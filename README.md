@@ -1,4 +1,3 @@
-sassdoc.github.io
-=================
+# SassDoc
 
-SassDoc's site.
+Like JSDoc for your Sass files.
