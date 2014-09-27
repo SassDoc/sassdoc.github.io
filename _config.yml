@@ -1,0 +1,11 @@
+# Site settings
+title: SassDoc
+email: contact@sassdoc.com
+description: Like JSDoc for your Sass files.
+baseurl: ""
+url: "http://sassdoc.com"
+twitter_username: sassdoc_
+github_username:  sassdoc
+
+# Build settings
+markdown: kramdown
