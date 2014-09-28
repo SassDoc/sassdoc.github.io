@@ -42,6 +42,18 @@ a {
   border: 0;
 }
 
+.counter-steps {
+  counter-reset: steps;
+}
+
+.counter-step {
+  counter-increment: steps;
+
+  &::before {
+    content: counter(steps) ". ";
+  }
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

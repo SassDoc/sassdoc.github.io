@@ -1,0 +1,15 @@
+.note {
+  padding: .5em;
+  border: 1px solid rgba(black, .1);
+  border-radius: .2em;
+
+  p {
+    margin: 0;
+  }
+}
+
+.note--warning {
+  background: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}

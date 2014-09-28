@@ -6,22 +6,114 @@ group: "Getting started"
 
 Getting started with SassDoc is really easy.
 
-1 - Install SassDoc.
+## Command Line
+
+<div class="counter-steps">
+<p class="counter-step">Install SassDoc.</p>
 
 {% highlight sh %}
 npm install sassdoc -g
 {% endhighlight %}
 
-2 - [Document your items](/documenting-your-items/). The syntax is pretty close to JSDoc although we took some liberty with it.
+<p class="counter-step">Write comments as specified in <a href="/documenting-your-items/">Document your items</a>. The syntax is pretty close to JSDoc although we took some liberty with it.</p>
 
-3 - Run SassDoc from the CLI (with [extra options](https://github.com/SassDoc/sassdoc#command-line) if you want).
+<p class="counter-step">Run SassDoc.</p>
 
 {% highlight sh %}
-sassdoc path/to/source/folder path/to/dest/folder
+sassdoc <src> <dest> [options]
 {% endhighlight %}
 
-**Beware!** Destination folder gets wiped. Make sure it does not contain any important file.
+<p>... where:</p>
 
-4 - Open the `index.html` file generated at `path/to/dest/folder/index.html`. It should contain your documentation!
+<ul>
+<li><code>&lt;src&gt;</code> is the path to your Sass folder;</li>
+<li><code>&lt;dest&gt;</code> is the path to the destination folder.</li>
+</ul>
 
-5 - What about [customising the view](/customising-the-view/) a little bit?
+<div class="note  note--warning">
+<p><strong>Beware!</strong> Destination folder gets wiped. Make sure it does not contain any important file.</p>
+</div>
+
+<p>... and options are:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code>--version</code></td>
+      <td>show version</td>
+    </tr>
+    <tr>
+      <td><code>-h, --help</code></td>
+      <td>bring help</td>
+    </tr>
+    <tr>
+      <td><code>-v, --verbose</code></td>
+      <td>run in verbose mode</td>
+    </tr>
+    <tr>
+      <td><code>-c, --config</code></td>
+      <td>patd to JSON/YAML configuration file</td>
+    </tr>
+    <tr>
+      <td><code>-t, --tdeme</code></td>
+      <td>tdeme to be used (will override configuration value)</td>
+    </tr>
+    <tr>
+      <td><code>--sass-convert</code></td>
+      <td>convert Sass to SCSS prior to run SassDoc</td>
+    </tr>
+    <tr>
+      <td><code>--no-update-notifier</code></td>
+      <td>disable update notifier check</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="counter-step">Open the <code>index.html</code> file generated at <code>path/to/dest/folder/index.html</code>. It should contain your documentation!</p>
+
+<p class="counter-step">What about <a href="/customising-the-view/">customising the view</a> a little bit now?</p>
+</div>
+
+## Node
+
+<div class="counter-steps">
+<p class="counter-step">Install SassDoc.</p>
+
+{% highlight sh %}
+npm install sassdoc --save
+{% endhighlight %}
+
+<p class="counter-step">Either use the raw data...</p>
+
+{% highlight js %}
+var sassdoc = require('sassdoc');
+
+sassdoc.parse(__dirname + '/sass').then(function (items) {
+  console.log(items);
+})
+{% endhighlight %}
+
+<p class="counter-step">... or generate documentation:</p>
+
+{% highlight js %}
+var config = {
+  display: {
+    access: ['public', 'private'],
+    alias: false,
+    watermark: true,
+  },
+
+  package: 'path/to/package.json', // Defaults to `./package.json`
+  theme: 'theme-name', // Defaults to `default`
+};
+
+var sassdoc = require('sassdoc');
+sassdoc.documentize(source, dest, config);
+{% endhighlight %}
+</div>
+
+## Grunt/Gulp/Broccoli
+
+See [grunt-sassdoc](https://github.com/SassDoc/grunt-sassdoc),
+[gulp-sassdoc](https://github.com/SassDoc/gulp-sassdoc),
+[broccoli-sassdoc](https://github.com/SassDoc/broccoli-sassdoc).

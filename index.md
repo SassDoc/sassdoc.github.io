@@ -5,7 +5,7 @@ title: "Like JSDoc for your Sass files"
 
 <a class="build-status" href="https://travis-ci.org/SassDoc/sassdoc" target="_blank"><img src="https://travis-ci.org/SassDoc/sassdoc.svg?branch=master" alt="Build Status" /></a>
 
-[![NPM](https://nodei.co/npm/sassdoc.png?downloads=true)](https://nodei.co/npm/sassdoc/)
+<a class="npm-badge" href="https://nodei.co/npm/sassdoc/"><img src="https://nodei.co/npm/sassdoc.png?downloads=true" alt="NPM SassDoc" /></a>
 
 SassDoc is to Sass what JSDoc is to JavaScript: a documentation system to build pretty and powerful docs in the blink of an eye. Among other things, SassDoc is:
 
@@ -15,84 +15,13 @@ SassDoc is to Sass what JSDoc is to JavaScript: a documentation system to build 
 * fully themable;
 * integrated with Grunt/Gulp/Broccoli or directly Node.
 
-![SassDoc](/assets/images/preview-image.png)
-
 ## How does it work?
 
 [SassDoc](http://github.com/sassdoc/sassdoc) parses your source folder to grab documentation-specific comments. From there, it builds a data tree, that gets [enhanced](http://github.com/sassdoc/sassdoc-indexer) and [filtered](http://github.com/sassdoc/sassdoc-filter) before being passed to the [view](http://github.com/sassdoc/sassdoc-theme-light). So you end up with a fully styled HTML document located at your destination folder.
 
-## Usage
+It would pretty much look like this:
 
-### Command line
-
-#### Install
-
-{% highlight sh %}
-npm install -g sassdoc
-{% endhighlight %}
-
-#### Generate Documentation
-
-{% highlight sh %}
-sassdoc <src> <dest> [options]
-{% endhighlight %}
-
-**Arguments:**
-
-1. `<src>` Path to your Sass folder.
-1. `<dest>` Path to the destination folder.
-
-**Options:**
-
-* `--version`: Show version.
-* `-h, --help`: Bring help.
-* `-v, --verbose`: Run in verbose mode.
-* `-c, --config`: Path to JSON file containing variables to be passed to the view.
-* `-t, --theme`: Theme to be required. It will override the configuration value.
-* `--sass-convert`: Perform a Sass to SCSS syntax conversion prior to run SassDoc.
-* `--no-update-notifier`: Do not run the update notifier check.
-
-### Node
-
-#### Install
-
-{% highlight sh %}
-npm install sassdoc --save
-{% endhighlight %}
-
-#### Use The Raw Data
-
-{% highlight js %}
-var sassdoc = require('sassdoc');
-
-sassdoc.parse(__dirname + '/sass').then(function (items) {
-  console.log(items);
-})
-{% endhighlight %}
-
-#### Generate Documentation
-
-{% highlight js %}
-var config = {
-  display: {
-    access: ['public', 'private'],
-    alias: false,
-    watermark: true,
-  },
-
-  package: 'path/to/package.json', // Defaults to `./package.json`
-  theme: 'theme-name', // Defaults to `default`
-};
-
-var sassdoc = require('sassdoc');
-sassdoc.documentize(source, dest, config);
-{% endhighlight %}
-
-### Grunt, Gulp, Broccoli
-
-See [grunt-sassdoc](https://github.com/SassDoc/grunt-sassdoc),
-[gulp-sassdoc](https://github.com/SassDoc/gulp-sassdoc),
-[broccoli-sassdoc](https://github.com/SassDoc/broccoli-sassdoc).
+![SassDoc](/assets/images/preview-image.png)
 
 ## Example
 
