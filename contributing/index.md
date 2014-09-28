@@ -24,23 +24,24 @@ If it's not, you can leave your question on:
 
 If you need a quick reply or don't feel really comfortable with asking on a public channel, try getting in touch with us on Twitter when possible:
 
-* [@SassDoc_](https://twitter.com/sassdoc_);
+* [@SassDoc\_](https://twitter.com/sassdoc_), the official repository;
 * [@HugoGiraudel](https://twitter.com/hugogiraudel) for anything related to the goals, objectives or future of SassDoc;
 * [@Fweinb](https://twitter.com/fweinb) for anything related to the parser;
 * [@valeriangalliat](https://twitter.com/valeriagalliat) for any related to the theme engine;
-* [@pascalduez](https://twitter.com/pascalduez) for SassDoc's integration, especially with Grunt, Gulp, Broccoli.
+* [@pascalduez](https://twitter.com/pascalduez) for anything related to Grunt, Gulp, Broccoli and Yeoman.
 
 ## Filling a bug
 
 So you think you've found a bug? Likely. We're all humans after all! Before even opening an issue, you have to know how SassDoc is architectured so you can submit an issue in the accurate repository:
 
-* [Core](https://github.com/sassdoc/sassdoc): API (you're here)
+* [Core](https://github.com/sassdoc/sassdoc): API
 * [Theme](https://github.com/sassdoc/sassdoc-theme-light): Theme, templates and styles
 * [Filter](https://github.com/sassdoc/sassdoc-filter): Markdown, display, groups...
 * [Indexer](https://github.com/sassdoc/sassdoc-indexer): Data structure
 * [Grunt plugin](https://github.com/sassdoc/grunt-sassdoc): Grunt integration
 * [Gulp plugin](https://github.com/sassdoc/gulp-sassdoc): Gulp integration
 * [Broccoli plugin](https://github.com/sassdoc/broccoli-sassdoc): Broccoli integration
+* [Yeoman theme generator](https://github.com/sassdoc/generator-sassdoc-theme): theme generator
 * [Site](https://github.com/SassDoc/sassdoc.github.io): SassDoc's site
 
 Please give GitHub's search a try first, to make sure someone didn't already submit something similar. If what you've found seems unique, be sure to open an issue in the appropriate repository with a clear title and a description as complete as possible.
