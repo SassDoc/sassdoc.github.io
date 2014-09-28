@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: $container-width;
+  overflow: hidden;
+  padding: 0 1em;
+}
+
+.main {
+  padding-left: $sidebar-width + 20px;
+}
+

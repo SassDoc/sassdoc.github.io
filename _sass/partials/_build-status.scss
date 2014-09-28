@@ -1,0 +1,10 @@
+.build-status {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+
+  &,
+  img {
+    display: block;
+  }
+}

@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+  font-size: 112.5%;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  color: $black;
+  padding: 2em 0 4em;
+  position: relative;
+  line-height: 1.35;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: $secondary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    background: white;
+    border-top: 1px solid #ccc;
+
+    &:nth-child(2n) {
+      background: #f8f8f8;
+    }
+  }
+
+  td,
+  th {
+    vertical-align: top;
+    padding: .5em 1em;
+    border: 1px solid #ccc;
+  }
+}

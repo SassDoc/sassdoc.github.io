@@ -1,0 +1,42 @@
+.sidebar {
+  float: left;
+  width: $sidebar-width;
+}
+
+.sidebar__main-title {
+  margin-top: 0;
+  font-family: 'Roboto', sans-serif;
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.sidebar__sub-title {
+  font-size: .8em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+.sidebar__list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: .9em;
+  line-height: 1.5;
+}
+
+.sidebar__list-item {
+
+  &.active a {
+    color: $primary-color;
+    font-weight: bold;
+  }
+}
+
+.sidebar__link {
+
+}

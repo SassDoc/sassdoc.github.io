@@ -1,0 +1,203 @@
+.highlight {
+    background: #111;
+    padding: 1em;
+    margin-bottom: 1em;
+    font: normal normal normal 100%/1.2 Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    overflow: auto;
+    border: 1px solid #CCC;
+    border-radius: 7px;
+
+    pre {
+        margin: 0;
+    }
+}
+
+:not(pre) > code {
+    border-radius: 4px;
+    background: #EFEFEF;
+    border: 1px solid rgba(black, .1);
+    font-size: .8em;
+    font-family: Menlo,Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+    padding: 2px 4px;
+    text-decoration: none;
+}
+
+.highlight span {
+    font-family: Consolas,"Courier New",Courier,FreeMono,monospace;
+    font-size: 1em;
+}
+
+.highlight .hll {
+    background-color: #49483e;
+}
+
+.highlight {
+    color: #f8f8f2;
+}
+
+.highlight .c {
+    color: #75715e;
+}
+
+.highlight .err {
+    color: #960050;
+    background-color: #1e0010;
+}
+
+.highlight .k {
+    color: #66d9ef;
+}
+
+.highlight .l {
+    color: #ae81ff;
+}
+
+.highlight .n {
+    color: #f8f8f2;
+}
+
+.highlight .o {
+    color: #f92672;
+}
+
+.highlight .p {
+    color: #f8f8f2;
+}
+
+.highlight .c1,
+.highlight .cm,
+.highlight .cp,
+.highlight .cs {
+    color: #999;
+}
+
+.highlight .ge {
+    font-style: italic;
+}
+
+.highlight .gs {
+    font-weight: 700;
+}
+
+.highlight .kc,
+.highlight .kd {
+    color: #66d9ef;
+}
+
+.highlight .kn {
+    color: #f92672;
+}
+
+.highlight .kp,
+.highlight .kr,
+.highlight .kt {
+    color: #66d9ef;
+}
+
+.highlight .ld {
+    color: #e6db74;
+}
+
+.highlight .m {
+    color: #ae81ff;
+}
+
+.highlight .s {
+    color: #e6db74;
+}
+
+.highlight .na {
+    color: #a6e22e;
+}
+
+.highlight .nb {
+    color: #f8f8f2;
+}
+
+.highlight .nc {
+    color: #a6e22e;
+}
+
+.highlight .no {
+    color: #66d9ef;
+}
+
+.highlight .nd {
+    color: #a6e22e;
+}
+
+.highlight .ni {
+    color: #f8f8f2;
+}
+
+.highlight .ne,
+.highlight .nf {
+    color: #a6e22e;
+}
+
+.highlight .nl,
+.highlight .nn {
+    color: #f8f8f2;
+}
+
+.highlight .nx {
+    color: #a6e22e;
+}
+
+.highlight .py {
+    color: #f8f8f2;
+}
+
+.highlight .nt {
+    color: #f92672;
+}
+
+.highlight .nv {
+    color: #f8f8f2;
+}
+
+.highlight .ow {
+    color: #f92672;
+}
+
+.highlight .w {
+    color: #f8f8f2;
+}
+
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo {
+    color: #ae81ff;
+}
+
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd {
+    color: #e6db74;
+}
+
+.highlight .se {
+    color: #ae81ff;
+}
+
+.highlight .s1,
+.highlight .sh,
+.highlight .si,
+.highlight .sr,
+.highlight .ss,
+.highlight .sx {
+    color: #e6db74;
+}
+
+.highlight .bp,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+    color: #f8f8f2;
+}
+
+.highlight .il {
+    color: #ae81ff;
+}
