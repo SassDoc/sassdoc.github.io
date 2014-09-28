@@ -10,7 +10,7 @@
       url: "/file-level-annotations/"
       _blank: false
     - title: "Customising the view"
-      url: "/vustomising-the-view/"
+      url: "/customising-the-view/"
       _blank: false
 - title: "Custom theme"
   order: 2
