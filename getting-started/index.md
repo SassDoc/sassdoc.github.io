@@ -6,8 +6,6 @@ group: "Getting started"
 
 Getting started with SassDoc is really easy.
 
-## Command Line
-
 <div class="counter-steps">
 <p class="counter-step">Install SassDoc.</p>
 
@@ -30,7 +28,7 @@ sassdoc <src> <dest> [options]
 <li><code>&lt;dest&gt;</code> is the path to the destination folder.</li>
 </ul>
 
-<div class="note  note--warning">
+<div class="note  note--danger">
 <p><strong>Beware!</strong> Destination folder gets wiped. Make sure it does not contain any important file.</p>
 </div>
 
@@ -73,47 +71,3 @@ sassdoc <src> <dest> [options]
 
 <p class="counter-step">What about <a href="/customising-the-view/">customising the view</a> a little bit now?</p>
 </div>
-
-## Node
-
-<div class="counter-steps">
-<p class="counter-step">Install SassDoc.</p>
-
-{% highlight sh %}
-npm install sassdoc --save
-{% endhighlight %}
-
-<p class="counter-step">Either use the raw data...</p>
-
-{% highlight js %}
-var sassdoc = require('sassdoc');
-
-sassdoc.parse(__dirname + '/sass').then(function (items) {
-  console.log(items);
-})
-{% endhighlight %}
-
-<p class="counter-step">... or generate documentation:</p>
-
-{% highlight js %}
-var config = {
-  display: {
-    access: ['public', 'private'],
-    alias: false,
-    watermark: true,
-  },
-
-  package: 'path/to/package.json', // Defaults to `./package.json`
-  theme: 'theme-name', // Defaults to `default`
-};
-
-var sassdoc = require('sassdoc');
-sassdoc.documentize(source, dest, config);
-{% endhighlight %}
-</div>
-
-## Grunt/Gulp/Broccoli
-
-See [grunt-sassdoc](https://github.com/SassDoc/grunt-sassdoc),
-[gulp-sassdoc](https://github.com/SassDoc/gulp-sassdoc),
-[broccoli-sassdoc](https://github.com/SassDoc/broccoli-sassdoc).
