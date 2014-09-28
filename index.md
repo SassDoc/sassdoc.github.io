@@ -27,15 +27,15 @@ SassDoc is to Sass what JSDoc is to JavaScript: a documentation system to build 
 
 #### Install
 
-```sh
+{% highlight sh %}
 npm install -g sassdoc
-```
+{% endhighlight %}
 
 #### Generate Documentation
 
-```sh
+{% highlight sh %}
 sassdoc <src> <dest> [options]
-```
+{% endhighlight %}
 
 **Arguments:**
 
@@ -56,23 +56,23 @@ sassdoc <src> <dest> [options]
 
 #### Install
 
-```shell
+{% highlight sh %}
 npm install sassdoc --save
-```
+{% endhighlight %}
 
 #### Use The Raw Data
 
-```js
+{% highlight js %}
 var sassdoc = require('sassdoc');
 
 sassdoc.parse(__dirname + '/sass').then(function (items) {
   console.log(items);
 })
-```
+{% endhighlight %}
 
 #### Generate Documentation
 
-```js
+{% highlight js %}
 var config = {
   display: {
     access: ['public', 'private'],
@@ -86,7 +86,7 @@ var config = {
 
 var sassdoc = require('sassdoc');
 sassdoc.documentize(source, dest, config);
-```
+{% endhighlight %}
 
 ### Grunt, Gulp, Broccoli
 
