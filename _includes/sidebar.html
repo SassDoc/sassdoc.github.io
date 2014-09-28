@@ -4,60 +4,18 @@
 <label class="sidebar__toggle-label" for="sidebar-toggle">Navigation</label>
 
 <div class="sidebar__body">
-<h2 class="sidebar__sub-title">Getting started</h2>
+
+{% for group in site.data.navigation %}
+<h2 class="sidebar__sub-title">{{ group.title }}</h2>
 
 <ul class="sidebar__list">
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="/getting-started/">Getting started</a>
+{% for item in group.items %}
+  {% capture tmp %}{{ item.url }}index.html{% endcapture %}
+  <li class="sidebar__list-item  {% if tmp == page.url %}active{% endif %}">
+    <a class="sidebar__link" href="{{ item.url }}" {% if item._blank %}target="_blank"{% endif %}>{{ item.title }}</a>
   </li>
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="/documenting-your-items/">Documenting your items</a>
-  </li>
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="/file-level-annotations/">File-level annotations</a>
-  </li>
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="/customising-the-view/">Customising the view</a>
-  </li>
+{% endfor %}
 </ul>
 
-<h2 class="sidebar__sub-title">Custom theme</h2>
-
-<ul class="sidebar__list">
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="/using-your-own-theme/">Using your own theme</a>
-  </li>
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="/theme-context/">Theme context</a>
-  </li>
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="/extending-sassdoc/">Extending SassDoc</a>
-  </li>
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="/data-interface/">Data interface</a>
-  </li>
-</ul>
-
-<h2 class="sidebar__sub-title">Extra</h2>
-
-<ul class="sidebar__list">
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="/about/">About</a>
-  </li>
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="/frequently-asked-questions/">Frequently Asked Questions</a>
-  </li>
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="/contributing/">Contributing</a>
-  </li>
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="/built-with-sassdoc/">Built with SassDoc</a>
-  </li>
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="https://twitter.com/sassdoc_" target="_blank">Twitter</a>
-  </li>
-  <li class="sidebar__list-item">
-    <a class="sidebar__link" href="https://github.com/sassdoc" target="_blank">GitHub</a>
-  </li>
-</ul>
+{% endfor %}
 </div>

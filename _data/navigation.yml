@@ -1,0 +1,49 @@
+- title: "Getting started"
+  items:
+    - title: "Getting started"
+      url: "/getting-started/"
+      _blank: false
+    - title: "Documenting your items"
+      url: "/documenting-your-items/"
+      _blank: false
+    - title: "File-level annotations"
+      url: "/file-level-annotations/"
+      _blank: false
+    - title: "Customising the view"
+      url: "/vustomising-the-view/"
+      _blank: false
+- title: "Custom theme"
+  order: 2
+  items:
+    - title: "Using your own theme"
+      url: "/using-your-own-theme/"
+      _blank: false
+    - title: "Theme context"
+      url: "/theme-context/"
+      _blank: false
+    - title: "Extending SassDoc"
+      url: "/extending-sassdoc/"
+      _blank: false
+    - title: "Data Interface"
+      url: "/data-interface/"
+      _blank: false
+- title: "Extra"
+  items:
+    - title: "About"
+      url: "/about/"
+      _blank: false
+    - title: "Frequently Asked questions"
+      url: "/frequently-asked-questions/"
+      _blank: false
+    - title: "Contributing"
+      url: "/contributing/"
+      _blank: false
+    - title: "Built with SassDoc"
+      url: "/built-with-sassdoc/"
+      _blank: false
+    - title: "Twitter"
+      url: "https://twitter.com/sassdoc_"
+      _blank: true
+    - title: "GitHub repository"
+      url: "https://github.com/sassdoc"
+      _blank: true
