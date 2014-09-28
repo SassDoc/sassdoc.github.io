@@ -13,6 +13,7 @@ group: "Getting started"
 * [@access](#access)
 * [@alias](#alias)
 * [@author](#author)
+* [@content](#content)
 * [@deprecated](#deprecated)
 * [@example](#example)
 * [@group](#group)
@@ -103,6 +104,23 @@ Describes the author of the documented item.
 
 * Parsed as Markdown.*
 * Multiple `@author` allowed on the same item.
+
+## @content
+
+Describes the usage of @content in a mixin. It will be automaticly added if found in the extracted code.
+
+**Example:**
+
+{% highlight scss %}
+/**
+ * @content [Description]
+ */
+{% endhighlight %}
+
+**Notes:**
+
+* Parsed as Markdown.*
+* Has no effect on functions, variables and placeholders.
 
 ## @deprecated
 
@@ -223,7 +241,7 @@ An equivalent to `@return` for mixins. Provide a description of what's being pri
 **Notes:**
 
 * Description is parsed as Markdown.*
-* Has no effect on functions, variables and placeholders in SassDoc default theme.
+* Has no effect on functions, variables and placeholders.
 
 ## @param (synonyms: @arg, @argument)
 
@@ -246,7 +264,7 @@ Describes a parameter of the documented item.
 * Description is optional. Hyphen before description is optional.
 * Description is parsed as Markdown.*
 * Multiple types must be separated by pipes (`|`).
-* Has no effect on variables and placeholders in SassDoc default theme.
+* Has no effect on variables and placeholders.
 
 
 ## @prop
@@ -420,7 +438,7 @@ Describes the type of a variable.
 
 **Notes:**
 
-* Has no effect on functions, mixins and placeholders in SassDoc default theme.
+* Has no effect on functions, mixins and placeholders.
 * Multiple types are separated with pipes (`|`).
 
 ---
