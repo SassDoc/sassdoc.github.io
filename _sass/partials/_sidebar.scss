@@ -61,6 +61,7 @@
 
 .sidebar__link {
   display: block;
+  text-transform: capitalize;
   padding: .25em .5em;
 
   &:hover,

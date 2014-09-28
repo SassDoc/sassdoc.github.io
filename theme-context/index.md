@@ -52,13 +52,11 @@ The view has no strict interface. The users can put whatever they
 want in this object. You can use it to let the user configure your
 theme (the main purpose of the view object is indeed configuration).
 
-*Note: if you use [SassDoc filters](https://github.com/SassDoc/sassdoc-filter),
-they also can be configured with the view object. Watch the filters
-documentation.*
+<p class="note  note--info"><strong>Note:</strong> if you use <a href="https://github.com/SassDoc/sassdoc-filter">SassDoc Filters</a>, they also can be configured with the view object. Watch the filters documentation.</p>
 
 An example view object, assuming you use some filters:
 
-{% highlight json %}
+{% highlight js %}
 {
   display: {
     access: ['public', 'private'],
@@ -78,9 +76,8 @@ An example view object, assuming you use some filters:
 
 [Ahem](https://www.npmjs.org/doc/files/package.json.html).
 
-*Note: with the [Markdown filter](https://github.com/SassDoc/sassdoc-filter#markdown),
-`package.description` will be parsed as Markdown.*
+<p class="note  note--info"><strong>Note:</strong> with the <a href="https://github.com/SassDoc/sassdoc-filter#markdown">Markdown filter</a>, <code>package.description</code> will be parsed as Markdown.</p>
 
 ## Data
 
-Everything is in [Sassdoc Data Interface](/data-interface/).
+Everything is in [Data Interface](/data-interface/).

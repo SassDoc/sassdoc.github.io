@@ -4,8 +4,6 @@ title: "Documenting your items"
 group: "Getting started"
 ---
 
-*Note: remember that you can define annotations at a file level rather than on specific items, which can happen to be very useful when all items from a file share some traits (author, group, and so on...). To do so, please refer to [File-level annotations](/file-level-annotations/).*
-
 ## Table of contents
 
 * [Name](#name)
@@ -28,6 +26,8 @@ group: "Getting started"
 * [@since](#since)
 * [@throws (@throw, @exception)](#throws-synonym-throw-exception)
 * [@todo](#todo)
+
+<p class="note  note--info"><strong>Note:</strong> remember that you can define annotations at a file level rather than on specific items, which can happen to be very useful when all items from a file share some traits (author, group, and so on...). To do so, please refer to <a href="/file-level-annotations/">File-level Annotations</a>.</p>
 
 ## Name
 

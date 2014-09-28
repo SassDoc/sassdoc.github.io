@@ -4,8 +4,7 @@ title: "Using your own theme"
 group: "Custom theme"
 ---
 
-Introduction
-------------
+## Introduction
 
 SassDoc is fully themable. You can write your own theme for your
 projects, and publish it on npm so other people can use it too!
@@ -39,31 +38,25 @@ themes without bothering with "low-level" considerations, like promises
 handling, raw `fs` calls, making sure the destination directory exists,
 etc.
 
-*Note: since SassDoc 1.8, you can also add your own annotations by exporting an `annotations` array. See more on [Extending SassDoc](e/xtending-sassdoc/).*
+<p class="note  note--info">Note: since SassDoc 1.8, you can also add your own annotations by exporting an `annotations` array. See more on <a href="/extending-sassdoc/">Extending SassDoc</a>.</p>
 
-Theme generator
----------------
+## Theme generator
 
-We've built a [Yeoman generator](https://github.com/SassDoc/generator-sassdoc-theme)
+We've built a [Yeoman generator](/theme-generator/)
 to assist in scaffolding a new theme.
 You will be given the possibility to customize the theme to your needs based on prompts.
 It will output all the boilerplate files for you in one command.
 Furthermore the generated code is loaded with inline documentation.
 
-
-Building the Theme
-------------------
+## Building the Theme
 
 We will use Themeleon to build a new theme with Swig template engine
 directly in in an existing project, and use it with SassDoc. Then, we
 will export this theme in it's own npm package to make it available to
 the world!
 
-*Note: you're totally not required to use Swig.
-A Jade, Mustache, Nunjucks and Handlebars plugins for Themeleon are also available, furthermore it's a breeze to
-write a Themeleon extension for your favorite template
-engine&nbsp;&mdash;&nbsp;or you can just use any node module in your
-render procedure without using a Themeleon helper.*
+<p class="note  note--info"><strong>Note:</strong> you are not required to use Swig. Jade, Mustache, Nunjucks and Handlebars are also available as Themeleon plugins. Furthermore it's a breeze to
+write a Themeleon extension for your favorite template engine&nbsp;&mdash;&nbsp;or you can just use any node module in your render procedure without using a Themeleon helper.</p>
 
 First, you need to add the dependencies to your `package.json`:
 
@@ -80,7 +73,7 @@ First, you need to add the dependencies to your `package.json`:
 }
 {% endhighlight %}
 
-*Don't forget to `npm install`!*
+<p class="note  note--warning"><strong>Reminder!</strong> Don't forget to <code>npm install</code>!</p>
 
 Then, we create a `theme` directory *(you can call it as you want)* in
 the root of your project. Assuming you already have a [configuration
@@ -136,12 +129,9 @@ rendering your view in `index.html`.
 
 The views are passed a couple of variables [documented here](/data-interface/).
 
-> To kick start your theme, be sure to check [SassDoc's blank theme](https://github.com/SassDoc/sassdoc-theme-blank),
-> a theme with a basic directory structure, and loads of comments to
-> help you understand how it works, and hack it to your own needs.
+<p class="note  note--info"><strong>Tip:</strong> To kick start your theme, be sure to check <a href="https://github.com/SassDoc/sassdoc-theme-blank">SassDoc's blank theme</a>, a theme with a basic directory structure, and loads of comments to help you understand how it works, and hack it to your own needs.</p>
 
-Packaging to the World
-----------------------
+## Packaging to the World
 
 Now that your awesome theme is ready, you probably want to make it available
 to everybody as a `"theme": "your-theme"` line in their
@@ -171,11 +161,10 @@ which makes finding and listing SassDoc themes published on `npm` easier.
 
 Then, run `npm publish` and you're done!
 
-*Note: the last command will require you to setup an npm account. Run
-`npm adduser` if you haven't an account configured already.*
+<p class="note  note--info"><strong>Note:</strong> the last command will require you to setup an npm account. Run
+<code>npm adduser</code> if you haven't an account configured already.</p>
 
-Bonus
------
+## Bonus
 
 ### Play with Swig Extras
 

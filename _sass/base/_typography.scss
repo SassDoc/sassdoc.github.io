@@ -1,9 +1,11 @@
 .main-title {
   margin-top: 0;
+  text-transform: capitalize;
   font-family: 'Roboto', sans-serif;
 }
 
 h2, h3, h4, h5, h6 {
+  text-transform: capitalize;
   position: relative;
 
   @include respond-to("large") {

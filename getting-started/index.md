@@ -13,7 +13,7 @@ Getting started with SassDoc is really easy.
 npm install sassdoc -g
 {% endhighlight %}
 
-<p class="counter-step">Write comments as specified in <a href="/documenting-your-items/">Document your items</a>. The syntax is pretty close to JSDoc although we took some liberty with it.</p>
+<p class="counter-step">Write comments as specified in <a href="/documenting-your-items/">Document Your Items</a>. The syntax is pretty close to JSDoc although we took some liberty with it.</p>
 
 <p class="counter-step">Run SassDoc.</p>
 

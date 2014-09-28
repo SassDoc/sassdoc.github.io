@@ -46,7 +46,7 @@ So you think you've found a bug? Likely. We're all humans after all! Before even
 
 Please give GitHub's search a try first, to make sure someone didn't already submit something similar. If what you've found seems unique, be sure to open an issue in the appropriate repository with a clear title and a description as complete as possible.
 
-Avoid titles like "it doesn't work", "please help me", or "bug with sassdoc". It doesn't help much understanding the problem at first glance.
+<p class="note  note--warning"><strong>Tip!</strong> Avoid titles like "it doesn't work", "please help me", or "bug with sassdoc". It doesn't help much understanding the problem at first glance.</p>
 
 Similarly, be as descriptive as possible within your description. If you have a stack trace, post it. If you can make a screenshot, even better! Explain the problem and how you got there so we can reproduce it. Only then we'll be able to investigate.
 
