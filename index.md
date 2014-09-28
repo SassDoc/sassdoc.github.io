@@ -59,6 +59,7 @@ sassdoc <src> <dest> [options]
 ```shell
 npm install sassdoc --save
 ```
+
 #### Use The Raw Data
 
 ```js
