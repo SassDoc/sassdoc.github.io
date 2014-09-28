@@ -11,8 +11,9 @@
 
 .main {
   padding: 0 1em;
+
   @include respond-to("large") {
-    padding-left: $sidebar-width + 20px;
+    padding: 0 0 0 $sidebar-width + 20px;
   }
 }
 

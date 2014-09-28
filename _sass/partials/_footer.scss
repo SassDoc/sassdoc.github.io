@@ -2,7 +2,14 @@
   clear: both;
   font-size: .9em;
   color: #aaa;
-  text-align: center;
+  text-align: right;
+  background: #EFEFEF;
+  border-top: 1px solid rgba(black, .1);
+  padding: .5em 1em;
+
+  p {
+    margin: 0;
+  }
 
   @include respond-to("large") {
     position: absolute;
