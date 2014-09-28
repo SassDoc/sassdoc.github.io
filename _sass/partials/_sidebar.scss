@@ -1,6 +1,12 @@
 .sidebar {
-  float: left;
-  width: $sidebar-width;
+  padding-bottom: 3em;
+  text-align: center;
+
+  @include respond-to("large") {
+    text-align: left;
+    float: left;
+    width: $sidebar-width;
+  }
 }
 
 .sidebar__main-title {
@@ -16,20 +22,36 @@
 .sidebar__sub-title {
   font-size: .8em;
   text-transform: uppercase;
-  margin-bottom: 1em;
-  margin-top: 2em;
+  border-bottom: 1px solid rgba(black, .1);
+  padding: .45em .9em;
+  margin: 0;
+
+  @include respond-to("large") {
+    margin-bottom: 1em;
+    margin-top: 2em;
+    border: none;
+    padding: 0;
+  }
 }
 
 .sidebar__list {
   list-style: none;
   padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 1em;
   font-size: .9em;
   line-height: 1.5;
+  margin: 0;
+
+  @include respond-to("large") {
+    margin-bottom: 1em;
+  }
 }
 
 .sidebar__list-item {
+  border-bottom: 1px solid rgba(black, .1);
+
+  @include respond-to("large") {
+    border: none;
+  }
 
   &.active a {
     color: $primary-color;
@@ -38,5 +60,38 @@
 }
 
 .sidebar__link {
+  display: block;
+  padding: .25em .5em;
 
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    background: #EFEFEF;
+  }
+}
+
+.sidebar__toggle-label {
+  cursor: pointer;
+  background: #EFEFEF;
+  border: 1px solid rgba(black, .1);
+  display: block;
+  padding: .25em .5em;
+  text-align: center;
+
+  @include respond-to("large") {
+    display: none;
+  }
+}
+
+.sidebar__body {
+  display: none;
+
+  @include respond-to("large") {
+    display: block;
+  }
+
+  .sidebar__toggle:checked ~ & {
+    display: block;
+  }
 }

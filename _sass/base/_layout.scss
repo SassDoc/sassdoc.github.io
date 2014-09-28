@@ -3,10 +3,16 @@
   max-width: 100%;
   width: $container-width;
   overflow: hidden;
-  padding: 0 1em;
+
+  @include respond-to("large") {
+    padding: 0 1em;
+  }
 }
 
 .main {
-  padding-left: $sidebar-width + 20px;
+  padding: 0 1em;
+  @include respond-to("large") {
+    padding-left: $sidebar-width + 20px;
+  }
 }
 
