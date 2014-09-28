@@ -2,3 +2,24 @@
   margin-top: 0;
   font-family: 'Roboto', sans-serif;
 }
+
+h2, h3, h4, h5, h6 {
+  position: relative;
+
+  @include respond-to("large") {
+    &:hover .header-link {
+      opacity: 1;
+    }
+  }
+}
+
+.header-link {
+  position: absolute;
+  top: 0;
+  left: -1em;
+  transition: .15s;
+
+  @include respond-to("large") {
+    opacity: 0;
+  }
+}
