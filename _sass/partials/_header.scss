@@ -41,6 +41,9 @@
   color: $black;
 
   @include respond-to("large") {
-    padding-left: $sidebar-width + 18px;
+    padding-left: $sidebar-width + 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
