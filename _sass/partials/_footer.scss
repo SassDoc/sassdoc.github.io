@@ -2,19 +2,22 @@
   clear: both;
   font-size: .9em;
   color: #aaa;
-  text-align: right;
-  background: #EFEFEF;
-  border-top: 1px solid rgba(black, .1);
-  padding: .5em 1em;
+  text-align: center;
+  background: $light-grey;
+  background: $very-dark-pink;
 
   p {
     margin: 0;
   }
 
   @include respond-to("large") {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    text-align: right;
+    padding-left: $sidebar-width;
   }
+}
+
+.footer__content {
+  border-top: 1px solid rgba(black, .1);
+  background: #EFEFEF;
+  padding: .5em 0;
 }

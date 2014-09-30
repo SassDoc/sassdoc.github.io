@@ -1,9 +1,3 @@
-.main-title {
-  margin-top: 0;
-  text-transform: capitalize;
-  font-family: 'Roboto', sans-serif;
-}
-
 h2, h3, h4, h5, h6 {
   text-transform: capitalize;
   position: relative;
@@ -18,7 +12,7 @@ h2, h3, h4, h5, h6 {
 .header-link {
   position: absolute;
   top: 0;
-  left: -1em;
+  right: 0;
   transition: .15s;
 
   @include respond-to("large") {

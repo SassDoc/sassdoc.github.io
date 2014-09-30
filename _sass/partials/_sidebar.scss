@@ -1,25 +1,25 @@
 .sidebar {
-  padding-bottom: 3em;
+  background: $dark-pink;
   text-align: center;
+  padding: 1em;
 
   @include respond-to("large") {
-    text-align: left;
     float: left;
+    padding: 0 1em;
+    text-align: left;
     width: $sidebar-width;
   }
 }
 
-.sidebar__main-title {
-  margin-top: 0;
-  font-family: 'Roboto', sans-serif;
+.sidebar__body {
+  padding-top: 1em;
 
-  a {
-    text-decoration: none;
-    color: $black;
+  @include respond-to("large") {
+    padding-top: 0;
   }
 }
 
-.sidebar__sub-title {
+.sidebar__title {
   font-size: .8em;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(black, .1);
@@ -40,6 +40,8 @@
   font-size: .9em;
   line-height: 1.5;
   margin: 0;
+  padding-bottom: 1.5em;
+  border-bottom: .25em solid $light-pink;
 
   @include respond-to("large") {
     margin-bottom: 1em;
@@ -54,7 +56,7 @@
   }
 
   &.active a {
-    color: $primary-color;
+    color: $black;
     font-weight: bold;
   }
 }
@@ -63,22 +65,34 @@
   display: block;
   text-transform: capitalize;
   padding: .25em .5em;
+  color: white;
 
   &:hover,
   &:active,
   &:focus {
-    text-decoration: none;
-    background: #EFEFEF;
+    text-decoration: underline;
+  }
+
+  @include respond-to("large") {
+    padding: .25em 0;
   }
 }
 
 .sidebar__toggle-label {
   cursor: pointer;
-  background: #EFEFEF;
+  background: $very-dark-pink;
+  color: white;
   border: 1px solid rgba(black, .1);
   display: block;
   padding: .25em .5em;
   text-align: center;
+  transition: .15s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $dark-pink;
+  }
 
   @include respond-to("large") {
     display: none;

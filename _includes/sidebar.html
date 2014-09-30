@@ -1,12 +1,10 @@
-<h1 class="sidebar__main-title"><a href="/">SassDoc</a></h1>
-
 <input type="checkbox" class="sidebar__toggle  visually-hidden" id="sidebar-toggle" />
 <label class="sidebar__toggle-label" for="sidebar-toggle">Navigation</label>
 
 <div class="sidebar__body">
 
 {% for group in site.data.navigation %}
-<h2 class="sidebar__sub-title">{{ group.title }}</h2>
+<h2 class="sidebar__title">{{ group.title }}</h2>
 
 <ul class="sidebar__list">
 {% for item in group.items %}

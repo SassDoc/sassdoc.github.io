@@ -1,9 +1,15 @@
-$container-width: 1170px;
+$container-width: 920px;
 $sidebar-width: 250px;
+
+$font-stack: 'Roboto', sans-serif;
 
 $black: #444;
 $pink: #c69;
+$light-pink: lighten($pink, 5%);
+$dark-pink: darken($pink, 12%);
+$very-dark-pink: darken($pink, 20%);
 $green: #699;
+$light-grey: #EFEFEF;
 
 $primary-color: $pink;
 $secondary-color: $green;
