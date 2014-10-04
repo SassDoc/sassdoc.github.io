@@ -46,6 +46,9 @@
       _blank: false
 - title: "Extra"
   items:
+    - title: "Changelog"
+      url: "/changelog/"
+      _blank: false
     - title: "About"
       url: "/about/"
       _blank: false
@@ -58,6 +61,8 @@
     - title: "Built with SassDoc"
       url: "/built-with-sassdoc/"
       _blank: false
+- title: "Contact"
+  items:
     - title: "Twitter"
       url: "https://twitter.com/sassdoc_"
       _blank: true
