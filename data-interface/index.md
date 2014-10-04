@@ -46,7 +46,7 @@ You can access to the number of documented items `data.count`.
 
 ## Annotations
 
-<p class="note  note--info"><strong>Clarification:</strong> in the following examples, we are using C-style comments but it works exactly the same for inline comments as well. Please refer to [Documenting your items](http://sassdoc.com/documenting-your-items/) for the syntax</p>.
+<p class="note  note--info"><strong>Clarification:</strong> in the following examples, we are using C-style comments but it works exactly the same for inline comments as well. Please refer to [Documenting your items](http://sassdoc.com/documenting-your-items/) for the syntax.</p>
 
 ## @access
 
