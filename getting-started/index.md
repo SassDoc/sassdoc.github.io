@@ -50,7 +50,7 @@ sassdoc <src> <dest> [options]
     </tr>
     <tr>
       <td><code>-c, --config</code></td>
-      <td>patd to JSON/YAML configuration file</td>
+      <td>path to JSON/YAML configuration file</td>
     </tr>
     <tr>
       <td><code>-t, --tdeme</code></td>
