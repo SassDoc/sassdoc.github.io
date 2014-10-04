@@ -46,6 +46,11 @@ Describes the documented item.
  */
 {% endhighlight %}
 
+{% highlight scss %}
+/// Here is the description
+/// On several lines if you will
+{% endhighlight %}
+
 **Notes:**
 
 * Parsed as Markdown.*
@@ -67,6 +72,12 @@ Defines the access of the documented item.
  */
 {% endhighlight %}
 
+{% highlight scss %}
+/// @access private
+
+/// @access public
+{% endhighlight %}
+
 **Notes:**
 
 * Either `public` or `private`.
@@ -82,6 +93,10 @@ Defines if the documented item is an alias of another item.
 /**
  * @alias other-item
  */
+{% endhighlight %}
+
+{% highlight scss %}
+/// @alias other-item
 {% endhighlight %}
 
 **Notes:**
@@ -100,6 +115,10 @@ Describes the author of the documented item.
  */
 {% endhighlight %}
 
+{% highlight scss %}
+/// @author Author's name
+{% endhighlight %}
+
 **Notes:**
 
 * Parsed as Markdown.*
@@ -107,7 +126,7 @@ Describes the author of the documented item.
 
 ## @content
 
-Describes the usage of @content in a mixin. It will be automaticly added if found in the extracted code.
+Describes the usage of `@content` Sass directive in a mixin.
 
 **Example:**
 
@@ -117,9 +136,14 @@ Describes the usage of @content in a mixin. It will be automaticly added if foun
  */
 {% endhighlight %}
 
+{% highlight scss %}
+/// @content [Description]
+{% endhighlight %}
+
 **Notes:**
 
 * Parsed as Markdown.*
+* Automatically added if found in extracted code.
 * Has no effect on functions, variables and placeholders.
 
 ## @deprecated
@@ -132,12 +156,16 @@ Defines if the documented item is deprecated.
 /**
  * @deprecated
  */
-{% endhighlight %}
 
-{% highlight scss %}
 /**
  * @deprecated Deprecation related message
  */
+{% endhighlight %}
+
+{% highlight scss %}
+/// @deprecated
+
+/// @deprecated Deprecation related message
 {% endhighlight %}
 
 **Notes:**
@@ -166,6 +194,18 @@ Describes a use case for the documented item, with a given language and descript
  */
 {% endhighlight %}
 
+{% highlight scss %}
+/// @example
+/// 4 + 2 = 8
+/// 4 / 2 = 2
+///
+/// @example scss
+/// // This is some SCSS code
+/// @example scss - Clamp function
+/// clamp(42, $min: 13, $max: 37)
+/// // 37
+{% endhighlight %}
+
 **Notes:**
 
 * Multiple `@example` allowed on the same item.
@@ -186,6 +226,10 @@ Defines to which group (if any) the documented item belongs.
  */
 {% endhighlight %}
 
+{% highlight scss %}
+/// @group helpers
+{% endhighlight %}
+
 **Notes:**
 
 * All items without `@group` will be gathered in an "undefined" group.
@@ -202,6 +246,10 @@ Defines a line which won't be documented.
 /**
  * @ignore Message
  */
+{% endhighlight %}
+
+{% highlight scss %}
+/// @ignore Message
 {% endhighlight %}
 
 **Notes:**
@@ -221,6 +269,11 @@ Describes a link.
  */
 {% endhighlight %}
 
+{% highlight scss %}
+/// @link http://some.url
+/// @link http://some.url Optional caption
+{% endhighlight %}
+
 **Notes:**
 
 * Caption is optional.
@@ -236,6 +289,10 @@ An equivalent to `@return` for mixins. Provide a description of what's being pri
 /**
  * @output Description
  */
+{% endhighlight %}
+
+{% highlight scss %}
+/// @output Description
 {% endhighlight %}
 
 **Notes:**
@@ -258,6 +315,13 @@ Describes a parameter of the documented item.
  */
 {% endhighlight %}
 
+{% highlight scss %}
+/// @param {type} $name
+/// @param {type | othertype} $name
+/// @param {type} $name - description
+/// @param {type} $name (default value) - description
+{% endhighlight %}
+
 **Notes:**
 
 * Default value is optional.
@@ -278,11 +342,15 @@ Document maps properties, use the dot notation to signify nesting.
  * @prop {Type} base.default (default) - description
  */
 {% endhighlight %}
+
+{% highlight scss %}
+/// @prop {Type} base.default (default) - description
+{% endhighlight %}
+
 **Notes:**
 
 * Description is parsed as Markdown.*
 * If `{Type}` is omitted, it will default to `Map` to make it more convenient for nested maps.
-
 
 ## @requires
 
@@ -299,6 +367,15 @@ Defines if the documented item requires any other item.
  * @requires {type} item <link>
  * @requires {type} item description <link>
  */
+{% endhighlight %}
+
+{% highlight scss %}
+/// @requires item
+/// @requires {type} item
+/// @requires {type} item - description
+/// @requires {type} item description
+/// @requires {type} item <link>
+/// @requires {type} item description <link>
 {% endhighlight %}
 
 **Notes:**
@@ -324,18 +401,22 @@ Describes the return statement of the documented item.
 /**
  * @returns {type}
  */
-{% endhighlight %}
 
-{% highlight scss %}
 /**
  * @returns {type | othertype}
  */
-{% endhighlight %}
 
-{% highlight scss %}
 /**
  * @returns {type} description
  */
+{% endhighlight %}
+
+{% highlight scss %}
+/// @returns {type}
+
+/// @returns {type | othertype}
+
+/// @returns {type} description
 {% endhighlight %}
 
 **Notes:**
@@ -359,6 +440,13 @@ Describes an item that is somehow related to the documented item. To describe a 
  */
 {% endhighlight %}
 
+{% highlight scss %}
+/// @see other-item
+/// @see {mixin} other-item
+/// @see $other-item
+/// @see %other-item
+{% endhighlight %}
+
 **Notes:**
 
 * Type is optional; default type is `function`.
@@ -376,6 +464,11 @@ Describes the version at which the documented item has been implemented or updat
  * @since version
  * @since version description
  */
+{% endhighlight %}
+
+{% highlight scss %}
+/// @since version
+/// @since version description
 {% endhighlight %}
 
 **Notes:**
@@ -396,6 +489,10 @@ Describes the error thrown by the documented item.
  */
 {% endhighlight %}
 
+{% highlight scss %}
+/// @throws Error related message
+{% endhighlight %}
+
 **Notes:**
 
 * Description is parsed as Markdown.*
@@ -413,6 +510,10 @@ Defines any task to do regarding the documented item.
  */
 {% endhighlight %}
 
+{% highlight scss %}
+/// @todo Task to be done
+{% endhighlight %}
+
 **Notes:**
 
 * Description is parsed as Markdown.*
@@ -428,12 +529,16 @@ Describes the type of a variable.
 /**
  * @type Bool
  */
-{% endhighlight %}
 
-{% highlight scss %}
 /**
  * @type Bool | String
  */
+{% endhighlight %}
+
+{% highlight scss %}
+/// @type Bool
+
+/// @type Bool | String
 {% endhighlight %}
 
 **Notes:**
