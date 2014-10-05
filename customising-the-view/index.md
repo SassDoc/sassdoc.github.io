@@ -11,7 +11,7 @@ SassDoc makes it possible for you to pass variables to the view through the `--c
 
 Here's a JSON example:
 
-{% highlight json %}
+{% highlight js %}
 {
   display: {
     access: ['public', 'private'],
