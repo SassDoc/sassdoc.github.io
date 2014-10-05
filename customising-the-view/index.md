@@ -11,23 +11,23 @@ SassDoc makes it possible for you to pass variables to the view through the `--c
 
 Here's a JSON example:
 
-{% highlight js %}
+{% highlight json %}
 {
-  'display': {
-    'access': ['public', 'private'],
-    'alias': false,
-    'watermark': true
+  display: {
+    access: ['public', 'private'],
+    alias: false,
+    watermark: true
   },
 
-  'package': './package.json',
+  package: './package.json',
 
-  'groups': {
-    'undefined': 'General'
+  groups: {
+    undefined: 'General'
   },
 
-  'theme': 'default',
+  theme: 'default',
 
-  'basePath': 'https://github.com/SassDoc/sassdoc'
+  basePath: 'https://github.com/SassDoc/sassdoc'
 }
 {% endhighlight %}
 
