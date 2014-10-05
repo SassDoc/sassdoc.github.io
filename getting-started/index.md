@@ -64,6 +64,10 @@ sassdoc <src> <dest> [options]
       <td><code>--no-update-notifier</code></td>
       <td>disable update notifier check</td>
     </tr>
+    <tr>
+      <td><code>--no-prompt</code></td>
+      <td>do not prompt with destination folder check warnings</td>
+    </tr>
   </tbody>
 </table>
 
