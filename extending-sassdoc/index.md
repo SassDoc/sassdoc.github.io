@@ -28,30 +28,34 @@ Then, you will export an annotations array to extend SassDoc.
 module.exports.annotations = [];
 {% endhighlight %}
 
+## Schema
+
 Each annotation is an object with a `name` property, a `parse`
 method, and optionnally `resolve` and `default` methods, and
 an `alias` array.
 
-The `parse` method takes the annotation content as parameter, and
-returns the parsed data (can be of any type - it will be available
-in the theme as `item.{{annotationName}}`, as an array since
-an annotation can be present multiple times).
+* `parse`: this method takes the annotation content as parameter, and
+  returns the parsed data (can be of any type - it will be available in
+  the theme as `item.{{annotationName}}`, as an array since an
+  annotation can be present multiple times).
 
-The `resolve` method is called after the raw data is generated,
-and is passed SassDoc data (indexed by type and name). You can then
-modify this object reference as you want to complete your data
-structure while having access to the whole data.
+* `resolve`: called after the raw data is generated, and is passed
+  SassDoc data (indexed by type and name). You can then modify this
+  object reference as you want to complete your data structure while
+  having access to the whole data.
 
-The `default` method returns a default value for when the annotation
-is not present.
+* `default`: returns a default value for when the annotation is not
+  present.
 
-`name` and `alias` are self-explanatory.
+* `name` and `alias` are self-explanatory.
 
-For example, we can add an `@awesome` annotation (meaning the annotated
-item is awesome) (also aliased as `@wow`).
+## Examples
+
+We can add an `@awesome` annotation (meaning the annotated item is
+awesome) (also aliased as `@wow`).
 
 This annotation is just meant to be applied as-is, without any
-argument
+argument.
 
 You can then add a condition on `item.awesome` in your templates!
 
