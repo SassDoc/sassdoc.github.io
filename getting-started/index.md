@@ -53,8 +53,8 @@ sassdoc <src> <dest> [options]
       <td>path to JSON/YAML configuration file</td>
     </tr>
     <tr>
-      <td><code>-t, --tdeme</code></td>
-      <td>tdeme to be used (will override configuration value)</td>
+      <td><code>-t, --theme</code></td>
+      <td>theme to be used (will override configuration value)</td>
     </tr>
     <tr>
       <td><code>--sass-convert</code></td>
