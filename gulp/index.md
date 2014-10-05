@@ -42,7 +42,7 @@ gulp.task('sassdoc', function () {
   return gulp
     .src('path/to/sass')
     .pipe(sassdoc({
-      dest: 'path/to/docs'
+      'dest': 'path/to/docs'
     }));
 });
 {% endhighlight %}
@@ -53,8 +53,8 @@ gulp.task('sassdoc', function () {
   return gulp
     .src('path/to/sass')
     .pipe(sassdoc({
-      dest: 'path/to/docs',
-      config: 'path/to/view.json'
+      'dest': 'path/to/docs',
+      'config': 'path/to/view.json'
     }));
 });
 {% endhighlight %}
@@ -65,21 +65,21 @@ gulp.task('sassdoc', function () {
 // just override the one you need.
 gulp.task('sassdoc', function () {
   var options = {
-      dest: 'test/docs',
-      verbose: true,
-      display: {
-        access: ['public', 'private'],
-        alias: true,
-        watermark: true
+      'dest': 'test/docs',
+      'verbose': true,
+      'display': {
+        'access': ['public', 'private'],
+        'alias': true,
+        'watermark': true
       },
-      groups: {
+      'groups': {
         'undefined': 'Ungrouped',
         'foo': 'Foo group',
         'bar': 'Bar group'
       },
-      package: './package.json',
-      theme: 'default',
-      basePath: 'https://github.com/SassDoc/sassdoc'
+      'package': './package.json',
+      'theme': 'default',
+      'basePath': 'https://github.com/SassDoc/sassdoc'
     };
 
     return gulp
@@ -104,20 +104,20 @@ gulp.task('sassdoc', function () {
   // Tip: you don't need to pass every options,
   // just override the one you need.
   var config = {
-    verbose: true,
-    display: {
-      access: ['public', 'private'],
-      alias: true,
-      watermark: true
+    'verbose': true,
+    'display': {
+      'access': ['public', 'private'],
+      'alias': true,
+      'watermark': true
     },
-    groups: {
+    'groups': {
       'undefined': 'Ungrouped',
       'foo': 'Foo group',
       'bar': 'Bar group'
     },
-    package: './package.json',
-    theme: 'default',
-    basePath: 'https://github.com/SassDoc/sassdoc'
+    'package': './package.json',
+    'theme': 'default',
+    'basePath': 'https://github.com/SassDoc/sassdoc'
   };
 
   // Enable verbose.

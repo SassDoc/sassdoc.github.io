@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Built with SassDoc"
-group: "Extra"
 ---
 
 ## [Bourbon Neat](http://thoughtbot.github.io/neat-docs/latest/)

@@ -1,20 +1,16 @@
 ---
 layout: default
 title: "Extending SassDoc"
-group: "Custom theme"
 ---
 
-Since 1.8, SassDoc allows you to define custom annotations.
-
-This can only be done from a [custom theme](/using-your-own-theme/)
-since SassDoc can't guess how you want your custom annotations to be
-displayed.
+SassDoc allows you to define custom annotations. This can only be done
+from a [custom theme](/using-your-own-theme/) since there is no way for
+SassDoc to guess what to do or how those annotations should be displayed.
 
 Here's a simple example to add a few simple annotations to SassDoc
 within your theme.
 
-First, you'll have the usual theme function. It's not covered in this
-page.
+First, you'll have the usual theme function. Refer to [Using Your Own Theme](/using-your-own-theme/) for more informations about this.
 
 {% highlight js %}
 module.exports = function () {
@@ -34,20 +30,13 @@ Each annotation is an object with a `name` property, a `parse`
 method, and optionnally `resolve` and `default` methods, and
 an `alias` array.
 
-* `parse`: this method takes the annotation content as parameter, and
-  returns the parsed data (can be of any type - it will be available in
-  the theme as `item.{{annotationName}}`, as an array since an
-  annotation can be present multiple times).
-
-* `resolve`: called after the raw data is generated, and is passed
-  SassDoc data (indexed by type and name). You can then modify this
-  object reference as you want to complete your data structure while
-  having access to the whole data.
-
-* `default`: returns a default value for when the annotation is not
-  present.
-
-* `name` and `alias` are self-explanatory.
+| Key | Type | Description |
+|-----|------|-------------|
+| `parse` | function | Takes the annotation content as parameter and returns the parsed data (can be of any type &mdash; it will be available in the theme as `item.<annotationName>`, as an array since an annotation can be present multiple times). |
+| `resolve` | function | Called after the raw data is generated, where the whole SassDoc data is being passed (indexed by type and name). You can then modify this object reference as you want to complete your data structure while having access to the whole data. |
+| `default` | function | Returns a default value when &mdash;if ever&mdash; the annotation is not present. |
+| `name` | string | Name of the annotation. |
+| `alias` | array | List of aliases for the annotation. |
 
 ## Examples
 
@@ -70,8 +59,12 @@ module.exports.annotations.push({
 
 Then, a `@friend` annotation to mark an item as "friend", for example:
 
-    @friend {function} foo
-    @friend {variable} bar
+{% highlight scss %}
+/**
+ * @friend {function} foo
+ * @friend {variable} bar
+ */
+{% endhighlight %}
 
 In your templates, `item.friend` will be an array of references
 to the "friends" items.
@@ -82,7 +75,10 @@ module.exports.annotations.push({
 
   parse: function (text) {
     var match = /^\{(.*)\}\s*(.*)$/.exec(text.trim());
-    return {type: match[1], name: match[2]};
+    return {
+      type: match[1],
+      name: match[2]
+    };
   },
 
   resolve: function (data) {

@@ -1,17 +1,16 @@
 ---
 layout: default
 title: "Contributing"
-group: "Extra"
 ---
 
 ## How to contribute?
 
 There are many things you can do to contribute SassDoc:
 
-* Report a bug
-* Fix a bug or implement a new feature
-* Suggest a new feature
-* Improve the documentation
+* Report a bug;
+* Fix a bug or implement a new feature;
+* Suggest a new feature;
+* Improve the documentation.
 
 ## Asking a question
 
@@ -24,7 +23,7 @@ If it's not, you can leave your question on:
 
 If you need a quick reply or don't feel really comfortable with asking on a public channel, try getting in touch with us on Twitter when possible:
 
-* [@SassDoc\_](https://twitter.com/sassdoc_), the official repository;
+* [@SassDoc\_](https://twitter.com/sassdoc_), the official account;
 * [@HugoGiraudel](https://twitter.com/hugogiraudel) for anything related to the goals, objectives or future of SassDoc;
 * [@Fweinb](https://twitter.com/fweinb) for anything related to the parser;
 * [@valeriangalliat](https://twitter.com/valeriagalliat) for any related to the theme engine;

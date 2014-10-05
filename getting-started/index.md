@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Getting started"
-group: "Getting started"
 ---
 
 Getting started with SassDoc could not be any easier.
@@ -35,6 +34,12 @@ sassdoc <src> <dest> [options]
 <p>... and options are:</p>
 
 <table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Role</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
       <td><code>--version</code></td>

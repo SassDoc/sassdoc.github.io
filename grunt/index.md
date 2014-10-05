@@ -42,10 +42,10 @@ You should really manage your options in one place.</p>
 {% highlight js %}
 // Bare minimum example.
 grunt.initConfig({
-  sassdoc: {
-    default: {
-      src: 'path/to/sass',
-      dest: 'path/to/docs'
+  'sassdoc': {
+    'default': {
+      'src': 'path/to/sass',
+      'dest': 'path/to/docs'
     }
   }
 });
@@ -54,12 +54,12 @@ grunt.initConfig({
 {% highlight js %}
 // Example with external view configuration file.
 grunt.initConfig({
-  sassdoc: {
-    default: {
-      src: 'path/to/sass',
-      dest: 'path/to/docs',
-      options: {
-        config: 'path/to/view.json'
+  'sassdoc': {
+    'default': {
+      'src': 'path/to/sass',
+      'dest': 'path/to/docs',
+      'options': {
+        'config': 'path/to/view.json'
       }
     }
   }
@@ -71,25 +71,25 @@ grunt.initConfig({
 // Tip: you're not required to to pass every options,
 // just override the one you need.
 grunt.initConfig({
-  sassdoc: {
-    default: {
-      src: 'path/to/sass',
-      dest: 'path/to/docs',
-      options: {
-        display: {
-          access: ['public', 'private'],
-          alias: true,
-          watermark: true
+  'sassdoc': {
+    'default': {
+      'src': 'path/to/sass',
+      'dest': 'path/to/docs',
+      'options': {
+        'display': {
+          'access': ['public', 'private'],
+          'alias': true,
+          'watermark': true
         },
-        package: './package.json',
-        theme: 'sassdoc-theme-dark',
-        groups: {
+        'package': './package.json',
+        'theme': 'sassdoc-theme-dark',
+        'groups': {
           'slug': 'Title',
           'helpers': 'Helpers',
           'hacks': 'Dirty Hacks & Fixes',
           'undefined': 'Ungrouped'
         },
-        basePath: 'https://github.com/SassDoc/sassdoc'
+        'basePath': 'https://github.com/SassDoc/sassdoc'
       }
     }
   }
@@ -101,7 +101,9 @@ grunt.initConfig({
 
 This task will emit a `start` event when compilation begins, and a `done` event on completion.
 This is useful if you would like simple notifications about the compile process.
-**The start and done events are not intended for replacing the standard Grunt API for configuring and running tasks.**
+
+<p class="note  note--danger"><strong>Caution!</strong> The <code>start</code> and <code>done</code> events are not intended for replacing the standard Grunt API for configuring and running tasks.</p>
+
 Here is a simple example using them:
 
 {% highlight js %}

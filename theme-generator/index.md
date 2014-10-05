@@ -17,19 +17,19 @@ title: "Theme generator"
 
 Install `generator-sassdoc-theme`:
 
-{% highlight sh %}
+{% highlight bash %}
 npm install -g generator-sassdoc-theme
 {% endhighlight %}
 
 Make a new theme directory, and `cd` into it:
 
-{% highlight sh %}
+{% highlight bash %}
 mkdir my-new-theme && cd $_
 {% endhighlight %}
 
 Run `yo sassdoc-theme`, optionally passing a theme name:
 
-{% highlight sh %}
+{% highlight bash %}
 yo sassdoc-theme [options] [<themeName>]
 {% endhighlight %}
 

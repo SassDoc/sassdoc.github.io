@@ -1,12 +1,7 @@
 ---
 layout: default
 title: "Frequently Asked Questions"
-group: "Extra"
 ---
-
-### Can SassDoc parse inline comments (`//`)?
-
-Starting 1.9, yes.
 
 ### Does SassDoc work with `.sass` files?
 

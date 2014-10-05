@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Changelog
+title: "Changelog"
 ---
 
 ## 1.9.0

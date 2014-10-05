@@ -1,0 +1,11 @@
+[id="table-of-contents"] + ul {
+
+  @include respond-to("large") {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+
+    padding-left: 0;
+    margin-bottom: 2em;
+  }
+}

@@ -23,14 +23,14 @@ sassdoc.parse(__dirname + '/sass').then(function (items) {
 
 {% highlight js %}
 var config = {
-  display: {
-    access: ['public', 'private'],
-    alias: false,
-    watermark: true,
+  'display': {
+    'access': ['public', 'private'],
+    'alias': false,
+    'watermark': true,
   },
 
-  package: 'path/to/package.json', // Defaults to `./package.json`
-  theme: 'theme-name', // Defaults to `default`
+  'package': 'path/to/package.json', // Defaults to `./package.json`
+  'theme': 'theme-name', // Defaults to `default`
 };
 
 var sassdoc = require('sassdoc');

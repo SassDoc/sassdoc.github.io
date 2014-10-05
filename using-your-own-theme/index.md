@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Using your own theme"
-group: "Custom theme"
 ---
 
 ## Introduction
@@ -38,7 +37,7 @@ themes without bothering with "low-level" considerations, like promises
 handling, raw `fs` calls, making sure the destination directory exists,
 etc.
 
-<p class="note  note--info">Note: since SassDoc 1.8, you can also add your own annotations by exporting an `annotations` array. See more on <a href="/extending-sassdoc/">Extending SassDoc</a>.</p>
+<p class="note  note--info"><strong>Note:</strong> you can also add your own annotations by exporting an <code>annotations</code> array. See more on <a href="/extending-sassdoc/">Extending SassDoc</a>.</p>
 
 ## Theme generator
 
@@ -63,10 +62,8 @@ First, you need to add the dependencies to your `package.json`:
 {% highlight json %}
 {
   ...
-
   "dependencies": {
     ...
-
     "themeleon": "0.*",
     "themeleon-swig": "0.*"
   }
@@ -83,7 +80,6 @@ directory, append this to it:
 {% highlight json %}
 {
   ...
-
   "theme": "theme"
 }
 {% endhighlight %}
@@ -111,12 +107,16 @@ to build the theme.
 {% highlight js %}
 var themeleon = require('themeleon')(); // Create a theme
 
-themeleon.use('swig'); // Tell the theme to use the `swig` extension
+// Tell the theme to use the `swig` extension
+themeleon.use('swig');
 
 // Themeleon needs to know the theme directory, hence `__dirname`
 module.exports = themeleon(__dirname, function (t) {
-  t.copy('assets'); // Copy `assets` in destination directory
-  // t.copy('assets', 'foo'); // Other name in destination directory
+  // Copy `assets` in destination directory
+  t.copy('assets');
+
+  // Other name in destination directory
+  // t.copy('assets', 'foo');
 
   // Compile a Swig view as `index.html` in destination directory
   t.swig('views/index.html.swig', 'index.html');
@@ -129,7 +129,7 @@ rendering your view in `index.html`.
 
 The views are passed a couple of variables [documented here](/data-interface/).
 
-<p class="note  note--info"><strong>Tip:</strong> To kick start your theme, be sure to check <a href="https://github.com/SassDoc/sassdoc-theme-blank">SassDoc's blank theme</a>, a theme with a basic directory structure, and loads of comments to help you understand how it works, and hack it to your own needs.</p>
+<p class="note  note--info"><strong>Tip:</strong> to kick start your theme, be sure to check <a href="https://github.com/SassDoc/sassdoc-theme-blank">SassDoc's blank theme</a>, a theme with a basic directory structure, and loads of comments to help you understand how it works, and hack it to your own needs.</p>
 
 ## Packaging to the World
 
@@ -161,8 +161,7 @@ which makes finding and listing SassDoc themes published on `npm` easier.
 
 Then, run `npm publish` and you're done!
 
-<p class="note  note--info"><strong>Note:</strong> the last command will require you to setup an npm account. Run
-<code>npm adduser</code> if you haven't an account configured already.</p>
+<p class="note  note--info"><strong>Note:</strong> the last command will require you to setup an npm account. Run <code>npm adduser</code> if you haven't an account configured already.</p>
 
 ## Bonus
 

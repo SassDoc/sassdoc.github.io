@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Documenting your items"
-group: "Getting started"
 ---
 
 ## Table of contents

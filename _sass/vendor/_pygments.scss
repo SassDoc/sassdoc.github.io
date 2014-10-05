@@ -4,8 +4,7 @@
     margin-bottom: 1em;
     font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     overflow: auto;
-    border: 1px solid #CCC;
-    border-radius: .2em;
+    border-left: .5em solid #666;
 
     pre {
         margin: 0;
@@ -149,7 +148,8 @@
     color: #f8f8f2;
 }
 
-.highlight .nt {
+.highlight .nt,
+.l-Scalar-Plain {
     color: #f92672;
 }
 
@@ -201,4 +201,8 @@
 
 .highlight .il {
     color: #ae81ff;
+}
+
+.language-json .err {
+    background: transparent;
 }

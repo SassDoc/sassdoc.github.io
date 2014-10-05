@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Customising the view"
-group: "Getting started"
 ---
 
 SassDoc makes it possible for you to pass variables to the view through the `--config` option. In itself, this configuration does absolutely nothing. But then it gets merged with the one from the theme (if there is one). In case a key is present in both files, the one from your file will takes precedence (so you can override theme's settings).
@@ -12,23 +11,23 @@ SassDoc makes it possible for you to pass variables to the view through the `--c
 
 Here's a JSON example:
 
-{% highlight json %}
+{% highlight js %}
 {
-  "display": {
-    "access": ["public", "private"],
-    "alias": false,
-    "watermark": true
+  'display': {
+    'access': ['public', 'private'],
+    'alias': false,
+    'watermark': true
   },
 
-  "package": "./package.json",
+  'package': './package.json',
 
-  "groups": {
-    "undefined": "General"
+  'groups': {
+    'undefined': 'General'
   },
 
-  "theme": "default",
+  'theme': 'default',
 
-  "basePath": "https://github.com/SassDoc/sassdoc"
+  'basePath': 'https://github.com/SassDoc/sassdoc'
 }
 {% endhighlight %}
 
@@ -36,17 +35,17 @@ And the same configuration in YAML:
 
 {% highlight yaml %}
 display
-    access: [public, private]
+    access: ["public", "private"]
     alias: false
     watermark: true
 
-package: ./package.json
+package: "./package.json"
 
 groups:
-    undefined: General
+    undefined: "General"
 
-theme: default
-basePath: https://github.com/SassDoc/sassdoc
+theme: "default"
+basePath: "https://github.com/SassDoc/sassdoc"
 {% endhighlight %}
 
 | Type | Name | Description |
@@ -79,8 +78,8 @@ If this doesn't work for you, then you can set your own package. The package obj
 Use the `-c` or `--config` option to define the path to your configuration file. If the option is not defined, SassDoc will try in this order: `view.json`, `view.yaml`, `view.yml` in the current directory. If nothing is found, the theme's default configuration will be used.
 
 {% highlight sh %}
-sassdoc source/ destination/ -c path/to/config.json # Short option and JSON file
-sassdoc source/ destination/ --config path/to/config.yaml # Long option and YAML file
+sassdoc source/ destination/       -c path/to/config.json # Short option and JSON file
+sassdoc source/ destination/ --config path/to/config.yaml # Long  option and YAML file
 {% endhighlight %}
 
 ### From the Node API

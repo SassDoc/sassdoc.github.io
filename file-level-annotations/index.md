@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "File-level annotations"
-group: "Getting started"
 ---
 
 You can define annotations at a file-level rather than on specific items. It is useful when you have a whole file sharing some annotations (for instance `@group`, `@author` and so on).

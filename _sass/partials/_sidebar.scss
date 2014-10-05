@@ -50,14 +50,27 @@
 
 .sidebar__list-item {
   border-bottom: 1px solid rgba(black, .1);
+  position: relative;
 
   @include respond-to("large") {
     border: none;
   }
 
+  &.active::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: .5em solid transparent;
+    border-bottom: .5em solid transparent;
+    border-right: .75em solid white;
+    position: absolute;
+    right: -1.1em;
+    top: 50%;
+    margin-top: -.5em;
+  }
+
   &.active a {
     color: $black;
-    font-weight: bold;
   }
 }
 

@@ -39,19 +39,19 @@ var docs = sassdoc('path/to/sass');
 {% highlight js %}
 // Example with external view configuration file.
 var docs = sassdoc('path/to/sass', {
-    config: 'path/to/view.json'
+    'config': 'path/to/view.json'
 });
 {% endhighlight %}
 
 {% highlight js %}
 // Example with passed in options.
 var docs = sassdoc('path/to/sass', {
-    verbose: true,
-    display: {
-      access: ['public', 'private'],
-      alias: true,
-      watermark: true
+    'verbose': true,
+    'display': {
+      'access': ['public', 'private'],
+      'alias': true,
+      'watermark': true
     },
-    package: './package.json'
+    'package': './package.json'
 });
 {% endhighlight %}
