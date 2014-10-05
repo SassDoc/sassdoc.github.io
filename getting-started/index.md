@@ -4,20 +4,20 @@ title: "Getting started"
 group: "Getting started"
 ---
 
-Getting started with SassDoc is really easy.
+Getting started with SassDoc could not be any easier.
 
 <div class="counter-steps">
 <p class="counter-step">Install SassDoc.</p>
 
-{% highlight sh %}
+{% highlight bash %}
 npm install sassdoc -g
 {% endhighlight %}
 
-<p class="counter-step">Write comments as specified in <a href="/documenting-your-items/">Document Your Items</a>. The syntax is pretty close to JSDoc although we took some liberty with it.</p>
+<p class="counter-step">Write comments as specified in <a href="/documenting-your-items/">Documenting Your Items</a>. The syntax is pretty close to JSDoc although we took some liberty with it.</p>
 
 <p class="counter-step">Run SassDoc.</p>
 
-{% highlight sh %}
+{% highlight bash %}
 sassdoc <src> <dest> [options]
 {% endhighlight %}
 
