@@ -1,0 +1,2 @@
+THEMES += light
+THEMES += vulcan

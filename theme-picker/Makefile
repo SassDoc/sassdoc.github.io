@@ -1,3 +1,5 @@
+include themes.mk
+
 MOGRIFY = mogrify
 NPM = npm
 GIT = git
@@ -18,29 +20,24 @@ PREVIEW = $(PREVIEW_DIR)/$(THEME)
 THUMB = $(THUMB_DIR)/$(THEME).png
 SAMPLE = sample
 
-ALL += require-theme
-ALL += $(PREVIEW)
-ALL += $(THUMB)
+ALL = $(addsuffix .png, $(addprefix $(THUMB_DIR)/, $(THEMES)))
 
 all: $(ALL)
 
-require-theme:
-	if [ -z '$(THEME)' ]; then echo 'Usage: make THEME=<theme>' >&2; exit 1; fi
-
-$(PREVIEW): $(PREVIEW_DIR) $(SAMPLE) $(SASSDOC) $(THEME_PACKAGE)
-	$(SASSDOC) $(SAMPLE) $@ --theme $(THEME_PACKAGE)
-
-$(THUMB): $(THUMB_DIR) $(WEBSHOT)
-	$(WEBSHOT) $(PREVIEW)/index.html $@
+$(THUMB_DIR)/%.png: $(PREVIEW_DIR)/% | $(WEBSHOT) $(THUMB_DIR)
+	$(WEBSHOT) $</index.html $@
 	$(MOGRIFY) -resize 256x192 $@
+
+$(PREVIEW_DIR)/%: node_modules/$(THEME_PACKAGE_PREFIX)% $(SAMPLE) | $(SASSDOC) $(PREVIEW_DIR)
+	$(SASSDOC) $(SAMPLE) $@ --theme $<
+
+node_modules/$(THEME_PACKAGE_PREFIX)%:
+	npm install $(@F)
 
 $(SAMPLE):
 	$(GIT) clone https://github.com/SassDoc/sassdoc-theme-light .$@
 	mv .$@/scss/utils $@
 	$(RM) -r .$@
-
-$(THEME_PACKAGE):
-	npm install $(THEME_PACKAGE_NAME)
 
 $(SASSDOC):
 	$(NPM) install sassdoc
