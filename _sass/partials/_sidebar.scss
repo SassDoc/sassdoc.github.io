@@ -60,13 +60,13 @@
     content: '';
     width: 0;
     height: 0;
-    border-top: .5em solid transparent;
-    border-bottom: .5em solid transparent;
-    border-right: .75em solid white;
+    border-top: .7em solid transparent;
+    border-bottom: .7em solid transparent;
+    border-right: .9em solid white;
     position: absolute;
     right: -1.1em;
     top: 50%;
-    margin-top: -.5em;
+    margin-top: -.7em;
   }
 
   &.active a {
