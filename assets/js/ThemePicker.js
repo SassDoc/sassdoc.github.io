@@ -22,7 +22,7 @@
 
   ThemePicker.prototype.bindUI = function () {
     $('.theme-picker__item').on('click', $.proxy(function (event) {
-      this.selectTheme($(event.target).attr('id'));
+      this.selectTheme($(event.target).attr('alt'));
     }, this));
   };
 
@@ -51,9 +51,9 @@
   };
 
   ThemePicker.prototype.preview = function (theme) {
-    $('.theme-picker__previewer').attr('src', '/preview/theme-' + theme);
+    $('.theme-picker__previewer').attr('src', '/theme-picker/preview/' + theme);
   };
-  
+
   global.ThemePicker = ThemePicker;
-  
+
 }(window.jQuery, window));

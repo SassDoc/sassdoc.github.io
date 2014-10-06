@@ -8,7 +8,7 @@ title: test
     <ul>
     {% for theme in site.data.themes %}
       <li class="theme-picker__item">
-        <img src="/theme-picker/thumbs/{{ theme.name | replace: 'sassdoc-theme-', '' }}.png" alt="{{ theme.name }}" />
+        <img src="/theme-picker/thumbs/{{ theme[0] }}.png" alt="{{ theme[0] }}" />
       </li>
     {% endfor %}
     </ul>
