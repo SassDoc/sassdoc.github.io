@@ -7,6 +7,8 @@ url: "http://sassdoc.com"
 twitter_username: sassdoc_
 github_username:  sassdoc
 
+exclude: ["theme-picker/node_modules"]
+
 # Build settings
 markdown: kramdown
 
