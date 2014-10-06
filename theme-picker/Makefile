@@ -32,7 +32,7 @@ $(PREVIEW): $(PREVIEW_DIR) $(SAMPLE) $(SASSDOC) $(THEME_PACKAGE)
 
 $(THUMB): $(THUMB_DIR) $(WEBSHOT)
 	$(WEBSHOT) $(PREVIEW)/index.html $@
-	$(MOGRIFY) $@ -resize 100x50
+	$(MOGRIFY) -resize 256x192 $@
 
 $(SAMPLE):
 	$(GIT) clone https://github.com/SassDoc/sassdoc-theme-light .$@
