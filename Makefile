@@ -10,6 +10,6 @@ changelog/index.md: force
 THEMES = $(shell echo theme-picker/node_modules/sassdoc-theme-*/package.json)
 
 _data/themes.yml: $(THEMES)
-	for i in $^; do sed '1s/^/- /;2,$$s/^/  /' "$$i"; done > $@
+	for i in $^; do name=$$(basename $$(dirname $$i) | sed 's/^sassdoc-theme-//'); sed "1s/^/$$name: /" $$i; done > $@
 
 force:
