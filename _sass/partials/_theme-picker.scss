@@ -27,12 +27,15 @@
 }
 
 .theme-picker__item {
-  float: left;
-  max-width: 270px;
   margin: .5em;
   position: relative;
   overflow: hidden;
   transition: .15s ease-out;
+
+  @include respond-to("large") {
+    max-width: 270px;
+    float: left;
+  }
 
   &.active {
     box-shadow: 0 0 0 .25em rgba($dark-pink, .5);
@@ -112,12 +115,15 @@
 }
 
 .theme-preview__fullscreen-button {
-  float: right;
-  background: none;
-  border: none;
-  font-size: .7em;
   color: lighten($black, 10%);
   margin-top: .3em;
+
+  @include respond-to("large") {
+    float: right;
+    background: none;
+    border: none;
+    font-size: .7em;
+  }
 
   .sassdoc-theme-preview--empty & {
     display: none;
