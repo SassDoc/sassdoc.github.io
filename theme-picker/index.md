@@ -7,7 +7,7 @@ title: "Theme Picker"
   <p>SassDoc officially has a single theme, but it also provides a simple and powerful theming engine to help authors <a href="/using-your-own-theme">build their own theme</a>. If you have built a theme or know one that's not featured here, be sure to suggest it!</p>
 
   <section class="theme-picker">
-    <h2>Click a theme to preview it</h2>
+    <h2>Click to preview</h2>
     <ul class="theme-picker__list">
     {% for theme in site.data.themes %}
       <li class="theme-picker__item" data-theme-name="{{ theme[0] }}">
@@ -41,8 +41,17 @@ title: "Theme Picker"
   </section>
 
   <section class="theme-preview">
-    <h2>Preview</h2>
-    <iframe class="theme-preview__frame" src=""></iframe>
+    <h2>Preview Theme
+      <span class="theme-preview__name" data-inject-theme-name></span>
+      <button class="theme-preview__fullscreen-button">Fullscreen</button>
+    </h2>
+    <iframe class="theme-preview__frame" frameborder="0" src=""></iframe>
+    <button class="theme-preview__fullscreen-close">Close fullscreen &times;</button>
+  </section>
+
+  <section class="theme-code">
+    <h2>Use this theme</h2>
+    <pre class="highlight"><code>sassdoc --theme <span data-inject-theme-name class="theme-code__name"></span> src dest</code></pre>
   </section>
 </article>
 
