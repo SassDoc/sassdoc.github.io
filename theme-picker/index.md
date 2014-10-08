@@ -4,6 +4,8 @@ title: "Theme Picker"
 ---
 
 <article class="sassdoc-theme-preview  sassdoc-theme-preview--empty">
+  <p>SassDoc officially has a single theme, but it also provides a simple and powerful theming engine to help authors <a href="/using-your-own-theme">build their own theme</a>. If you have built a theme or know one that's not featured here, be sure to suggest it!</p>
+
   <section class="theme-picker">
     <h2>Click a theme to preview it</h2>
     <ul class="theme-picker__list">
@@ -14,7 +16,7 @@ title: "Theme Picker"
           <ul class="metadata__list">
             <li class="metadata__item">
               {% if theme[1].homepage %}
-              <a href="{{ theme[1].homepage }}">{{ theme[1].title|default(theme[1].name) }}</a>
+              <a href="{{ theme[1].homepage }}" target="_blank">{{ theme[1].title|default(theme[1].name) }}</a>
               {% else %}
               <span>{{ theme[1].title|default(theme[1].name) }}</span>
               {% endif %}
