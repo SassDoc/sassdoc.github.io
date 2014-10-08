@@ -1,0 +1,50 @@
+.sassdoc-theme-preview {
+
+}
+
+.sassdoc-theme-preview--empty {
+
+}
+
+.theme-picker {
+  ul {
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+  }
+}
+
+.theme-picker__item {
+  float: left;
+  margin: .5em;
+  max-width: 10em;
+  cursor: pointer;
+  opacity: .8;
+  border: 1px solid silver;
+  transition: .15s ease-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.theme-preview {
+  .sassdoc-theme-preview--empty & {
+    display: none;
+  }
+}
+
+.theme-preview__frame {
+  width: 100%;
+  border: 1px solid silver;
+  min-height: 30em;
+}
+
+.theme-content {
+
+  .sassdoc-theme-preview--empty & {
+    display: none;
+  }
+}
