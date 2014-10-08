@@ -15,6 +15,9 @@
     - title: "Customising the view"
       url: "/customising-the-view/"
       _blank: false
+    - title: "Theme picker"
+      url: "/theme-picker/"
+      _blank: false
 - title: "Custom theme"
   order: 2
   items:
