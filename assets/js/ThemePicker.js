@@ -17,41 +17,21 @@
   };
 
   ThemePicker.prototype.initialize = function () {
-    this.bindUI();
-  };
+    var $item         = $('.theme-picker__item');
+    var $frame        = $('.theme-preview__frame');
+    var $container    = $('.' + this.conf.container);
+    var inactiveClass = this.conf.container + '--empty';
+    var $selectedItem;
 
-  ThemePicker.prototype.bindUI = function () {
-    $('.theme-picker__item').on('click', $.proxy(function (event) {
-      this.selectTheme($(event.target).attr('alt'));
-    }, this));
-  };
+    $item.on('click', function (event) {
+      $selectedItem = $(event.target).closest('[data-theme-name]');
 
-  ThemePicker.prototype.selectTheme = function (theme) {
-    var themeConf = this.conf.themes[theme];
+      $container.removeClass(inactiveClass);
+      $item.removeClass('active');
+      $selectedItem.addClass('active');
 
-    if (typeof themeConf === 'undefined') {
-      throw new Error('Unknown theme `' + theme + '`.');
-    }
-
-    $('.' + this.conf.container).removeClass(this.conf.container + '--empty');
-    this.injectData(theme);
-    this.preview(theme);
-  };
-
-  ThemePicker.prototype.injectData = function (theme) {
-    var themeConf = this.conf.themes[theme];
-
-    $('.theme-content__name').html(themeConf.name);
-    $('.theme-content__author').html(themeConf.author);
-    $('.theme-content__homepage').html(themeConf.homepage);
-    $('.theme-content__homepage').attr('href', themeConf.homepage);
-    $('.theme-content__description').html(themeConf.description);
-    $('.theme-content__license').html(themeConf.license);
-    $('.theme-content__version').html(themeConf.version);
-  };
-
-  ThemePicker.prototype.preview = function (theme) {
-    $('.theme-picker__previewer').attr('src', '/theme-picker/preview/' + theme);
+      $frame.attr('src', '/theme-picker/preview/' + $selectedItem.data('theme-name'));
+    });
   };
 
   global.ThemePicker = ThemePicker;
