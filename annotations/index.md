@@ -141,6 +141,7 @@ Describes the usage of `@content` Sass directive in a mixin.
 
 **Notes:**
 
+* Autofilled (if not set otherwise in `autofill` option).
 * Parsed as Markdown.*
 * Automatically added if found in extracted code.
 * Has no effect on functions, variables and placeholders.
@@ -329,7 +330,6 @@ Describes a parameter of the documented item.
 * Multiple types must be separated by pipes (`|`).
 * Has no effect on variables and placeholders.
 
-
 ## @prop
 
 Document maps properties, use the dot notation to signify nesting.
@@ -379,6 +379,7 @@ Defines if the documented item requires any other item.
 
 **Notes:**
 
+* Autofilled (if not set otherwise in `autofill` option).
 * Type is optional; default type is `function`.
 * Description is optional. Hyphen before description is optional.
 * Description is parsed as Markdown.*
@@ -494,6 +495,7 @@ Describes the error thrown by the documented item.
 
 **Notes:**
 
+* Autofilled (if not set otherwise in `autofill` option).
 * Description is parsed as Markdown.*
 * Multiple `@throws` allowed on the same item.
 
