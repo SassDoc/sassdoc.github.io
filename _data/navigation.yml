@@ -3,14 +3,20 @@
     - title: "Getting started"
       url: "/getting-started/"
       _blank: false
-    - title: "Documenting your items"
-      url: "/documenting-your-items/"
+    - title: "Configuration"
+      url: "/configuration/"
+      _blank: false
+    - title: "Annotations"
+      url: "/annotations/"
       _blank: false
     - title: "File-level annotations"
       url: "/file-level-annotations/"
       _blank: false
     - title: "Customising the view"
       url: "/customising-the-view/"
+      _blank: false
+    - title: "Theme picker"
+      url: "/theme-picker/"
       _blank: false
 - title: "Custom theme"
   order: 2

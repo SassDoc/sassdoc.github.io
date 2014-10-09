@@ -1,30 +1,30 @@
 ---
 layout: default
-title: "Documenting your items"
+title: "Annotations"
 ---
 
-## Table of contents
-
-* [Name](#name)
-* [Description](#description)
-* [@access](#access)
-* [@alias](#alias)
-* [@author](#author)
-* [@content](#content)
-* [@deprecated](#deprecated)
-* [@example](#example)
-* [@group](#group)
-* [@ignore](#ignore)
-* [@link (@source)](#link-synonym-source)
-* [@output](#output)
-* [@param (@arg, @argument)](#param-synonyms-arg-argument)
-* [@prop](#prop)
-* [@requires (@require)](#requires)
-* [@returns (@return)](#returns-synonym-return)
-* [@see](#see)
-* [@since](#since)
-* [@throws (@throw, @exception)](#throws-synonym-throw-exception)
-* [@todo](#todo)
+| Annotation | Description |
+|------------|-------------|
+| [Name](#name) | Name of the documented item |
+| [Description](#description) | Description of the documented item |
+| [@access](#access) | Access of the documented item |
+| [@alias](#alias) | Whether the documented item is an alias of another item |
+| [@author](#author) | Author of the documented item |
+| [@content](#content) | Whether the documented mixin uses the `@content` directive |
+| [@deprecated](#deprecated) | Whether the documented item is deprecated |
+| [@example](#example) | Example for the documented item |
+| [@group](#group) | Group the documented item belongs to |
+| [@ignore](#ignore) | Ignored content |
+| [@link (@source)](#link-synonym-source) | Link related to the documented item |
+| [@output](#output) | Output from the documented mixin |
+| [@param (@arg, @argument)](#param-synonyms-arg-argument) | Parameters from the documented mixin or function |
+| [@prop](#prop) | Property of the documented map |
+| [@requires (@require)](#requires) | Requirements from the documented item |
+| [@returns (@return)](#returns-synonym-return) | Return from the documented function |
+| [@see](#see) | Resource related to the documented item |
+| [@since](#since) | Changelog for the documented item |
+| [@throws (@throw, @exception)](#throws-synonym-throw-exception) | Exceptions raised by the documented item |
+| [@todo](#todo) | Things to do related to the documented item |
 
 <p class="note  note--info"><strong>Note:</strong> remember that you can define annotations at a file level rather than on specific items, which can happen to be very useful when all items from a file share some traits (author, group, and so on...). To do so, please refer to <a href="/file-level-annotations/">File-level Annotations</a>.</p>
 
