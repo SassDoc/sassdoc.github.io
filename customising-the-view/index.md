@@ -3,16 +3,72 @@ layout: default
 title: "Customising the view"
 ---
 
-SassDoc makes it possible for you to pass variables to the view through the `--config` option. In itself, this configuration does absolutely nothing. But then it gets merged with the one from the theme (if there is one). In case a key is present in both files, the one from your file will takes precedence (so you can override theme's settings).
+Aside from regular [configuration](/configuration/) from SassDoc itself, it is likely that the theme you use provides some kind of default configuration that you can overload.
 
-## Customising SassDoc's default theme
+This is done exactly like the regular configuration, within the same configuration file. Please refer to the [configuration documentation](/configuration/) to learn how to specify a configuration file.
 
-[SassDoc's default theme](https://github.com/SassDoc/sassdoc-theme-light) has a couple of options to give you some extra power over the view. You can override or complete this configuration with a JSON or YAML file.
+## Options
+
+[SassDoc's default theme](https://github.com/SassDoc/sassdoc-theme-light) has a couple of options to give you some extra power over the view.
+
+| Option              | Type    | Default                 |
+|---------------------|---------|-------------------------|
+| `display.access`    | Array   | `["public", "private"]` |
+| `display.alias`     | Boolean | `false`                 |
+| `display.watermark` | Boolean | `true`                  |
+| `basePath`          | String  | `""`                    |
+
+### display.access
+
+The `display.access` option lists access levels that are being displayed, default is all (both `public` and `private`). If you don't want to display `private` items, you can remove it from the array, like so:
+
+{% highlight js %}
+{
+  display: {
+    access: ["public"]
+  }
+}
+{% endhighlight %}
+
+### display.alias
+
+The `display.alias` option defines whether or not aliases should be displayed. Default value is `false`, meaning that aliases items are not displayed in the docs. They are documented and exist in the raw data, but are simply not displayed.
+
+If you want to display aliases as well, change the value to `true`.
+
+{% highlight js %}
+{
+  display: {
+    alias: true
+  }
+}
+{% endhighlight %}
+
+### display.watermark
+
+The default theme from SassDoc displays a discret *© Made with love by [SassDoc](http://github.com/sassdoc) team.* in the footer, in order to promote the tool and share the love. You can turn off this watermak if you like, but we would really appreciate you to leave it if you use this theme.
+
+{% highlight js %}
+{
+  display: {
+    watermark: false
+  }
+}
+{% endhighlight %}
+
+Along the same lines, if you build your own theme, adding a little mention to SassDoc somewhere on the page would be very nice of you!
+
+### basePath
+
+The `basePath` option is used to provide a *View source* link to each item in case the code is hosted on a public repository. By setting the option to the base path of your repository, and thanks to SassDoc's parser keeping track of the file name, the path and the lines number, we are able to build links such as: [https://github.com/sassdoc/sassdoc/tree/master/scss/utils/functions.scss#L13-L37](https://github.com/sassdoc/sassdoc/tree/master/scss/utils/functions.scss#L13-L37).
+
+## Example
 
 Here's a JSON example:
 
 {% highlight js %}
 {
+  basePath: 'https://github.com/SassDoc/sassdoc',
   display: {
     access: ['public', 'private'],
     alias: false,
@@ -20,83 +76,24 @@ Here's a JSON example:
   },
 
   package: './package.json',
-
+  theme: 'default',
   groups: {
     undefined: 'General'
-  },
-
-  theme: 'default',
-
-  basePath: 'https://github.com/SassDoc/sassdoc'
+  }
 }
 {% endhighlight %}
 
 And the same configuration in YAML:
 
 {% highlight yaml %}
-display
+basePath: "https://github.com/SassDoc/sassdoc"
+display:
     access: ["public", "private"]
     alias: false
     watermark: true
 
 package: "./package.json"
-
+theme: "default"
 groups:
     undefined: "General"
-
-theme: "default"
-basePath: "https://github.com/SassDoc/sassdoc"
-{% endhighlight %}
-
-| Type | Name | Description |
-|:-----|:-----|:------------|
-| `Array` | `display.access` | access levels that should be displayed |
-| `Boolean` | `display.alias` | enable/disable display of alias items |
-| `Boolean` | `display.watermark` | mention to SassDoc in footer (be cool, leave it!) |
-| `String`/`Object` | `package` | path to a custom JSON file or directly an object |
-| `Object` | `groups` | keys are group slugs you defined with `@group` annotations and values are group aliases, displayed in the view |
-| `String` | `theme` | custom or contrib theme name |
-| `String` | `basePath` | a path or URL to link to sources files from generated docs |
-
-Before setting the `package` key you have to know we try to find a `package.json` file at 3 different places before giving up:
-
-* a relative path from your current folder,
-* a relative path from the theme folder,
-* an absolute path.
-
-If this doesn't work for you, then you can set your own package. The package object (either direct or required from a path) should ideally contain:
-
-* `title`: human name of your project
-* `name`: package name of your project (in case `title` is not defined)
-* `version`: your project's version
-* `license`: your project's license
-* `homepage`: URL to your project's homepage
-* `description`: description of your project
-
-### From the CLI
-
-Use the `-c` or `--config` option to define the path to your configuration file. If the option is not defined, SassDoc will try in this order: `view.json`, `view.yaml`, `view.yml` in the current directory. If nothing is found, the theme's default configuration will be used.
-
-{% highlight sh %}
-sassdoc source/ destination/       -c path/to/config.json # Short option and JSON file
-sassdoc source/ destination/ --config path/to/config.yaml # Long  option and YAML file
-{% endhighlight %}
-
-### From the Node API
-
-When using the Node API instead of the CLI, it's easier to use an object from the ground up and to pass it as the 3rd argument to the `documentize` method.
-
-{% highlight js %}
-var config = {
-  "display": {
-    "access": ["public", "private"],
-    "alias": false,
-    "watermark": true
-  },
-
-  "package": "./package.json"
-}
-
-var sassdoc = require('sassdoc');
-sassdoc.documentize(source, dest, config);
 {% endhighlight %}
