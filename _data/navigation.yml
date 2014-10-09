@@ -6,8 +6,8 @@
     - title: "Configuration"
       url: "/configuration/"
       _blank: false
-    - title: "Documenting your items"
-      url: "/documenting-your-items/"
+    - title: "Annotations"
+      url: "/annotations/"
       _blank: false
     - title: "File-level annotations"
       url: "/file-level-annotations/"
