@@ -43,7 +43,7 @@
       $selectedItem.addClass('active');
 
       $('[data-inject-theme-name]').html($selectedItem.data('theme-name'));
-      $frame.attr('src', '/theme-picker/preview/' + $selectedItem.data('theme-name'));
+      $frame.attr('src', '/theme-gallery/preview/' + $selectedItem.data('theme-name'));
     });
 
     $fullscreenButton.on('click', function () {

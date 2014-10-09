@@ -17,7 +17,7 @@ Update `changelog/index.md` from
 
 Do everything needed for the theme picker to work:
 
-1. Run `make` in `theme-picker`. This will fetch all the themes defined
+1. Run `make` in `theme-gallery`. This will fetch all the themes defined
    in `themes.mk`, render them in `preview` and generate thumbnails in
    `thumbs`.
 

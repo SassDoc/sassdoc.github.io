@@ -15,9 +15,6 @@
     - title: "Customising the view"
       url: "/customising-the-view/"
       _blank: false
-    - title: "Theme picker"
-      url: "/theme-picker/"
-      _blank: false
 - title: "Custom theme"
   order: 2
   items:
@@ -35,6 +32,9 @@
       _blank: false
     - title: "Theme generator"
       url: "/theme-generator/"
+      _blank: false
+    - title: "Theme Gallery"
+      url: "/theme-gallery/"
       _blank: false
 - title: "Alternative usages"
   items:

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Theme Picker"
+title: "Theme Gallery"
 ---
 
 <article class="sassdoc-theme-preview  sassdoc-theme-preview--empty">
@@ -11,7 +11,7 @@ title: "Theme Picker"
     <ul class="theme-picker__list">
     {% for theme in site.data.themes %}
       <li class="theme-picker__item" data-theme-name="{{ theme[0] }}">
-        <img src="/theme-picker/thumbs/{{ theme[0] }}.png" alt="{{ theme[0] }}" />
+        <img src="/theme-gallery/thumbs/{{ theme[0] }}.png" alt="{{ theme[0] }}" />
         <div class="theme-picker__metadata  metadata">
           <ul class="metadata__list">
             <li class="metadata__item">
