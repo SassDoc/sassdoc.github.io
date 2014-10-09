@@ -3,6 +3,9 @@
     - title: "Getting started"
       url: "/getting-started/"
       _blank: false
+    - title: "Configuration"
+      url: "/configuration/"
+      _blank: false
     - title: "Documenting your items"
       url: "/documenting-your-items/"
       _blank: false
