@@ -17,6 +17,7 @@ This is done exactly like the regular configuration, within the same configurati
 | `display.alias`     | Boolean | `false`                 |
 | `display.watermark` | Boolean | `true`                  |
 | `basePath`          | String  | `""`                    |
+| `shortcutIcon`      | String  | `""`                    |
 
 ### display.access
 
@@ -62,23 +63,34 @@ Along the same lines, if you build your own theme, adding a little mention to Sa
 
 The `basePath` option is used to provide a *View source* link to each item in case the code is hosted on a public repository. By setting the option to the base path of your repository, and thanks to SassDoc's parser keeping track of the file name, the path and the lines number, we are able to build links such as: [https://github.com/sassdoc/sassdoc/tree/master/scss/utils/functions.scss#L13-L37](https://github.com/sassdoc/sassdoc/tree/master/scss/utils/functions.scss#L13-L37).
 
+### shortcutIcon
+
+The `shortcutIcon` option can be used to provide a favicon to your documentation. It accepts a path, either relative or absolute.
+
+{% highlight js %}
+{
+  shortcutIcon: "assets/images/favicon.png"
+}
+{% endhighlight %}
+
 ## Example
 
 Here's a JSON example:
 
 {% highlight js %}
 {
-  basePath: 'https://github.com/SassDoc/sassdoc',
+  basePath: "https://github.com/SassDoc/sassdoc",
+  shortcutIcon: "assets/images/favicon.png",
   display: {
-    access: ['public', 'private'],
+    access: ["public", "private"],
     alias: false,
     watermark: true
   },
 
-  package: './package.json',
-  theme: 'default',
+  package: "./package.json",
+  theme: "default",
   groups: {
-    undefined: 'General'
+    undefined: "General"
   }
 }
 {% endhighlight %}
@@ -87,6 +99,7 @@ And the same configuration in YAML:
 
 {% highlight yaml %}
 basePath: "https://github.com/SassDoc/sassdoc"
+shortcutIcon: "assets/images/favicon.png"
 display:
     access: ["public", "private"]
     alias: false
