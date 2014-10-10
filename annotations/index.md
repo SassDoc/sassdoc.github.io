@@ -234,7 +234,7 @@ Defines to which group (if any) the documented item belongs.
 
 * All items without `@group` will be gathered in an "undefined" group.
 * Groups define the way items are displayed in SassDoc's default theme.
-* Groups can be aliased for friendly names from the configuration ([more infos](https://github.com/SassDoc/sassdoc/wiki/Customising-the-View)).
+* Groups can be aliased for friendly names from the configuration ([more infos](http://sassdoc.com/configuration/#groups)).
 
 ## @ignore
 
