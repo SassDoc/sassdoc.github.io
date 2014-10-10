@@ -27,16 +27,16 @@ sassdoc <src> <dest> [options]
 * `<dest>` is the path to the destination folder;
 * `[options]` are:
 
-| Option | Role |
-|--------|------|
-| `--version` | show version |
-| `-h`, `--help` | bring help |
-| `-v`, `--verbose` | enable verbose mode |
-| `-c`, `--config` | path to JSON/YML configuration file |
-| `-t`, `--theme` | theme to use |
-| `--sass-convert` | use if syntax is `.sass` |
-| `--no-update-notifier` | disable update notifier check |
-| `--no-prompt` | disable all prompts |
+| Option                 | Role                                |
+|------------------------|-------------------------------------|
+| `--version`            | show version                        |
+| `-h`, `--help`         | bring help                          |
+| `-v`, `--verbose`      | enable verbose mode                 |
+| `-c`, `--config`       | path to JSON/YML configuration file |
+| `-t`, `--theme`        | theme to use                        |
+| `--sass-convert`       | use if syntax is `.sass`            |
+| `--no-update-notifier` | disable update notifier check       |
+| `--no-prompt`          | disable all prompts                 |
 
 
 ## Profit
