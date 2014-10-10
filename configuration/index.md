@@ -27,12 +27,15 @@ sassdoc.documentize(source, dest, config);
 
 Here is the available configuration that does not depend on the theme whatsoever:
 
-| Option     | Type            | Default                    |
-|------------|-----------------|----------------------------|
-| `package`  | String / Object | `./package.json`           |
-| `theme`    | String          | `default`                  |
-| `autofill` | Array           | `["requires", "throws"]`   |
-| `groups`   | Object          | `{ undefined: "general" }` |
+| Option               | Type            | Default                    |
+|----------------------|-----------------|----------------------------|
+| `package`            | String / Object | `./package.json`           |
+| `theme`              | String          | `default`                  |
+| `autofill`           | Array           | `["requires", "throws"]`   |
+| `groups`             | Object          | `{ undefined: "general" }` |
+| `sass-convert`       | Boolean         | `false`                    |
+| `no-update-notifier` | Boolean         | `false`                    |
+| `no-prompt`          | Boolean         | `false`                    |
 
 ### Package
 
@@ -86,3 +89,15 @@ The `groups` option is an object of aliases for group slugs. When you gather ite
 All non-grouped items are gathered by SassDoc in an `undefined` group, that is being aliased as *General*. Feel free to change this to suit your preferences.
 
 <p class="note  note--warning"><strong>Note:</strong> that for this feature to work, <a href="https://github.com/sassdoc-filter">sassdoc-filter</a> has to be used by the theme, which is obviously the case with the default theme.</p>
+
+### Sass convert
+
+Use if syntax is `.sass`.
+
+### No update notifier
+
+Disable update notifier check.
+
+### No prompt
+
+Disable all prompts.
