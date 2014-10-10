@@ -21,14 +21,11 @@
     - title: "Using your own theme"
       url: "/using-your-own-theme/"
       _blank: false
-    - title: "Theme context"
-      url: "/theme-context/"
+    - title: "Data Interface"
+      url: "/data-interface/"
       _blank: false
     - title: "Extending SassDoc"
       url: "/extending-sassdoc/"
-      _blank: false
-    - title: "Data Interface"
-      url: "/data-interface/"
       _blank: false
     - title: "Theme generator"
       url: "/theme-generator/"
