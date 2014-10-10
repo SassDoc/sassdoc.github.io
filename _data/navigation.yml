@@ -27,6 +27,9 @@
     - title: "Extending SassDoc"
       url: "/extending-sassdoc/"
       _blank: false
+    - title: "Extra tools"
+      url: "/extra-tools/"
+      _blank: false
     - title: "Theme generator"
       url: "/theme-generator/"
       _blank: false
