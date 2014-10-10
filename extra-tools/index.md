@@ -3,7 +3,7 @@ title: "Extra tools"
 layout: default
 ---
 
-If you have made up so far into building your own theme, you'll be pleased to now SassDoc comes with some extra tools for theme builders: [sassdoc-filter]() and [sassdoc-index](). Those filters add some features to SassDoc by post-processing the data.
+If you have made up so far into building your own theme, you'll be pleased to now SassDoc comes with some [extra tools](https://github.com/sassdoc/sassdoc-filter) for theme builders. Those filters add some features to SassDoc by post-processing the data.
 
 ## Markdown
 
