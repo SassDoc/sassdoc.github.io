@@ -8,6 +8,12 @@ title: "Using your own theme"
 SassDoc is fully themable. You can write your own theme for your
 projects, and publish it on npm so other people can use it too!
 
+The easiest way for you to build a theme is to use the Yeoman generator. See [Theme Generator](/theme-generator/) to get started. You will be given the possibility to customize the theme to your needs based on prompts. It will output all the boilerplate files for you in a single command. Furthermore, the generated code is loaded with inline documentation so you don't get lost.
+
+You can also have a look at [sassdoc-theme-blank](https://github.com/sassdoc/sassdoc-theme-blank) which is a fully documented empty theme you can tweak.
+
+## Going manually
+
 When you set the `--theme` option of the cli interface, or the
 `config.theme` option to `foo`, SassDoc will search for
 a `sassdoc-theme-foo`, package, then `./foo`, and finally `foo`.
@@ -39,13 +45,75 @@ etc.
 
 <p class="note  note--info"><strong>Note:</strong> you can also add your own annotations by exporting an <code>annotations</code> array. See more on <a href="/extending-sassdoc/">Extending SassDoc</a>.</p>
 
-## Theme generator
+## Theme Context
 
-We've built a [Yeoman generator](/theme-generator/)
-to assist in scaffolding a new theme.
-You will be given the possibility to customize the theme to your needs based on prompts.
-It will output all the boilerplate files for you in one command.
-Furthermore the generated code is loaded with inline documentation.
+If you want to create your own theme, you'll have to mess with the
+`ctx` object that will be passed to you. It contains the current
+project informations, the user's configuration, and the parsed
+documentation data.
+
+{% highlight js %}
+{
+  "view": {
+    // Raw data from configuration file passed to
+    // SassDoc's `--config` option (or API equivalent).
+  },
+
+  "package": {
+    // Raw data from the project's `package.json`, or a JSON file
+    // whose path was given in `view.package`, or an object directly
+    // defined in `view.package`.
+  },
+
+  "theme": function (dest, ctx) {
+    // The theme function, probably a reference to **your** theme
+    // function if you're writing a theme. You can ignore it unless you
+    // want some kind of recursivity.
+  },
+
+  "data": {
+    // Parsed documentation object like described in Sassdoc Data
+    // Interface documentation page.
+  },
+}
+{% endhighlight %}
+
+### View
+
+Don't assume the view object will contain anything. If the user
+doesn't have a configuration file it will likely be an empty object.
+
+The view has no strict interface. Users can put whatever they
+want in this object. You can use it to let the user configure your
+theme (the main purpose of the view object is indeed configuration).
+
+An example view object, assuming you use some [filters](/extra-tools/):
+
+{% highlight js %}
+{
+  'display': {
+    'access': ['public', 'private'],
+    'alias': false,
+  },
+
+  'groups': {
+    'slug': 'Title',
+    'helpers': 'Helpers',
+    'hacks': 'Dirty Hacks & Fixes',
+    'undefined': 'Ungrouped',
+  }
+}
+{% endhighlight %}
+
+### Package
+
+[See official package.json reference](https://www.npmjs.org/doc/files/package.json.html).
+
+<p class="note  note--info"><strong>Note:</strong> with the <a href="/extra-tools/#markdown">Markdown filter</a>, <code>package.description</code> will be parsed as Markdown.</p>
+
+### Data
+
+Refer to [Data Interface](/data-interface/).
 
 ## Building the Theme
 
@@ -164,6 +232,10 @@ Then, run `npm publish` and you're done!
 <p class="note  note--info"><strong>Note:</strong> the last command will require you to setup an npm account. Run <code>npm adduser</code> if you haven't an account configured already.</p>
 
 ## Bonus
+
+### Markdown, display, group aliases and more
+
+SassDoc provides a couple of extra features to theme builders. Please refer to [extra tools](/extra-tools/).
 
 ### Play with Swig Extras
 
