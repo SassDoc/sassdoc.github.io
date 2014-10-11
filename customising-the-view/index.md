@@ -61,7 +61,7 @@ Along the same lines, if you build your own theme, adding a little mention to Sa
 
 ### basePath
 
-The `basePath` option is used to provide a *View source* link to each item in case the code is hosted on a public repository. By setting the option to the base path of your repository, and thanks to SassDoc's parser keeping track of the file name, the path and the lines number, we are able to build links such as: [https://github.com/sassdoc/sassdoc/tree/master/scss/utils/functions.scss#L13-L37](https://github.com/sassdoc/sassdoc/tree/master/scss/utils/functions.scss#L13-L37).
+The `basePath` option is used to provide a *View source* link to each item in case the code is hosted on a public repository. By setting the option to the base path of your repository, and thanks to SassDoc's parser keeping track of the file name, the path and the lines number, we are able to build links such as: [https://github.com/sassdoc/sassdoc-theme-light/tree/master/scss/utils/_functions.scss#L13-L37](https://github.com/sassdoc/sassdoc-theme-light/tree/master/scss/utils/_functions.scss#L10-L31).
 
 ### shortcutIcon
 

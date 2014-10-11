@@ -88,7 +88,7 @@ The `groups` option is an object of aliases for group slugs. When you gather ite
 
 All non-grouped items are gathered by SassDoc in an `undefined` group, that is being aliased as *General*. Feel free to change this to suit your preferences.
 
-<p class="note  note--warning"><strong>Note:</strong> that for this feature to work, <a href="https://github.com/sassdoc-filter">sassdoc-filter</a> has to be used by the theme, which is obviously the case with the default theme.</p>
+<p class="note  note--warning"><strong>Note:</strong> that for this feature to work, <a href="/extra-tools/#groups-aliases">sassdoc-extras</a> has to be used by the theme, which is obviously the case with the default theme.</p>
 
 ### sass-convert
 

@@ -141,7 +141,7 @@ Describes the usage of `@content` Sass directive in a mixin.
 
 **Notes:**
 
-* Autofilled (if not set otherwise in `autofill` option).
+* Autofilled (if not set otherwise in [`autofill`](/configuration/#autofill) option).
 * Parsed as Markdown.*
 * Automatically added if found in extracted code.
 * Has no effect on functions, variables and placeholders.
@@ -379,7 +379,7 @@ Defines if the documented item requires any other item.
 
 **Notes:**
 
-* Autofilled (if not set otherwise in `autofill` option).
+* Autofilled (if not set otherwise in [`autofill`](/configuration/#autofill) option).
 * Type is optional; default type is `function`.
 * Description is optional. Hyphen before description is optional.
 * Description is parsed as Markdown.*
@@ -495,7 +495,7 @@ Describes the error thrown by the documented item.
 
 **Notes:**
 
-* Autofilled (if not set otherwise in `autofill` option).
+* Autofilled (if not set otherwise in [`autofill`](/configuration/#autofill) option).
 * Description is parsed as Markdown.*
 * Multiple `@throws` allowed on the same item.
 
@@ -549,4 +549,4 @@ Describes the type of a variable.
 
 ---
 
-\* The Markdown parsing is effective in compliant themes, usually by using the Markdown filter from [sassdoc-filter](https://github.com/sassdoc/sassdoc-filter).
+\* The Markdown parsing is effective in compliant themes, by using the Markdown filter from [sassdoc-extras](/extra-tools/#markdown).
