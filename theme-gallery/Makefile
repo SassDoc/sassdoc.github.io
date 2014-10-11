@@ -20,9 +20,17 @@ PREVIEW = $(PREVIEW_DIR)/$(THEME)
 THUMB = $(THUMB_DIR)/$(THEME).png
 SAMPLE = sample
 
-ALL = $(addsuffix .png, $(addprefix $(THUMB_DIR)/, $(THEMES)))
+THEME_PACKAGES = $(addprefix node_modules/$(THEME_PACKAGE_PREFIX), $(THEMES))
+THEME_PREVIEWS = $(addprefix $(PREVIEW_DIR)/, $(THEMES))
+THEME_THUMBS = $(addsuffix .png, $(addprefix $(THUMB_DIR)/, $(THEMES)))
+
+ALL = $(THEME_PACKAGES) $(THEME_PREVIEWS) $(THEME_THUMBS)
 
 all: $(ALL)
+
+update:
+	$(NPM) update
+	$(MAKE)
 
 $(THUMB_DIR)/%.png: $(PREVIEW_DIR)/% | $(WEBSHOT) $(THUMB_DIR)
 	$(WEBSHOT) $</index.html $@

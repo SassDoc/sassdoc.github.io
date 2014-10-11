@@ -23,3 +23,6 @@ Do everything needed for the theme picker to work:
 
 2. Generate `_data/themes.yml` from the `package.json` of each theme
    previously downloaded.
+
+To update the themes, run `make update` in the `theme-gallery`
+directory.
