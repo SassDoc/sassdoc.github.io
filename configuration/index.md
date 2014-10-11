@@ -27,12 +27,15 @@ sassdoc.documentize(source, dest, config);
 
 Here is the available configuration that does not depend on the theme whatsoever:
 
-| Option     | Type            | Default                    |
-|------------|-----------------|----------------------------|
-| `package`  | String / Object | `./package.json`           |
-| `theme`    | String          | `default`                  |
-| `autofill` | Array           | `["requires", "throws"]`   |
-| `groups`   | Object          | `{ undefined: "general" }` |
+| Option               | Type            | Default                    |
+|----------------------|-----------------|----------------------------|
+| `package`            | String / Object | `./package.json`           |
+| `theme`              | String          | `default`                  |
+| `autofill`           | Array           | `["requires", "throws"]`   |
+| `groups`             | Object          | `{ undefined: "general" }` |
+| `sass-convert`       | Boolean         | `false`                    |
+| `no-update-notifier` | Boolean         | `false`                    |
+| `no-prompt`          | Boolean         | `false`                    |
 
 ### Package
 
@@ -86,3 +89,24 @@ The `groups` option is an object of aliases for group slugs. When you gather ite
 All non-grouped items are gathered by SassDoc in an `undefined` group, that is being aliased as *General*. Feel free to change this to suit your preferences.
 
 <p class="note  note--warning"><strong>Note:</strong> that for this feature to work, <a href="https://github.com/sassdoc-filter">sassdoc-filter</a> has to be used by the theme, which is obviously the case with the default theme.</p>
+
+### sass-convert
+
+In itself, SassDoc does not support `.sass` files. If your code base is written in Sass indented syntax, pass `sass-convert` to `true` so SassDoc performs a Sass syntax conversion before running.
+
+<p class="note  note--info"><strong>Note:</strong> you can also use the CLI option <code>--sass-convert</code>.</p>
+
+### no-update-notifier
+
+SassDoc tries to make sure you always use an up-to-date version. If it is not the case, it will prompt you to update your current version. You can disable this behaviour by using the `no-update-notifier` option.
+
+<p class="note  note--info"><strong>Note:</strong> you can also use the CLI option <code>--no-update-notifier</code>.</p>
+
+
+### no-prompt
+
+Because the destination folder gets wiped and to prevent any accident, SassDoc prompts you whenever the destination folder is not empty. If you don't want SassDoc to ask you to confirm everytime you run it, you can use the `no-prompt` option to disable it.
+
+<p class="note  note--info"><strong>Note:</strong> you can also use the CLI option <code>--no-prompt</code>.</p>
+
+<p class="note  note--danger"><strong>Caution!</strong> SassDoc prompts you for a reason: the destination folder gets completely erased only to be recreated. Don't leave any important file in there.</p>
