@@ -58,7 +58,7 @@ Note that if you set this option as a path to a JSON file, we will override it w
 
 ### Theme
 
-The `theme` option is the name of a theme to be used. If not set, it will default to `default`, which means SassDoc will use `sassdoc-theme-default`, which is basically a wrapper for [sassdoc-theme-light](https://github.com/sassdoc/sassdoc-theme-light), the official theme.
+The `theme` option is the name of a theme to be used. If not set, it will default to `default`, which means SassDoc will use `sassdoc-theme-default`, the official theme.
 
 Based on the value you set, for instance `unicorn`, SassDoc will try to require the following until one matches:
 

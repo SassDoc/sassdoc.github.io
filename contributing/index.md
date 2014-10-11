@@ -34,9 +34,8 @@ If you need a quick reply or don't feel really comfortable with asking on a publ
 So you think you've found a bug? Likely. We're all humans after all! Before even opening an issue, you have to know how SassDoc is architectured so you can submit an issue in the accurate repository:
 
 * [Core](https://github.com/sassdoc/sassdoc): API
-* [Theme](https://github.com/sassdoc/sassdoc-theme-light): Theme, templates and styles
-* [Filter](https://github.com/sassdoc/sassdoc-filter): Markdown, display, groups...
-* [Indexer](https://github.com/sassdoc/sassdoc-indexer): Data structure
+* [Theme](https://github.com/sassdoc/sassdoc-theme-default): Theme, templates and styles
+* [Filter](https://github.com/sassdoc/sassdoc-extras): Extra tools for theme authors
 * [Grunt plugin](https://github.com/sassdoc/grunt-sassdoc): Grunt integration
 * [Gulp plugin](https://github.com/sassdoc/gulp-sassdoc): Gulp integration
 * [Broccoli plugin](https://github.com/sassdoc/broccoli-sassdoc): Broccoli integration

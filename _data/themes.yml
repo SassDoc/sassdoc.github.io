@@ -1,14 +1,17 @@
-light: {
-  "name": "sassdoc-theme-light",
+default: {
+  "name": "sassdoc-theme-default",
   "description": "SassDoc's default theme",
-  "title": "SassDoc Theme Light",
+  "title": "SassDoc Default Theme",
+  "author": {
+    "name": "SassDoc team"
+  },
   "version": "1.7.0",
   "keywords": [
     "sassdoc-theme"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/SassDoc/sassdoc-theme-light.git"
+    "url": "https://github.com/SassDoc/sassdoc-theme-default.git"
   },
   "dependencies": {
     "extend": "1.*",
@@ -16,49 +19,19 @@ light: {
     "swig-extras": "0.*",
     "themeleon": "1.*",
     "themeleon-swig": "0.*",
-    "sassdoc-filter": "^1.2.0",
-    "sassdoc-indexer": "^1.1.0"
+    "sassdoc-extras": "^1.0.0"
   },
   "devDependencies": {
     "uglify-js": "^2.4.15"
   },
+  "readme": "# SassDoc Default Theme\n\nThis is [SassDoc](https://github.com/SassDoc/sassdoc)'s default theme which means this is the theme that will be used when running SassDoc without a custom theme.\n\nThis theme uses [Themeleon](https://github.com/themeleon/themeleon) as a theme engine, and [themeleon-swig](https://github.com/themeleon/themeleon-swig) as a template engine, directly plugged into Themeleon.\n\nBecause this is likely to be the most used theme of all, it is not as simple as a theme can get. For instance, there is quite a bit of logic in both `index.js` and the Swig templates. Fortunately, you don't have to deal with that at all.\n\n## Customising the view\n\nThere are some possibilites to customise the theme's view. Essentially what's being displayed, what's not, and what are the project informations to be displayed in the header and footer.\n\nTo learn how to customise the theme's view, please read [the documentation on SassDoc's site](http://sassdoc.com/customising-the-view/). Fear not! It's all about creating a configuration file. No big deal.\n",
+  "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/SassDoc/sassdoc-theme-light/issues"
+    "url": "https://github.com/SassDoc/sassdoc-theme-default/issues"
   },
-  "homepage": "https://github.com/SassDoc/sassdoc-theme-light",
-  "_id": "sassdoc-theme-light@1.7.0",
-  "dist": {
-    "shasum": "5bd3baf3b28599f565822e1fe04f767b11b9273d",
-    "tarball": "http://registry.npmjs.org/sassdoc-theme-light/-/sassdoc-theme-light-1.7.0.tgz"
-  },
-  "_from": "sassdoc-theme-light@*",
-  "_npmVersion": "1.4.3",
-  "_npmUser": {
-    "name": "hugogiraudel",
-    "email": "hugo.giraudel@gmail.com"
-  },
-  "maintainers": [
-    {
-      "name": "hugogiraudel",
-      "email": "hugo.giraudel@gmail.com"
-    },
-    {
-      "name": "valeriangalliat",
-      "email": "vava720@gmail.com"
-    },
-    {
-      "name": "fweinb",
-      "email": "Fabrice@weinberg.me"
-    },
-    {
-      "name": "pascalduez",
-      "email": "public@pascalduez.me"
-    }
-  ],
-  "directories": {},
-  "_shasum": "5bd3baf3b28599f565822e1fe04f767b11b9273d",
-  "_resolved": "https://registry.npmjs.org/sassdoc-theme-light/-/sassdoc-theme-light-1.7.0.tgz",
-  "readme": "ERROR: No README data found!"
+  "homepage": "https://github.com/SassDoc/sassdoc-theme-default",
+  "_id": "sassdoc-theme-default@1.7.0",
+  "_from": "sassdoc-theme-default@"
 }
 vulcan: {
   "name": "sassdoc-theme-vulcan",
@@ -91,28 +64,11 @@ vulcan: {
   "devDependencies": {
     "uglify-js": "^2.4.15"
   },
+  "readme": "# SassDoc Theme for Vulcan packages\n\n## Install\n```\nnpm install sassdoc-theme-vulcan --save\n```\n\n## Config\n```\n{\n    \"display\": {\n        \"access\": [\n            \"public\",\n            \"private\"\n        ],\n        \"alias\": false,\n        \"watermark\": true\n    },\n    \"groups\": {\n        \"undefined\": \"General\"\n    },\n    \"url\": \"https://github.com/vulcan-framework\",\n    \"repo\": \"https://github.com/vulcan-framework/core\",\n    \"packageName\": \"vulcan-core\",\n    \"packageVersion\": \"1.0.0\",\n    \"googleAnalytics\": \"UA-55436603-2\"\n}\n```",
+  "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/vulcan-framework/sassdoc-theme/issues"
   },
   "_id": "sassdoc-theme-vulcan@0.2.0",
-  "_shasum": "77832965e8910f5583d6804cd5c29cee328419bd",
-  "_from": "sassdoc-theme-vulcan@*",
-  "_npmVersion": "1.4.10",
-  "_npmUser": {
-    "name": "mmintel",
-    "email": "marc@mintel.me"
-  },
-  "maintainers": [
-    {
-      "name": "mmintel",
-      "email": "marc@mintel.me"
-    }
-  ],
-  "dist": {
-    "shasum": "77832965e8910f5583d6804cd5c29cee328419bd",
-    "tarball": "http://registry.npmjs.org/sassdoc-theme-vulcan/-/sassdoc-theme-vulcan-0.2.0.tgz"
-  },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/sassdoc-theme-vulcan/-/sassdoc-theme-vulcan-0.2.0.tgz",
-  "readme": "ERROR: No README data found!"
+  "_from": "sassdoc-theme-vulcan@"
 }

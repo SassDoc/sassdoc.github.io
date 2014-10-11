@@ -43,7 +43,7 @@ node_modules/$(THEME_PACKAGE_PREFIX)%:
 	npm install $(@F)
 
 $(SAMPLE):
-	$(GIT) clone https://github.com/SassDoc/sassdoc-theme-light .$@
+	$(GIT) clone https://github.com/SassDoc/sassdoc-theme-default .$@
 	mv .$@/scss/utils $@
 	$(RM) -r .$@
 

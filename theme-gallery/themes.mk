@@ -1,2 +1,2 @@
-THEMES += light
+THEMES += default
 THEMES += vulcan
