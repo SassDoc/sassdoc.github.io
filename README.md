@@ -1,6 +1,6 @@
 # SassDoc
 
-Like JSDoc for your Sass files.
+Uncompiled source code from the Jekyll powered [official SassDoc site](http://sassdoc.com).
 
 ## Building
 
