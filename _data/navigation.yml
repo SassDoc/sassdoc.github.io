@@ -69,9 +69,12 @@
       _blank: false
 - title: "Contact"
   items:
-    - title: "Twitter"
+    - title: "@SassDoc_"
       url: "https://twitter.com/sassdoc_"
       _blank: true
-    - title: "GitHub repository"
+    - title: "Spread the word"
+      url: "http://twitter.com/share?text=Release+the+docs!+@SassDoc_+is+a+documentation+tool+for+Sass+%E2%80%94&url=http://sassdoc.com"
+      _blank: true
+    - title: "GitHub organisation"
       url: "https://github.com/sassdoc"
       _blank: true
