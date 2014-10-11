@@ -18,6 +18,8 @@ This is done exactly like the regular configuration, within the same configurati
 | `display.watermark` | Boolean | `true`                  |
 | `basePath`          | String  | `""`                    |
 | `shortcutIcon`      | String  | `""`                    |
+| `googleAnalytics`   | String  | `""`                    |
+| `trackingCode`      | String  | `""`                    |
 
 ### display.access
 
@@ -71,6 +73,30 @@ The `shortcutIcon` option can be used to provide a favicon to your documentation
 {
   shortcutIcon: "assets/images/favicon.png"
 }
+{% endhighlight %}
+
+### googleAnalytics
+
+If you are using Google Analytics to track users behaviour on your site, you can set your Google Analytics tracking key as a value for the `googleAnalytics` key.
+
+### trackingCode
+
+In case you don't use Google Analytics, or use a custom tracking code snippet, you can set it as a value to the `trackingCode` option. It will be directly injected in the DOM as HTML, so be sure to include `<script>` and `</script>` tags if you need them.
+
+In YAML, you can leave a single pipe on the first line to indicate that the following is a literal string, like so:
+
+{% highlight yaml %}
+trackingCode: |
+  <script type="text/javascript">
+      var _paq = _paq || [];
+      (function(){ var u=(("https:" == document.location.protocol) ? "https://{$PIWIK_URL}/" : "http://{$PIWIK_URL}/");
+      _paq.push(['setSiteId', {$IDSITE}]);
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.defer=true; g.async=true; g.src=u+'piwik.js';
+      s.parentNode.insertBefore(g,s); })();
+  </script>
 {% endhighlight %}
 
 ## Example
