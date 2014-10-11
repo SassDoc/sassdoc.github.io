@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Like JSDoc for your Sass files"
+title: "Release the docs!"
 ---
 
 <a class="build-status" href="https://travis-ci.org/SassDoc/sassdoc" target="_blank"><img src="https://travis-ci.org/SassDoc/sassdoc.svg?branch=master" alt="Build Status" /></a>
