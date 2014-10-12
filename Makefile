@@ -43,7 +43,7 @@ include $(GALLERY)/gallery.mk
 themes: _data/themes.yml
 
 _data/themes.yml: $(THEME_PACKAGES) | gallery
-	for i in $(addsffix /package.json, $^); do name=$$(basename $$(dirname $$i) | sed 's/^sassdoc-theme-//'); sed "1s/^/$$name: /" $$i; done > $@
+	for i in $(addsuffix /package.json, $^); do name=$$(basename $$(dirname $$i) | sed 's/^sassdoc-theme-//'); sed "1s/^/$$name: /" $$i; done > $@
 
 # Common
 # ======
