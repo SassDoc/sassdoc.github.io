@@ -28,9 +28,10 @@ changelog/index.md: force
 preview: assets/images/preview-image.png
 
 assets/images/preview-image.png: $(SASSDOC_THEME) | $(SASSDOC) $(WEBSHOT)
-	$(SASSDOC) $</scss .preview
+	echo '{"package": "node_modules/sassdoc-theme-default/package.json"}' > .preview.json
+	$(SASSDOC) $</scss .preview --config .preview.json
 	$(WEBSHOT) --window-size 1200/675 .preview/index.html $@
-	$(RM) -r .preview
+	$(RM) -r .preview .preview.json
 
 # Theme gallery
 # =============
