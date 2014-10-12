@@ -1,21 +1,23 @@
-.build-status {
-  position: absolute;
-  top: 1.7em;
-  right: 1em;
+@include respond-to("large") {
+  .build-status {
+    position: absolute;
+    top: 1.7em;
+    right: 1em;
 
-  &,
-  img {
-    display: block;
+    &,
+    img {
+      display: block;
+    }
   }
-}
 
-.npm-badge {
-  float: right;
-  margin-left: 1em;
-  margin-bottom: 1em;
+  .npm-badge {
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
 
-  &,
-  img {
-    display: block;
+    &,
+    img {
+      display: block;
+    }
   }
 }
