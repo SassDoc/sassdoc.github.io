@@ -10,17 +10,23 @@ SassDoc is doing quite a lot of things under the hood. In most cases, you won't 
 SassDoc uses the word "item" to describe either a variable, a function, a mixin or a placeholder. Technically speaking, an "item" is an object composed of:
 
 * a description defined at the top of the related documentation block comment, before any annotation;
-* a context, which is a sub-object containing the item's name, its type (function, variable, mixin, placeholder), and the item's inner code (inside the declaration braces / variable content);
+* a context, which is a sub-object containing the item's name, its type (function, variable, mixin, placeholder), the lines at which it has been found in the file, and the its inner code (inside the declaration braces / variable content);
 * annotations: both those declared in the related documentation block comment, and those omitted with a default value.
 
 Note that as a matter of simplicity, all annotations are mapped to an array, even those for which having multiple values makes no sense (for instance `@access`).
+
 {% highlight js %}
 {
   'description': '',
   'context': {
     'name': '',
     'type': '',
-    'code': ''
+    'code': '',
+    'line': {
+      'start': 0,
+      'end': 0
+    }
+  }
   },
   'access': ['public'],
   'group': [['undefined']]
