@@ -17,13 +17,13 @@ title: "Annotations"
 | [@ignore](#ignore) | Ignored content |
 | [@link (@source)](#link-synonym-source) | Link related to the documented item |
 | [@output](#output) | Output from the documented mixin |
-| [@param (@arg, @argument)](#param-synonyms-arg-argument) | Parameters from the documented mixin or function |
-| [@prop](#prop) | Property of the documented map |
-| [@requires (@require)](#requires) | Requirements from the documented item |
-| [@returns (@return)](#returns-synonym-return) | Return from the documented function |
+| [@parameter (@param, @arg, @argument)](#param-synonyms-arg-argument) | Parameters from the documented mixin or function |
+| [@property (@prop)](#prop) | Property of the documented map |
+| [@require (@requires)](#requires) | Requirements from the documented item |
+| [@return (@returns)](#returns-synonym-return) | Return from the documented function |
 | [@see](#see) | Resource related to the documented item |
 | [@since](#since) | Changelog for the documented item |
-| [@throws (@throw, @exception)](#throws-synonym-throw-exception) | Exceptions raised by the documented item |
+| [@throw (@throws, @exception)](#throws-synonym-throw-exception) | Exceptions raised by the documented item |
 | [@todo](#todo) | Things to do related to the documented item |
 
 <p class="note  note--info"><strong>Note:</strong> remember that you can define annotations at a file level rather than on specific items, which can happen to be very useful when all items from a file share some traits (author, group, and so on...). To do so, please refer to <a href="/file-level-annotations/">File-level Annotations</a>.</p>
@@ -199,8 +199,6 @@ Describes a use case for the documented item, with a given language and descript
 /// 4 + 2 = 8
 /// 4 / 2 = 2
 ///
-/// @example scss
-/// // This is some SCSS code
 /// @example scss - Clamp function
 /// clamp(42, $min: 13, $max: 37)
 /// // 37
@@ -279,7 +277,7 @@ Describes a link.
 * Caption is optional.
 * Multiple `@link` allowed on the same item.
 
-## @output
+## @output (synonym: @outputs)
 
 An equivalent to `@return` for mixins. Provide a description of what's being printed by the mixin.
 
@@ -300,7 +298,7 @@ An equivalent to `@return` for mixins. Provide a description of what's being pri
 * Description is parsed as Markdown.*
 * Has no effect on functions, variables and placeholders.
 
-## @param (synonyms: @arg, @argument)
+## @parameter (synonyms: @param, @arg, @argument)
 
 Describes a parameter of the documented item.
 
@@ -330,7 +328,7 @@ Describes a parameter of the documented item.
 * Multiple types must be separated by pipes (`|`).
 * Has no effect on variables and placeholders.
 
-## @prop
+## @property (synonym: @prop)
 
 Document maps properties, use the dot notation to signify nesting.
 
@@ -351,7 +349,7 @@ Document maps properties, use the dot notation to signify nesting.
 * Description is parsed as Markdown.*
 * If `{Type}` is omitted, it will default to `Map` to make it more convenient for nested maps.
 
-## @requires
+## @require (synonym: @requires)
 
 Defines if the documented item requires any other item.
 
@@ -359,22 +357,22 @@ Defines if the documented item requires any other item.
 
 {% highlight scss %}
 /**
- * @requires item
- * @requires {type} item
- * @requires {type} item - description
- * @requires {type} item description
- * @requires {type} item <link>
- * @requires {type} item description <link>
+ * @require item
+ * @require {type} item
+ * @require {type} item - description
+ * @require {type} item description
+ * @require {type} item <link>
+ * @require {type} item description <link>
  */
 {% endhighlight %}
 
 {% highlight scss %}
-/// @requires item
-/// @requires {type} item
-/// @requires {type} item - description
-/// @requires {type} item description
-/// @requires {type} item <link>
-/// @requires {type} item description <link>
+/// @require item
+/// @require {type} item
+/// @require {type} item - description
+/// @require {type} item description
+/// @require {type} item <link>
+/// @require {type} item description <link>
 {% endhighlight %}
 
 **Notes:**
@@ -389,9 +387,9 @@ Defines if the documented item requires any other item.
 * If `{type}` is `variable`, then the `$` sign before the variable name is optional. Alongside if there is a `$` sign before the item name, then the `{variable}` type is optional.
 * If `{type}` is `placeholder`, then the `%` sign before the placeholder name is optional. Alongside if there is a `%` sign before the item name, then the `{placeholder}` type is optional.
 * The other item will automatically have a key named `usedBy` containing the name of function requiring it.
-* Multiple `@requires` allowed on the same item.
+* Multiple `@require` allowed on the same item.
 
-## @returns (synonym: @return)
+## @return (synonym: @returns)
 
 Describes the return statement of the documented item.
 
@@ -399,24 +397,24 @@ Describes the return statement of the documented item.
 
 {% highlight scss %}
 /**
- * @returns {type}
+ * @return {type}
  */
 
 /**
- * @returns {type | othertype}
+ * @return {type | othertype}
  */
 
 /**
- * @returns {type} description
+ * @return {type} description
  */
 {% endhighlight %}
 
 {% highlight scss %}
-/// @returns {type}
+/// @return {type}
 
-/// @returns {type | othertype}
+/// @return {type | othertype}
 
-/// @returns {type} description
+/// @return {type} description
 {% endhighlight %}
 
 **Notes:**
@@ -477,7 +475,7 @@ Describes the version at which the documented item has been implemented or updat
 * Description is parsed as Markdown.*
 * Multiple `@since` allowed on the same item.
 
-## @throws (synonym: @throw, @exception)
+## @throw (synonym: @throw, @exception)
 
 Describes the error thrown by the documented item.
 
@@ -485,19 +483,19 @@ Describes the error thrown by the documented item.
 
 {% highlight scss %}
 /**
- * @throws Error related message
+ * @throw Error related message
  */
 {% endhighlight %}
 
 {% highlight scss %}
-/// @throws Error related message
+/// @throw Error related message
 {% endhighlight %}
 
 **Notes:**
 
 * Autofilled (if not set otherwise in [`autofill`](/configuration/#autofill) option).
 * Description is parsed as Markdown.*
-* Multiple `@throws` allowed on the same item.
+* Multiple `@throw` allowed on the same item.
 
 ## @todo
 

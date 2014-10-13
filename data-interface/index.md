@@ -105,7 +105,6 @@ Item `other-item` will look like this:
 }
 {% endhighlight %}
 
-
 ### @author
 
 {% highlight scss %}
@@ -163,7 +162,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @group (since 1.2.0)
+### @group
 
 {% highlight scss %}
 /**
@@ -223,7 +222,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @output (since 1.3.0)
+### @output (synonym: @outputs)
 
 {% highlight scss %}
 /**
@@ -240,7 +239,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @param (synonyms: @arg, @argument)
+### @parameter (synonyms: @param, @arg, @argument)
 
 {% highlight scss %}
 /**
@@ -252,7 +251,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'parameters': [{
+  'parameter': [{
     'type': 'type',
     'name': 'name',
     'default': 'default value',
@@ -262,7 +261,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @prop (since 1.5.0)
+### @property (synonym: @prop)
 
 {% highlight scss %}
 /**
@@ -273,7 +272,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'prop' : [{
+  'property' : [{
      'type': 'Function',
      'path': 'base.default',
      'default': 'default',
@@ -283,13 +282,13 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @requires
+### @require (synonym: @requires)
 
 The required item will automatically have a key named `usedBy` containing the whole referencing item.
 
 {% highlight scss %}
 /**
- * @requires {type} item - description <link>
+ * @require {type} item - description <link>
  */
 {% endhighlight %}
 
@@ -297,7 +296,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'requires' : [{
+  'require' : [{
     'type': 'type',
     'name': 'item',
     'url': '<link>',
@@ -319,11 +318,11 @@ The referenced item will have a `usedBy` key that looks like:
 }
 {% endhighlight %}
 
-### @returns (synonym: @return)
+### @return (synonym: @returns)
 
 {% highlight scss %}
 /**
- * @returns {type} $name (default value) - description
+ * @return {type} $name (default value) - description
  */
 {% endhighlight %}
 
@@ -331,7 +330,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'returns': [{
+  'return': [{
     'type': 'type',
     'name': 'name',
     'default': 'default value',
@@ -363,7 +362,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @throws (synonym: @throw, @exception)
+### @throw (synonym: @throws, @exception)
 
 {% highlight scss %}
 /**
@@ -375,7 +374,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'throws': ['Error related message']
+  'throw': ['Error related message']
   /* ... */
 }
 {% endhighlight %}
