@@ -27,16 +27,17 @@ sassdoc <src> <dest> [options]
 * `<dest>` is the path to the destination folder;
 * `[options]` are:
 
-| Option                 | Role                                |
-|------------------------|-------------------------------------|
-| `--version`            | show version                        |
-| `-h`, `--help`         | bring help                          |
-| `-v`, `--verbose`      | enable verbose mode                 |
-| `-c`, `--config`       | path to JSON/YML configuration file |
-| `-t`, `--theme`        | theme to use                        |
-| `--sass-convert`       | use if syntax is `.sass`            |
-| `--no-update-notifier` | disable update notifier check       |
-| `--no-prompt`          | disable all prompts                 |
+| Option                 | Role                                                           |
+|------------------------|----------------------------------------------------------------|
+| `-h`, `--help`         | bring help                                                     |
+| `--version`            | show version                                                   |
+| `-v`, `--verbose`      | enable verbose mode                                            |
+| `-i`, `--interactive`  | prompt to remove an existing destination directory             |
+| `-f`, `--force`        | always remove an existing destination directory without asking |
+| `-c`, `--config`       | path to JSON/YAML configuration file                           |
+| `-t`, `--theme`        | theme to use                                                   |
+| `--sass-convert`       | use if syntax is `.sass`                                       |
+| `--no-update-notifier` | disable update notifier check                                  |
 
 <p class="note  note--info"><strong>Note:</strong> options <code>--sass-convert</code>, <code>--no-update-notifier</code> and <code>--no-prompt</code> can also be set from the configuration file (set with <code>--config</code>) respectively with <code>sass-convert</code>, <code>no-update-notifier</code> and <code>no-prompt</code>.</p>
 
