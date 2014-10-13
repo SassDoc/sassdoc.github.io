@@ -15,7 +15,7 @@ $(THUMB_DIR)/%.png: $(PREVIEW_DIR)/% | $(WEBSHOT) $(THUMB_DIR)
 	$(MOGRIFY) -resize 256x192 $@
 
 $(PREVIEW_DIR)/%: node_modules/sassdoc-theme-% $(SAMPLE_DIR) | $(SASSDOC) $(PREVIEW_DIR)
-	$(SASSDOC) $(SAMPLE_DIR) $@ --theme $<
+	$(SASSDOC) $(SASSDOC_FLAGS) $(SAMPLE_DIR) $@ --theme $<
 
 node_modules/sassdoc-theme-%:
 	npm install $(@F)

@@ -5,6 +5,7 @@ MOGRIFY = mogrify
 SASSDOC = node_modules/sassdoc/bin/sassdoc
 WEBSHOT = node_modules/webshot-cli/webshot
 
+SASSDOC_FLAGS = --force
 SASSDOC_THEME = node_modules/sassdoc-theme-default
 
 RAW_BASE_URL = https://raw.githubusercontent.com/SassDoc/sassdoc/master
@@ -29,7 +30,7 @@ preview: assets/images/preview-image.png
 
 assets/images/preview-image.png: $(SASSDOC_THEME) | $(SASSDOC) $(WEBSHOT)
 	echo '{"package": "node_modules/sassdoc-theme-default/package.json"}' > .preview.json
-	$(SASSDOC) $</scss .preview --config .preview.json
+	$(SASSDOC) $(SASSDOC_FLAGS) $</scss .preview --config .preview.json
 	$(WEBSHOT) --window-size 1200/675 .preview/index.html $@
 	$(RM) -r .preview .preview.json
 
