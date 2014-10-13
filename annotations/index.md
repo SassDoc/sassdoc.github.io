@@ -36,7 +36,7 @@ Name of the documented item is self parsed, hence `@name` doesn't exist.
 
 Describes the documented item.
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -50,16 +50,23 @@ Describes the documented item.
 /// On several lines if you will
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * Parsed as Markdown.*
 * Comes on top of a comment, before any annotation.
 
 ## @access
 
-Defines the access of the documented item.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Defines the access of the documented item                  |
+| Multiple    | false                                                      |
+| Default     | `public`                                                   |
+| Aliases     | &mdash;                                                    |
+| Autofilled  | false                                                      |
+| Allowed on  | functions, mixins, placeholders, variables                 |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -77,16 +84,22 @@ Defines the access of the documented item.
 /// @access public
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * Either `public` or `private`.
-* None is considered `public`.
 
 ## @alias
 
-Defines if the documented item is an alias of another item.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Defines if the documented item is an alias of another item |
+| Multiple    | false                                                      |
+| Default     | &mdash;                                                    |
+| Aliases     | &mdash;                                                    |
+| Autofilled  | false                                                      |
+| Allowed on  | functions, mixins, variables                               |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -98,15 +111,22 @@ Defines if the documented item is an alias of another item.
 /// @alias other-item
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * The other item will automatically have a key named `aliased` containing the name of aliases.
 
 ## @author
 
-Describes the author of the documented item.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Describes the author of the documented item                |
+| Multiple    | true                                                       |
+| Default     | &mdash;                                                    |
+| Aliases     | &mdash;                                                    |
+| Autofilled  | false                                                      |
+| Allowed on  | functions, mixins, placeholders, variables                 |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -118,16 +138,22 @@ Describes the author of the documented item.
 /// @author Author's name
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * Parsed as Markdown.*
-* Multiple `@author` allowed on the same item.
 
 ## @content
 
-Describes the usage of `@content` Sass directive in a mixin.
+| Attribute   | Value                                                                    |
+|-------------|--------------------------------------------------------------------------|
+| Description | Describes the usage of `@content` Sass directive in the documented mixin |
+| Multiple    | false                                                                    |
+| Default     | &mdash;                                                                  |
+| Aliases     | &mdash;                                                                  |
+| Autofilled  | true                                                                     |
+| Allowed on  | mixins                                                                   |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -139,18 +165,22 @@ Describes the usage of `@content` Sass directive in a mixin.
 /// @content [Description]
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
-* Autofilled (if not set otherwise in [`autofill`](/configuration/#autofill) option).
 * Parsed as Markdown.*
-* Automatically added if found in extracted code.
-* Has no effect on functions, variables and placeholders.
 
 ## @deprecated
 
-Defines if the documented item is deprecated.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Defines if the documented item is deprecated               |
+| Multiple    | false                                                      |
+| Default     | &mdash;                                                    |
+| Aliases     | &mdash;                                                    |
+| Autofilled  | false                                                      |
+| Allowed on  | functions, mixins, placeholders, variables                 |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -168,16 +198,23 @@ Defines if the documented item is deprecated.
 /// @deprecated Deprecation related message
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * Message is optional.
 * Parsed as Markdown.*
 
 ## @example
 
-Describes a use case for the documented item, with a given language and description if specified.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Describes a use case for the documented item, with a given language and description if specified |
+| Multiple    | true                                                       |
+| Default     | &mdash;                                                    |
+| Aliases     | &mdash;                                                    |
+| Autofilled  | false                                                      |
+| Allowed on  | functions, mixins, placeholders, variables                 |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -204,10 +241,9 @@ Describes a use case for the documented item, with a given language and descript
 /// // 37
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
-* Multiple `@example` allowed on the same item.
-* Lines starting with '@' need to be indented to work correctly.
+* Lines starting with `@` need to be indented to work correctly.
 * First word on the same line as `@example` is the language for syntax highlighting.
 * Currently supported languages: `css`, `scss`, `markup`, `javascript`. New languages on demand.
 * Everything but the first word on the same line as `@example` is the description.
@@ -216,7 +252,16 @@ Describes a use case for the documented item, with a given language and descript
 
 ## @group
 
-Defines to which group (if any) the documented item belongs.
+| Attribute   | Value                                                       |
+|-------------|-------------------------------------------------------------|
+| Description | Defines to which group (if any) the documented item belongs |
+| Multiple    | false                                                       |
+| Default     | `undefined`                                                 |
+| Aliases     | &mdash;                                                     |
+| Autofilled  | false                                                       |
+| Allowed on  | functions, mixins, placeholders, variables                  |
+
+### Example
 
 {% highlight scss %}
 /**
@@ -228,17 +273,23 @@ Defines to which group (if any) the documented item belongs.
 /// @group helpers
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
-* All items without `@group` will be gathered in an "undefined" group.
 * Groups define the way items are displayed in SassDoc's default theme.
-* Groups can be aliased for friendly names from the configuration ([more infos](http://sassdoc.com/configuration/#groups)).
+* Groups can be aliased for friendly names from the configuration ([more infos](/configuration/#groups)).
 
 ## @ignore
 
-Defines a line which won't be documented.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Defines a line which won't be documented                   |
+| Multiple    | true                                                       |
+| Default     | &mdash;                                                    |
+| Aliases     | &mdash;                                                    |
+| Autofilled  | false                                                      |
+| Allowed on  | functions, mixins, placeholders, variables                 |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -250,15 +301,18 @@ Defines a line which won't be documented.
 /// @ignore Message
 {% endhighlight %}
 
-**Notes:**
+## @link
 
-* Multiple `@ignore` allowed on the same item.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Describes a link                                           |
+| Multiple    | true                                                       |
+| Default     | &mdash;                                                    |
+| Aliases     | `@source`                                                  |
+| Autofilled  | false                                                      |
+| Allowed on  | functions, mixins, placeholders, variables                 |
 
-## @link (synonym: @source)
-
-Describes a link.
-
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -272,16 +326,22 @@ Describes a link.
 /// @link http://some.url Optional caption
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * Caption is optional.
-* Multiple `@link` allowed on the same item.
 
-## @output (synonym: @outputs)
+## @output
 
-An equivalent to `@return` for mixins. Provide a description of what's being printed by the mixin.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Provide a description of what's being printed by the mixin |
+| Multiple    | false                                                      |
+| Default     | &mdash;                                                    |
+| Aliases     | `@outputs`                                                  |
+| Autofilled  | false                                                      |
+| Allowed on  | mixins                                                     |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -293,16 +353,22 @@ An equivalent to `@return` for mixins. Provide a description of what's being pri
 /// @output Description
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * Description is parsed as Markdown.*
-* Has no effect on functions, variables and placeholders.
 
-## @parameter (synonyms: @param, @arg, @argument)
+## @parameter
 
-Describes a parameter of the documented item.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Describes a parameter of the documented item               |
+| Multiple    | true                                                       |
+| Default     | &mdash;                                                    |
+| Aliases     | `@arg`, `@argument`, `@param`                              |
+| Autofilled  | false                                                      |
+| Allowed on  | functions, mixins                                          |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -320,19 +386,25 @@ Describes a parameter of the documented item.
 /// @param {type} $name (default value) - description
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * Default value is optional.
 * Description is optional. Hyphen before description is optional.
 * Description is parsed as Markdown.*
-* Multiple types must be separated by pipes (`|`).
-* Has no effect on variables and placeholders.
+* Multiple types should be separated by pipes (`|`).
 
-## @property (synonym: @prop)
+## @property
 
-Document maps properties, use the dot notation to signify nesting.
+| Attribute   | Value                                                             |
+|-------------|-------------------------------------------------------------------|
+| Description | Document maps properties, use the dot notation to signify nesting |
+| Multiple    | true                                                              |
+| Default     | &mdash;                                                           |
+| Aliases     | `@prop`                                                           |
+| Autofilled  | false                                                             |
+| Allowed on  | variables                                                         |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -344,16 +416,23 @@ Document maps properties, use the dot notation to signify nesting.
 /// @prop {Type} base.default (default) - description
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * Description is parsed as Markdown.*
 * If `{Type}` is omitted, it will default to `Map` to make it more convenient for nested maps.
 
-## @require (synonym: @requires)
+## @require
 
-Defines if the documented item requires any other item.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Defines if the documented item requires any other item     |
+| Multiple    | true                                                       |
+| Default     | &mdash;                                                    |
+| Aliases     | `@requires`                                                |
+| Autofilled  | true                                                       |
+| Allowed on  | functions, mixins, placeholders, variables                 |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -375,9 +454,8 @@ Defines if the documented item requires any other item.
 /// @require {type} item description <link>
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
-* Autofilled (if not set otherwise in [`autofill`](/configuration/#autofill) option).
 * Type is optional; default type is `function`.
 * Description is optional. Hyphen before description is optional.
 * Description is parsed as Markdown.*
@@ -387,13 +465,19 @@ Defines if the documented item requires any other item.
 * If `{type}` is `variable`, then the `$` sign before the variable name is optional. Alongside if there is a `$` sign before the item name, then the `{variable}` type is optional.
 * If `{type}` is `placeholder`, then the `%` sign before the placeholder name is optional. Alongside if there is a `%` sign before the item name, then the `{placeholder}` type is optional.
 * The other item will automatically have a key named `usedBy` containing the name of function requiring it.
-* Multiple `@require` allowed on the same item.
 
-## @return (synonym: @returns)
+## @return
 
-Describes the return statement of the documented item.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Describes the return statement of the documented function  |
+| Multiple    | false                                                      |
+| Default     | &mdash;                                                    |
+| Aliases     | `@returns`                                                  |
+| Autofilled  | false                                                      |
+| Allowed on  | functions                                                  |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -417,7 +501,7 @@ Describes the return statement of the documented item.
 /// @return {type} description
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * Description is optional. Hyphen before description is optional.
 * Description is parsed as Markdown.*
@@ -425,9 +509,16 @@ Describes the return statement of the documented item.
 
 ## @see
 
-Describes an item that is somehow related to the documented item. To describe a dependency, authors should use `@requires` instead.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Describes an item that is somehow related to the documented item (to describe a dependency, authors should use `@require` instead) |
+| Multiple    | true                                                       |
+| Default     | &mdash;                                                    |
+| Aliases     | &mdash;                                                    |
+| Autofilled  | false                                                      |
+| Allowed on  | functions, mixins, placeholders, variables                 |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -445,7 +536,7 @@ Describes an item that is somehow related to the documented item. To describe a 
 /// @see %other-item
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * Type is optional; default type is `function`.
 * If `{type}` is `variable`, then the `$` sign before the variable name is optional. Alongside if there is a `$` sign before the item name, then the `{variable}` type is optional.
@@ -453,9 +544,16 @@ Describes an item that is somehow related to the documented item. To describe a 
 
 ## @since
 
-Describes the version at which the documented item has been implemented or updated.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Describes the version at which the documented item has been implemented or updated |
+| Multiple    | true                                                       |
+| Default     | &mdash;                                                    |
+| Aliases     | &mdash;                                                    |
+| Autofilled  | false                                                      |
+| Allowed on  | functions, mixins, placeholders, variables                 |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -469,17 +567,23 @@ Describes the version at which the documented item has been implemented or updat
 /// @since version description
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * Description is optional. Hyphen before description is optional.
 * Description is parsed as Markdown.*
-* Multiple `@since` allowed on the same item.
 
-## @throw (synonym: @throw, @exception)
+## @throw
 
-Describes the error thrown by the documented item.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Describes an error thrown by the documented item           |
+| Multiple    | true                                                       |
+| Default     | &mdash;                                                    |
+| Aliases     | `@throws`, `@exception`                                    |
+| Autofilled  | true                                                       |
+| Allowed on  | functions, mixins, placeholders                            |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -491,17 +595,22 @@ Describes the error thrown by the documented item.
 /// @throw Error related message
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
-* Autofilled (if not set otherwise in [`autofill`](/configuration/#autofill) option).
 * Description is parsed as Markdown.*
-* Multiple `@throw` allowed on the same item.
 
 ## @todo
 
-Defines any task to do regarding the documented item.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Defines any task to do regarding the documented item       |
+| Multiple    | true                                                       |
+| Default     | &mdash;                                                    |
+| Aliases     | &mdash;                                                    |
+| Autofilled  | false                                                      |
+| Allowed on  | functions, mixins, placeholders, variables                 |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -513,16 +622,22 @@ Defines any task to do regarding the documented item.
 /// @todo Task to be done
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
 * Description is parsed as Markdown.*
-* Multiple `@todo` allowed on the same item.
 
 ## @type
 
-Describes the type of a variable.
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Describes the type of the documented variable              |
+| Multiple    | false                                                      |
+| Default     | &mdash;                                                    |
+| Aliases     | &mdash;                                                    |
+| Autofilled  | false                                                      |
+| Allowed on  | variables                                                  |
 
-**Example:**
+### Example
 
 {% highlight scss %}
 /**
@@ -540,10 +655,9 @@ Describes the type of a variable.
 /// @type Bool | String
 {% endhighlight %}
 
-**Notes:**
+### Extra notes
 
-* Has no effect on functions, mixins and placeholders.
-* Multiple types are separated with pipes (`|`).
+* Multiple types should be separated with pipes (`|`).
 
 ---
 
