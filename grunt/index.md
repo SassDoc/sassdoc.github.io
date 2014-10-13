@@ -52,7 +52,7 @@ Refer to [Customising the view](/customising-the-view/) for a list of supported 
 
 <h4 class="option">verbose</h4>
 
-Type: `Boolean`  
+Type: `Boolean`
 Default: `false`
 
 Whether to enable SassDoc own logger or not.
@@ -60,7 +60,7 @@ Whether to enable SassDoc own logger or not.
 
 <h4 class="option">config</h4>
 
-Type: `String`  
+Type: `String`
 Default: `null`
 
 Path to a view configuration file.
@@ -68,7 +68,7 @@ Path to a view configuration file.
 
 <h4 class="option">display.access</h4>
 
-Type: `Array`  
+Type: `Array`
 Default: `['public', 'private']`
 
 Access levels that should be displayed.
@@ -76,7 +76,7 @@ Access levels that should be displayed.
 
 <h4 class="option">display.alias</h4>
 
-Type: `Boolean`  
+Type: `Boolean`
 Default: `false`
 
 Enable/disable display of alias items.
@@ -84,7 +84,7 @@ Enable/disable display of alias items.
 
 <h4 class="option">display.watermark</h4>
 
-Type: `Boolean`  
+Type: `Boolean`
 Default: `true`
 
 Enable/disable display of SassDoc watermark in footer.
@@ -92,7 +92,7 @@ Enable/disable display of SassDoc watermark in footer.
 
 <h4 class="option">package</h4>
 
-Type: `String | Object`  
+Type: `String | Object`
 Default: `null`
 
 Pass your project informations to the generated view.
@@ -110,8 +110,8 @@ Following keys will be looked for:
 <h4 class="option">theme</h4>
 
 
-Type: `String`  
-Default: `'default'`  
+Type: `String`
+Default: `'default'`
 Since: `sassdoc@1.2.0`
 
 Name of a custom theme, either a published package or a local one.
@@ -119,8 +119,8 @@ Name of a custom theme, either a published package or a local one.
 
 <h4 class="option">groups</h4>
 
-Type: `Object`  
-Default: `{ 'undefined': 'Ungrouped' }`  
+Type: `Object`
+Default: `{ 'undefined': 'Ungrouped' }`
 Since: `sassdoc@1.2.0`
 
 Give friendly names to your groups, if any.
@@ -128,8 +128,8 @@ Give friendly names to your groups, if any.
 
 <h4 class="option">basePath</h4>
 
-Type: `String`  
-Default: `null`  
+Type: `String`
+Default: `null`
 Since: `sassdoc@1.2.0`
 
 An URL or a path which will be transformed in a link to the source file.
@@ -194,7 +194,7 @@ grunt.initConfig({
       'src': 'path/to/sass',
       'dest': 'path/to/docs',
       'options': {
-        'config': 'path/to/view.json'
+        'config': 'path/to/config.json'
       }
     }
   }

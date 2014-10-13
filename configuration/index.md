@@ -7,9 +7,7 @@ SassDoc comes with surprisingly few configuration in itself. Most of the configu
 
 Here is how it works: SassDoc merge the configuration file you provide (or that is being automatically fetched) with the one from the theme. If an option is set in both files, the one you set yourself overrides the one from the theme.
 
-To provide a configuration file, use the `--config`  (or `-c`) option when running `sassdoc`. If the option is not defined, SassDoc will try in this order: `view.json`, `view.yaml`, `view.yml`. So if you don't feel like passing the `--config` option every time, just name your file `view`.
-
-<p class="note  note--info"><strong>Beware!</strong> Starting SassDoc version 2, the default name for the file will be <code>.sassdocrc</code> (no extension). Until then, it's still <code>view</code>, either as a JSON or a YML file.</p>
+To provide a configuration file, use the `--config`  (or `-c`) option when running `sassdoc`. If the option is not defined, SassDoc will try to find a file named `.sassdocrc` (no extension). So if you don't feel like passing the `--config` option every time, just name your file `.sassdocrc`.
 
 {% highlight sh %}
 sassdoc source/ destination/       -c path/to/config.json # Short option and JSON file
