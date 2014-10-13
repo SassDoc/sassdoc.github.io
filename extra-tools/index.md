@@ -22,18 +22,7 @@ module.exports = function (dest, ctx) {
 };
 {% endhighlight %}
 
-This filter adds some extra key to annotations that can be parsed as Markdown so be sure to use them in your templates rather than the usual keys:
-
-* `ctx.package.htmlDescription`
-* `htmlAuthor`
-* `htmlThrows`
-* `htmlTodo`
-* `htmlDescription`
-* `htmlDescription` to `returns`
-* `htmlDescription` to `example`
-* `htmlDescription` to `parameters`
-* `htmlDescription` to `prop`
-* `htmlDescription` to `content`
+This filter overrides the provided values, so a value such as ``This is some `code`.`` would become ``This is some <code>code</code>``.
 
 ## Display toggle
 
