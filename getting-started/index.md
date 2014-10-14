@@ -39,7 +39,7 @@ sassdoc <src> <dest> [options]
 | `--sass-convert`       | use if syntax is `.sass`                                       |
 | `--no-update-notifier` | disable update notifier check                                  |
 
-<p class="note  note--info"><strong>Note:</strong> options <code>--sass-convert</code>, <code>--no-update-notifier</code> and <code>--no-prompt</code> can also be set from the configuration file (set with <code>--config</code>) respectively with <code>sass-convert</code>, <code>no-update-notifier</code> and <code>no-prompt</code>.</p>
+<p class="note  note--info"><strong>Note:</strong> options <code>--sass-convert</code> and <code>--no-update-notifier</code> can also be set from the configuration file (set with <code>--config</code>) respectively with <code>sass-convert</code> and <code>no-update-notifier</code>.</p>
 
 ## Profit
 

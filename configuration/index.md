@@ -100,11 +100,4 @@ SassDoc tries to make sure you always use an up-to-date version. If it is not th
 
 <p class="note  note--info"><strong>Note:</strong> you can also use the CLI option <code>--no-update-notifier</code>.</p>
 
-
-### no-prompt
-
-Because the destination folder gets wiped and to prevent any accident, SassDoc prompts you whenever the destination folder is not empty. If you don't want SassDoc to ask you to confirm everytime you run it, you can use the `no-prompt` option to disable it.
-
-<p class="note  note--info"><strong>Note:</strong> you can also use the CLI option <code>--no-prompt</code>.</p>
-
 <p class="note  note--danger"><strong>Caution!</strong> SassDoc prompts you for a reason: the destination folder gets completely erased only to be recreated. Don't leave any important file in there.</p>
