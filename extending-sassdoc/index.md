@@ -37,6 +37,7 @@ an `alias` array.
 | `resolve` | function | Called after the raw data is generated, where the whole SassDoc data is being passed (indexed by type and name). You can then modify this object reference as you want to complete your data structure while having access to the whole data. |
 | `default` | function | Returns a default value when &mdash;if ever&mdash; the annotation is not present. |
 | `autofill` | function | Takes a parsed annotation object. You can modify this object reference as you want while having access to the whole parsed content of the current annotation. |
+| `multiple` | boolean | Indicates if this annotation is allowed multiple times per comment. (Default `true`) |
 | `alias` | array | List of aliases for the annotation. |
 
 ## Examples
