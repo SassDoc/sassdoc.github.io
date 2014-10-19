@@ -36,6 +36,20 @@ Name of the documented item is self parsed, hence `@name` doesn't exist.
 
 Describes the documented item.
 
+## CommentRange
+
+Each annotated comment will include a object like:
+
+```js
+{
+  start : 1,
+  end : 3
+}
+```
+
+representing the start and end of the comment.
+
+
 ### Example
 
 {% highlight scss %}
