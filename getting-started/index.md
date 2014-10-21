@@ -38,7 +38,7 @@ sassdoc <src> <dest> [options]
 | `--no-update-notifier` | disable update notifier check       |
 | `--no-prompt`          | disable all prompts                 |
 
-<p class="note  note--info"><strong>Note:</strong> options <code>--sass-convert</code>, <code>--no-update-notifier</code> and <code>--no-prompt</code> can also be set from the configuration file (set with <code>--config</code>) respectively with <code>sass-convert</code>, <code>no-update-notifier</code> and <code>no-prompt</code>.</p>
+<p class="note  note--info"><strong>Note:</strong> options <code>--sass-convert</code>, <code>--no-update-notifier</code> and <code>--no-prompt</code> can also be set from the configuration file (set with <code>--config</code>) respectively with <code>sass-convert</code>, <code>no-update-notifier</code> and <code>force</code>.</p>
 
 ## Profit
 
