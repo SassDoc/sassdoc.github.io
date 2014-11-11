@@ -115,6 +115,30 @@ Since: `sassdoc@1.2.0`
 An URL or a path which will be transformed in a link to the source file.
 
 
+#### force
+
+Type: `Boolean`  
+Default: `false`  
+Since: `sassdoc@1.10.0`
+
+Whether to force wipe if the destination folder is not empty.
+
+
+#### interactive
+
+Type: `Boolean`  
+Default: `true`  
+Since: `sassdoc@1.10.0`
+
+Whether the session is interactive.
+
+
+<p class="note note--info">
+  Provided you know what your doing and you've checked your paths before,
+  you can disable the destination folder check and prompts by passing:
+  `force: true, interactive: false` to your config.
+</p>
+
 <p class="note note--info">
   <strong>Heads up</strong>: If a config file is passed
 and found, its options will prevail over defaults. Additional options passed to
