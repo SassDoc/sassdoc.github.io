@@ -35,7 +35,7 @@ Here is the available configuration that does not depend on the theme whatsoever
 | `groups`             | Object          | `{ undefined: "general" }` |
 | `sass-convert`       | Boolean         | `false`                    |
 | `no-update-notifier` | Boolean         | `false`                    |
-| `no-prompt`          | Boolean         | `false`                    |
+| `force`              | Boolean         | `false`                    |
 
 ### Package
 
@@ -103,9 +103,9 @@ SassDoc tries to make sure you always use an up-to-date version. If it is not th
 <p class="note  note--info"><strong>Note:</strong> you can also use the CLI option <code>--no-update-notifier</code>.</p>
 
 
-### no-prompt
+### force
 
-Because the destination folder gets wiped and to prevent any accident, SassDoc prompts you whenever the destination folder is not empty. If you don't want SassDoc to ask you to confirm everytime you run it, you can use the `no-prompt` option to disable it.
+Because the destination folder gets wiped and to prevent any accident, SassDoc prompts you whenever the destination folder is not empty. If you don't want SassDoc to ask you to confirm everytime you run it, you can use the `force` option to disable it.
 
 <p class="note  note--info"><strong>Note:</strong> you can also use the CLI option <code>--no-prompt</code>.</p>
 
