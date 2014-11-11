@@ -156,7 +156,7 @@ Whether the session is interactive.
 <p class="note note--info">
   Provided you know what your doing and you've checked your paths before,
   you can disable the destination folder check and prompts by passing:
-  `force: true, interactive: false` to your config.
+  <code>force: true, interactive: false</code> to your config.
 </p>
 
 <p class="note note--info">
