@@ -30,7 +30,7 @@ specify any option that SassDoc supports.
 Refer to [Customising the view](/customising-the-view/) for a list of supported options.
 
 
-#### verbose
+<h4 class="option">verbose</h4>
 
 Type: `Boolean`  
 Default: `false`
@@ -38,7 +38,7 @@ Default: `false`
 Whether to enable SassDoc own logger or not.
 
 
-#### config
+<h4 class="option">config</h4>
 
 Type: `String`  
 Default: `null`
@@ -46,7 +46,7 @@ Default: `null`
 Path to a view configuration file.
 
 
-#### display.access
+<h4 class="option">display.access</h4>
 
 Type: `Array`  
 Default: `['public', 'private']`
@@ -54,7 +54,7 @@ Default: `['public', 'private']`
 Access levels that should be displayed.
 
 
-#### display.alias
+<h4 class="option">display.alias</h4>
 
 Type: `Boolean`  
 Default: `false`
@@ -62,7 +62,7 @@ Default: `false`
 Enable/disable display of alias items.
 
 
-#### display.watermark
+<h4 class="option">display.watermark</h4>
 
 Type: `Boolean`  
 Default: `true`
@@ -70,7 +70,7 @@ Default: `true`
 Enable/disable display of SassDoc watermark in footer.
 
 
-#### package
+<h4 class="option">package</h4>
 
 Type: `String | Object`  
 Default: `null`
@@ -87,7 +87,7 @@ Following keys will be looked for:
 `description`
 
 
-#### theme
+<h4 class="option">theme</h4>
 
 
 Type: `String`  
@@ -97,7 +97,7 @@ Since: `sassdoc@1.2.0`
 Name of a custom theme, either a published package or a local one.
 
 
-#### groups
+<h4 class="option">groups</h4>
 
 Type: `Object`  
 Default: `{ 'undefined': 'Ungrouped' }`  
@@ -106,7 +106,7 @@ Since: `sassdoc@1.2.0`
 Give friendly names to your groups, if any.
 
 
-#### basePath
+<h4 class="option">basePath</h4>
 
 Type: `String`  
 Default: `null`  
@@ -115,7 +115,7 @@ Since: `sassdoc@1.2.0`
 An URL or a path which will be transformed in a link to the source file.
 
 
-#### force
+<h4 class="option">force</h4>
 
 Type: `Boolean`  
 Default: `false`  
@@ -124,7 +124,7 @@ Since: `sassdoc@1.10.0`
 Whether to force wipe if the destination folder is not empty.
 
 
-#### interactive
+<h4 class="option">interactive</h4>
 
 Type: `Boolean`  
 Default: `true`  
