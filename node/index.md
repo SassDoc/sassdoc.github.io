@@ -30,6 +30,12 @@ sassdoc.parse(__dirname + '/sass').then(function (items) {
 Or if you want to use SassDoc at its best and generate the whole documentation from Node, you can use the `documentize` function that returns a promise and accepts 3 arguments: the source folder, the destination folder, and a configuration object (which is optional).
 
 {% highlight js %}
+// Import SassDoc
 var sassdoc = require('sassdoc');
-sassdoc.documentize(source, dest, config);
+
+// Generate the docs
+sassdoc.documentize(source, destination, configuration);
+
+// Refresh the docs
+sassdoc.refresh(destination, configuration);
 {% endhighlight %}
