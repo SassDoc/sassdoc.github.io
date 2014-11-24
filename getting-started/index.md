@@ -23,7 +23,7 @@ sassdoc <src> <dest> [options]
 
 ...where:
 
-* `<src>` is the path to your Sass folder;
+* `<src>` is the path to your Sass folder or a [glob expression] to SCSS/Sass files;
 * `<dest>` is the path to the destination folder;
 * `[options]` are:
 
@@ -37,6 +37,8 @@ sassdoc <src> <dest> [options]
 | `-c`, `--config`       | Path to JSON/YAML configuration file.                           |
 | `-t`, `--theme`        | Theme to use.                                                   |
 | `--no-update-notifier` | Disable update notifier check.                                  |
+
+[glob expression]: https://github.com/isaacs/node-glob#glob-primer
 
 ## Profit
 
