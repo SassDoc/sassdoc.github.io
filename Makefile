@@ -8,12 +8,14 @@ WEBSHOT = node_modules/webshot-cli/webshot
 SASSDOC_FLAGS = --force
 SASSDOC_THEME = node_modules/sassdoc-theme-default
 
+WEBSHOT_FLAGS = --default-white-background
+
 RAW_BASE_URL = https://raw.githubusercontent.com/SassDoc/sassdoc/master
 
-all: changelog preview themes
+all: changelog preview themes built-with-sassdoc
 
-# Changelog
-# =========
+# Changelog {{{
+# =============
 
 CHANGELOG_URL = $(RAW_BASE_URL)/CHANGELOG.md
 CHANGELOG_HEADER = '---\nlayout: default\ntitle: "Changelog"\n---\n\n'
@@ -23,19 +25,23 @@ changelog: changelog/index.md
 changelog/index.md: force
 	(printf -- $(CHANGELOG_HEADER); curl -s $(CHANGELOG_URL) | sed 1,2d) > $@
 
-# Preview
-# =======
+# }}}
+
+# Preview {{{
+# ===========
 
 preview: assets/images/preview-image.png
 
 assets/images/preview-image.png: $(SASSDOC_THEME) | $(SASSDOC) $(WEBSHOT)
 	echo '{"package": "node_modules/sassdoc-theme-default/package.json"}' > .preview.json
 	$(SASSDOC) $(SASSDOC_FLAGS) $</scss .preview --config .preview.json
-	$(WEBSHOT) --window-size 1200/675 .preview/index.html $@
+	$(WEBSHOT) $(WEBSHOT_FLAGS) --window-size 1200/675 .preview/index.html $@
 	$(RM) -r .preview .preview.json
 
-# Theme gallery
-# =============
+# }}}
+
+# Theme gallery {{{
+# =================
 
 GALLERY = theme-gallery
 
@@ -45,10 +51,32 @@ include $(GALLERY)/gallery.mk
 themes: _data/themes.yml
 
 _data/themes.yml: $(THEME_PACKAGES) | gallery
-	for i in $(addsuffix /package.json, $^); do name=$$(basename $$(dirname $$i) | sed 's/^sassdoc-theme-//'); sed "1s/^/$$name: /" $$i; done > $@
+	for i in $(addsuffix /package.json, $^); do \
+		name=$$(basename $$(dirname $$i) | sed 's/^sassdoc-theme-//'); \
+		sed "1s/^/$$name: /" $$i; \
+	done > $@
 
-# Common
-# ======
+# }}}
+
+# Built with SassDoc {{{
+# ======================
+
+BWS = _data/built_with_sassdoc.yml
+BWS_DIR = assets/images/built-with-sassdoc
+BWS_IMAGES = $(addprefix $(BWS_DIR)/, $(shell awk '$$1 == "image:" {print $$2}' $(BWS)))
+
+bws: built-with-sassdoc
+
+built-with-sassdoc: $(BWS_IMAGES)
+
+$(BWS_IMAGES): $(BWS) | $(WEBSHOT)
+	url=$$(grep -B1 '$(@F)' $< | sed 's/.*: //;q'); \
+	$(WEBSHOT) $(WEBSHOT_FLAGS) --window-size 2880/1800 --zoom 2 "$$url" $@
+
+# }}}
+
+# Common {{{
+# ==========
 
 update:
 	$(NPM) update
@@ -63,3 +91,5 @@ $(DIRS):
 	mkdir $@
 
 force:
+
+# }}}
