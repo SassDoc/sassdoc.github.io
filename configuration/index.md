@@ -31,9 +31,7 @@ Here is the available configuration that does not depend on the theme whatsoever
 | `theme`              | String          | `default`                  |
 | `autofill`           | Array           | `["requires", "throws"]`   |
 | `groups`             | Object          | `{ undefined: "general" }` |
-| `sass-convert`       | Boolean         | `false`                    |
 | `no-update-notifier` | Boolean         | `false`                    |
-| `force`              | Boolean         | `false`                    |
 
 ### Package
 
@@ -87,12 +85,6 @@ The `groups` option is an object of aliases for group slugs. When you gather ite
 All non-grouped items are gathered by SassDoc in an `undefined` group, that is being aliased as *General*. Feel free to change this to suit your preferences.
 
 <p class="note  note--warning"><strong>Note:</strong> that for this feature to work, <a href="/extra-tools/#groups-aliases">sassdoc-extras</a> has to be used by the theme, which is obviously the case with the default theme.</p>
-
-### sass-convert
-
-In itself, SassDoc does not support `.sass` files. If your code base is written in Sass indented syntax, pass `sass-convert` to `true` so SassDoc performs a Sass syntax conversion before running.
-
-<p class="note  note--info"><strong>Note:</strong> you can also use the CLI option <code>--sass-convert</code>.</p>
 
 ### no-update-notifier
 

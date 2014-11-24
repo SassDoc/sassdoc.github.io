@@ -29,14 +29,14 @@ sassdoc <src> <dest> [options]
 
 | Option                 | Role                                                           |
 |------------------------|----------------------------------------------------------------|
-| `-h`, `--help`         | bring help                                                     |
-| `--version`            | show version                                                   |
-| `-v`, `--verbose`      | enable verbose mode                                            |
-| `-i`, `--interactive`  | prompt to remove an existing destination directory             |
-| `-f`, `--force`        | always remove an existing destination directory without asking |
-| `-c`, `--config`       | path to JSON/YAML configuration file                           |
-| `-t`, `--theme`        | theme to use                                                   |
-| `--no-update-notifier` | disable update notifier check                                  |
+| `--version`            | Show version.                                                   |
+| `-h`, `--help`         | Bring help.                                                     |
+| `-v`, `--verbose`      | Enable verbose mode.                                            |
+| `-i`, `--interactive`  | Prompt to remove an existing destination directory.             |
+| `-f`, `--force`        | Always remove an existing destination directory without asking. |
+| `-c`, `--config`       | Path to JSON/YAML configuration file.                           |
+| `-t`, `--theme`        | Theme to use.                                                   |
+| `--no-update-notifier` | Disable update notifier check.                                  |
 
 ## Profit
 
