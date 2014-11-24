@@ -34,7 +34,7 @@ Or if you want to use SassDoc at its best and generate the whole documentation f
 var sassdoc = require('sassdoc').default;
 
 // Generate docs
-// @param {String} source - path to source
+// @param {String} source - path to source or glob string/array
 // @param {String} destination - path to description
 // @param {Object} configuration - configuration object
 // @return {Promise}
@@ -43,4 +43,18 @@ sassdoc(source, destination, configuration).then(function () {
 }, function (err) {
   console.error(err);
 });
+{% endhighlight %}
+
+## About glob
+
+The `source` parameter above can be a simple source directory, but also
+a [glob expression] or even array.
+
+[glob expression]: https://github.com/isaacs/node-glob#glob-primer
+
+{% highlight js %}
+sassdoc(['scss/**/*.scss', '!scss/vendor/*.scss'], ...args);
+sassdoc('scss/**/*.{sass,scss}', ...args);
+sassdoc('scss/**/*.s[ac]ss', ...args);
+sassdoc('scss/**/*.s?ss', ...args);
 {% endhighlight %}
