@@ -12,7 +12,7 @@ WEBSHOT_FLAGS = --default-white-background
 
 RAW_BASE_URL = https://raw.githubusercontent.com/SassDoc/sassdoc/master
 
-all: changelog preview themes
+all: changelog preview themes built-with-sassdoc
 
 # Changelog {{{
 # =============
@@ -58,6 +58,22 @@ _data/themes.yml: $(THEME_PACKAGES) | gallery
 
 # }}}
 
+# Built with SassDoc {{{
+# ======================
+
+BWS = _data/built_with_sassdoc.yml
+BWS_DIR = assets/images/built-with-sassdoc
+BWS_IMAGES = $(addprefix $(BWS_DIR)/, $(shell awk '$$1 == "image:" {print $$2}' $(BWS)))
+
+bws: built-with-sassdoc
+
+built-with-sassdoc: $(BWS_IMAGES)
+
+$(BWS_IMAGES): $(BWS) | $(WEBSHOT)
+	url=$$(grep -B1 '$(@F)' $< | sed 's/.*: //;q'); \
+	$(WEBSHOT) $(WEBSHOT_FLAGS) --window-size 2880/1800 --zoom 2 "$$url" $@
+
+# }}}
 
 # Common {{{
 # ==========
