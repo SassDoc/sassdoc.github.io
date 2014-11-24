@@ -1,0 +1,33 @@
+- name: Bourbon Neat
+  url: http://thoughtbot.github.io/neat-docs/latest/
+  image: neat.png
+- name: Guardian StyleSheets (GUSS)
+  url: http://www.kaelig.fr/gu/guss-sassdoc/
+  image: guss.png
+- name: SassyIcons
+  url: http://pascalduez.github.io/SassyIcons/docs/
+  image: sassyicons.png
+- name: SassyFilters
+  url: http://pascalduez.github.io/SassyFilters/docs/
+  image: sassyfilters.png
+- name: SassyLists
+  url: http://sassylists.com/documentation
+  image: sassylists.png
+- name: css-patterns
+  url: http://madebymany.github.io/css-patterns/
+  image: css-patterns.png
+- name: scss-components
+  url: http://scss-components.com/sassdoc/
+  image: scss-components.png
+- name: yy
+  url: http://astina.github.io/yy/
+  image: yy.png
+- name: Sassy Starter
+  url: http://minamarkham.github.io/sassy-starter/docs/
+  image: sassy-starter.png
+- name: a11y.css
+  url: http://ffoodd.github.io/a11y.css/docs/
+  image: a11y.css.png
+- name: Sassy-Gridlover
+  url: http://hiulit.github.io/Sassy-Gridlover/sassdoc/
+  image: sassy-gridlover.png
