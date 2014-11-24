@@ -11,7 +11,7 @@ If you want to integrate SassDoc in a build process but do not use [Grunt](/grun
 npm install sassdoc --save
 {% endhighlight %}
 
-## Using Raw Data
+## Using raw data
 
 If you are not interested in generating the documentation but only want to access the raw data, it is as easy as using the `parse` method accepting a folder (of Sass/SCSS files) and returning a promise yielding documented items.
 
