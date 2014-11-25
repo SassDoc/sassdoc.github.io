@@ -25,6 +25,7 @@ title: "Annotations"
 | [@since](#since) | Changelog for the documented item |
 | [@throws (@throw, @exception)](#throws-synonym-throw-exception) | Exceptions raised by the documented item |
 | [@todo](#todo) | Things to do related to the documented item |
+| [@type](#type) | Describes the type of a variable |
 
 <p class="note  note--info"><strong>Note:</strong> remember that you can define annotations at a file level rather than on specific items, which can happen to be very useful when all items from a file share some traits (author, group, and so on...). To do so, please refer to <a href="/file-level-annotations/">File-level Annotations</a>.</p>
 
