@@ -1,5 +1,22 @@
 .navbar {
-    border-bottom: .5em solid $pink;
+    text-align: center;
+
+    @include respond-to("large") {
+        border-bottom: .5em solid $pink;
+        text-align: left;
+    }
+
+    @media (min-width: 1170px) {
+        padding-left: $sidebar-width;
+    }
+}
+
+.navbar > .container {
+    width: $container-width + $sidebar-width;
+
+    @media (min-width: 1170px) {
+        width: $container-width;
+    }
 }
 
 .navbar__list {
@@ -8,21 +25,27 @@
 }
 
 .navbar__item {
-    float: left;
     padding: 1em;
+
+    @include respond-to("large") {
+       float: left;
+    }
 }
 
 .navbar__item--pull {
-    float: right;
+    @include respond-to("large") {
+        float: right;
+    }
 }
 
 .navbar__item--logo {
-    position: absolute;
-    right: 100%;
+    @media (min-width: 1170px) {
+        position: absolute;
+        right: 100%;
+    }
 }
 
 .navbar__item--title {
-    padding: 0;
     text-transform: uppercase;
     color: $pink;
     font-weight: bold;
@@ -32,6 +55,13 @@
         margin: 0;
     }
 
+    @include respond-to("large") {
+        padding: 0;
+
+        .navbar__link {
+            font-size: 2.5em;
+        }
+    }
 }
 
 .navbar__link {
