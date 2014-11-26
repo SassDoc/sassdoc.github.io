@@ -1,0 +1,50 @@
+.wrapper--home {
+    font-size: 1.25em;
+}
+
+.megatron {
+    border-bottom: 3.5em solid $pink;
+    background-color: $yellow;
+    padding: 1em 0;
+}
+
+.megatron__dual {
+    position: relative;
+}
+
+.megatron__side {
+    float: left;
+    width: 50%;
+}
+
+.megatron__code {
+    width: 60%;
+}
+
+.megatron__illustration {
+    position: absolute;
+    top: -2em;
+    right: 0;
+}
+
+.home__section {
+    border-top: 1.5em solid $pink;
+    overflow: hidden;
+    padding-bottom: 3em;
+
+    ul {
+        margin-bottom: 0;
+    }
+}
+
+.home__section-heading {
+    color: $pink;
+    font-size: 2.5em;
+    margin-top: -.375em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+
+    + * {
+        margin-top: 0;
+    }
+}

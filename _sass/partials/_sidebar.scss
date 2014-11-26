@@ -1,5 +1,5 @@
 .sidebar {
-  background: $dark-pink;
+  background: $blue;
   text-align: center;
   padding: 1em;
 
@@ -25,6 +25,7 @@
   border-bottom: 1px solid rgba(black, .1);
   padding: .45em .9em;
   margin: 0;
+  color: $yellow;
 
   @include respond-to("large") {
     margin-bottom: 1em;
@@ -41,7 +42,7 @@
   line-height: 1.5;
   margin: 0;
   padding-bottom: 1.5em;
-  border-bottom: .25em solid $light-pink;
+  border-bottom: .25em solid $yellow;
 
   @include respond-to("large") {
     margin-bottom: 1em;
@@ -70,7 +71,7 @@
   }
 
   &.active a {
-    color: $black;
+    color: $pink;
   }
 }
 
@@ -93,7 +94,7 @@
 
 .sidebar__toggle-label {
   cursor: pointer;
-  background: $very-dark-pink;
+  background: $black;
   color: white;
   border: 1px solid rgba(black, .1);
   display: block;
@@ -104,7 +105,7 @@
   &:hover,
   &:focus,
   &:active {
-    background: $dark-pink;
+    background: $pink;
   }
 
   @include respond-to("large") {

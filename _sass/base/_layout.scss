@@ -1,18 +1,29 @@
+.wrapper {
+}
+
+.wrapper--home {
+  border: none;
+}
+
 .container {
   max-width: 100%;
   width: $container-width;
-  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
 
   @include respond-to("large") {
     padding: 0 1em;
   }
+
+  &::after {
+    clear: both;
+    display: table;
+    content: '';
+  }
 }
 
-
 .main {
-  padding: 0 1em;
-
-  @include respond-to("large") {
-    border-left: $sidebar-width solid $dark-pink;
+  > .container {
+    padding-top: 1em;
   }
 }

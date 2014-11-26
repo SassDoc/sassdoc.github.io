@@ -1,23 +1,19 @@
 .footer {
+  background-color: $blue;
+  color: $yellow;
   clear: both;
-  font-size: .9em;
-  color: #aaa;
   text-align: center;
-  background: $light-grey;
-  background: $very-dark-pink;
+  padding: 1em 0;
 
   p {
     margin: 0;
   }
 
-  @include respond-to("large") {
-    text-align: right;
-    padding-left: $sidebar-width;
+  a {
+    color: $yellow;
   }
 }
 
 .footer__content {
-  border-top: 1px solid rgba(black, .1);
-  background: #EFEFEF;
   padding: .5em 0;
 }
