@@ -1,61 +1,59 @@
 ---
-layout: default
+layout: home
 title: "Release the docs!"
 ---
 
-<a class="build-status" href="https://travis-ci.org/SassDoc/sassdoc" target="_blank"><img src="https://travis-ci.org/SassDoc/sassdoc.svg?branch=master" alt="Build Status" /></a>
+<header role="banner" class="megatron">
+    <div class="container">
+        <div class="megatron__dual  clearfix">
+            <div class="megatron__code">
+{% highlight bash %}
+# Install SassDoc globally
+npm install sassdoc -g
 
-<a class="npm-badge" href="https://nodei.co/npm/sassdoc/"><img src="https://nodei.co/npm/sassdoc.png?downloads=true" alt="NPM SassDoc" /></a>
-
-SassDoc is to Sass what JSDoc is to JavaScript: a documentation system to build pretty and powerful docs in the blink of an eye. Among other things, SassDoc is:
-
-* usable out of the box;
-* highly customisable;
-* blazingly fast;
-* fully themable;
-* integrated with Grunt/Gulp/Broccoli or directly Node.
-
-## How does it work?
-
-[SassDoc](http://github.com/sassdoc/sassdoc) parses your source folder to grab [documentation-specific comments](/annotations/). From there, it builds a [data tree](/data-interface/), that gets [enhanced and filtered](/extra-tools/) before being passed to the [view](/customising-the-view/). So you end up with a fully styled HTML document located at your destination folder.
-
-It would pretty much look like this:
-
-![SassDoc](/assets/images/preview-image.png)
-
-## Example
-
-{% highlight scss %}
-/**
- * Adds `$value` at `$index` in `$list`.
- *
- * @author Hugo Giraudel
- *
- * @requires {function} is-true
- *
- * @param {List}   $list  - list to update
- * @param {Number} $index - index to add
- * @param {*}      $value - value to add
- *
- * @throws List index $index is not a number for `insert-nth`.
- *
- * @return {List | Null}
- */
-
-@function insert-nth($list, $index, $value) {
-  // ...
-}
-
-/**
- * Defines whether the lib should support legacy browsers (e.g. `IE 8`).
- *
- * @since 1.3.37
- *
- * @todo Nothing. It's awesome.
- *
- * @link https://github.com/SassDoc/sassdoc SassDoc
- *
- * @type Bool
- */
-$legacy-support: true !global;
+# Run SassDoc on your project
+sassdoc source/ destination/
 {% endhighlight %}
+                <a href="/getting-started/" class="button  button--primary">Getting started</a>
+            </div>
+
+            <div class="megatron__side  megatron__side--illustration">
+                <img class="megatron__illustration" alt="SassDoc, release the docs!" src="/assets/images/illustration.png" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="home__section">
+    <div class="container">
+        <h2 class="home__section-heading">What is it?</h2>
+
+        <p>SassDoc is to Sass what JSDoc is to JavaScript: a documentation system to build pretty and powerful docs in the blink of an eye. Among other things, SassDoc is:</p>
+
+        <ul>
+            <li>usable out of the box;</li>
+            <li>highly customisable;</li>
+            <li>blazingly fast;</li>
+            <li>fully themable;</li>
+            <li>integrated with Grunt/Gulp/Broccoli or directly Node.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="home__section">
+    <div class="container">
+        <h2 class="home__section-heading">How it works</h2>
+
+        <p><a href="http://github.com/sassdoc/sassdoc">SassDoc</a> parses your source folder to grab <a href="/annotations/">documentation-specific comments</a>. From there, it builds a <a href="/data-interface/">data tree</a>, that gets <a href="/extra-tools/">enhanced and filtered</a> before being passed to the <a href="/customising-the-view/">view</a>. So you end up with a fully styled HTML document located at your destiantion folder.</p>
+
+        <img src="/assets/images/preview-image.png" alt="SassDoc Default Theme" />
+    </div>
+</section>
+
+<section class="home__section">
+    <div class="container">
+        <h2 class="home__section-heading">What they think</h2>
+
+        {% include quotes.html %}
+    </div>
+</section>
