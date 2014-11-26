@@ -1,0 +1,25 @@
+.quote {
+    margin: 0 0 2em;
+    overflow: hidden;
+}
+
+.quote__avatar {
+    border-radius: 50%;
+    float: left;
+    display: block;
+    max-width: 5em;
+    margin: 0 1em 1em 0;
+}
+
+.quote__content {
+    margin-bottom: .5em;
+    margin-top: 0;
+}
+
+.quote__author {
+    a {
+        color: $blue;
+    }
+
+    margin: 0;
+}
