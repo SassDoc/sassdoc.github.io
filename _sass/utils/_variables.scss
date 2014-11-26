@@ -1,15 +1,27 @@
+/// Main container width
+/// @type Length
 $container-width: 920px;
+
+/// Sidebar width
+/// @type Length
 $sidebar-width: 250px;
 
-$font-stack: 'Roboto', sans-serif;
+/// Main font familiy
+/// @type List
+$font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Arial', sans-serif;
 
-$black: #444;
-$pink: #c69;
-$light-pink: lighten($pink, 5%);
-$dark-pink: darken($pink, 12%);
-$very-dark-pink: darken($pink, 20%);
-$green: #699;
-$light-grey: #EFEFEF;
+/// Pink
+/// @type Color
+$pink: #dd5a6f;
 
-$primary-color: $pink;
-$secondary-color: $green;
+/// Blue
+/// @type Color
+$blue: #135c6a;
+
+/// Yellow
+/// @type Color
+$yellow: #ffc93c;
+
+/// Black
+/// @type Color
+$black: #333;

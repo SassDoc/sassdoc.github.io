@@ -14,10 +14,12 @@
 @import "base/typography";
 
 @import "partials/sidebar";
-@import "partials/header";
+@import "partials/navbar";
 @import "partials/footer";
-@import "partials/badges";
 
 @import "components/notes";
+@import "components/buttons";
+@import "components/quotes";
 
+@import "pages/home";
 @import "pages/theme-picker";
