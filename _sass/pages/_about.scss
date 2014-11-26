@@ -1,0 +1,34 @@
+.authors {
+  overflow: hidden;
+  list-style: none;
+}
+
+.author {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 1em;
+  display: block;
+
+  @include respond-to("large") {
+    float: left;
+    width: 50%;
+  }
+}
+
+.author__name {
+  color: $blue;
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.author__role {
+  color: $black;
+  display: block;
+}
+
+.author__avatar {
+  border-radius: 50%;
+  margin: 0 auto 1em;
+  max-width: 200px;
+}
