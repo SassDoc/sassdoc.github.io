@@ -23,3 +23,8 @@ h2, h3, h4, h5, h6 {
 .option {
   text-transform: lowercase;
 }
+
+body:not(.home) h2 {
+  color: $blue;
+  text-transform: uppercase;
+}
