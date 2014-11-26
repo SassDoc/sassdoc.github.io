@@ -1,50 +1,151 @@
-.wrapper--home {
+.home .wrapper {
     font-size: 1.25em;
+    border: none;
+}
+
+.home .main {
+    border: none;
+}
+
+.home .navbar {
+    padding-left: 0;
 }
 
 .megatron {
-    border-bottom: 3.5em solid $pink;
-    background-color: $yellow;
+    margin-bottom: 3em;
+}
+
+.megatron__top {
+    position: relative;
+    background: $yellow;
+    padding: 1em 0;
+
+    .highlight {
+        margin: 0 1em 1em;
+
+        @include respond-to("large") {
+            margin: 0;
+            border: none;
+            background: none;
+
+            pre {
+                padding: 0;
+            }
+
+            span {
+                font-family: inherit;
+            }
+
+            > * {
+                color: $black !important;
+            }
+
+            .c {
+                color: $blue;
+            }
+
+            .nb {
+                color: $black;
+            }
+        }
+    }
+}
+
+.megatron__bottom {
+    background: $pink;
     padding: 1em 0;
 }
 
-.megatron__dual {
-    position: relative;
+.megatron__content {
+    @include respond-to("large") {
+        width: 60%;
+        margin-left: auto;
+    }
 }
 
-.megatron__side {
-    float: left;
-    width: 50%;
-}
+.megatron__button {
+    margin: 0 1em;
 
-.megatron__code {
-    width: 60%;
+    & + & {
+        margin-top: 1em;
+    }
+
+    @include respond-to("large") {
+        width: 48%;
+        vertical-align: top;
+        margin: 0;
+
+        & + & {
+            margin-top: 0;
+            margin-left: 4%;
+        }
+    }
+
+    font-size: .9em;
+
 }
 
 .megatron__illustration {
-    position: absolute;
-    top: -2em;
-    right: 0;
+    margin: 0 auto 1em;
+
+    @include respond-to("large") {
+        margin-top: 0;
+        position: absolute;
+        top: -4em;
+        left: 0;
+        max-width: 300px;
+    }
 }
 
 .home__section {
-    border-top: 1.5em solid $pink;
     overflow: hidden;
-    padding-bottom: 3em;
+    padding: 0 1em 3em;
 
     ul {
         margin-bottom: 0;
     }
+
+    @include respond-to("large") {
+        padding: 0 0 3em;
+    }
 }
 
 .home__section-heading {
-    color: $pink;
-    font-size: 2.5em;
-    margin-top: -.375em;
-    margin-bottom: 1em;
-    text-transform: uppercase;
+    $border-height: .5em;
 
-    + * {
+    margin-bottom: 1em;
+    border-bottom: $border-height solid $pink;
+
+    color: $pink;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: .65;
+
+    & + * {
         margin-top: 0;
+    }
+
+    @include respond-to("large") {
+        font-size: 2.5em;
+        text-align: left;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            background: $pink;
+            top: 100%;
+            width: 20em;
+            height: $border-height;
+        }
+
+        &::after {
+            left: 100%;
+        }
+
+        &::before {
+            right: 100%;
+        }
     }
 }

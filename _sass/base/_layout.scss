@@ -1,8 +1,5 @@
 .wrapper {
-}
-
-.wrapper--home {
-  border: none;
+  position: relative;
 }
 
 .container {
@@ -24,6 +21,15 @@
 
 .main {
   > .container {
-    padding-top: 1em;
+    padding: 1em;
+  }
+
+  @include respond-to("large") {
+    border-left: $sidebar-width solid $pink;
+
+    > .container {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
   }
 }
