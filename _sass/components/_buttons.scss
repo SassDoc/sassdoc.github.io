@@ -12,14 +12,17 @@
 .button--primary {
     border-radius: .15em;
     background-color: $yellow;
+    box-shadow: inset 0 1px mix($yellow, white, 60%);
     display: block;
+    box-shadow: 0 4px 0 mix($pink, black, 80%);
 
     color: $blue;
     text-transform: uppercase;
 
-    &:hover {
+    &:hover,
+    &:active {
         background: mix($yellow, white, 90%);
-        box-shadow: 0 4px 0 mix($pink, black, 80%);
+        box-shadow: none;
     }
 
     @include respond-to("large") {
