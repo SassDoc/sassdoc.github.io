@@ -1,0 +1,27 @@
+.button {
+    transition: .150s ease-out;
+    padding: .5em 1em;
+    text-align: center;
+    display: inline-block;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.button--primary {
+    border-radius: .35em;
+    border: .25em solid;
+    background-color: transparent;
+
+    color: $blue;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: rgba(white, .5);
+    }
+}
+
+.button--block {
+    display: block;
+}
