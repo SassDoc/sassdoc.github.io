@@ -1,0 +1,100 @@
+.header {
+    text-align: center;
+    padding: 1em 0;
+
+    @include respond-to("large") {
+        border-bottom: .5em solid $pink;
+        text-align: left;
+    }
+}
+
+.header > .container {
+    width: $container-width + $sidebar-width;
+
+    @include respond-to("huge") {
+        width: $container-width;
+    }
+}
+
+.nav {
+    @include respond-to("large") {
+        float: right;
+    }
+}
+
+.nav__list {
+    list-style: none;
+    margin: 0;
+}
+
+.nav__item {
+    @include respond-to("large") {
+       float: left;
+    }
+}
+
+.nav__item--pull {
+    @include respond-to("large") {
+        float: right;
+    }
+}
+
+.nav__link {
+    display: block;
+    padding: 1em;
+    position: relative;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &::after {
+        content: '';
+        opacity: 0;
+        transition: .15s ease-out;
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: -2em;
+        border-left: .6em solid transparent;
+        border-right: .6em solid transparent;
+        border-bottom: .75em solid $pink;
+        left: 50%;
+        margin-left: -.3em;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        bottom: -1em;
+    }
+}
+
+.logo {
+    @include respond-to("large") {
+        float: left;
+        margin-right: 1em;
+        padding: 1em 0;
+    }
+
+    @include respond-to("huge") {
+        padding: 0;
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        margin-top: -.75em;
+    }
+}
+
+.main-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: $pink;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin: 0;
+
+    @include respond-to("large") {
+        text-align: left;
+        float: left;
+    }
+}
