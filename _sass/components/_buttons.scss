@@ -10,15 +10,20 @@
 }
 
 .button--primary {
-    border-radius: .35em;
-    border: .25em solid;
-    background-color: transparent;
+    border-radius: .15em;
+    background-color: $yellow;
+    display: block;
 
     color: $blue;
     text-transform: uppercase;
 
     &:hover {
-        background-color: rgba(white, .5);
+        background: mix($yellow, white, 90%);
+        box-shadow: 0 4px 0 mix($pink, black, 80%);
+    }
+
+    @include respond-to("large") {
+        display: inline-block;
     }
 }
 
