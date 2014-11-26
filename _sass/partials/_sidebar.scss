@@ -1,5 +1,5 @@
 .sidebar {
-  background: $blue;
+  background: $pink;
   text-align: center;
   padding: 1em;
 
@@ -71,7 +71,8 @@
   }
 
   &.active a {
-    color: $pink;
+    color: $yellow;
+    font-weight: bold;
   }
 }
 
@@ -80,6 +81,7 @@
   text-transform: capitalize;
   padding: .25em .5em;
   color: white;
+  font-weight: normal;
 
   &:hover,
   &:active,
