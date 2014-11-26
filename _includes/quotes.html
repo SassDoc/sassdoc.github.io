@@ -1,0 +1,7 @@
+{% for quote in site.data.quotes %}
+<blockquote class="quote">
+    <img class="quote__avatar" src="{{ quote.author_avatar }}" alt="{{ quote.author }}" />
+    <p class="quote__content">{{ quote.content }}</p>
+    <p class="quote__author"><a href="{{ quote.link }}" target="_blank">{{ quote.author }}</a></p>
+</blockquote>
+{% endfor %}
