@@ -25,3 +25,12 @@ $yellow: #ffc93c;
 /// Black
 /// @type Color
 $black: #333;
+
+/// Breakpoints
+/// @type Map
+/// @require $container-width
+/// @require $sidebar-width
+$breakpoints: (
+  'large': $container-width,
+  'huge': $container-width + $sidebar-width
+);
