@@ -1,6 +1,5 @@
 .highlight {
     background: #333;
-    padding: .5em 1em;
     margin-bottom: 1em;
     font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     overflow: auto;
@@ -8,6 +7,7 @@
     font-size: .9em;
 
     pre {
+        padding: .5em 1em;
         margin: 0;
     }
 
