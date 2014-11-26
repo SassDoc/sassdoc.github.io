@@ -1,10 +1,10 @@
-/// Main container width
-/// @type Length
-$container-width: 920px;
-
 /// Sidebar width
 /// @type Length
 $sidebar-width: 250px;
+
+/// Main container width
+/// @type Length
+$container-width: 1170px - $sidebar-width;
 
 /// Main font familiy
 /// @type List
