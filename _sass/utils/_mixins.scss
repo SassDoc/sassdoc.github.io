@@ -1,9 +1,9 @@
 @mixin respond-to($breakpoint) {
-  @if not map-has-key($breakpoints, $breakpoint) {
-    @throw "Invalid breakpoint `#{$breakpoint}`. Choose one of `#{map-keys($breakpoints)}`.";
-  }
+    @if not map-has-key($breakpoints, $breakpoint) {
+        @throw "Invalid breakpoint `#{$breakpoint}`. Choose one of `#{map-keys($breakpoints)}`.";
+    }
 
-  @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
-    @content;
-  }
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+    }
 }

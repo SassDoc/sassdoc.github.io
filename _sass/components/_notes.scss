@@ -1,33 +1,33 @@
 .note {
-  padding: .5em;
-  border-left: .5em solid;
-  font-size: .9em;
+    padding: .5em;
+    border-left: .5em solid;
+    font-size: .9em;
 
-  p {
-    margin: 0;
-  }
+    p {
+        margin: 0;
+    }
 }
 
 .note--warning {
-  background: #fcf8e3;
-  border-color: darken(#faebcc, 10%);
-  color: #8a6d3b;
+    background: #fcf8e3;
+    border-color: darken(#faebcc, 10%);
+    color: #8a6d3b;
 }
 
 .note--info {
-  color: #31708f;
-  background: #d9edf7;
-  border-color: darken(#bce8f1, 10%);
+    color: #31708f;
+    background: #d9edf7;
+    border-color: darken(#bce8f1, 10%);
 }
 
 .note--success {
-  color: #3c763d;
-  background: #dff0d8;
-  border-color: darken(#d6e9c6, 10%);
+    color: #3c763d;
+    background: #dff0d8;
+    border-color: darken(#d6e9c6, 10%);
 }
 
 .note--danger {
-  color: #a94442;
-  background: #f2dede;
-  border-color: darken(#ebccd1, 10%);
+    color: #a94442;
+    background: #f2dede;
+    border-color: darken(#ebccd1, 10%);
 }

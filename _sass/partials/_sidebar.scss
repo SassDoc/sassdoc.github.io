@@ -1,128 +1,128 @@
 .sidebar {
-  background: $pink;
-  text-align: center;
-  padding: 1em;
+    background: $pink;
+    text-align: center;
+    padding: 1em;
 
-  @include respond-to("large") {
-    float: left;
-    padding: 0 1em;
-    text-align: left;
-    width: $sidebar-width;
-  }
+    @include respond-to("large") {
+        float: left;
+        padding: 0 1em;
+        text-align: left;
+        width: $sidebar-width;
+    }
 }
 
 .sidebar__body {
-  padding-top: 1em;
+    padding-top: 1em;
 
-  @include respond-to("large") {
-    padding-top: 0;
-  }
+    @include respond-to("large") {
+        padding-top: 0;
+    }
 }
 
 .sidebar__title {
-  font-size: .8em;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(black, .1);
-  padding: .45em .9em;
-  margin: 0;
-  color: $yellow;
+    font-size: .8em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(black, .1);
+    padding: .45em .9em;
+    margin: 0;
+    color: $yellow;
 
-  @include respond-to("large") {
-    margin-bottom: 1em;
-    margin-top: 2em;
-    border: none;
-    padding: 0;
-  }
+    @include respond-to("large") {
+        margin-bottom: 1em;
+        margin-top: 2em;
+        border: none;
+        padding: 0;
+    }
 }
 
 .sidebar__list {
-  list-style: none;
-  padding-left: 0;
-  font-size: .9em;
-  line-height: 1.5;
-  margin: 0;
-  padding-bottom: 1.5em;
-  border-bottom: .25em solid $yellow;
+    list-style: none;
+    padding-left: 0;
+    font-size: .9em;
+    line-height: 1.5;
+    margin: 0;
+    padding-bottom: 1.5em;
+    border-bottom: .25em solid $yellow;
 
-  @include respond-to("large") {
-    margin-bottom: 1em;
-  }
+    @include respond-to("large") {
+        margin-bottom: 1em;
+    }
 }
 
 .sidebar__list-item {
-  border-bottom: 1px solid rgba(black, .1);
-  position: relative;
+    border-bottom: 1px solid rgba(black, .1);
+    position: relative;
 
-  @include respond-to("large") {
-    border: none;
-  }
+    @include respond-to("large") {
+        border: none;
+    }
 
-  &.active::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-top: .7em solid transparent;
-    border-bottom: .7em solid transparent;
-    border-right: .9em solid white;
-    position: absolute;
-    right: -1.1em;
-    top: 50%;
-    margin-top: -.7em;
-  }
+    &.active::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: .7em solid transparent;
+        border-bottom: .7em solid transparent;
+        border-right: .9em solid white;
+        position: absolute;
+        right: -1.1em;
+        top: 50%;
+        margin-top: -.7em;
+    }
 
-  &.active a {
-    color: $yellow;
-    font-weight: bold;
-  }
+    &.active a {
+        color: $yellow;
+        font-weight: bold;
+    }
 }
 
 .sidebar__link {
-  display: block;
-  text-transform: capitalize;
-  padding: .25em .5em;
-  color: white;
-  font-weight: normal;
+    display: block;
+    text-transform: capitalize;
+    padding: .25em .5em;
+    color: white;
+    font-weight: normal;
 
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: underline;
-  }
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+    }
 
-  @include respond-to("large") {
-    padding: .25em 0;
-  }
+    @include respond-to("large") {
+        padding: .25em 0;
+    }
 }
 
 .sidebar__toggle-label {
-  cursor: pointer;
-  background: $black;
-  color: white;
-  border: 1px solid rgba(black, .1);
-  display: block;
-  padding: .25em .5em;
-  text-align: center;
-  transition: .15s;
+    cursor: pointer;
+    background: $black;
+    color: white;
+    border: 1px solid rgba(black, .1);
+    display: block;
+    padding: .25em .5em;
+    text-align: center;
+    transition: .15s;
 
-  &:hover,
-  &:focus,
-  &:active {
-    background: $pink;
-  }
+    &:hover,
+    &:focus,
+    &:active {
+        background: $pink;
+    }
 
-  @include respond-to("large") {
-    display: none;
-  }
+    @include respond-to("large") {
+        display: none;
+    }
 }
 
 .sidebar__body {
-  display: none;
+    display: none;
 
-  @include respond-to("large") {
-    display: block;
-  }
+    @include respond-to("large") {
+        display: block;
+    }
 
-  .sidebar__toggle:checked ~ & {
-    display: block;
-  }
+    .sidebar__toggle:checked ~ & {
+        display: block;
+    }
 }
