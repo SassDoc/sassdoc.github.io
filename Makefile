@@ -58,18 +58,16 @@ _data/themes.yml: $(THEME_PACKAGES) | gallery
 
 # }}}
 
-# Built with SassDoc {{{
+# Gallery {{{
 # ======================
 
-BWS = _data/built_with_sassdoc.yml
-BWS_DIR = assets/images/built-with-sassdoc
-BWS_IMAGES = $(addprefix $(BWS_DIR)/, $(shell awk '$$1 == "image:" {print $$2}' $(BWS)))
+GALLERY = _data/gallery.yml
+GALLERY_DIR = assets/images/gallery
+GALLERY_IMAGES = $(addprefix $(GALLERY_DIR)/, $(shell awk '$$1 == "image:" {print $$2}' $(GALLERY)))
 
-bws: built-with-sassdoc
+gallery: $(GALLERY_IMAGES)
 
-built-with-sassdoc: $(BWS_IMAGES)
-
-$(BWS_IMAGES): $(BWS) | $(WEBSHOT)
+$(GALLERY_IMAGES): $(GALLERY) | $(WEBSHOT)
 	url=$$(grep -B1 '$(@F)' $< | sed 's/.*: //;q'); \
 	$(WEBSHOT) $(WEBSHOT_FLAGS) --window-size 2880/1800 --zoom 2 "$$url" $@
 
