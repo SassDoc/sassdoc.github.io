@@ -10,6 +10,27 @@ h2, h3, h4 {
     }
 }
 
+p, blockquote,
+ul, ol,
+h2, h3, h4,
+table, img,
+.highlight {
+    margin-bottom: 1.5em;
+}
+
+p {
+    margin-top: 0;
+}
+
+ul, ol {
+    padding-left: 1em;
+    list-style-position: inside;
+}
+
+li {
+    line-height: 1.4;
+}
+
 .header-link {
     position: absolute;
     top: 0;
@@ -21,14 +42,14 @@ h2, h3, h4 {
     }
 }
 
-.option {
-    text-transform: lowercase;
-}
-
 body:not(.home) h2 {
     color: $blue;
     text-transform: uppercase;
     margin-top: 3em;
+
+    > code {
+        text-transform: initial;
+    }
 
     &:first-child {
         margin-top: 1em;

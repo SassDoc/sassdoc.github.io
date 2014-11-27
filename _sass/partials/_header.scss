@@ -6,6 +6,10 @@
         border-bottom: .5em solid $pink;
         text-align: left;
     }
+
+    @include respond-to("huge") {
+        padding-left: $sidebar-width;
+    }
 }
 
 .header > .container {
@@ -65,7 +69,7 @@
 
     &:hover::after {
         opacity: 1;
-        bottom: -1em;
+        bottom: -1.2em;
     }
 }
 

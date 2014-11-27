@@ -1,7 +1,6 @@
 .note {
     padding: .5em;
     border-left: .5em solid;
-    font-size: .9em;
 
     p {
         margin: 0;
@@ -9,25 +8,41 @@
 }
 
 .note--warning {
+    color: #8a6d3b;
     background: #fcf8e3;
     border-color: darken(#faebcc, 10%);
-    color: #8a6d3b;
+
+    a {
+        color: mix(#8a6d3b, black, 80%);
+    }
 }
 
 .note--info {
     color: #31708f;
     background: #d9edf7;
     border-color: darken(#bce8f1, 10%);
+
+    a {
+        color: mix(#31708f, black, 80%);
+    }
 }
 
 .note--success {
     color: #3c763d;
     background: #dff0d8;
     border-color: darken(#d6e9c6, 10%);
+
+    a {
+        color: mix(#3c763d, black, 80%);
+    }
 }
 
 .note--danger {
     color: #a94442;
     background: #f2dede;
     border-color: darken(#ebccd1, 10%);
+
+    a {
+        color: mix(#a94442, black, 80%);
+    }
 }
