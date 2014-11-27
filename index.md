@@ -62,3 +62,7 @@ sassdoc source/ destination/
         {% include quotes.html %}
     </div>
 </section>
+
+<div class="quotes-catcher">
+    <p class="container">All <a href="/built-with-sassdoc/">these projects</a> are built with SassDoc. What are you waiting for to make your own?</p>
+</div>
