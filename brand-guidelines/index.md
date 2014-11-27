@@ -3,6 +3,26 @@ layout: default
 title: "Brand guidelines"
 ---
 
+## Brand usage
+
+* Do not stretch, distort or alter the colors of both the logo and the illustration.
+* When using the SassDoc brand and identity in your presentations, articles, videos or any other media, please be respectful.
+* Stick to [Sass Brand Guidelines](http://sass-lang.com/styleguide/brand) as well.
+
+## Fonts
+
+The main font is [Open Sans](http://www.google.com/fonts/specimen/Open+Sans). The full font-stack is:
+
+{% highlight scss %}
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+{% endhighlight %}
+
+The code font is Courier New. The full font-stack is:
+
+{% highlight scss %}
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace;
+{% endhighlight %}
+
 ## Colors
 
 <ul class="colors">

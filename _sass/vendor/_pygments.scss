@@ -1,6 +1,6 @@
 .highlight {
     background: $black;
-    font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-family: $code-font-stack;
     overflow: auto;
     border-left: .5em solid #666;
     font-size: .9em;
@@ -21,13 +21,12 @@
     background: #EFEFEF;
     border: 1px solid rgba(black, .1);
     font-size: .8em;
-    font-family: Menlo,Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+    font-family: $code-font-stack;
     padding: 2px 4px;
     text-decoration: none;
 }
 
 .highlight span {
-    font-family: Consolas,"Courier New",Courier,FreeMono,monospace;
     font-size: 1em;
 }
 
