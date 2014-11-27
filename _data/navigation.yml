@@ -50,7 +50,7 @@
     - title: "Broccoli"
       url: "/broccoli/"
       _blank: false
-- title: "Extra"
+- title: "Extras"
   items:
     - title: "Changelog"
       url: "/changelog/"
@@ -66,4 +66,7 @@
       _blank: false
     - title: "Built with SassDoc"
       url: "/built-with-sassdoc/"
+      _blank: false
+    - title: "Brand guidelines"
+      url: "/brand-guidelines/"
       _blank: false

@@ -1,0 +1,54 @@
+.colors {
+    overflow: hidden;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.color {
+    font-family: monospace;
+    border-radius: .25em;
+    margin-bottom: 1em;
+    padding: 1em;
+
+
+    @include respond-to("large") {
+        float: left;
+        width: 15em;
+
+        & + & {
+            margin-left: 1em;
+        }
+
+        &:nth-of-type(3n) {
+            clear: both;
+            margin-left: 0;
+        }
+    }
+}
+
+.color--pink {
+    background-color: $pink;
+}
+
+.color--blue {
+    background-color: $blue;
+    color: white;
+}
+
+.color--yellow {
+    background-color: $yellow;
+}
+
+.color--black {
+    background-color: $black;
+    color: white;
+}
+
+.color__name {
+    display: block;
+}
+
+.color__value {
+    display: block;
+}
