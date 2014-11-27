@@ -14,7 +14,7 @@ html {
 body {
     color: $black;
     position: relative;
-    line-height: 1.35;
+    line-height: 1.4;
     font-family: $font-stack;
 }
 
@@ -33,15 +33,6 @@ a {
     &:active {
         text-decoration: underline;
     }
-}
-
-p {
-    margin-top: 0;
-}
-
-ul, ol {
-    padding-left: 0;
-    list-style-position: inside;
 }
 
 table {
@@ -64,6 +55,3 @@ th {
     padding: .5em 1em .5em 0;
 }
 
-li {
-    line-height: 1.4;
-}
