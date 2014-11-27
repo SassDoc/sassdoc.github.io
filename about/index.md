@@ -7,7 +7,7 @@ There is nothing new with SassDoc. It has nothing of a revolutionnary idea; ther
 
 Still, we needed this. We needed a way to document our Sass files, APIs, frameworks, libraries and whatever. Thus, this project.
 
-SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Galliat](https://twitter.com/valeriangalliat), [Hugo Giraudel](https://twitter.com/hugogiraudel) and [Fabrice Weinberg](https://twitter.com/fweinb), a.k.a [SassDoc team](https://github.com/sassdoc). And perhaps you, if you feel like contributing!
+SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Galliat](https://twitter.com/valeriangalliat), [Hugo Giraudel](https://twitter.com/hugogiraudel) and [Fabrice Weinberg](https://twitter.com/fweinb), a.k.a [SassDoc team](https://github.com/sassdoc) with the help of [Why Alix](https://twitter.com/isendil) for the design. And perhaps you, if you feel like <a href="/contributing/">contributing</a>!
 
 <ul class="authors">
   <li class="author">
@@ -32,5 +32,17 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
     <img src="https://pbs.twimg.com/profile_images/2849329881/9938793eb770f5c0957cdd7406456053_400x400.png" alt="Fabrice Weinberg" class="author__avatar">
     <a class="author__name" href="https://twitter.com/fweinb">Fabrice Weinberg</a>
     <span class="author__role">Parser tinkerer</span>
+  </li>
+
+  <li class="author">
+    <img src="https://pbs.twimg.com/profile_images/1839011731/cupkace-detoure_reasonably_small_400x400.jpg" alt="Why Alix" class="author__avatar">
+    <a class="author__name" href="https://twitter.com/isendil">Why Alix</a>
+    <span class="author__role">Octopus designer</span>
+  </li>
+
+  <li class="author">
+    <img src="http://1.gravatar.com/avatar/17b37204cf6010dca12951259135df7b?s=383&d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D383&r=G" alt="You" class="author__avatar">
+    <span class="author__name">You</span>
+    <span class="author__role">Contributor</span>
   </li>
 </ul>
