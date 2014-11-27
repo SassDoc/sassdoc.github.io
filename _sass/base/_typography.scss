@@ -16,10 +16,14 @@ h2, h3, h4 {
 
 p, blockquote,
 ul, ol,
-h2, h3, h4,
+h3, h4,
 table, img,
 .highlight {
     margin-bottom: 1.5em;
+}
+
+h2 {
+    margin-bottom: 1em;
 }
 
 p {
@@ -28,6 +32,7 @@ p {
 
 ul, ol {
     padding-left: 1em;
+    margin-top: 0;
     list-style-position: inside;
 }
 
