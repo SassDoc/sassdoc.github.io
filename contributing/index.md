@@ -21,7 +21,7 @@ If it's not, you can leave your question on:
 * [#sassdoc on freenode](http://webchat.freenode.net/)
 * [SassDoc on Slack](http://sassdoc.slack.com/)
 
-If you need a quick reply or don't feel really comfortable with asking on a public channel, try getting in touch with us on Twitter when possible: [@SassDoc_](https://twitter.com/sassdoc_), the official account.
+If you need a quick reply or don't feel really comfortable with asking on a public channel, try getting in touch with us on Twitter when possible: [@SassDoc\_](https://twitter.com/sassdoc_), the official account.
 
 ## Filling a bug
 
