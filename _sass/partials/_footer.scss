@@ -1,19 +1,19 @@
 .footer {
-  background-color: $blue;
-  color: $yellow;
-  clear: both;
-  text-align: center;
-  padding: 1em 0;
-
-  p {
-    margin: 0;
-  }
-
-  a {
+    background-color: $blue;
     color: $yellow;
-  }
+    clear: both;
+    text-align: center;
+    padding: 1em 0;
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        color: $yellow;
+    }
 }
 
 .footer__content {
-  padding: .5em 0;
+    padding: .5em 0;
 }

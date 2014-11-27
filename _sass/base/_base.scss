@@ -1,68 +1,69 @@
 html {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 112.5%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 112.5%;
 }
 
 *,
 ::after,
 ::before {
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  color: $black;
-  position: relative;
-  line-height: 1.35;
-  font-family: $font-stack;
+    color: $black;
+    position: relative;
+    line-height: 1.35;
+    font-family: $font-stack;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 a {
-  color: $pink;
-  font-weight: bold;
-  text-decoration: none;
+    color: $pink;
+    font-weight: bold;
+    text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-  }
+    &:hover,
+    &:active {
+        text-decoration: underline;
+    }
 }
 
 p {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 ul, ol {
-  padding-left: 0;
-  list-style-position: inside;
+    padding-left: 0;
+    list-style-position: inside;
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
 }
 
 thead {
-  border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
 }
 
 tbody tr {
-  border-top: 1px solid #ccc;
+    border-top: 1px solid #ccc;
 }
 
 td,
 th {
-  vertical-align: top;
-  padding: .5em 1em .5em 0;
+    vertical-align: top;
+    padding: .5em 1em .5em 0;
 }
 
 li {
-  line-height: 1.4;
+    line-height: 1.4;
 }
