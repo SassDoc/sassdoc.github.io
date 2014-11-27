@@ -69,7 +69,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'access': ['private']
+  'access': 'private'
   /* ... */
 }
 {% endhighlight %}
@@ -89,7 +89,7 @@ Item `alias-for-other-item`:
 {% highlight js %}
 {
   /* ... */
-  'alias': ['other-item']
+  'alias': 'other-item'
   /* ... */
 }
 {% endhighlight %}
@@ -116,10 +116,28 @@ Item `other-item` will look like this:
 {% endhighlight %}
 
 An item will look like this:
+
 {% highlight js %}
 {
   /* ... */
   'author': ['Fabrice Weinberg']
+  /* ... */
+}
+{% endhighlight %}
+
+### @content
+
+{% highlight scss %}
+/**
+ * @content The `@content` directive allows user ...
+ */
+{% endhighlight %}
+
+An item will look like this:
+{% highlight js %}
+{
+  /* ... */
+  'content': 'The `@content` dirctive allows user ...'
   /* ... */
 }
 {% endhighlight %}
@@ -136,7 +154,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'deprecated': ['No longer in use']
+  'deprecated': 'No longer in use'
   /* ... */
 }
 {% endhighlight %}
@@ -176,13 +194,10 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'group': [['Groupname']]
+  'group': ['Groupname']
   /* ... */
 }
 {% endhighlight %}
-The outer array is for multiple `@group` annotations, the inner
-array is a list of possibly nested groups. For now you can assume
-there will be only one `@group` and no nesting.
 
 ### @ignore
 
@@ -236,7 +251,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'output': ['Description of output styles']
+  'output': 'Description of output styles'
   /* ... */
 }
 {% endhighlight %}
@@ -324,7 +339,7 @@ The referenced item will have a `usedBy` key that looks like:
 
 {% highlight scss %}
 /**
- * @return {type} $name (default value) - description
+ * @return {type} description
  */
 {% endhighlight %}
 
@@ -332,12 +347,10 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'return': [{
+  'return': {
     'type': 'type',
-    'name': 'name',
-    'default': 'default value',
     'description': 'description'
-  }]
+  }
   /* ... */
 }
 {% endhighlight %}
@@ -410,7 +423,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'type': ['bool | string']
+  'type': 'bool | string'
   /* ... */
 }
 {% endhighlight %}
