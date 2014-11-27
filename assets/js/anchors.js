@@ -2,7 +2,7 @@ var anchorForId = function (id) {
   var anchor = document.createElement("a");
   anchor.className = "header-link";
   anchor.href      = "#" + id;
-  anchor.innerHTML = "#";
+  anchor.innerHTML = "§";
   return anchor;
 };
 

@@ -43,7 +43,7 @@ li {
 .header-link {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 101%;
     transition: .15s;
 
     @include respond-to("large") {
