@@ -8,6 +8,10 @@ h2, h3, h4 {
             opacity: 1;
         }
     }
+
+    > code {
+        text-transform: initial;
+    }
 }
 
 p, blockquote,
@@ -47,11 +51,7 @@ body:not(.home) h2 {
     text-transform: uppercase;
     margin-top: 3em;
 
-    > code {
-        text-transform: initial;
-    }
-
-    &:first-child {
-        margin-top: 1em;
+    a {
+        color: $blue;
     }
 }
