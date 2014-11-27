@@ -3,11 +3,12 @@ layout: default
 title: "Theme Gallery"
 ---
 
+## Click to preview
+
 <article class="sassdoc-theme-preview  sassdoc-theme-preview--empty">
   <p>SassDoc officially has a single theme, but it also provides a simple and powerful theming engine to help authors <a href="/using-your-own-theme">build their own theme</a>. If you have built a theme or know one that's not featured here, be sure to suggest it!</p>
 
   <section class="theme-picker">
-    <h2>Click to preview</h2>
     <ul class="theme-picker__list">
     {% for theme in site.data.themes %}
       <li class="theme-picker__item" data-theme-name="{{ theme[0] }}">

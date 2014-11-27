@@ -3,6 +3,8 @@ title: "Configuration"
 layout: default
 ---
 
+## Introduction
+
 SassDoc comes with surprisingly few configuration in itself. Most of the configuration is [brought by the theme](/customising-the-view). However, you don't have to set up a configuration file in the theme package, that would be silly.
 
 Here is how it works: SassDoc merge the configuration file you provide (or that is being automatically fetched) with the one from the theme. If an option is set in both files, the one you set yourself overrides the one from the theme.

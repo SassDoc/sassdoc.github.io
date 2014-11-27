@@ -3,15 +3,15 @@ layout: default
 title: "Theme generator"
 ---
 
-[Yeoman](http://yeoman.io) generator that scaffolds out a SassDoc theme.
-
 ## Features
 
-* Let you chose your preferred template engine
-* Build the theme views and `index.js` based on prompts
-* Default Sass starter structure
-* Let you use a pre-defined Grunt or Gulp workflow
-* Templates loaded with examples and comments
+[Yeoman](http://yeoman.io) generator that scaffolds out a SassDoc theme.
+
+* Let you chose your preferred template engine.
+* Build the theme views and `index.js` based on prompts.
+* Default Sass starter structure.
+* Let you use a pre-defined Grunt or Gulp workflow.
+* Templates loaded with examples and comments.
 
 ## Usage
 
@@ -46,20 +46,20 @@ yo sassdoc-theme [options] [<themeName>]
 to call them directly in cases where you would like a certain functionality without bootstraping
 a full theme generation.
 
-Views: generates <code>index.js</code> and views templates.  
-Example:  
+Views: generates <code>index.js</code> and views templates.
+Example:
 {% highlight bash %}
 yo sassdoc-theme:jade
 {% endhighlight %}
 
-Task runnners: generates <code>Gruntfile.js | Gulpfile.js</code> and <code>package.json</code>.  
-Example:  
+Task runnners: generates <code>Gruntfile.js | Gulpfile.js</code> and <code>package.json</code>.
+Example:
 {% highlight bash %}
 yo sassdoc-theme:grunt
 {% endhighlight %}
 
 <p class="note  note--danger">
   <strong>Caution!</strong>
-  Running a sub-generator on an existing theme, will override the corresponding files.  
+  Running a sub-generator on an existing theme, will override the corresponding files.
   Although Yeoman will prompt you for confirmation before doing so.
 </p>

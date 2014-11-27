@@ -3,6 +3,8 @@ layout: default
 title: "Annotations"
 ---
 
+## Table of content
+
 | Annotation | Description |
 |------------|-------------|
 | [Name](#name) | Name of the documented item |
