@@ -117,6 +117,10 @@
         background-size: cover;
         padding-top: 3em;
     }
+
+    &:last-of-type {
+        padding-bottom: 2em;
+    }
 }
 
 .home__section-heading {
@@ -157,4 +161,12 @@
             right: 100%;
         }
     }
+}
+
+
+.quotes-catcher {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 2em;
+    background: url("http://sass-lang.com/assets/img/textures/grey-prism-8553d5a4.png");
 }
