@@ -3,6 +3,8 @@ layout: default
 title: "File-level annotations"
 ---
 
+## Introduction
+
 You can define annotations at a file-level rather than on specific items. It is useful when you have a whole file sharing some annotations (for instance `@group`, `@author` and so on).
 
 Usually, the *poster comment* goes on top of the file. In order to be parsed as a poster, it has to be wrapped in `/** **/` (note the double-star at the end) with C-style comments, or prefixed by `////` (note the 4 slashes) with inline comments. Also, you cannot have more than on poster per file.

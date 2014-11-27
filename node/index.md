@@ -3,9 +3,10 @@ layout: default
 title: "Node integration"
 ---
 
-If you want to integrate SassDoc in a build process but do not use [Grunt](/grunt/), [Gulp](/gulp/) or [Broccoli](/broccoli/), you can still use SassDoc with nothing but Node.
 
 ## Installation
+
+If you want to integrate SassDoc in a build process but do not use [Grunt](/grunt/), [Gulp](/gulp/) or [Broccoli](/broccoli/), you can still use SassDoc with nothing but Node.
 
 {% highlight sh %}
 npm install sassdoc --save

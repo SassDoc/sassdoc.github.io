@@ -3,9 +3,9 @@ layout: default
 title: "Getting started"
 ---
 
-Getting started with SassDoc could not be any easier.
-
 ## Install
+
+Getting started with SassDoc could not be any easier.
 
 {% highlight bash %}
 npm install sassdoc -g

@@ -3,6 +3,8 @@ title: "Extra tools"
 layout: default
 ---
 
+## Introduction
+
 If you have made up so far into building your own theme, you'll be pleased to now SassDoc comes with some [extra tools](https://github.com/sassdoc/sassdoc-extras) for theme builders. Those filters add some features to SassDoc by post-processing the data.
 
 ## Markdown

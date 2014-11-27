@@ -3,6 +3,8 @@ layout: default
 title: "Data interface"
 ---
 
+## Introduction
+
 SassDoc is doing quite a lot of things under the hood. In most cases, you won't have to know anything about it but if you are willing to write your own theme, you might need to understand what's going on. Especially, you'll need to know what is being returned to the view so that you can actually write your templates.
 
 ## Terminology

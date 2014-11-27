@@ -3,6 +3,8 @@ layout: default
 title: "Extending SassDoc"
 ---
 
+## Introduction
+
 SassDoc allows you to define custom annotations. This can only be done
 from a [custom theme](/using-your-own-theme/) since there is no way for
 SassDoc to guess what to do or how those annotations should be displayed.
