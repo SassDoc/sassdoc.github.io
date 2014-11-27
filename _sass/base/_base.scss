@@ -55,3 +55,12 @@ th {
     padding: .5em 1em .5em 0;
 }
 
+@media (max-width: 767px) {
+    table, thead, tbody, tr, th, td {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+}
