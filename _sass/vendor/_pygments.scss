@@ -16,14 +16,9 @@
 }
 
 :not(pre) > code {
-    white-space: normal;
-    border-radius: 4px;
-    background: #EFEFEF;
-    border: 1px solid rgba(black, .1);
-    font-size: .8em;
     font-family: $code-font-stack;
-    padding: 2px 4px;
-    text-decoration: none;
+    color: $blue;
+    font-weight: bold;
 }
 
 .highlight span {
