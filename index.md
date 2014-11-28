@@ -3,7 +3,7 @@ layout: home
 title: "Release the docs!"
 ---
 
-<header role="banner" class="megatron">
+<div class="megatron">
     <div class="megatron__top  clearfix">
         <div class="container">
             <img class="megatron__illustration" alt="SassDoc, release the docs!" src="/assets/images/illustration.png" />
@@ -28,7 +28,7 @@ sassdoc source/ destination/
             </div>
         </div>
     </div>
-</header>
+</div>
 
 <section class="home__section">
     <div class="container">
