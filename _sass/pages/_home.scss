@@ -13,8 +13,9 @@
 
 .megatron__top {
     position: relative;
-    background: $yellow;
     padding: 2em 0;
+    background: $yellow;
+
 
     .highlight {
         margin: 0 1em 1em;
@@ -109,8 +110,7 @@
 
     &:first-of-type {
         margin-top: 0;
-        background: url('http://sass-lang.com/assets/img/textures/grey-prism-8553d5a4.png');
-        background-size: cover;
+        background: url(http://subtlepatterns.com/patterns/gplaypattern.png);
         padding-top: 4em;
     }
 
@@ -143,10 +143,12 @@
 }
 
 
-.quotes-catcher {
+.home__section--catcher {
     font-size: 1.5em;
     text-align: center;
-    padding: 2em;
-    background: url("http://sass-lang.com/assets/img/textures/grey-prism-8553d5a4.png");
-    background-size: cover;
+    background: url(http://subtlepatterns.com/patterns/gplaypattern.png);
+
+    .home__section-content {
+        margin: 0;
+    }
 }
