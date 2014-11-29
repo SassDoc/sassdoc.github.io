@@ -61,7 +61,7 @@ sassdoc source/ destination/
 
 <section class="home__section">
     <div class="container">
-        <h2 class="home__section-heading">What they think</h2>
+        <h2 class="home__section-heading">What they say</h2>
     </div>
     <div class="home__section-content">
         <div class="container">
@@ -70,6 +70,8 @@ sassdoc source/ destination/
     </div>
 </section>
 
-<div class="quotes-catcher">
-    <p class="container">All <a href="/gallery/">these projects</a> are built with SassDoc. What are you waiting for to make your own?</p>
-</div>
+<section class="home__section  home__section--catcher">
+    <div class="home__section-content">
+        <p class="container">All <a href="/gallery/">these projects</a> are built with SassDoc. What are you waiting for to make your own?</p>
+    </div>
+</section>
