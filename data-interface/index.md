@@ -7,6 +7,8 @@ title: "Data interface"
 
 SassDoc is doing quite a lot of things under the hood. In most cases, you won't have to know anything about it but if you are willing to write your own theme, you might need to understand what's going on. Especially, you'll need to know what is being returned to the view so that you can actually write your templates.
 
+<p class="note  note--info"><strong>Clarification:</strong> in the following examples, we are using C-style comments but it works exactly the same for inline comments as well. Please refer to the <a href="/annotations/">Annotations</a> page for the syntax.</p>
+
 ## Terminology
 
 SassDoc uses the word "item" to describe either a variable, a function, a mixin or a placeholder. Technically speaking, an "item" is an object composed of:
@@ -47,15 +49,7 @@ SassDoc will collect all these item and sort them by `type` like this:
 }
 {% endhighlight %}
 
-## Count
-
-You can access to the number of documented items `data.count`.
-
-## Annotations
-
-<p class="note  note--info"><strong>Clarification:</strong> in the following examples, we are using C-style comments but it works exactly the same for inline comments as well. Please refer to the <a href="/annotations/">Annotations</a> page for the syntax.</p>
-
-### @access
+## @access
 
 Will just return the string after the annotation as the access level.
 
@@ -74,7 +68,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @alias
+## @alias
 
 Will list the alias in the `alias` key and add the alias item to the `aliased` key in the referenced item.
 
@@ -107,7 +101,7 @@ Item `other-item` will look like this:
 }
 {% endhighlight %}
 
-### @author
+## @author
 
 {% highlight scss %}
 /**
@@ -125,7 +119,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @content
+## @content
 
 {% highlight scss %}
 /**
@@ -142,7 +136,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @deprecated
+## @deprecated
 
 {% highlight scss %}
 /**
@@ -159,7 +153,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @example
+## @example
 
 {% highlight scss %}
 /**
@@ -182,7 +176,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @group
+## @group
 
 {% highlight scss %}
 /**
@@ -199,7 +193,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @ignore
+## @ignore
 
 This line will be just ignored.
 
@@ -219,7 +213,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @link (synonym: @source)
+## @link (synonym: @source)
 
 {% highlight scss %}
 /**
@@ -239,7 +233,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @output (synonym: @outputs)
+## @output (synonym: @outputs)
 
 {% highlight scss %}
 /**
@@ -256,7 +250,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @parameter (synonyms: @param, @arg, @argument)
+## @parameter (synonyms: @param, @arg, @argument)
 
 {% highlight scss %}
 /**
@@ -278,7 +272,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @property (synonym: @prop)
+## @property (synonym: @prop)
 
 {% highlight scss %}
 /**
@@ -299,7 +293,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @require (synonym: @requires)
+## @require (synonym: @requires)
 
 The required item will automatically have a key named `usedBy` containing the whole referencing item.
 
@@ -335,7 +329,7 @@ The referenced item will have a `usedBy` key that looks like:
 }
 {% endhighlight %}
 
-### @return (synonym: @returns)
+## @return (synonym: @returns)
 
 {% highlight scss %}
 /**
@@ -355,7 +349,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @since
+## @since
 
 Describes the version at which the documented item has been implemented or updated.
 
@@ -377,7 +371,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @throw (synonym: @throws, @exception)
+## @throw (synonym: @throws, @exception)
 
 {% highlight scss %}
 /**
@@ -394,7 +388,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @todo
+## @todo
 
 {% highlight scss %}
 /**
@@ -411,7 +405,7 @@ An item will look like this:
 }
 {% endhighlight %}
 
-### @type
+## @type
 
 {% highlight scss %}
 /**
