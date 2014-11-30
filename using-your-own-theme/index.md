@@ -10,7 +10,7 @@ projects, and publish it on npm so other people can use it too!
 
 The easiest way for you to build a theme is to use the Yeoman generator. See [Theme Generator][theme_generator] to get started. You will be given the possibility to customize the theme to your needs based on prompts. It will output all the boilerplate files for you in a single command. Furthermore, the generated code is loaded with inline documentation so you don't get lost.
 
-You can also have a look at [sassdoc-theme-blank](https://github.com/sassdoc/sassdoc-theme-blank) which is a fully documented empty theme you can tweak.
+You can also have a look at [sassdoc-theme-blank][repo_theme_blank] which is a fully documented empty theme you can tweak.
 
 ## Going manually
 
@@ -37,7 +37,7 @@ You can find more informations on the Promises/A+ specification
 [here](http://promises-aplus.github.io/promises-spec/), but note the
 [`q` library](https://github.com/kriskowal/q) does a great job for this.
 
-The [Themeleon](https://github.com/themeleon/themeleon) theming
+The [Themeleon][repo_themeleon] theming
 framework is compatible with this interface, and allows you to write
 themes without bothering with "low-level" considerations, like promises
 handling, raw `fs` calls, making sure the destination directory exists,
