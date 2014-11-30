@@ -6,7 +6,7 @@ title: "Node integration"
 
 ## Installation
 
-If you want to integrate SassDoc in a build process but do not use [Grunt](/grunt/), [Gulp](/gulp/) or [Broccoli](/broccoli/), you can still use SassDoc with nothing but Node.
+If you want to integrate SassDoc in a build process but do not use [Grunt]({{ site.data.routes.grunt }}), [Gulp]({{ site.data.routes.gulp }}) or [Broccoli]({{ site.data.routes.broccoli }}), you can still use SassDoc with nothing but Node.
 
 {% highlight sh %}
 npm install sassdoc --save
@@ -49,9 +49,7 @@ sassdoc(source, destination, configuration).then(function () {
 ## About glob
 
 The `source` parameter above can be a simple source directory, but also
-a [glob expression] or even array.
-
-[glob expression]: https://github.com/isaacs/node-glob#glob-primer
+a [glob expression](https://github.com/isaacs/node-glob#glob-primer) or even array.
 
 {% highlight js %}
 sassdoc(['scss/**/*.scss', '!scss/vendor/*.scss'], ...args);

@@ -5,7 +5,7 @@ layout: default
 
 ## Introduction
 
-SassDoc comes with surprisingly few configuration in itself. Most of the configuration is [brought by the theme](/customising-the-view). However, you don't have to set up a configuration file in the theme package, that would be silly.
+SassDoc comes with surprisingly few configuration in itself. Most of the configuration is [brought by the theme]({{ site.data.routes.view }}). However, you don't have to set up a configuration file in the theme package, that would be silly.
 
 Here is how it works: SassDoc merge the configuration file you provide (or that is being automatically fetched) with the one from the theme. If an option is set in both files, the one you set yourself overrides the one from the theme.
 
@@ -86,7 +86,7 @@ The `groups` option is an object of aliases for group slugs. When you gather ite
 
 All non-grouped items are gathered by SassDoc in an `undefined` group, that is being aliased as *General*. Feel free to change this to suit your preferences.
 
-<p class="note  note--warning"><strong>Note:</strong> that for this feature to work, <a href="/extra-tools/#groups-aliases">sassdoc-extras</a> has to be used by the theme, which is obviously the case with the default theme.</p>
+<p class="note  note--warning"><strong>Note:</strong> that for this feature to work, <a href="{{ site.data.routes.extra_tools }}#groups-aliases">sassdoc-extras</a> has to be used by the theme, which is obviously the case with the default theme.</p>
 
 ## No update notifier
 

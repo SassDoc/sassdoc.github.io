@@ -5,9 +5,9 @@ title: "Customising the view"
 
 ## Introduction
 
-Aside from regular [configuration](/configuration/) from SassDoc itself, it is likely that the theme you use provides some kind of default configuration that you can overload.
+Aside from regular [configuration]({{ site.data.routes.configuration }}) from SassDoc itself, it is likely that the theme you use provides some kind of default configuration that you can overload.
 
-This is done exactly like the regular configuration, within the same configuration file. Please refer to the [configuration documentation](/configuration/) to learn how to specify a configuration file.
+This is done exactly like the regular configuration, within the same configuration file. Please refer to the [configuration documentation]({{ site.data.routes.configuration }}) to learn how to specify a configuration file.
 
 ## Options
 

@@ -601,4 +601,4 @@ Describes the documented item.
 
 ---
 
-\* The Markdown parsing is effective in compliant themes, by using the Markdown filter from [sassdoc-extras](/extra-tools/#markdown).
+\* The Markdown parsing is effective in compliant themes, by using the Markdown filter from [sassdoc-extras]({{ site.data.routes.extra_tools }}#markdown).

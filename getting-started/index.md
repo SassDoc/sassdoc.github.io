@@ -13,7 +13,7 @@ npm install sassdoc -g
 
 ## Comments
 
-Write [SassDoc compliant comments](/annotations/). The syntax is pretty close to JSDoc's although we took some liberty with it.
+Write [SassDoc compliant comments]({{ site.data.routes.annotations }}). The syntax is pretty close to JSDoc's although we took some liberty with it.
 
 ## SassDoc Command
 
@@ -44,4 +44,4 @@ sassdoc <src> <dest> [options]
 
 ## Profit
 
-Open the `index.html` file generated at `path/to/dest/folder/`. It should contain your documentation! What about [configuring](/configuration/) and [customising the view](/customising-the-view) a little bit now?
+Open the `index.html` file generated at `path/to/dest/folder/`. It should contain your documentation! What about [configuring](/configuration/) and [customising the view]({{ site.data.routes.view }}) a little bit now?
