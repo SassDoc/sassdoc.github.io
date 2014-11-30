@@ -11,9 +11,9 @@ Usually, the *poster comment* goes on top of the file. In order to be parsed as 
 
 <p class="note  note--info"><strong>Clarification:</strong> with inline comments, you should have 4 slashes on the first and last lines (which are usually empty lines), and any number of slashes in between (2, 3, 4...). See example below.</p>
 
-Feel free to add a description to it, however it won't be parsed in any way. At this point it is nothing but a comment. At some point, it might be useful though.
+Feel free to add a description to it, however it won't be parsed in any way. For now, it is nothing but a comment. [At some point](https://github.com/SassDoc/sassdoc/issues/256), it might be useful though.
 
-When an item has an annotation that has already been defined on the poster, it **overrides** it. It is not merged with the one from the poster, it purely replaces it.
+<p class="note  note--warning"><strong>Warning:</strong> when an item has an annotation that has already been defined on the poster, it <strong>overrides</strong> it. It is not merged with the one from the poster, it purely replaces it.</p>
 
 ## Example
 
