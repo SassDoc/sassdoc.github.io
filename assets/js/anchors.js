@@ -20,11 +20,11 @@ var linkifyAnchors = function (level, containingElement) {
 document.onreadystatechange = function () {
   if (this.readyState === "complete") {
     var contentBlock = document.getElementsByClassName("main")[0];
+
     if (!contentBlock) {
       return;
     }
-    for (var level = 2; level <= 6; level++) {
-      linkifyAnchors(level, contentBlock);
-    }
+
+    linkifyAnchors(2, contentBlock);
   }
 };
