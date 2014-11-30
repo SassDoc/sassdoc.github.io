@@ -3,7 +3,7 @@ layout: default
 title: "Gulp integration"
 ---
 
-## Getting Started
+## Introduction
 
 This is a [Gulp friendly](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/README.md#about-streams)
 Its goal is to make SassDoc integration in your Gulp workflow easier.
@@ -19,147 +19,37 @@ Once you're familiar with that process, install this plugin with this command:
 npm install --save-dev gulp-sassdoc
 {% endhighlight %}
 
+Run the task:
 
-## Documentation
-
-See the [Gulpfile](https://github.com/sassdoc/gulp-sassdoc/blob/master/Gulpfile.js) in the repository for a full example.
-
-
-## SassDoc task
-
-Run this task with the `gulp sassdoc` command.
-
+{% highlight sh %}
+gulp sassdoc
+{% endhighlight %}
 
 ## Options
 
 Any specified option will be passed through directly to SassDoc, thus you can
-specify any option that SassDoc supports.
-Refer to [Customising the view](/customising-the-view/) for a list of supported options.
+specify any option that SassDoc supports. Refer to:
 
-
-<h4 class="option">verbose</h4>
-
-Type: `Boolean`
-Default: `false`
-
-Whether to enable SassDoc own logger or not.
-
-
-<h4 class="option">config</h4>
-
-Type: `String`
-Default: `null`
-
-Path to a view configuration file.
-
-
-<h4 class="option">display.access</h4>
-
-Type: `Array`
-Default: `['public', 'private']`
-
-Access levels that should be displayed.
-
-
-<h4 class="option">display.alias</h4>
-
-Type: `Boolean`
-Default: `false`
-
-Enable/disable display of alias items.
-
-
-<h4 class="option">display.watermark</h4>
-
-Type: `Boolean`
-Default: `true`
-
-Enable/disable display of SassDoc watermark in footer.
-
-
-<h4 class="option">package</h4>
-
-Type: `String | Object`
-Default: `null`
-
-Pass your project informations to the generated view.
-Either a path to your `package.json` or an object.
-
-Following keys will be looked for:
-`title`
-`name`
-`version`
-`license`
-`homepage`
-`description`
-
-
-<h4 class="option">theme</h4>
-
-
-Type: `String`
-Default: `'default'`
-Since: `sassdoc@1.2.0`
-
-Name of a custom theme, either a published package or a local one.
-
-
-<h4 class="option">groups</h4>
-
-Type: `Object`
-Default: `{ 'undefined': 'Ungrouped' }`
-Since: `sassdoc@1.2.0`
-
-Give friendly names to your groups, if any.
-
-
-<h4 class="option">basePath</h4>
-
-Type: `String`
-Default: `null`
-Since: `sassdoc@1.2.0`
-
-An URL or a path which will be transformed in a link to the source file.
-
-
-<h4 class="option">force</h4>
-
-Type: `Boolean`
-Default: `false`
-Since: `sassdoc@1.10.0`
-
-Whether to force wipe if the destination folder is not empty.
-
-
-<h4 class="option">interactive</h4>
-
-Type: `Boolean`
-Default: `true`
-Since: `sassdoc@1.10.0`
-
-Whether the session is interactive.
-
+* [Getting started](/getting-started/) for CLI options;
+* [Configuration](/configuration/) for SassDoc options;
+* [Customising the view](/customising-the-view/) for default theme options.
 
 <p class="note note--info">
-  Provided you know what your doing and you've checked your paths before,
+  <strong>Tip:</strong> provided you know what your doing and you've checked your paths before,
   you can disable the destination folder check and prompts by passing:
-  <code>force: true, interactive: false</code> to your config.
+  <code>force: true</code> and <code>interactive: false</code> to your config.
 </p>
 
 <p class="note note--info">
-  <strong>Heads up</strong>: If a config file is passed
+  <strong>Heads up:</strong> if a config file is passed
 and found, its options will prevail over defaults. Additional options passed to
 the Grunt task, will complement it but not override it.
 You should really manage your options in one place.
 </p>
 
-<p class="note note--info">
-  <strong>Heads up</strong>: Options default values will be removed in version
-  <code>2.0.0</code> of the plugin to transparently follow SassDoc core ones.
-</p>
+## Examples
 
-
-## Config examples
+See the [Gulpfile](https://github.com/sassdoc/gulp-sassdoc/blob/master/Gulpfile.js) in the repository for a full example.
 
 {% highlight js %}
 var gulp = require('gulp');
