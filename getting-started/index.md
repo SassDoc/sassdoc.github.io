@@ -11,11 +11,11 @@ Getting started with SassDoc could not be any easier.
 npm install sassdoc -g
 {% endhighlight %}
 
-## Write comments
+## Comments
 
 Write [SassDoc compliant comments](/annotations/). The syntax is pretty close to JSDoc's although we took some liberty with it.
 
-## Run SassDoc
+## SassDoc Command
 
 {% highlight bash %}
 sassdoc <src> <dest> [options]
@@ -25,7 +25,9 @@ sassdoc <src> <dest> [options]
 
 * `<src>` is the path to your Sass folder or a [glob expression] to SCSS/Sass files;
 * `<dest>` is the path to the destination folder;
-* `[options]` are:
+* `[options]` are the options.
+
+## Options
 
 | Option                 | Role                                                           |
 |------------------------|----------------------------------------------------------------|
