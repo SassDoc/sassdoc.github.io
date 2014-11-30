@@ -52,7 +52,7 @@ Example:
 yo sassdoc-theme:jade
 {% endhighlight %}
 
-Task runnners: generates <code>Gruntfile.js | Gulpfile.js</code> and <code>package.json</code>.
+Task runners: generates <code>Gruntfile.js | Gulpfile.js</code> and <code>package.json</code>.
 Example:
 {% highlight bash %}
 yo sassdoc-theme:grunt
@@ -60,6 +60,6 @@ yo sassdoc-theme:grunt
 
 <p class="note  note--danger">
   <strong>Caution!</strong>
-  Running a sub-generator on an existing theme, will override the corresponding files.
+  Running a sub-generator on an existing theme will override the corresponding files.
   Although Yeoman will prompt you for confirmation before doing so.
 </p>
