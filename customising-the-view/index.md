@@ -11,7 +11,7 @@ This is done exactly like the regular configuration, within the same configurati
 
 ## Options
 
-[SassDoc's default theme](https://github.com/SassDoc/sassdoc-theme-default) has a couple of options to give you some extra power over the view.
+[SassDoc's default theme][repo_theme] has a couple of options to give you some extra power over the view.
 
 | Option              | Type    | Default                 |
 |---------------------|---------|-------------------------|
@@ -51,7 +51,7 @@ If you want to display aliases as well, change the value to `true`.
 
 ## Watermark display
 
-The default theme from SassDoc displays a discret *© Made with love by [SassDoc](http://github.com/sassdoc) team.* in the footer, in order to promote the tool and share the love. You can turn off this watermak if you like, but we would really appreciate you to leave it if you use this theme.
+The default theme from SassDoc displays a discret *© Made with love by [SassDoc][organisation] team.* in the footer, in order to promote the tool and share the love. You can turn off this watermak if you like, but we would really appreciate you to leave it if you use this theme.
 
 {% highlight js %}
 {
