@@ -1,6 +1,6 @@
 h2, h3, h4 {
-    text-transform: capitalize;
     position: relative;
+    margin-top: 0;
 
     @include respond-to("large") {
         &:hover  .header-link,
@@ -24,6 +24,19 @@ table, img,
 
 h2 {
     margin-bottom: 1em;
+    text-transform: uppercase;
+    margin-top: 3em;
+    color: $blue;
+
+    a {
+        color: $blue;
+    }
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 1.25em;
+    color: mix($black, white, 80%);
 }
 
 p {
@@ -37,7 +50,7 @@ ul, ol {
 }
 
 li {
-    line-height: 1.4;
+    margin-bottom: .5em;
 }
 
 .header-link {
@@ -45,18 +58,26 @@ li {
     top: 0;
     right: 101%;
     transition: .15s;
+    color: $pink;
 
     @include respond-to("large") {
         opacity: 0;
     }
 }
 
-body:not(.home) h2 {
-    color: $blue;
-    text-transform: uppercase;
-    margin-top: 3em;
+.main ul > li:not([class]) {
+    position: relative;
+    padding-left: 1.5em;
+    list-style: none;
 
-    a {
-        color: $blue;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: .4em;
+        height: .4em;
+        border-radius: 50%;
+        top: .6em;
+        background: $blue;
     }
 }

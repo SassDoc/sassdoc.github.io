@@ -15,7 +15,7 @@
     padding-top: 1em;
 
     @include respond-to("large") {
-        padding-top: 0;
+        padding-top: 2em;
     }
 }
 
@@ -28,10 +28,9 @@
     color: $yellow !important;
 
     @include respond-to("large") {
-        margin-bottom: 1em;
-        margin-top: 2em;
         border: none;
         padding: 0;
+        margin-bottom: 1em;
     }
 }
 
@@ -39,22 +38,27 @@
     list-style: none;
     padding-left: 0;
     font-size: .9em;
-    line-height: 1.5;
-    margin: 0;
     padding-bottom: 1.5em;
     border-bottom: .25em solid $yellow;
+    margin: 0;
 
     @include respond-to("large") {
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
     }
 }
 
 .sidebar__list-item {
     border-bottom: 1px solid rgba(black, .1);
     position: relative;
+    margin-bottom: 0;
 
     @include respond-to("large") {
         border: none;
+        margin-bottom: .5em;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     &.active::after {
@@ -90,7 +94,7 @@
     }
 
     @include respond-to("large") {
-        padding: .25em 0;
+        padding: 0;
     }
 }
 
