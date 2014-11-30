@@ -14,7 +14,7 @@ There are many things you can do to contribute SassDoc:
 
 ## Asking a question
 
-Please, do not open an issue only to ask a question; it is not the best place for this. First, make sure your question is not already answered in the documentation, especially in the [Frequently Asked Questions]({{ site.data.routes.faq }}) section.
+Please, do not open an issue only to ask a question; it is not the best place for this. First, make sure your question is not already answered in the documentation, especially in the [Frequently Asked Questions][faq] section.
 
 If it's not, you can leave your question on:
 
@@ -54,3 +54,5 @@ If you are thinking of something a bit more complex, be sure to talk with someon
 New features or sizeable refactors should be based on the `develop` branch while bugfixes should head into both `master` and `develop`.
 
 Anyway, thank you very much for contributing!
+
+{% include routes.html %}

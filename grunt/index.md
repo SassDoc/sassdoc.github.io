@@ -43,9 +43,9 @@ Task targets, files and options may be specified according to the Grunt
 Any specified option will be passed through directly to SassDoc, thus you can
 specify any option that SassDoc supports. Refer to:
 
-* [Getting started]({{ site.data.routes.command_line }}) for CLI options;
-* [Configuration]({{ site.data.routes.configuration }}) for SassDoc options;
-* [Customising the view]({{ site.data.routes.view }}) for default theme options.
+* [Getting started][command_line] for CLI options;
+* [Configuration][configuration] for SassDoc options;
+* [Customising the view][view] for default theme options.
 
 <p class="note note--info">
   <strong>Tip:</strong> provided you know what your doing and you've checked your paths before,
@@ -142,3 +142,5 @@ grunt.event.on('sassdoc.done', function (target, src, dest) {
   grunt.log.writeln(target + ': ' + src + ' compiled to ' + dest);
 });
 {% endhighlight %}
+
+{% include routes.html %}

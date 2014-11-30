@@ -5,7 +5,7 @@ layout: default
 
 ## Introduction
 
-SassDoc comes with surprisingly few configuration in itself. Most of the configuration is [brought by the theme]({{ site.data.routes.view }}). However, you don't have to set up a configuration file in the theme package, that would be silly.
+SassDoc comes with surprisingly few configuration in itself. Most of the configuration is [brought by the theme][view]. However, you don't have to set up a configuration file in the theme package, that would be silly.
 
 Here is how it works: SassDoc merge the configuration file you provide (or that is being automatically fetched) with the one from the theme. If an option is set in both files, the one you set yourself overrides the one from the theme.
 
@@ -93,3 +93,5 @@ All non-grouped items are gathered by SassDoc in an `undefined` group, that is b
 SassDoc tries to make sure you always use an up-to-date version. If it is not the case, it will prompt you to update your current version. You can disable this behaviour by using the `no-update-notifier` option.
 
 <p class="note  note--info"><strong>Note:</strong> you can also use the CLI option <code>--no-update-notifier</code>.</p>
+
+{% include routes.html %}

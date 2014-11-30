@@ -131,3 +131,5 @@ module.exports = function (dest, ctx) {
   filter.shortcutIcon(ctx);
 };
 {% endhighlight %}
+
+{% include routes.html %}

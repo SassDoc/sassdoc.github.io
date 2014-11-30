@@ -10,3 +10,4 @@ Do you know a SassDoc project that's not in this list? Please report it or submi
   <img src="/assets/images/gallery/{{ item.image }}" alt="{{ item.name }}" />
 {% endfor %}
 
+{% include routes.html %}

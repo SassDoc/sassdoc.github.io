@@ -66,3 +66,5 @@ Feel free to add a description to it, however it won't be parsed in any way. For
   // ...
 }
 {% endhighlight %}
+
+{% include routes.html %}

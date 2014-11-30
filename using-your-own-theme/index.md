@@ -8,7 +8,7 @@ title: "Using your own theme"
 SassDoc is fully themable. You can write your own theme for your
 projects, and publish it on npm so other people can use it too!
 
-The easiest way for you to build a theme is to use the Yeoman generator. See [Theme Generator]({{ site.data.routes.theme_generator }}) to get started. You will be given the possibility to customize the theme to your needs based on prompts. It will output all the boilerplate files for you in a single command. Furthermore, the generated code is loaded with inline documentation so you don't get lost.
+The easiest way for you to build a theme is to use the Yeoman generator. See [Theme Generator][theme_generator] to get started. You will be given the possibility to customize the theme to your needs based on prompts. It will output all the boilerplate files for you in a single command. Furthermore, the generated code is loaded with inline documentation so you don't get lost.
 
 You can also have a look at [sassdoc-theme-blank](https://github.com/sassdoc/sassdoc-theme-blank) which is a fully documented empty theme you can tweak.
 
@@ -43,7 +43,7 @@ themes without bothering with "low-level" considerations, like promises
 handling, raw `fs` calls, making sure the destination directory exists,
 etc.
 
-<p class="note  note--info"><strong>Note:</strong> you can also add your own annotations by exporting an <code>annotations</code> array. See more on <a href="/extending-sassdoc/">Extending SassDoc</a>.</p>
+<p class="note  note--info"><strong>Note:</strong> you can also add your own annotations by exporting an <code>annotations</code> array. See more on <a href="{{ site.data.routes.extending_sassdoc }}">Extending SassDoc</a>.</p>
 
 ## Theme Context
 
@@ -87,7 +87,7 @@ The view has no strict interface. Users can put whatever they
 want in this object. You can use it to let the user configure your
 theme (the main purpose of the view object is indeed configuration).
 
-An example view object, assuming you use some [filters]({{ site.data.routes.extra_tools }}):
+An example view object, assuming you use some [filters][extra_tools]:
 
 {% highlight js %}
 {
@@ -113,7 +113,7 @@ An example view object, assuming you use some [filters]({{ site.data.routes.extr
 
 ## Data
 
-Refer to [Data Interface]({{ site.data.routes.data_interface }}).
+Refer to [Data Interface][data_interface].
 
 ## Building the Theme
 
@@ -142,7 +142,7 @@ First, you need to add the dependencies to your `package.json`:
 
 Then, we create a `theme` directory *(you can call it as you want)* in
 the root of your project. Assuming you already have a [configuration
-file](Customising-the-View), and it's at the same level as the `theme`
+file][view], and it's at the same level as the `theme`
 directory, append this to it:
 
 {% highlight json %}
@@ -195,7 +195,7 @@ The next time you'll render the documentation, your theme function will
 be called, copying the `assets` folder in the destination directory, and
 rendering your view in `index.html`.
 
-The views are passed a couple of variables [documented here](/data-interface/).
+The views are passed a couple of variables [documented here][data_interface].
 
 <p class="note  note--info"><strong>Tip:</strong> to kick start your theme, be sure to check <a href="https://github.com/SassDoc/sassdoc-theme-blank">SassDoc's blank theme</a>, a theme with a basic directory structure, and loads of comments to help you understand how it works, and hack it to your own needs.</p>
 
@@ -268,3 +268,5 @@ module.exports = themeleon(__dirname, function (t) {
   ...
 });
 {% endhighlight %}
+
+{% include routes.html %}
