@@ -7,6 +7,7 @@ title: "Annotations"
 
 | Annotation | Description | Aliases |
 |------------|-------------|---------|
+| [Comment range](#comment-range) | Comment range | &mdash; |
 | [Name](#name) | Name of the documented item | &mdash; |
 | [Description](#description) | Description of the documented item | &mdash; |
 | [@access](#access) | Access of the documented item | &mdash; |
@@ -31,6 +32,19 @@ title: "Annotations"
 
 <p class="note  note--info"><strong>Note:</strong> remember that you can define annotations at a file level rather than on specific items, which can happen to be very useful when all items from a file share some traits (author, group, and so on...). To do so, please refer to <a href="/file-level-annotations/">File-level Annotations</a>.</p>
 
+## Comment Range
+
+Each annotated comment will include a `commentRange` object like so:
+
+{% highlight js %}
+{
+  start: 1,
+  end: 3
+}
+{% endhighlight %}
+
+...representing the start and end of the comment.
+
 ## Name
 
 Name of the documented item is self parsed, hence `@name` doesn't exist.
@@ -38,20 +52,6 @@ Name of the documented item is self parsed, hence `@name` doesn't exist.
 ## Description
 
 Describes the documented item.
-
-## CommentRange
-
-Each annotated comment will include a object like:
-
-```js
-{
-  start : 1,
-  end : 3
-}
-```
-
-representing the start and end of the comment.
-
 
 ### Example
 
