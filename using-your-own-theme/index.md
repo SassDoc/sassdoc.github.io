@@ -78,7 +78,7 @@ documentation data.
 }
 {% endhighlight %}
 
-### View
+## View
 
 Don't assume the view object will contain anything. If the user
 doesn't have a configuration file it will likely be an empty object.
@@ -105,13 +105,13 @@ An example view object, assuming you use some [filters](/extra-tools/):
 }
 {% endhighlight %}
 
-### Package
+## Package
 
 [See official package.json reference](https://www.npmjs.org/doc/files/package.json.html).
 
 <p class="note  note--info"><strong>Note:</strong> with the <a href="/extra-tools/#markdown">Markdown filter</a>, <code>package.description</code> will be parsed as Markdown.</p>
 
-### Data
+## Data
 
 Refer to [Data Interface](/data-interface/).
 
@@ -138,7 +138,7 @@ First, you need to add the dependencies to your `package.json`:
 }
 {% endhighlight %}
 
-<p class="note  note--warning"><strong>Reminder!</strong> Don't forget to <code>npm install</code>!</p>
+<p class="note  note--warning"><strong>Reminder:</strong> don't forget to <code>npm install</code>!</p>
 
 Then, we create a `theme` directory *(you can call it as you want)* in
 the root of your project. Assuming you already have a [configuration
@@ -231,13 +231,11 @@ Then, run `npm publish` and you're done!
 
 <p class="note  note--info"><strong>Note:</strong> the last command will require you to setup an npm account. Run <code>npm adduser</code> if you haven't an account configured already.</p>
 
-## Bonus
+## Extra tools from SassDoc
 
-### Markdown, display, group aliases and more
+SassDoc provides a couple of extra features to theme builders. Please refer to [relevant section](/extra-tools/).
 
-SassDoc provides a couple of extra features to theme builders. Please refer to [extra tools](/extra-tools/).
-
-### Play with Swig Extras
+## Extra tools from Swig
 
 If you use Swig, you may want to include additional filters. An
 excellent collection of filters is included in `swig-extras`.
