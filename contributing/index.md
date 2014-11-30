@@ -14,7 +14,7 @@ There are many things you can do to contribute SassDoc:
 
 ## Asking a question
 
-Please, do not open an issue only to ask a question; it is not the best place for this. First, make sure your question is not already answered in the documentation, especially in the [Frequently Asked Questions](/frequently-asked-questions/) section.
+Please, do not open an issue only to ask a question; it is not the best place for this. First, make sure your question is not already answered in the documentation, especially in the [Frequently Asked Questions]({{ site.data.routes.faq }}) section.
 
 If it's not, you can leave your question on:
 

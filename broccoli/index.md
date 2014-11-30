@@ -26,9 +26,9 @@ var docs = sassdoc(tree, options);
 Any specified option will be passed through directly to SassDoc, thus you can
 specify any option that SassDoc supports. Refer to:
 
-* [Getting started](/getting-started/) for CLI options;
-* [Configuration](/configuration/) for SassDoc options;
-* [Customising the view](/customising-the-view/) for default theme options.
+* [Command Line]({{ site.data.routes.command_line }}) for CLI options;
+* [Configuration]({{ site.data.routes.configuration }}) for SassDoc options;
+* [Customising the view]({{ site.data.routes.view }}) for default theme options.
 
 <p class="note note--info">
   <strong>Tip:</strong> provided you know what your doing and you've checked your paths before,

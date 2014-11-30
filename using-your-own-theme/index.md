@@ -8,7 +8,7 @@ title: "Using your own theme"
 SassDoc is fully themable. You can write your own theme for your
 projects, and publish it on npm so other people can use it too!
 
-The easiest way for you to build a theme is to use the Yeoman generator. See [Theme Generator](/theme-generator/) to get started. You will be given the possibility to customize the theme to your needs based on prompts. It will output all the boilerplate files for you in a single command. Furthermore, the generated code is loaded with inline documentation so you don't get lost.
+The easiest way for you to build a theme is to use the Yeoman generator. See [Theme Generator]({{ site.data.routes.theme_generator }}) to get started. You will be given the possibility to customize the theme to your needs based on prompts. It will output all the boilerplate files for you in a single command. Furthermore, the generated code is loaded with inline documentation so you don't get lost.
 
 You can also have a look at [sassdoc-theme-blank](https://github.com/sassdoc/sassdoc-theme-blank) which is a fully documented empty theme you can tweak.
 
@@ -87,7 +87,7 @@ The view has no strict interface. Users can put whatever they
 want in this object. You can use it to let the user configure your
 theme (the main purpose of the view object is indeed configuration).
 
-An example view object, assuming you use some [filters](/extra-tools/):
+An example view object, assuming you use some [filters]({{ site.data.routes.extra_tools }}):
 
 {% highlight js %}
 {
@@ -109,11 +109,11 @@ An example view object, assuming you use some [filters](/extra-tools/):
 
 [See official package.json reference](https://www.npmjs.org/doc/files/package.json.html).
 
-<p class="note  note--info"><strong>Note:</strong> with the <a href="/extra-tools/#markdown">Markdown filter</a>, <code>package.description</code> will be parsed as Markdown.</p>
+<p class="note  note--info"><strong>Note:</strong> with the <a href="{{ site.data.routes.extra_tools }}#markdown">Markdown filter</a>, <code>package.description</code> will be parsed as Markdown.</p>
 
 ## Data
 
-Refer to [Data Interface](/data-interface/).
+Refer to [Data Interface]({{ site.data.routes.data_interface }}).
 
 ## Building the Theme
 
