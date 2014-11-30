@@ -35,7 +35,7 @@ Here is the available configuration that does not depend on the theme whatsoever
 | `groups`             | Object          | `{ undefined: "general" }` |
 | `no-update-notifier` | Boolean         | `false`                    |
 
-### Package
+## Package
 
 The `package` option is either a string to a JSON file containing information about the documented project (for instance a `package.json`, hence the name of the key), or directly an object. Please know that we try to find it in 3 different locations before giving up:
 
@@ -54,7 +54,7 @@ If this doesn't work for you, then you can set your own package. The package obj
 
 Note that if you set this option as a path to a JSON file, we will override it with the content of this JSON file so once in the view, `package` will no longer contain a string, but an object.
 
-### Theme
+## Theme
 
 The `theme` option is the name of a theme to be used. If not set, it will default to `default`, which means SassDoc will use `sassdoc-theme-default`, the official theme.
 
@@ -66,7 +66,7 @@ Based on the value you set, for instance `unicorn`, SassDoc will try to require 
 
 <p class="note  note--info"><strong>Tip:</strong> to make sure it matches your local <code>unicorn</code> directory, and not a <code>sassdoc-theme-unicorn</code> from which you're not the author, we recommand you to set it to <code>./unicorn</code> if you are using a local theme.</p>
 
-### Autofill
+## Autofill
 
 The `autofill` option tells which annotations SassDoc should try to autofill when possible. For instance, SassDoc is able to figure from your code if an item requires another item, or if an item is likely to throw an error (`@error` directive from Sass) in some circumstancies.
 
@@ -80,7 +80,7 @@ For instance, a falsy value, like an empty array would disable SassDoc autofill 
 }
 {% endhighlight %}
 
-### Groups
+## Groups
 
 The `groups` option is an object of aliases for group slugs. When you gather items in groups with the `@group` annotation, you specify a slug string, without spaces or formatting (e.g. `api-helpers`). In the `groups` object, you can associate a group slug with a group name so the latter gets used in the view rather than the dirty slug (e.g. `API Helpers`).
 
@@ -88,7 +88,7 @@ All non-grouped items are gathered by SassDoc in an `undefined` group, that is b
 
 <p class="note  note--warning"><strong>Note:</strong> that for this feature to work, <a href="/extra-tools/#groups-aliases">sassdoc-extras</a> has to be used by the theme, which is obviously the case with the default theme.</p>
 
-### no-update-notifier
+## No update notifier
 
 SassDoc tries to make sure you always use an up-to-date version. If it is not the case, it will prompt you to update your current version. You can disable this behaviour by using the `no-update-notifier` option.
 
