@@ -40,6 +40,10 @@
     &.active {
         box-shadow: 0 0 0 .25em rgba($pink, .5);
     }
+
+    img {
+        margin-bottom: 0;
+    }
 }
 
 .theme-picker__preview {
@@ -65,20 +69,20 @@
 }
 
 .metadata__list {
+    width: 100%;
+    height: 100%;
     list-style: none;
     padding: .5em;
     font-size: 1.2em;
     position: absolute;
     top: 50%;
     left: 50%;
+    margin: 0;
     transform: translate(-50%, -50%);
 }
 
 .metadata__item {
     height: 33.33%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
     text-align: center;
 
     a {

@@ -1,12 +1,12 @@
 .highlight {
-    background: $black;
+    background: mix($blue, $black, 80%);
     font-family: $code-font-stack;
     overflow: auto;
-    border-left: .5em solid #666;
+    border-left: .5em solid $black;
     font-size: .9em;
 
     pre {
-        padding: .5em 1em;
+        padding: 1em;
         margin: 0;
     }
 
@@ -34,7 +34,7 @@
 }
 
 .highlight .c {
-    color: #75715e;
+    color: mix($black, white, 40%);
 }
 
 .highlight .err {
@@ -55,11 +55,11 @@
 }
 
 .highlight .o {
-    color: #f92672;
+    color: white;
 }
 
 .highlight .p {
-    color: #f8f8f2;
+    color: white;
 }
 
 .highlight .c1,
@@ -79,7 +79,7 @@
 
 .highlight .kc,
 .highlight .kd {
-    color: #66d9ef;
+    color: mix($blue, white, 30%);
 }
 
 .highlight .kn {
@@ -139,7 +139,7 @@
 }
 
 .highlight .nx {
-    color: #a6e22e;
+    color: $pink;
 }
 
 .highlight .py {
@@ -148,7 +148,7 @@
 
 .highlight .nt,
 .l-Scalar-Plain {
-    color: #f92672;
+    color: $pink;
 }
 
 .highlight .nv {
@@ -174,7 +174,7 @@
 .highlight .sb,
 .highlight .sc,
 .highlight .sd {
-    color: #e6db74;
+    color: $yellow;
 }
 
 .highlight .se {
