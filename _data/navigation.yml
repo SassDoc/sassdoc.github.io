@@ -1,6 +1,6 @@
 - title: "Getting started"
   items:
-    - title: "Getting started"
+    - title: "Command Line"
       url: "/getting-started/"
       _blank: false
     - title: "Configuration"
