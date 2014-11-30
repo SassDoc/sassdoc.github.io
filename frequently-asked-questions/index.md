@@ -20,3 +20,5 @@ Nope. Point is to document Sass, not CSS.
 ## Can SassDoc work with LESS? Stylus? KSS?
 
 Nope. It's called SassDoc, not LESSDoc, StylusDoc or KSSDoc.
+
+{% include routes.html %}

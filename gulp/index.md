@@ -30,9 +30,9 @@ gulp sassdoc
 Any specified option will be passed through directly to SassDoc, thus you can
 specify any option that SassDoc supports. Refer to:
 
-* [Getting started]({{ site.data.routes.command_line }}) for CLI options;
-* [Configuration]({{ site.data.routes.configuration }}) for SassDoc options;
-* [Customising the view]({{ site.data.routes.view }}) for default theme options.
+* [Getting started][command_line] for CLI options;
+* [Configuration][configuration] for SassDoc options;
+* [Customising the view][view] for default theme options.
 
 <p class="note note--info">
   <strong>Tip:</strong> provided you know what your doing and you've checked your paths before,
@@ -145,3 +145,5 @@ gulp.task('sassdoc', function () {
   return sassdoc.documentize(src, dest, config);
 });
 {% endhighlight %}
+
+{% include routes.html %}

@@ -63,3 +63,5 @@ yo sassdoc-theme:grunt
   Running a sub-generator on an existing theme will override the corresponding files.
   Although Yeoman will prompt you for confirmation before doing so.
 </p>
+
+{% include routes.html %}

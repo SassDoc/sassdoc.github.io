@@ -6,7 +6,7 @@ title: "Theme Gallery"
 ## Click to preview
 
 <article class="sassdoc-theme-preview  sassdoc-theme-preview--empty">
-  <p>SassDoc officially has a single theme, but it also provides a simple and powerful theming engine to help authors <a href="/using-your-own-theme">build their own theme</a>. If you have built a theme or know one that's not featured here, be sure to suggest it!</p>
+  <p>SassDoc officially has a single theme, but it also provides a simple and powerful theming engine to help authors <a href="{{ site.data.routes.custom_theme }}">build their own theme</a>. If you have built a theme or know one that's not featured here, be sure to suggest it!</p>
 
   <section class="theme-picker">
     <ul class="theme-picker__list">
@@ -63,3 +63,5 @@ title: "Theme Gallery"
     new ThemePicker();
   })
 </script>
+
+{% include routes.html %}
