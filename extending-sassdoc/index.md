@@ -10,9 +10,7 @@ from a [custom theme](/using-your-own-theme/) since there is no way for
 SassDoc to guess what to do or how those annotations should be displayed.
 
 Here's a simple example to add a few simple annotations to SassDoc
-within your theme.
-
-First, you'll have the usual theme function. Refer to [Using Your Own Theme](/using-your-own-theme/) for more informations about this.
+within your theme. First, you'll have the usual theme function. Refer to [Using Your Own Theme](/using-your-own-theme/) for more informations about this.
 
 {% highlight js %}
 module.exports = function () {
@@ -45,12 +43,8 @@ an `alias` array.
 ## Examples
 
 We can add an `@awesome` annotation (meaning the annotated item is
-awesome) (also aliased as `@wow`).
-
-This annotation is just meant to be applied as-is, without any
-argument.
-
-You can then add a condition on `item.awesome` in your templates!
+awesome) (also aliased as `@wow`). This annotation is just meant to be applied as-is, without any
+argument. You can then add a condition on `item.awesome` in your templates!
 
 {% highlight js %}
 module.exports.annotations.push({
