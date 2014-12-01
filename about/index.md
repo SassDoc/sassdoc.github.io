@@ -9,7 +9,7 @@ There is nothing new with SassDoc. It has nothing of a revolutionnary idea; ther
 
 Still, we needed this. We needed a way to document our Sass files, APIs, frameworks, libraries and whatever. Thus, this project.
 
-SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Galliat](https://twitter.com/valeriangalliat), [Hugo Giraudel](https://twitter.com/hugogiraudel) and [Fabrice Weinberg](https://twitter.com/fweinb), a.k.a [SassDoc team](https://github.com/sassdoc) with the help of [Why Alix](https://twitter.com/isendil) for the design. And perhaps you, if you feel like <a href="/contributing/">contributing</a>!
+SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Galliat](https://twitter.com/valeriangalliat), [Hugo Giraudel](https://twitter.com/hugogiraudel) and [Fabrice Weinberg](https://twitter.com/fweinb), a.k.a [SassDoc team](https://github.com/sassdoc) with the help of [Why Alix](https://twitter.com/isendil) for the design. And perhaps you, if you feel like <a href="{{ site.data.routes.contributing }}">contributing</a>!
 
 <ul class="authors">
   <li class="author">
@@ -48,3 +48,5 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
     <span class="author__role">Contributor</span>
   </li>
 </ul>
+
+{% include routes.html %}

@@ -6,11 +6,11 @@ title: "Extending SassDoc"
 ## Introduction
 
 SassDoc allows you to define custom annotations. This can only be done
-from a [custom theme](/using-your-own-theme/) since there is no way for
+from a [custom theme][custom_theme] since there is no way for
 SassDoc to guess what to do or how those annotations should be displayed.
 
 Here's a simple example to add a few simple annotations to SassDoc
-within your theme. First, you'll have the usual theme function. Refer to [Using Your Own Theme](/using-your-own-theme/) for more informations about this.
+within your theme. First, you'll have the usual theme function. Refer to [Using Your Own Theme][custom_theme] for more informations about this.
 
 {% highlight js %}
 module.exports = function () {
@@ -98,7 +98,7 @@ module.exports.annotations.push({
 });
 {% endhighlight %}
 
-For more examples, you can look at [the core annotations] which are very
+For more examples, you can look at [the core annotations](https://github.com/SassDoc/sassdoc/tree/master/src/annotation/annotations) which are very
 insightful.
 
-[the core annotations]: https://github.com/SassDoc/sassdoc/tree/master/src/annotation/annotations
+{% include routes.html %}

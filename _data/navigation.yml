@@ -1,72 +1,72 @@
 - title: "Getting started"
   items:
     - title: "Command Line"
-      url: "/getting-started/"
+      route: command_line
       _blank: false
     - title: "Configuration"
-      url: "/configuration/"
+      route: configuration
       _blank: false
     - title: "Annotations"
-      url: "/annotations/"
+      route: annotations
       _blank: false
     - title: "File-level annotations"
-      url: "/file-level-annotations/"
+      route: poster_annotations
       _blank: false
     - title: "Customising the view"
-      url: "/customising-the-view/"
+      route: view
       _blank: false
 - title: "Custom theme"
   order: 2
   items:
     - title: "Using your own theme"
-      url: "/using-your-own-theme/"
+      route: custom_theme
       _blank: false
     - title: "Data Interface"
-      url: "/data-interface/"
+      route: data_interface
       _blank: false
     - title: "Extending SassDoc"
-      url: "/extending-sassdoc/"
+      route: extending_sassdoc
       _blank: false
     - title: "Extra tools"
-      url: "/extra-tools/"
+      route: extra_tools
       _blank: false
     - title: "Theme generator"
-      url: "/theme-generator/"
+      route: theme_generator
       _blank: false
     - title: "Theme Gallery"
-      url: "/theme-gallery/"
+      route: theme_gallery
       _blank: false
 - title: "Alternative usages"
   items:
     - title: "Node"
-      url: "/node/"
+      route: node
       _blank: false
     - title: "Grunt"
-      url: "/grunt/"
+      route: grunt
       _blank: false
     - title: "Gulp"
-      url: "/gulp/"
+      route: gulp
       _blank: false
     - title: "Broccoli"
-      url: "/broccoli/"
+      route: broccoli
       _blank: false
 - title: "Extras"
   items:
     - title: "Changelog"
-      url: "/changelog/"
+      route: changelog
       _blank: false
     - title: "About"
-      url: "/about/"
+      route: about
       _blank: false
-    - title: "Frequently Asked questions"
-      url: "/frequently-asked-questions/"
+    - title: "FAQ"
+      route: faq
       _blank: false
     - title: "Contributing"
-      url: "/contributing/"
+      route: contributing
       _blank: false
     - title: "Gallery"
-      url: "/gallery/"
+      route: gallery
       _blank: false
     - title: "Brand guidelines"
-      url: "/brand-guidelines/"
+      route: branding
       _blank: false

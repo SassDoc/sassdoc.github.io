@@ -5,7 +5,7 @@ layout: default
 
 ## Introduction
 
-If you have made up so far into building your own theme, you'll be pleased to now SassDoc comes with some [extra tools](https://github.com/sassdoc/sassdoc-extras) for theme builders. Those filters add some features to SassDoc by post-processing the data.
+If you have made up so far into building your own theme, you'll be pleased to now SassDoc comes with some [extra tools][repo_extras] for theme builders. Those filters add some features to SassDoc by post-processing the data.
 
 ## Markdown
 
@@ -55,7 +55,7 @@ module.exports = function (dest, ctx) {
 
 ## Groups aliases
 
-The `groupName` filter makes it possible for you to define aliases for your group slugs (see [reference](/configuration/#groups)). When using `@group` annotation in your SassDoc comments, you usually define a slug (a lowercase string without spaces). If you want your theme to display pretty titles, you can map those slugs to human-friendly names by setting a `groups` key in your context configuration.
+The `groupName` filter makes it possible for you to define aliases for your group slugs (see [reference]({{ site.data.routes.configuration }}#groups)). When using `@group` annotation in your SassDoc comments, you usually define a slug (a lowercase string without spaces). If you want your theme to display pretty titles, you can map those slugs to human-friendly names by setting a `groups` key in your context configuration.
 
 {% highlight js %}
 {
@@ -131,3 +131,5 @@ module.exports = function (dest, ctx) {
   filter.shortcutIcon(ctx);
 };
 {% endhighlight %}
+
+{% include routes.html %}
