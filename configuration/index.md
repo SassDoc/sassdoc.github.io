@@ -37,13 +37,16 @@ Here is the available configuration that does not depend on the theme whatsoever
 
 ## Package
 
-The `package` option is either a string to a JSON file containing information about the documented project (for instance a `package.json`, hence the name of the key), or directly an object. Please know that we try to find it in 3 different locations before giving up:
+The `package` option is either a path (String) to a JSON file or directly an Object.
+It contains information about the documented project (for instance a `package.json`, hence the name of the key).
 
-* a relative path from your current folder,
-* a relative path from the theme folder,
+Please note that we try to find a `package.json` in 3 different locations before giving up:
+
+* a relative path from your current folder
+* a relative path from the theme folder
 * an absolute path.
 
-If this doesn't work for you, then you can set your own package. The package object (either direct or required from a path) should ideally contain (so the theme can access to various information about your project):
+If this doesn't work for you, then you can set your own package. The package object (either direct or required from a path) should ideally contain (for the theme to access to various information about your project):
 
 * `title`: human name of your project
 * `name`: package name of your project (in case `title` is not defined)
@@ -52,7 +55,13 @@ If this doesn't work for you, then you can set your own package. The package obj
 * `homepage`: URL to your project's homepage
 * `description`: description of your project
 
-Note that if you set this option as a path to a JSON file, we will override it with the content of this JSON file so once in the view, `package` will no longer contain a string, but an object.
+<p class="note note--info">
+  A given path must be relative to the configuration file.
+</p>
+
+<p class="note note--info">
+  Note that if you set this option as a path to a JSON file, we will override it with     the content of this JSON file once in the view, thus `package` will no longer contain a string, but an object.
+</p>
 
 ## Theme
 
