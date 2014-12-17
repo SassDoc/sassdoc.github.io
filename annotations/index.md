@@ -405,7 +405,7 @@ Describes the documented item.
 | Aliases     | `@requires`                                                |
 | Autofilled  | true                                                       |
 | Allowed on  | functions, mixins, placeholders, variables                 |
-| Extra notes | Type is optional; default type is `function`.<br>Description is optional. Hyphen before description is optional.<br>Description is parsed as Markdown.*<br>Link is optional.<br>Item name can contain `::`, `:`, `.` and/or `/` when item is from an external resource.<br>Link is used as a link if present, else it tries to link to an inner item, else it doesn't have a link.<br>If `{type}` is `variable`, then the `$` sign before the variable name is optional. Alongside if there is a `$` sign before the item name, then the `{variable}` type is optional.<br>If `{type}` is `placeholder`, then the `%` sign before the placeholder name is optional. Alongside if there is a `%` sign before the item name, then the `{placeholder}` type is optional.<br>The other item will automatically have a key named `usedBy` containing the name of function requiring it. |
+| Extra notes | Type is optional; default type is `function`. Can be either `function`, `mixin`, `variable` or `placeholder`.<br>If `{type}` is `variable`, then the `$` sign before the variable name is optional. Alongside if there is a `$` sign before the item name, then the `{variable}` type is optional.<br>If `{type}` is `placeholder`, then the `%` sign before the placeholder name is optional. Alongside if there is a `%` sign before the item name, then the `{placeholder}` type is optional.<br>Description is optional. Hyphen before description is optional.<br>Description is parsed as Markdown.*<br>Link is optional.<br>Item name can contain `::`, `:`, `.` and/or `/` when item is from an external resource.<br>Link is used as a link if present, else it tries to link to an inner item, else it doesn't have a link.<br>The other item will automatically have a key named `usedBy` containing the name of function requiring it. |
 
 ### Example
 
@@ -475,7 +475,7 @@ Describes the documented item.
 | Aliases     | &mdash;                                                    |
 | Autofilled  | false                                                      |
 | Allowed on  | functions, mixins, placeholders, variables                 |
-| Extra notes | Type is optional; default type is `function`.<br>If `{type}` is `variable`, then the `$` sign before the variable name is optional. Alongside if there is a `$` sign before the item name, then the `{variable}` type is optional.<br>If `{type}` is `placeholder`, then the `%` sign before the placeholder name is optional. Alongside if there is a `%` sign before the item name, then the `{placeholder}` type is optional. |
+| Extra notes | Type is optional; default type is `function`. Can be either `function`, `mixin`, `variable` or `placeholder`.<br>If `{type}` is `variable`, then the `$` sign before the variable name is optional. Alongside if there is a `$` sign before the item name, then the `{variable}` type is optional.<br>If `{type}` is `placeholder`, then the `%` sign before the placeholder name is optional. Alongside if there is a `%` sign before the item name, then the `{placeholder}` type is optional. |
 
 ### Example
 
