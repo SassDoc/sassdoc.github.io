@@ -31,12 +31,6 @@ specify any option that SassDoc supports. Refer to:
 * [Customising the view][view] for default theme options.
 
 <p class="note note--info">
-  <strong>Tip:</strong> provided you know what your doing and you've checked your paths before,
-  you can disable the destination folder check and prompts by passing:
-  <code>force: true</code> and <code>interactive: false</code> to your config.
-</p>
-
-<p class="note note--info">
   <strong>Heads up:</strong> if a config file is passed
 and found, its options will prevail over defaults. Additional options passed to
 the Grunt task, will complement it but not override it.
