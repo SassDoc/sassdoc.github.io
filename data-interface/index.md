@@ -254,7 +254,7 @@ An item will look like this:
 
 {% highlight scss %}
 /**
- * @param {type} $name (default value) - description
+ * @param {type} $name [default value] - description
  */
 {% endhighlight %}
 
@@ -276,7 +276,7 @@ An item will look like this:
 
 {% highlight scss %}
 /**
- * @prop {Function} base.default (default) - description
+ * @prop {Function} base.default [default] - description
  */
 {% endhighlight %}
 
