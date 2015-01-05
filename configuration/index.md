@@ -38,7 +38,7 @@ Here is the available configuration that does not depend on the theme whatsoever
 
 ## Destination
 
-The `dest` option is the path to the documentation directory to generate. By default it `sassdoc` in the current directory.
+The `dest` option is the path to the documentation directory to generate. By default it's `sassdoc` in the current directory.
 SassDoc will wipe this directory at every run, so don't put anything worthwhile in it.
 
 ## Package
