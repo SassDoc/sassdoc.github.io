@@ -12,15 +12,15 @@ Here is how it works: SassDoc merge the configuration file you provide (or that 
 To provide a configuration file, use the `--config`  (or `-c`) option when running `sassdoc`. If the option is not defined, SassDoc will try to find a file named `.sassdocrc` (no extension). So if you don't feel like passing the `--config` option every time, just name your file `.sassdocrc`.
 
 {% highlight sh %}
-sassdoc source/ destination/       -c path/to/config.json # Short option and JSON file
-sassdoc source/ destination/ --config path/to/config.yaml # Long  option and YAML file
+sassdoc source/       -c path/to/config.json # Short option and JSON file
+sassdoc source/ --config path/to/config.yaml # Long  option and YAML file
 {% endhighlight %}
 
 If you are using the Node API rather than the CLI tool, you can pass your configuration object as the third argument of the `documentize` function:
 
 {% highlight js %}
 var sassdoc = require('sassdoc');
-sassdoc.documentize(source, dest, config);
+sassdoc.documentize(source, config);
 {% endhighlight %}
 
 ## Options
@@ -29,11 +29,17 @@ Here is the available configuration that does not depend on the theme whatsoever
 
 | Option               | Type            | Default                    |
 |----------------------|-----------------|----------------------------|
+| `dest`               | String          | `./sassdoc`                |
 | `package`            | String / Object | `./package.json`           |
 | `theme`              | String          | `default`                  |
 | `autofill`           | Array           | `["requires", "throws"]`   |
 | `groups`             | Object          | `{ undefined: "general" }` |
 | `no-update-notifier` | Boolean         | `false`                    |
+
+## Destination
+
+The `dest` option is the path to the documentation directory to generate. By default it `sassdoc` in the current directory.
+SassDoc will wipe this directory at every run, so don't put anything worthwhile in it.
 
 ## Package
 

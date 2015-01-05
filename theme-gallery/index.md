@@ -52,7 +52,7 @@ title: "Theme Gallery"
 
   <section class="theme-code">
     <h2>Use this theme</h2>
-    <pre class="highlight"><code>sassdoc src/ dest/ --theme <span data-inject-theme-name class="theme-code__name"></span></code></pre>
+    <pre class="highlight"><code>sassdoc src/ --theme <span data-inject-theme-name class="theme-code__name"></span></code></pre>
   </section>
 </article>
 

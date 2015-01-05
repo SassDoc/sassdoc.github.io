@@ -18,30 +18,28 @@ Write [SassDoc compliant comments][annotations]. The syntax is pretty close to J
 ## SassDoc Command
 
 {% highlight bash %}
-sassdoc <src> <dest> [options]
+sassdoc <src> [options]
 {% endhighlight %}
 
 ...where:
 
 * `<src>` is the path to your Sass folder or a [glob expression](https://github.com/isaacs/node-glob#glob-primer) to SCSS/Sass files;
-* `<dest>` is the path to the destination folder;
 * `[options]` are the options.
 
 ## Options
 
-| Option                 | Role                                                           |
-|------------------------|----------------------------------------------------------------|
-| `--version`            | Show version.                                                   |
+| Option                 | Role                                                            |
+|------------------------|-----------------------------------------------------------------|
 | `-h`, `--help`         | Bring help.                                                     |
+| `--version`            | Show version.                                                   |
 | `-v`, `--verbose`      | Enable verbose mode.                                            |
-| `-i`, `--interactive`  | Prompt to remove an existing destination directory.             |
-| `-f`, `--force`        | Always remove an existing destination directory without asking. |
+| `-d`, `--dest`         | Documentation folder [default: sassdoc].                        |
 | `-c`, `--config`       | Path to JSON/YAML configuration file.                           |
 | `-t`, `--theme`        | Theme to use.                                                   |
 | `--no-update-notifier` | Disable update notifier check.                                  |
 
 ## Profit
 
-Open the `index.html` file generated at `path/to/dest/folder/`. It should contain your documentation! What about [configuring][configuration] and [customising the view][view] a little bit now?
+Open the `index.html` file generated in the `sassdoc` directory (or the path you gave to `--dest`). It should contain your documentation! What about [configuring][configuration] and [customising the view][view] a little bit now?
 
 {% include routes.html %}
