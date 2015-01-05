@@ -360,7 +360,7 @@ Describes the documented item.
  * @param {type} $name
  * @param {type | othertype} $name
  * @param {type} $name - description
- * @param {type} $name (default value) - description
+ * @param {type} $name [default value] - description
  */
 {% endhighlight %}
 
@@ -368,7 +368,7 @@ Describes the documented item.
 /// @param {type} $name
 /// @param {type | othertype} $name
 /// @param {type} $name - description
-/// @param {type} $name (default value) - description
+/// @param {type} $name [default value] - description
 {% endhighlight %}
 
 ## @property
@@ -387,12 +387,12 @@ Describes the documented item.
 
 {% highlight scss %}
 /**
- * @prop {Type} base.default (default) - description
+ * @prop {Type} base.default [default] - description
  */
 {% endhighlight %}
 
 {% highlight scss %}
-/// @prop {Type} base.default (default) - description
+/// @prop {Type} base.default [default] - description
 {% endhighlight %}
 
 ## @require
