@@ -38,6 +38,7 @@ sassdoc <src> [options]
 | `-t`, `--theme`        | Theme to use.                            |
 | `--no-update-notifier` | Disable update notifier check.           |
 | `--strict`             | Turn warnings into errors.               |
+| `--debug`              | Output debugging information.            |
 
 ## Profit
 
