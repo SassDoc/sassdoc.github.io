@@ -28,17 +28,18 @@ sassdoc <src> [options]
 
 ## Options
 
-| Option                 | Role                                     |
-|------------------------|------------------------------------------|
-| `-h`, `--help`         | Bring help.                              |
-| `--version`            | Show version.                            |
-| `-v`, `--verbose`      | Enable verbose mode.                     |
-| `-d`, `--dest`         | Documentation folder [default: sassdoc]. |
-| `-c`, `--config`       | Path to JSON/YAML configuration file.    |
-| `-t`, `--theme`        | Theme to use.                            |
-| `--no-update-notifier` | Disable update notifier check.           |
-| `--strict`             | Turn warnings into errors.               |
-| `--debug`              | Output debugging information.            |
+| Option                 | Role                                            |
+|------------------------|-------------------------------------------------|
+| `-h`, `--help`         | Bring help.                                     |
+| `--version`            | Show version.                                   |
+| `-v`, `--verbose`      | Enable verbose mode.                            |
+| `-d`, `--dest`         | Documentation folder [default: sassdoc].        |
+| `-c`, `--config`       | Path to JSON/YAML configuration file.           |
+| `-t`, `--theme`        | Theme to use.                                   |
+| `-p`, `--parse`        | Parse the input and output JSON data to stdout. |
+| `--no-update-notifier` | Disable update notifier check.                  |
+| `--strict`             | Turn warnings into errors.                      |
+| `--debug`              | Output debugging information.                   |
 
 ## Profit
 
