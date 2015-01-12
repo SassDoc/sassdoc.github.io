@@ -75,6 +75,10 @@ Based on the value you set, for instance `unicorn`, SassDoc will try to resolve 
 * if the value contains a `/`, it's `require`d as a Node package;
 * otherwise it's required as `sassdoc-theme-{{value}}` (like `sassdoc-theme-unicorn` in our example).
 
+<p class="note  note--info">
+  <strong>Note:</strong> see <a href="{{ site.data.routes.custom_theme }}">Using Your Own Theme</a> to build your own theme.
+</p>
+
 ## Autofill
 
 The `autofill` option tells which annotations SassDoc should try to autofill when possible. For instance, SassDoc is able to figure from your code if an item requires another item, or if an item is likely to throw an error (`@error` directive from Sass) in some circumstancies.
