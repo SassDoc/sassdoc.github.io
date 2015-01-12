@@ -121,15 +121,29 @@ directly in in an existing project, and use it with SassDoc. Then, we
 will export this theme in it's own npm package to make it available to
 the world!
 
-<p class="note  note--info"><strong>Note:</strong> you are not required to use Swig. Jade, Mustache, Nunjucks and Handlebars are also available as Themeleon plugins. Furthermore it's a breeze to
-write a Themeleon extension for your favorite template engine&nbsp;&mdash;&nbsp;or you can just use any node module in your render procedure without using a Themeleon helper.</p>
+<p class="note  note--info">
+  <strong>Note:</strong> you are not required to use Swig. There's a lot
+  of template engines available in Themeleon through
+  [consolidate.js][repo_consolidate]. Furthermore it's a breeze to write a
+  Themeleon extension for your favorite template
+  engine&nbsp;&mdash;&nbsp;or you can just use any node module in your
+  render procedure without using a Themeleon helper.
+</p>
 
 First, you need to add the dependencies to your `package.json`:
+
+{% highlight sh %}
+npm install --save themeleon
+npm install --save swig
+{% endhighlight %}
+
+... or manually:
 
 {% highlight json %}
 {
   "dependencies": {
-    "themeleon": "3.*"
+    "themeleon": "3.*",
+    "swig": "1.*"
   }
 }
 {% endhighlight %}
@@ -146,14 +160,7 @@ theme: theme
 {% endhighlight %}
 
 You're now telling SassDoc to search for a theme named `theme`. SassDoc
-will try to `require` the following until one matches:
-
-* `sassdoc-theme-theme`
-* `./theme` (here, `.` the configuration file directory)
-* `theme`
-
-To be sure it matches your local directory, you can set the theme to
-`./theme`.
+will try to resolve it with the rules described in [Theme Configuration](/configuration/#theme).
 
 When passing a directory to `require`, Node.js will search for an
 `index.js` file in it. Your theme module will therefore be in
@@ -168,8 +175,8 @@ to build the theme.
 {% highlight js %}
 var themeleon = require('themeleon')(); // Create a theme
 
-// Tell the theme to use the `swig` extension
-themeleon.use('swig');
+// Tell the theme to use the `consolidate` extension
+themeleon.use('consolidate');
 
 // Themeleon needs to know the theme directory, hence `__dirname`
 module.exports = themeleon(__dirname, function (t) {
@@ -210,7 +217,8 @@ dependencies:
     "sassdoc-theme"
   ],
   "dependencies": {
-    "themeleon": "3.*"
+    "themeleon": "3.*",
+    "swig": "1.*"
   }
 }
 {% endhighlight %}
@@ -235,9 +243,7 @@ To add it to your theme, add `swig` and `swig-extras` as a dependency to
 your `package.json`. Then, in your `index.js`:
 
 {% highlight js %}
-// Create a local Swig instance instead of altering the globale one
-var swig = new (require('swig').Swig)();
-
+var swig = new require('swig');
 var extras = require('swig-extras'); // Moar filters
 var themeleon = require('themeleon')(); // No change here
 
@@ -252,8 +258,7 @@ swig.setFilter('push', function (arr, val) {
     return arr.push(val);
 });
 
-// Tell Themeleon to use your own Swig instance
-themeleon.use('swig', swig);
+themeleon.use('consolidate');
 
 module.exports = themeleon(__dirname, function (t) {
   /* ... */
