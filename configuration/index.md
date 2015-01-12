@@ -77,6 +77,7 @@ Based on the value you set, for instance `unicorn`, SassDoc will try to resolve 
 
 <p class="note  note--info">
   <strong>Note:</strong> see <a href="{{ site.data.routes.custom_theme }}">Using Your Own Theme</a> to build your own theme.
+  Also see the <a href="{{ site.data.routes.theme_gallery }}">Theme Gallery</a> to see some existing themes.
 </p>
 
 ## Autofill
