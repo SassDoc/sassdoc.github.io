@@ -58,11 +58,11 @@ If this doesn't work for you, then you can set your own package. The package obj
 * `homepage`: URL to your project's homepage
 * `description`: description of your project
 
-<p class="note note--info">
+<p class="note  note--info">
   A given path must be relative to the configuration file.
 </p>
 
-<p class="note note--info">
+<p class="note  note--info">
   Note that if you set this option as a path to a JSON file, we will override it with the content of this JSON file once in the view, thus <code>package</code> will no longer contain a string, but an object.
 </p>
 
