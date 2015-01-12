@@ -87,11 +87,13 @@ For instance, a falsy value, like an empty array would disable SassDoc autofill 
 autofill: []
 {% endhighlight %}
 
-Or you can enable only some annotations to be autofilled:
+Or you can enable only some annotations to be autofilled (here all supported annotations are listed):
 
 {% highlight yaml %}
 autofill:
-  - throws
+  - throw
+  - content
+  - require
 {% endhighlight %}
 
 ## Groups
