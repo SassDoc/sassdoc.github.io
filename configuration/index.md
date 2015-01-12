@@ -16,11 +16,11 @@ sassdoc source/       -c path/to/config.json # Short option and JSON file
 sassdoc source/ --config path/to/config.yaml # Long  option and YAML file
 {% endhighlight %}
 
-If you are using the Node API rather than the CLI tool, you can pass your configuration object as the third argument of the `documentize` function:
+If you are using the Node API rather than the CLI tool, you can pass your configuration object as the third argument of the `sassdoc` function:
 
 {% highlight js %}
 var sassdoc = require('sassdoc');
-sassdoc.documentize(source, config);
+sassdoc(source, config);
 {% endhighlight %}
 
 ## Options
@@ -43,14 +43,11 @@ SassDoc will wipe this directory at every run, so don't put anything worthwhile 
 
 ## Package
 
-The `package` option is either a path (String) to a JSON file or directly an Object.
+The `package` option is either a path (string) to a JSON file or directly an object.
 It contains information about the documented project (for instance a `package.json`, hence the name of the key).
 
-Please note that we try to find a `package.json` in 3 different locations before giving up:
-
-* a relative path from your current folder
-* a relative path from the theme folder
-* an absolute path.
+If you provide a path, it will be resolved from the configuration file (or CWD if you have no configuration file).
+By default, it's `package.json` (with the same resolving rules).
 
 If this doesn't work for you, then you can set your own package. The package object (either direct or required from a path) should ideally contain (for the theme to access to various information about your project):
 
@@ -66,20 +63,17 @@ If this doesn't work for you, then you can set your own package. The package obj
 </p>
 
 <p class="note note--info">
-  Note that if you set this option as a path to a JSON file, we will override it with     the content of this JSON file once in the view, thus `package` will no longer contain a string, but an object.
+  Note that if you set this option as a path to a JSON file, we will override it with the content of this JSON file once in the view, thus <code>package</code> will no longer contain a string, but an object.
 </p>
 
 ## Theme
 
 The `theme` option is the name of a theme to be used. If not set, it will default to `default`, which means SassDoc will use `sassdoc-theme-default`, the official theme.
 
-Based on the value you set, for instance `unicorn`, SassDoc will try to require the following until one matches:
+Based on the value you set, for instance `unicorn`, SassDoc will try to resolve it this way:
 
-* a package named `sassdoc-theme-unicorn`;
-* a folder named `./unicorn` (here, `.` is the configuration file directory);
-* a package named `unicorn`.
-
-<p class="note  note--info"><strong>Tip:</strong> to make sure it matches your local <code>unicorn</code> directory, and not a <code>sassdoc-theme-unicorn</code> from which you're not the author, we recommand you to set it to <code>./unicorn</code> if you are using a local theme.</p>
+* if the value contains a `/`, it's `require`d as a Node package;
+* otherwise it's required as `sassdoc-theme-{{value}}` (like `sassdoc-theme-unicorn` in our example).
 
 ## Autofill
 
@@ -89,10 +83,8 @@ Meanwhile, SassDoc is not a Sass lexer. It is not infallible, and in some rare o
 
 For instance, a falsy value, like an empty array would disable SassDoc autofill feature altogether:
 
-{% highlight json %}
-{
-  "autofill": []
-}
+{% highlight yaml %}
+autofill: []
 {% endhighlight %}
 
 ## Groups
@@ -100,6 +92,12 @@ For instance, a falsy value, like an empty array would disable SassDoc autofill 
 The `groups` option is an object of aliases for group slugs. When you gather items in groups with the `@group` annotation, you specify a slug string, without spaces or formatting (e.g. `api-helpers`). In the `groups` object, you can associate a group slug with a group name so the latter gets used in the view rather than the dirty slug (e.g. `API Helpers`).
 
 All non-grouped items are gathered by SassDoc in an `undefined` group, that is being aliased as *General*. Feel free to change this to suit your preferences.
+
+{% highlight yaml %}
+groups:
+  api-helpers: API Helpers
+  undefined: Ungrouped
+{% endhighlight %}
 
 <p class="note  note--warning"><strong>Note:</strong> that for this feature to work, <a href="{{ site.data.routes.extra_tools }}#groups-aliases">sassdoc-extras</a> has to be used by the theme, which is obviously the case with the default theme.</p>
 

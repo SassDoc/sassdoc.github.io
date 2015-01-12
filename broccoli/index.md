@@ -18,7 +18,7 @@ var docs = sassdoc(tree, options);
 
 ... where:
 
-* `tree`: A [broccoli tree](https://github.com/broccolijs/broccoli#plugin-api-specification) or a directory path as a string.
+* `tree`: A [Broccoli tree](https://github.com/broccolijs/broccoli#plugin-api-specification) or a directory path as a string.
 * `options`: An object of options to pass to SassDoc.
 
 ## Options
@@ -47,20 +47,20 @@ var docs = sassdoc('path/to/sass');
 {% highlight js %}
 // Example with external view configuration file.
 var docs = sassdoc('path/to/sass', {
-    'config': 'path/to/view.json'
+    config: 'path/to/view.json',
 });
 {% endhighlight %}
 
 {% highlight js %}
 // Example with passed in options.
 var docs = sassdoc('path/to/sass', {
-    'verbose': true,
-    'display': {
-      'access': ['public', 'private'],
-      'alias': true,
-      'watermark': true
+    verbose: true,
+    display: {
+      access: ['public', 'private'],
+      alias: true,
+      watermark: true,
     },
-    'package': './package.json'
+    package: './package.json',
 });
 {% endhighlight %}
 

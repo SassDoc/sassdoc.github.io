@@ -5,30 +5,30 @@ title: "Annotations"
 
 ## Table of content
 
-| Annotation | Description | Aliases |
-|------------|-------------|---------|
-| [Comment range](#comment-range) | Comment range | &mdash; |
-| [Name](#name) | Name of the documented item | &mdash; |
-| [Description](#description) | Description of the documented item | &mdash; |
-| [@access](#access) | Access of the documented item | &mdash; |
-| [@alias](#alias) | Whether the documented item is an alias of another item | &mdash; |
-| [@author](#author) | Author of the documented item | &mdash; |
-| [@content](#content) | Whether the documented mixin uses the `@content` directive | &mdash; |
-| [@deprecated](#deprecated) | Whether the documented item is deprecated | &mdash; |
-| [@example](#example) | Example for the documented item | &mdash; |
-| [@group](#group) | Group the documented item belongs to | &mdash; |
-| [@ignore](#ignore) | Ignored content | &mdash; |
-| [@link](#link-synonym-source) | Link related to the documented item | @source |
-| [@output](#output) | Output from the documented mixin | &mdash; |
-| [@parameter](#param-synonyms-arg-argument) | Parameters from the documented mixin or function | @param, @arg, @argument |
-| [@property](#prop) | Property of the documented map | @prop |
-| [@require](#requires) | Requirements from the documented item | @requires |
-| [@return](#returns-synonym-return) | Return from the documented function | @returns |
-| [@see](#see) | Resource related to the documented item | &mdash; |
-| [@since](#since) | Changelog for the documented item | &mdash; |
-| [@throw](#throws-synonym-throw-exception) | Exceptions raised by the documented item | @throws, @exception |
-| [@todo](#todo) | Things to do related to the documented item | &mdash; |
-| [@type](#type) | Describes the type of a variable | &mdash; |
+| Annotation                                 | Description                                                | Aliases                 |
+|--------------------------------------------|------------------------------------------------------------|-------------------------|
+| [Comment range](#comment-range)            | Comment range                                              | &mdash;                 |
+| [Name](#name)                              | Name of the documented item                                | &mdash;                 |
+| [Description](#description)                | Description of the documented item                         | &mdash;                 |
+| [@access](#access)                         | Access of the documented item                              | &mdash;                 |
+| [@alias](#alias)                           | Whether the documented item is an alias of another item    | &mdash;                 |
+| [@author](#author)                         | Author of the documented item                              | &mdash;                 |
+| [@content](#content)                       | Whether the documented mixin uses the `@content` directive | &mdash;                 |
+| [@deprecated](#deprecated)                 | Whether the documented item is deprecated                  | &mdash;                 |
+| [@example](#example)                       | Example for the documented item                            | &mdash;                 |
+| [@group](#group)                           | Group the documented item belongs to                       | &mdash;                 |
+| [@ignore](#ignore)                         | Ignored content                                            | &mdash;                 |
+| [@link](#link-synonym-source)              | Link related to the documented item                        | @source                 |
+| [@output](#output)                         | Output from the documented mixin                           | &mdash;                 |
+| [@parameter](#param-synonyms-arg-argument) | Parameters from the documented mixin or function           | @param, @arg, @argument |
+| [@property](#prop)                         | Property of the documented map                             | @prop                   |
+| [@require](#requires)                      | Requirements from the documented item                      | @requires               |
+| [@return](#returns-synonym-return)         | Return from the documented function                        | @returns                |
+| [@see](#see)                               | Resource related to the documented item                    | &mdash;                 |
+| [@since](#since)                           | Changelog for the documented item                          | &mdash;                 |
+| [@throw](#throws-synonym-throw-exception)  | Exceptions raised by the documented item                   | @throws, @exception     |
+| [@todo](#todo)                             | Things to do related to the documented item                | &mdash;                 |
+| [@type](#type)                             | Describes the type of a variable                           | &mdash;                 |
 
 <p class="note  note--info"><strong>Note:</strong> remember that you can define annotations at a file level rather than on specific items, which can happen to be very useful when all items from a file share some traits (author, group, and so on...). To do so, please refer to <a href="/file-level-annotations/">File-level Annotations</a>.</p>
 
@@ -39,11 +39,11 @@ Each annotated comment will include a `commentRange` object like so:
 {% highlight js %}
 {
   start: 1,
-  end: 3
+  end: 3,
 }
 {% endhighlight %}
 
-...representing the start and end of the comment.
+... representing the start and end of the comment.
 
 ## Name
 

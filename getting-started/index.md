@@ -21,7 +21,7 @@ Write [SassDoc compliant comments][annotations]. The syntax is pretty close to J
 sassdoc <src>... [options]
 {% endhighlight %}
 
-...where:
+... where:
 
 * `<src>` is the path to one or more Sass folders or [glob expressions](https://github.com/isaacs/node-glob#glob-primer) to SCSS/Sass files;
 * `[options]` are the options.

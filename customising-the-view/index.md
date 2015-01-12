@@ -27,12 +27,10 @@ This is done exactly like the regular configuration, within the same configurati
 
 The `display.access` option lists access levels that are being displayed, default is all (both `public` and `private`). If you don't want to display `private` items, you can remove it from the array, like so:
 
-{% highlight js %}
-{
-  display: {
-    access: ["public"]
-  }
-}
+{% highlight yaml %}
+display:
+  access:
+    - public
 {% endhighlight %}
 
 ## Alias display
@@ -41,12 +39,9 @@ The `display.alias` option defines whether or not aliases should be displayed. D
 
 If you want to display aliases as well, change the value to `true`.
 
-{% highlight js %}
-{
-  display: {
-    alias: true
-  }
-}
+{% highlight yaml %}
+display:
+  alias: true
 {% endhighlight %}
 
 ## Watermark display
@@ -54,11 +49,8 @@ If you want to display aliases as well, change the value to `true`.
 The default theme from SassDoc displays a discret *© Made with love by [SassDoc][organisation] team.* in the footer, in order to promote the tool and share the love. You can turn off this watermak if you like, but we would really appreciate you to leave it if you use this theme.
 
 {% highlight js %}
-{
-  display: {
-    watermark: false
-  }
-}
+display:
+  watermark: false
 {% endhighlight %}
 
 Along the same lines, if you build your own theme, adding a little mention to SassDoc somewhere on the page would be very nice of you!
@@ -67,28 +59,22 @@ Along the same lines, if you build your own theme, adding a little mention to Sa
 
 The `basePath` option is used to provide a *View source* link to each item in case the code is hosted on a public repository. By setting the option to the base path of your repository, and thanks to SassDoc's parser keeping track of the file name, the path and the lines number, we are able to build links such as:
 
-{% highlight bash %}
-https://github.com/sassdoc/sassdoc-theme-default/tree/master/scss/utils/_functions.scss#L13-L37
-{% endhighlight %}
+    https://github.com/sassdoc/sassdoc-theme-default/tree/master/scss/utils/_functions.scss#L13-L37
 
 ## Shortcut icon
 
 The `shortcutIcon` option can be used to provide a favicon to your documentation. It accepts a path, either relative or absolute.
 
-{% highlight js %}
-{
-  shortcutIcon: "assets/images/favicon.png"
-}
+{% highlight yaml %}
+shortcutIcon: assets/images/favicon.png
 {% endhighlight %}
 
 ## Google Analytics
 
 If you are using Google Analytics to track users behaviour on your site, you can set your Google Analytics tracking key as a value for the `googleAnalytics` key.
 
-{% highlight js %}
-{
-  googleAnalytics: 'UA-XXXXX-YY'
-}
+{% highlight yaml %}
+googleAnalytics: UA-XXXXX-YY
 {% endhighlight %}
 
 ## Tracking code
@@ -106,43 +92,44 @@ trackingCode: |
 
 Here's a JSON example:
 
-{% highlight js %}
+{% highlight json %}
 {
-  basePath: "https://github.com/SassDoc/sassdoc",
-  shortcutIcon: "assets/images/favicon.png",
-  display: {
-    access: ["public", "private"],
-    alias: false,
-    watermark: true
+  "basePath": "https://github.com/SassDoc/sassdoc",
+  "shortcutIcon": "assets/images/favicon.png",
+  "display": {
+    "access": ["public", "private"],
+    "alias": false,
+    "watermark": true
   },
 
-  package: "./package.json",
-  theme: "default",
-  groups: {
-    undefined: "General"
+  "package": "./package.json",
+  "theme": "default",
+  "groups": {
+    "undefined": "General"
   },
 
-  googleAnalytics: 'UA-XXXXX-YY',
-  tracking: '<img src="http://piwik.example.org/piwik.php?idsite={$IDSITE}amp;rec=1" style="border:0" alt="" />'
+  "googleAnalytics": "UA-XXXXX-YY",
+  "tracking": "<img src=\"http://piwik.example.org/piwik.php?idsite={$IDSITE}amp;rec=1\" style=\"border:0\" alt=\"\" />"
 }
 {% endhighlight %}
 
 And the same configuration in YAML:
 
 {% highlight yaml %}
-basePath: "https://github.com/SassDoc/sassdoc"
-shortcutIcon: "assets/images/favicon.png"
+basePath: https://github.com/SassDoc/sassdoc
+shortcutIcon: assets/images/favicon.png
 display:
-    access: ["public", "private"]
+    access: [public, private]
     alias: false
     watermark: true
 
-package: "./package.json"
-theme: "default"
+package: ./package.json
+theme: default
 groups:
-    undefined: "General"
+    undefined: General
 
-googleAnalytics: 'UA-XXXXX-YY'
+googleAnalytics: UA-XXXXX-YY
+
 tracking: |
   <img src="http://piwik.example.org/piwik.php?idsite={$IDSITE}amp;rec=1" style="border:0" alt="" />
 {% endhighlight %}

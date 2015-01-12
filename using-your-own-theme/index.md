@@ -29,7 +29,7 @@ function implementing the following interface:
  * @return {promise} A Promises/A+ implementation.
  */
 module.exports = function (dest, ctx) {
-  ...
+  /* ... */
 };
 {% endhighlight %}
 
@@ -54,26 +54,25 @@ documentation data.
 
 {% highlight js %}
 {
-  "view": {
-    // Raw data from configuration file passed to
-    // SassDoc's `--config` option (or API equivalent).
-  },
+  // Raw data from configuration file passed to
+  // SassDoc's `--config` option (or API equivalent) are in top-level
+  // context.
 
-  "package": {
+  package: {
     // Raw data from the project's `package.json`, or a JSON file
     // whose path was given in `view.package`, or an object directly
     // defined in `view.package`.
   },
 
-  "theme": function (dest, ctx) {
+  theme: function (dest, ctx) {
     // The theme function, probably a reference to **your** theme
     // function if you're writing a theme. You can ignore it unless you
     // want some kind of recursivity.
   },
 
-  "data": {
-    // Parsed documentation object like described in Sassdoc Data
-    // Interface documentation page.
+  data: [
+    // Parsed documentation array described in Sassdoc Data Interface
+    // documentation page.
   },
 }
 {% endhighlight %}
@@ -91,16 +90,16 @@ An example view object, assuming you use some [filters][extra_tools]:
 
 {% highlight js %}
 {
-  'display': {
-    'access': ['public', 'private'],
-    'alias': false,
+  display: {
+    access: ['public', 'private'],
+    alias: false,
   },
 
-  'groups': {
-    'slug': 'Title',
-    'helpers': 'Helpers',
-    'hacks': 'Dirty Hacks & Fixes',
-    'undefined': 'Ungrouped',
+  groups: {
+    slug: 'Title',
+    helpers: 'Helpers',
+    hacks: 'Dirty Hacks & Fixes',
+    undefined: 'Ungrouped',
   }
 }
 {% endhighlight %}
@@ -129,11 +128,8 @@ First, you need to add the dependencies to your `package.json`:
 
 {% highlight json %}
 {
-  ...
   "dependencies": {
-    ...
-    "themeleon": "0.*",
-    "themeleon-swig": "0.*"
+    "themeleon": "3.*"
   }
 }
 {% endhighlight %}
@@ -145,11 +141,8 @@ the root of your project. Assuming you already have a [configuration
 file][view], and it's at the same level as the `theme`
 directory, append this to it:
 
-{% highlight json %}
-{
-  ...
-  "theme": "theme"
-}
+{% highlight yaml %}
+theme: theme
 {% endhighlight %}
 
 You're now telling SassDoc to search for a theme named `theme`. SassDoc
@@ -202,8 +195,7 @@ The views are passed a couple of variables [documented here][data_interface].
 ## Packaging to the World
 
 Now that your awesome theme is ready, you probably want to make it available
-to everybody as a `"theme": "your-theme"` line in their
-configuration file.
+to everybody as a `theme: your-theme` line in their configuration file.
 
 To do this, create a `package.json` in your theme's directory (the one
 containing the `index.js`). Give it a name (prefixed with
@@ -218,8 +210,7 @@ dependencies:
     "sassdoc-theme"
   ],
   "dependencies": {
-    "themeleon": "0.*",
-    "themeleon-swig": "0.*"
+    "themeleon": "3.*"
   }
 }
 {% endhighlight %}
@@ -265,7 +256,7 @@ swig.setFilter('push', function (arr, val) {
 themeleon.use('swig', swig);
 
 module.exports = themeleon(__dirname, function (t) {
-  ...
+  /* ... */
 });
 {% endhighlight %}
 
