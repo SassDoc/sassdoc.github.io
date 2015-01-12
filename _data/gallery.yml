@@ -22,9 +22,9 @@
   url: http://madebymany.github.io/css-patterns/
   image: css-patterns.png
 
-- name: scss-components
-  url: http://scss-components.com/sassdoc/
-  image: scss-components.png
+# - name: scss-components
+#   url: http://scss-components.com/sassdoc/
+#   image: scss-components.png
 
 - name: yy
   url: http://astina.github.io/yy/
