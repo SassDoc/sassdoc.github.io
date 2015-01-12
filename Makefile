@@ -69,7 +69,8 @@ gallery: $(GALLERY_IMAGES)
 
 $(GALLERY_IMAGES): $(GALLERY) | $(WEBSHOT)
 	url=$$(grep -B1 '$(@F)' $< | sed 's/.*: //;q'); \
-	$(WEBSHOT) $(WEBSHOT_FLAGS) --window-size 2880/1800 --zoom 2 "$$url" $@
+	$(WEBSHOT) $(WEBSHOT_FLAGS) --window-size 1440/900 "$$url" $@
+	$(MOGRIFY) -resize 900x $@
 
 # }}}
 
