@@ -87,6 +87,13 @@ For instance, a falsy value, like an empty array would disable SassDoc autofill 
 autofill: []
 {% endhighlight %}
 
+Or you can enable only some annotations to be autofilled:
+
+{% highlight yaml %}
+autofill:
+  - throws
+{% endhighlight %}
+
 ## Groups
 
 The `groups` option is an object of aliases for group slugs. When you gather items in groups with the `@group` annotation, you specify a slug string, without spaces or formatting (e.g. `api-helpers`). In the `groups` object, you can associate a group slug with a group name so the latter gets used in the view rather than the dirty slug (e.g. `API Helpers`).
