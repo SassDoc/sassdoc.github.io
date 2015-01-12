@@ -12,7 +12,7 @@ WEBSHOT_FLAGS = --default-white-background
 
 RAW_BASE_URL = https://raw.githubusercontent.com/SassDoc/sassdoc/master
 
-all: changelog preview themes built-with-sassdoc
+all: changelog preview themes gallery
 
 # Changelog {{{
 # =============
@@ -43,14 +43,14 @@ assets/images/preview-image.png: $(SASSDOC_THEME) | $(SASSDOC) $(WEBSHOT)
 # Theme gallery {{{
 # =================
 
-GALLERY = theme-gallery
+THEME_GALLERY = theme-gallery
 
-include $(GALLERY)/themes.mk
-include $(GALLERY)/gallery.mk
+include $(THEME_GALLERY)/themes.mk
+include $(THEME_GALLERY)/gallery.mk
 
 themes: _data/themes.yml
 
-_data/themes.yml: $(THEME_PACKAGES) | gallery
+_data/themes.yml: $(THEME_PACKAGES) | theme-gallery
 	for i in $(addsuffix /package.json, $^); do \
 		name=$$(basename $$(dirname $$i) | sed 's/^sassdoc-theme-//'); \
 		sed "1s/^/$$name: /" $$i; \
@@ -59,7 +59,7 @@ _data/themes.yml: $(THEME_PACKAGES) | gallery
 # }}}
 
 # Gallery {{{
-# ======================
+# ===========
 
 GALLERY = _data/gallery.yml
 GALLERY_DIR = assets/images/gallery
