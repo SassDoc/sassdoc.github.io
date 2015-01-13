@@ -18,12 +18,12 @@ Write [SassDoc compliant comments][annotations]. The syntax is pretty close to J
 ## SassDoc Command
 
 {% highlight bash %}
-sassdoc <src> [options]
+sassdoc <src>... [options]
 {% endhighlight %}
 
 ...where:
 
-* `<src>` is the path to your Sass folder or a [glob expression](https://github.com/isaacs/node-glob#glob-primer) to SCSS/Sass files;
+* `<src>` is the path to one or more Sass folders or [glob expressions](https://github.com/isaacs/node-glob#glob-primer) to SCSS/Sass files;
 * `[options]` are the options.
 
 ## Options
