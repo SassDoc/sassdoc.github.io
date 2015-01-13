@@ -8,7 +8,7 @@ screenshot({
   width: 0 | process.argv[3],
   height: 0 | process.argv[4],
   css: '::-webkit-scrollbar { display: none; }',
-  delay: 2,
+  delay: 1,
 }).then(function (buffer) {
   fs.writeFile(process.argv[5], buffer, function (err) {
     screenshot.close();
