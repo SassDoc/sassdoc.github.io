@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var screenshot = require('atom-screenshot');
+
+screenshot({
+  url: process.argv[2],
+  width: 0 | process.argv[3],
+  height: 0 | process.argv[4],
+  css: '::-webkit-scrollbar { display: none; }',
+  delay: 2,
+}).then(function (buffer) {
+  fs.writeFile(process.argv[5], buffer, function (err) {
+    screenshot.close();
+
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    }
+  });
+});

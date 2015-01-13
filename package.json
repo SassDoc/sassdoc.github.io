@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "atom-screenshot": "^0.3.0",
+    "sassdoc": "^2.0.0-rc.16"
+  }
+}

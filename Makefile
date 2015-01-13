@@ -1,14 +1,10 @@
-NPM = npm
 GIT = git
 MOGRIFY = mogrify
 
 SASSDOC = node_modules/sassdoc/bin/sassdoc
-WEBSHOT = node_modules/webshot-cli/webshot
+SHOT = utils/shot
 
-SASSDOC_FLAGS = --force
 SASSDOC_THEME = node_modules/sassdoc-theme-default
-
-WEBSHOT_FLAGS = --default-white-background
 
 RAW_BASE_URL = https://raw.githubusercontent.com/SassDoc/sassdoc/master
 
@@ -32,10 +28,10 @@ changelog/index.md: force
 
 preview: assets/images/preview-image.png
 
-assets/images/preview-image.png: $(SASSDOC_THEME) | $(SASSDOC) $(WEBSHOT)
+assets/images/preview-image.png: $(SASSDOC_THEME)
 	echo '{"package": "node_modules/sassdoc-theme-default/package.json"}' > .preview.json
-	$(SASSDOC) $(SASSDOC_FLAGS) $</scss .preview --config .preview.json
-	$(WEBSHOT) $(WEBSHOT_FLAGS) --window-size 1200/675 .preview/index.html $@
+	$(SASSDOC) $</scss --dest .preview --config .preview.json
+	$(SHOT) file://$(PWD)/.preview/index.html 1200 675 $@
 	$(RM) -r .preview .preview.json
 
 # }}}
@@ -65,26 +61,19 @@ GALLERY = _data/gallery.yml
 GALLERY_DIR = assets/images/gallery
 GALLERY_IMAGES = $(addprefix $(GALLERY_DIR)/, $(shell awk '$$1 == "image:" {print $$2}' $(GALLERY)))
 
+DIRS += $(GALLERY_DIR)
+
 gallery: $(GALLERY_IMAGES)
 
-$(GALLERY_IMAGES): $(GALLERY) | $(WEBSHOT)
+$(GALLERY_IMAGES): $(GALLERY) | $(GALLERY_DIR)
 	url=$$(grep -B1 '$(@F)' $< | sed 's/.*: //;q'); \
-	$(WEBSHOT) $(WEBSHOT_FLAGS) --window-size 1440/900 "$$url" $@
+	utils/shot "$$url" 1440 900 $@
 	$(MOGRIFY) -resize 900x $@
 
 # }}}
 
 # Common {{{
 # ==========
-
-update:
-	$(NPM) update
-
-$(SASSDOC):
-	$(NPM) install sassdoc
-
-$(WEBSHOT):
-	$(NPM) install webshot-cli
 
 $(DIRS):
 	mkdir $@
