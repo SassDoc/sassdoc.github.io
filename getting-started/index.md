@@ -15,15 +15,16 @@ npm install sassdoc -g
 
 Write [SassDoc compliant comments][annotations]. The syntax is pretty close to JSDoc's although we took some liberty with it.
 
-## SassDoc Command
+## SassDoc command
 
 {% highlight bash %}
 sassdoc <src>... [options]
+sassdoc [options]
 {% endhighlight %}
 
 ... where:
 
-* `<src>` is the path to one or more Sass folders or [glob expressions](https://github.com/isaacs/node-glob#glob-primer) to SCSS/Sass files;
+* `<src>` is the path to one or more Sass folders or [glob expressions](https://github.com/isaacs/node-glob#glob-primer) to SCSS/Sass files; if not given, SassDoc will read from stdin;
 * `[options]` are the options.
 
 ## Options
