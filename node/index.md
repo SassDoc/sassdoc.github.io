@@ -21,7 +21,7 @@ It's up to you to do whatever you want with this!
 {% highlight js %}
 var sassdoc = require('sassdoc');
 
-sassdoc.parse(__dirname + '/your-sass-folder')
+sassdoc.parse('./scss', { verbose: true })
   .then(function (data) {
     console.log(data);
   });
@@ -34,7 +34,7 @@ Or if you want to use SassDoc at its best and generate the whole documentation f
 {% highlight js %}
 var sassdoc = require('sassdoc');
 
-sassdoc(source)
+sassdoc('./scss', { verbose: true })
   .then(function () {
     console.log('Your documentation has been generated!');
   }, function (err) {
