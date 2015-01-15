@@ -76,7 +76,7 @@ grunt.initConfig({
 grunt.initConfig({
   sassdoc: {
     default: {
-      'src: path/to/sass',
+      src: path/to/sass',
       dest: 'path/to/docs',
       options: {
         config: 'path/to/config.json',
