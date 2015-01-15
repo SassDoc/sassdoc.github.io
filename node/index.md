@@ -54,7 +54,7 @@ Both `sassdoc` and `sassdoc.parse` functions have the same synopsis:
 
 ## Streaming
 
-I lied to you in the [Synopsis](#synopsis) part. There is one more way you can use these functions; if you ommit the `source` argument, you'll get a [transform stream][repo_through2], able to handle [vinyl files][repo_vinyl]. You can easily use it with [vinyl-fs][repo_vinyl_fs].
+There is one more way you can use these functions; if you ommit the `source` argument, you'll get a [transform stream][repo_through2], able to handle [vinyl files][repo_vinyl]. You can easily use it with [vinyl-fs][repo_vinyl_fs].
 
 {% highlight js %}
 var vfs = require('vinyl-fs');
