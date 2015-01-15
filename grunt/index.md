@@ -7,7 +7,7 @@ title: "Grunt integration"
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out
 the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how
-to create a [gruntfile](http://gruntjs.com/getting-started) as well as install
+to create a [Gruntfile](http://gruntjs.com/getting-started) as well as install
 and use grunt plugins. Once you're familiar with that process, install this
 plugin with this command:
 
@@ -22,7 +22,7 @@ this line of JavaScript:
 grunt.loadNpmTasks('grunt-sassdoc');
 {% endhighlight %}
 
-<p class="note note--info">
+<p class="note  note--info">
   <strong>Tip</strong>:
   the <a href="https://github.com/sindresorhus/load-grunt-tasks">load-grunt-tasks</a>
   module makes it easier to load multiple grunt tasks.
@@ -47,7 +47,7 @@ specify any option that SassDoc supports. Refer to:
 * [Configuration][configuration] for SassDoc options;
 * [Customising the view][view] for default theme options.
 
-<p class="note note--info">
+<p class="note  note--info">
   <strong>Heads up:</strong> if a config file is passed
 and found, its options will prevail over defaults. Additional options passed to
 the Grunt task, will complement it but not override it.
@@ -62,27 +62,27 @@ in the repository for a full example.
 {% highlight js %}
 // Bare minimum example.
 grunt.initConfig({
-  'sassdoc': {
-    'default': {
-      'src': 'path/to/sass',
-      'dest': 'path/to/docs'
-    }
-  }
+  sassdoc: {
+    default: {
+      src: 'path/to/sass',
+      dest: 'path/to/docs',
+    },
+  },
 });
 {% endhighlight %}
 
 {% highlight js %}
 // Example with external view configuration file.
 grunt.initConfig({
-  'sassdoc': {
-    'default': {
-      'src': 'path/to/sass',
-      'dest': 'path/to/docs',
-      'options': {
-        'config': 'path/to/config.json'
-      }
-    }
-  }
+  sassdoc: {
+    default: {
+      src: path/to/sass',
+      dest: 'path/to/docs',
+      options: {
+        config: 'path/to/config.json',
+      },
+    },
+  },
 });
 {% endhighlight %}
 
@@ -91,31 +91,30 @@ grunt.initConfig({
 // Tip: you're not required to to pass every options,
 // just override the one you need.
 grunt.initConfig({
-  'sassdoc': {
-    'default': {
-      'src': 'path/to/sass',
-      'dest': 'path/to/docs',
-      'options': {
-        'display': {
-          'access': ['public', 'private'],
-          'alias': true,
-          'watermark': true
+  sassdoc: {
+    default: {
+      src: 'path/to/sass',
+      dest: 'path/to/docs',
+      options: {
+        display: {
+          access: ['public', 'private'],
+          alias: true,
+          watermark: true,
         },
-        'package': './package.json',
-        'theme': 'sassdoc-theme-dark',
-        'groups': {
-          'slug': 'Title',
-          'helpers': 'Helpers',
-          'hacks': 'Dirty Hacks & Fixes',
-          'undefined': 'Ungrouped'
+        package: './package.json',
+        theme: 'sassdoc-theme-dark',
+        groups: {
+          slug: 'Title',
+          helpers: 'Helpers',
+          hacks: 'Dirty Hacks & Fixes',
+          undefined: 'Ungrouped',
         },
-        'basePath': 'https://github.com/SassDoc/sassdoc'
-      }
-    }
-  }
+        basePath: 'https://github.com/SassDoc/sassdoc',
+      },
+    },
+  },
 });
 {% endhighlight %}
-
 
 ## Events
 

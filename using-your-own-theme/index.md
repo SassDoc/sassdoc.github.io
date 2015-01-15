@@ -29,7 +29,7 @@ function implementing the following interface:
  * @return {promise} A Promises/A+ implementation.
  */
 module.exports = function (dest, ctx) {
-  ...
+  /* ... */
 };
 {% endhighlight %}
 
@@ -54,26 +54,25 @@ documentation data.
 
 {% highlight js %}
 {
-  "view": {
-    // Raw data from configuration file passed to
-    // SassDoc's `--config` option (or API equivalent).
-  },
+  // Raw data from configuration file passed to
+  // SassDoc's `--config` option (or API equivalent) are in top-level
+  // context.
 
-  "package": {
+  package: {
     // Raw data from the project's `package.json`, or a JSON file
     // whose path was given in `view.package`, or an object directly
     // defined in `view.package`.
   },
 
-  "theme": function (dest, ctx) {
+  theme: function (dest, ctx) {
     // The theme function, probably a reference to **your** theme
     // function if you're writing a theme. You can ignore it unless you
     // want some kind of recursivity.
   },
 
-  "data": {
-    // Parsed documentation object like described in Sassdoc Data
-    // Interface documentation page.
+  data: [
+    // Parsed documentation array described in Sassdoc Data Interface
+    // documentation page.
   },
 }
 {% endhighlight %}
@@ -91,16 +90,16 @@ An example view object, assuming you use some [filters][extra_tools]:
 
 {% highlight js %}
 {
-  'display': {
-    'access': ['public', 'private'],
-    'alias': false,
+  display: {
+    access: ['public', 'private'],
+    alias: false,
   },
 
-  'groups': {
-    'slug': 'Title',
-    'helpers': 'Helpers',
-    'hacks': 'Dirty Hacks & Fixes',
-    'undefined': 'Ungrouped',
+  groups: {
+    slug: 'Title',
+    helpers: 'Helpers',
+    hacks: 'Dirty Hacks & Fixes',
+    undefined: 'Ungrouped',
   }
 }
 {% endhighlight %}
@@ -122,18 +121,29 @@ directly in in an existing project, and use it with SassDoc. Then, we
 will export this theme in it's own npm package to make it available to
 the world!
 
-<p class="note  note--info"><strong>Note:</strong> you are not required to use Swig. Jade, Mustache, Nunjucks and Handlebars are also available as Themeleon plugins. Furthermore it's a breeze to
-write a Themeleon extension for your favorite template engine&nbsp;&mdash;&nbsp;or you can just use any node module in your render procedure without using a Themeleon helper.</p>
+<p class="note  note--info">
+  <strong>Note:</strong> you are not required to use Swig. There's a lot
+  of template engines available in Themeleon through
+  [consolidate.js][repo_consolidate]. Furthermore it's a breeze to write a
+  Themeleon extension for your favorite template
+  engine&nbsp;&mdash;&nbsp;or you can just use any node module in your
+  render procedure without using a Themeleon helper.
+</p>
 
 First, you need to add the dependencies to your `package.json`:
 
+{% highlight sh %}
+npm install --save themeleon
+npm install --save swig
+{% endhighlight %}
+
+... or manually:
+
 {% highlight json %}
 {
-  ...
   "dependencies": {
-    ...
-    "themeleon": "0.*",
-    "themeleon-swig": "0.*"
+    "themeleon": "3.*",
+    "swig": "1.*"
   }
 }
 {% endhighlight %}
@@ -145,22 +155,12 @@ the root of your project. Assuming you already have a [configuration
 file][view], and it's at the same level as the `theme`
 directory, append this to it:
 
-{% highlight json %}
-{
-  ...
-  "theme": "theme"
-}
+{% highlight yaml %}
+theme: theme
 {% endhighlight %}
 
 You're now telling SassDoc to search for a theme named `theme`. SassDoc
-will try to `require` the following until one matches:
-
-* `sassdoc-theme-theme`
-* `./theme` (here, `.` the configuration file directory)
-* `theme`
-
-To be sure it matches your local directory, you can set the theme to
-`./theme`.
+will try to resolve it with the rules described in [Theme Configuration](/configuration/#theme).
 
 When passing a directory to `require`, Node.js will search for an
 `index.js` file in it. Your theme module will therefore be in
@@ -175,8 +175,8 @@ to build the theme.
 {% highlight js %}
 var themeleon = require('themeleon')(); // Create a theme
 
-// Tell the theme to use the `swig` extension
-themeleon.use('swig');
+// Tell the theme to use the `consolidate` extension
+themeleon.use('consolidate');
 
 // Themeleon needs to know the theme directory, hence `__dirname`
 module.exports = themeleon(__dirname, function (t) {
@@ -202,8 +202,7 @@ The views are passed a couple of variables [documented here][data_interface].
 ## Packaging to the World
 
 Now that your awesome theme is ready, you probably want to make it available
-to everybody as a `"theme": "your-theme"` line in their
-configuration file.
+to everybody as a `theme: your-theme` line in their configuration file.
 
 To do this, create a `package.json` in your theme's directory (the one
 containing the `index.js`). Give it a name (prefixed with
@@ -218,8 +217,8 @@ dependencies:
     "sassdoc-theme"
   ],
   "dependencies": {
-    "themeleon": "0.*",
-    "themeleon-swig": "0.*"
+    "themeleon": "3.*",
+    "swig": "1.*"
   }
 }
 {% endhighlight %}
@@ -244,9 +243,7 @@ To add it to your theme, add `swig` and `swig-extras` as a dependency to
 your `package.json`. Then, in your `index.js`:
 
 {% highlight js %}
-// Create a local Swig instance instead of altering the globale one
-var swig = new (require('swig').Swig)();
-
+var swig = new require('swig');
 var extras = require('swig-extras'); // Moar filters
 var themeleon = require('themeleon')(); // No change here
 
@@ -261,11 +258,10 @@ swig.setFilter('push', function (arr, val) {
     return arr.push(val);
 });
 
-// Tell Themeleon to use your own Swig instance
-themeleon.use('swig', swig);
+themeleon.use('consolidate');
 
 module.exports = themeleon(__dirname, function (t) {
-  ...
+  /* ... */
 });
 {% endhighlight %}
 

@@ -9,6 +9,8 @@ SassDoc is doing quite a lot of things under the hood. In most cases, you won't 
 
 <p class="note  note--info"><strong>Clarification:</strong> in the following examples, we are using C-style comments but it works exactly the same for inline comments as well. Please refer to the <a href="/annotations/">Annotations</a> page for the syntax.</p>
 
+<p class="note  note--info"><strong>Note:</strong>You can run SassDoc in parse mode with the <code>--parse</code> CLI flag to output the data as JSON instead of generating a documentation directory.</p>
+
 ## Terminology
 
 SassDoc uses the word "item" to describe either a variable, a function, a mixin or a placeholder. Technically speaking, an "item" is an object composed of:
@@ -21,32 +23,30 @@ Note that as a matter of simplicity, all annotations are mapped to an array, eve
 
 {% highlight js %}
 {
-  'description': '',
-  'context': {
-    'name': '',
-    'type': '',
-    'code': '',
-    'line': {
-      'start': 0,
-      'end': 0
-    }
-  }
+  description: '',
+  context: {
+    name: '',
+    type: '',
+    code: '',
+    line: {
+      start: 0,
+      end: 0,
+    },
   },
-  'access': ['public'],
-  'group': [['undefined']]
+  access: ['public'],
+  group: ['undefined'],
 }
 {% endhighlight %}
 
 ## Sorting
 
-SassDoc will collect all these item and sort them by `type` like this:
+SassDoc will collect all these item in an array and sort them by group, alphabetic file path, and position in file.
+
 {% highlight js %}
-{
- 'function' : [{ /* Item */ }, { /* Item */ }],
- 'mixin' : [{ /* Item */ }, { /* Item */ }],
- 'placeholder' : [{ /* Item */ }, { /* Item */ }],
- 'variable' : [{ /* Item */ }, { /* Item */ }]
-}
+[
+  { /* Item */ },
+  { /* Item */ },
+]
 {% endhighlight %}
 
 ## @access
@@ -63,7 +63,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'access': 'private'
+  access: 'private',
   /* ... */
 }
 {% endhighlight %}
@@ -83,7 +83,7 @@ Item `alias-for-other-item`:
 {% highlight js %}
 {
   /* ... */
-  'alias': 'other-item'
+  alias: 'other-item',
   /* ... */
 }
 {% endhighlight %}
@@ -92,9 +92,9 @@ Item `other-item` will look like this:
 {% highlight js %}
 {
   /* ... */
-  'aliased': [{
+  aliased: [{
     /* ... */
-    'alias': ['alias-for-other-item']
+    alias: ['alias-for-other-item'],
     /* ... */
   }]
   /* ... */
@@ -114,7 +114,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'author': ['Fabrice Weinberg']
+  author: ['Fabrice Weinberg'],
   /* ... */
 }
 {% endhighlight %}
@@ -131,7 +131,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'content': 'The `@content` dirctive allows user ...'
+  content: 'The `@content` dirctive allows user ...',
   /* ... */
 }
 {% endhighlight %}
@@ -148,7 +148,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'deprecated': 'No longer in use'
+  deprecated: 'No longer in use',
   /* ... */
 }
 {% endhighlight %}
@@ -167,11 +167,11 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'example': [{
+  example: [{
     'type': 'scss',
     'description': 'basic usage',
-    'code': 'clamp(42, $min: 13, $max: 37)\n // 37'
-  }]
+    'code': 'clamp(42, $min: 13, $max: 37)\n // 37',
+  }],
   /* ... */
 }
 {% endhighlight %}
@@ -188,7 +188,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'group': ['Groupname']
+  group: ['Groupname'],
   /* ... */
 }
 {% endhighlight %}
@@ -208,7 +208,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'ignore': []
+  ignore: [],
   /* ... */
 }
 {% endhighlight %}
@@ -225,10 +225,10 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'link': [{
+  link: [{
     'url': 'http://example.com',
-    'caption': 'Caption'
-  }]
+    'caption': 'Caption',
+  }],
   /* ... */
 }
 {% endhighlight %}
@@ -245,7 +245,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'output': 'Description of output styles'
+  output: 'Description of output styles',
   /* ... */
 }
 {% endhighlight %}
@@ -262,12 +262,12 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'parameter': [{
+  parameter: [{
     'type': 'type',
     'name': 'name',
     'default': 'default value',
-    'description': 'description'
-  }]
+    'description': 'description',
+  }],
   /* ... */
 }
 {% endhighlight %}
@@ -283,12 +283,12 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'property' : [{
+  property: [{
      'type': 'Function',
      'path': 'base.default',
      'default': 'default',
-     'description': 'description'
-   }]
+     'description': 'description',
+   }],
   /* ... */
 }
 {% endhighlight %}
@@ -307,13 +307,13 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'require' : [{
+  require: [{
     'type': 'type',
     'name': 'item',
     'url': '<link>',
     'description': 'description',
-    'item': { /* The whole required item */ }
-  }]
+    'item': { /* The whole required item */ },
+  }],
   /* ... */
 }
 {% endhighlight %}
@@ -322,9 +322,7 @@ The referenced item will have a `usedBy` key that looks like:
 {% highlight js %}
 {
   /* ... */
-  'usedBy': [{
-    /* The whole referencing item */
-  }]
+  usedBy: [{ /* The whole referencing item */ }],
   /* ... */
 }
 {% endhighlight %}
@@ -342,9 +340,9 @@ An item will look like this:
 {
   /* ... */
   'return': {
-    'type': 'type',
-    'description': 'description'
-  }
+    type: 'type',
+    description: 'description',
+  },
   /* ... */
 }
 {% endhighlight %}
@@ -363,10 +361,10 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'since': [{
-    'version': 'version',
-    'description': 'description'
-  }]
+  since: [{
+    version: 'version',
+    description: 'description',
+  }],
   /* ... */
 }
 {% endhighlight %}
@@ -383,7 +381,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'throw': ['Error related message']
+  'throw': ['Error related message'],
   /* ... */
 }
 {% endhighlight %}
@@ -400,7 +398,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'todo': ['Task to be done']
+  todo: ['Task to be done'],
   /* ... */
 }
 {% endhighlight %}
@@ -417,7 +415,7 @@ An item will look like this:
 {% highlight js %}
 {
   /* ... */
-  'type': 'bool | string'
+  type: 'bool | string',
   /* ... */
 }
 {% endhighlight %}

@@ -30,7 +30,7 @@ mkdir my-new-theme && cd $_
 Run `yo sassdoc-theme`, optionally passing a theme name:
 
 {% highlight bash %}
-yo sassdoc-theme [options] [<themeName>]
+yo sassdoc-theme [options] [<theme-name>]
 {% endhighlight %}
 
 ## Options
@@ -42,17 +42,17 @@ yo sassdoc-theme [options] [<themeName>]
 
 ## Sub generators
 
-<code>generator-sassdoc-theme</code> is divided into sub-generators, hence you have to possibility
+`generator-sassdoc-theme` is divided into sub-generators, hence you have to possibility
 to call them directly in cases where you would like a certain functionality without bootstraping
 a full theme generation.
 
-Views: generates <code>index.js</code> and views templates.
+Views: generates `index.js` and views templates.
 Example:
 {% highlight bash %}
 yo sassdoc-theme:jade
 {% endhighlight %}
 
-Task runners: generates <code>Gruntfile.js | Gulpfile.js</code> and <code>package.json</code>.
+Task runners: generates `Gruntfile.js` or `Gulpfile.js` and `package.json`.
 Example:
 {% highlight bash %}
 yo sassdoc-theme:grunt

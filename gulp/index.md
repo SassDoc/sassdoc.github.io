@@ -9,7 +9,7 @@ This is a [Gulp friendly](https://github.com/gulpjs/gulp/blob/master/docs/writin
 Its goal is to make SassDoc integration in your Gulp workflow easier.
 plugin, not using the benefits of streams.
 
-If you haven't used [gulp](http://gulpjs.com) before, be sure to check out the
+If you haven't used [Gulp](http://gulpjs.com) before, be sure to check out the
 [Getting Started] guide, as it explains how to create a
 [Gulpfile](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started)
 as well as install and use Gulp plugins.
@@ -34,7 +34,7 @@ specify any option that SassDoc supports. Refer to:
 * [Configuration][configuration] for SassDoc options;
 * [Customising the view][view] for default theme options.
 
-<p class="note note--info">
+<p class="note  note--info">
   <strong>Heads up:</strong> if a config file is passed
 and found, its options will prevail over defaults. Additional options passed to
 the Grunt task, will complement it but not override it.
@@ -54,7 +54,7 @@ gulp.task('sassdoc', function () {
   return gulp
     .src('path/to/sass')
     .pipe(sassdoc({
-      'dest': 'path/to/docs'
+      dest: 'path/to/docs',
     }));
 });
 {% endhighlight %}
@@ -65,8 +65,8 @@ gulp.task('sassdoc', function () {
   return gulp
     .src('path/to/sass')
     .pipe(sassdoc({
-      'dest': 'path/to/docs',
-      'config': 'path/to/view.json'
+      dest: 'path/to/docs',
+      config: 'path/to/view.json',
     }));
 });
 {% endhighlight %}
@@ -77,21 +77,21 @@ gulp.task('sassdoc', function () {
 // just override the one you need.
 gulp.task('sassdoc', function () {
   var options = {
-      'dest': 'test/docs',
-      'verbose': true,
-      'display': {
-        'access': ['public', 'private'],
-        'alias': true,
-        'watermark': true
+      dest: 'test/docs',
+      verbose: true,
+      display: {
+        access: ['public', 'private'],
+        alias: true,
+        watermark: true,
       },
-      'groups': {
-        'undefined': 'Ungrouped',
-        'foo': 'Foo group',
-        'bar': 'Bar group'
+      groups: {
+        undefined: 'Ungrouped',
+        foo: 'Foo group',
+        bar: 'Bar group',
       },
-      'package': './package.json',
-      'theme': 'default',
-      'basePath': 'https://github.com/SassDoc/sassdoc'
+      package: './package.json',
+      theme: 'default',
+      basePath: 'https://github.com/SassDoc/sassdoc',
     };
 
     return gulp
@@ -116,20 +116,20 @@ gulp.task('sassdoc', function () {
   // Tip: you don't need to pass every options,
   // just override the one you need.
   var config = {
-    'verbose': true,
-    'display': {
-      'access': ['public', 'private'],
-      'alias': true,
-      'watermark': true
+    verbose: true,
+    display: {
+      access: ['public', 'private'],
+      alias: true,
+      watermark: true,
     },
-    'groups': {
-      'undefined': 'Ungrouped',
-      'foo': 'Foo group',
-      'bar': 'Bar group'
+    groups: {
+      undefined: 'Ungrouped',
+      foo: 'Foo group',
+      bar: 'Bar group',
     },
-    'package': './package.json',
-    'theme': 'default',
-    'basePath': 'https://github.com/SassDoc/sassdoc'
+    package: './package.json',
+    theme: 'default',
+    basePath: 'https://github.com/SassDoc/sassdoc',
   };
 
   // Enable verbose.

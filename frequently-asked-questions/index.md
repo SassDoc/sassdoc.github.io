@@ -5,7 +5,7 @@ title: "Frequently Asked Questions"
 
 ## Does SassDoc work with `.sass` files?
 
-Yes. You have to use the `--sass-convert` option. However note that Sass v3.4.5 is required for this to work.
+Yes. SassDoc automatically converts Sass files to SCSS. Though you need Sass v3.4.5 for this to work.
 
 Basically SassDoc first converts your Sass folder in SCSS at a temporary location, then run over this SCSS code base to generate documentation, only to delete the temporary folder once done.
 

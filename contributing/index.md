@@ -43,7 +43,7 @@ Please give GitHub's search a try first, to make sure someone didn't already sub
 
 Similarly, be as descriptive as possible within your description. If you have a stack trace, post it. If you can make a screenshot, even better! Explain the problem and how you got there so we can reproduce it. Only then we'll be able to investigate.
 
-<p class="note note--info"><strong>Tip!</strong> The <code>--debug</code> CLI flag is really helpful to gather some context to ease debugging. When not using CLI, you can always set <code>SASSDOC_DEBUG=1 environment variable (e.g. <code>SASSDOC_DEBUG=1 grunt</code> when using Grunt).</p>
+<p class="note  note--info"><strong>Tip!</strong> The <code>--debug</code> CLI flag is really helpful to gather some context to ease debugging. When not using CLI, you can always set <code>SASSDOC_DEBUG=1</code> environment variable (e.g. <code>SASSDOC_DEBUG=1 grunt</code> when using Grunt).</p>
 
 ## Submitting a pull request
 

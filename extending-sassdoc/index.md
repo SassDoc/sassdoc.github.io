@@ -49,10 +49,10 @@ argument. You can then add a condition on `item.awesome` in your templates!
 {% highlight js %}
 module.exports.annotations.push({
   name: 'awesome',
-  parse: function () { return true },
-  default: function (comment) { return false },
-  autofill: function (comment) { }
-  alias: ['wow']
+  parse: function () { return true; },
+  default: function (comment) { return false; },
+  autofill: function (comment) {},
+  alias: ['wow'],
 });
 {% endhighlight %}
 
@@ -74,9 +74,10 @@ module.exports.annotations.push({
 
   parse: function (text) {
     var match = /^\{(.*)\}\s*(.*)$/.exec(text.trim());
+
     return {
       type: match[1],
-      name: match[2]
+      name: match[2],
     };
   },
 

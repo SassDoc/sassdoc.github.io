@@ -72,6 +72,6 @@ sassdoc source/
 
 <section class="home__section  home__section--catcher">
     <div class="home__section-content">
-        <p class="container">All <a href="/gallery/">these projects</a> are built with SassDoc. What are you waiting for to make your own?</p>
+        <p class="container">All <a href="/gallery/">these projects</a> are documented with SassDoc. What are you waiting for to make your own?</p>
     </div>
 </section>

@@ -3,6 +3,18 @@ layout: default
 title: "Changelog"
 ---
 
+# 1.10.12
+
+* Backport of `a994ed5` fix multiple require autofill ([#314](https://github.com/SassDoc/sassdoc/issues/314))
+
+# 1.10.11
+
+* Ensure `@todo` compat with docs and contrib ([#293](https://github.com/SassDoc/sassdoc/issues/293))
+
+## 1.10.6
+
+* Ensure proper type checking for `@see` annotation ([#291](https://github.com/SassDoc/sassdoc/issues/291))
+
 ## 1.10.3
 
 * Prevented `@requires` to autofill dependency twice

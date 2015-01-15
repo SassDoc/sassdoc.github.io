@@ -35,8 +35,8 @@ To determine if an item should be displayed or not, this filter reads the `displ
 {% highlight js %}
 {
   display: {
-    access: ["private", "public"]
-  }
+    access: ['private', 'public'],
+  },
 }
 {% endhighlight %}
 
@@ -60,10 +60,10 @@ The `groupName` filter makes it possible for you to define aliases for your grou
 {% highlight js %}
 {
   groups: {
-    undefined: "Private",
-    api: "API",
-    hacks: "Dirty Hacks & Fixes"
-  }
+    undefined: 'Private',
+    api: 'API',
+    hacks: 'Dirty Hacks & Fixes',
+  },
 }
 {% endhighlight %}
 
@@ -71,7 +71,7 @@ Note that this filter rewrites the `group` key from each item. For instance, an 
 
 {% highlight js %}
 {
-  "group": [["hacks"]]
+  'group': [['hacks']],
 }
 {% endhighlight %}
 
@@ -79,7 +79,7 @@ Note that this filter rewrites the `group` key from each item. For instance, an 
 
 {% highlight js %}
 {
-  "group": {"hacks": "Dirty Hacks & Fixes"}
+  'group': { 'hacks': 'Dirty Hacks & Fixes' },
 }
 {% endhighlight %}
 
@@ -104,8 +104,8 @@ For instance, `"http://absolute.path/to/icon.png"` as a value in `ctx.view.short
 
 {% highlight js %}
 {
-  type: "external",
-  url: "http://absolute.path/to/icon.png"
+  type: 'external',
+  url: 'http://absolute.path/to/icon.png',
 }
 {% endhighlight %}
 
@@ -113,9 +113,9 @@ On the other hand, a relative path like `"relative/path/to/icon.png"` would leav
 
 {% highlight js %}
 {
-  type: "internal",
-  url: "icon.png",
-  path: "/complete/relative/path/to/icon.png"
+  type: 'internal',
+  url: 'icon.png',
+  path: '/complete/relative/path/to/icon.png',
 }
 {% endhighlight %}
 
