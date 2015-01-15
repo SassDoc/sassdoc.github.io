@@ -34,7 +34,7 @@ Note that as a matter of simplicity, all annotations are mapped to an array, eve
     },
   },
   access: ['public'],
-  group: [['undefined']],
+  group: ['undefined'],
 }
 {% endhighlight %}
 
