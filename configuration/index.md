@@ -46,8 +46,7 @@ SassDoc will wipe this directory at every run, so don't put anything worthwhile 
 The `package` option is either a path (string) to a JSON file or directly an object.
 It contains information about the documented project (for instance a `package.json`, hence the name of the key).
 
-If you provide a path, it will be resolved from the configuration file (or CWD if you have no configuration file).
-By default, it's `package.json` (with the same resolving rules).
+If you provide a path, it will be resolved from the configuration file (or CWD if you have no configuration file). By default, it's `package.json` (with the same resolving rules).
 
 If this doesn't work for you, then you can set your own package. The package object (either direct or required from a path) should ideally contain (for the theme to access to various information about your project):
 
