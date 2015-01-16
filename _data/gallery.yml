@@ -2,9 +2,21 @@
   url: http://thoughtbot.github.io/neat-docs/latest/
   image: neat.png
 
+- name: Sass-Maps-Plus
+  url: http://lunelson.de/sass-maps-plus/
+  image: sass-maps-plus.png
+
+- name: include-media
+  url: http://eduardoboucas.com/include-media/doc/
+  image: include-media.png
+
 - name: Guardian StyleSheets (GUSS)
   url: http://www.kaelig.fr/gu/guss-sassdoc/
   image: guss.png
+
+- name: Sass-MQ
+  url: http://sass-mq.github.io/sass-mq/
+  image: sass-mq.png
 
 - name: SassyIcons
   url: http://pascalduez.github.io/SassyIcons/docs/
@@ -37,3 +49,39 @@
 - name: Sassy-Gridlover
   url: http://hiulit.github.io/Sassy-Gridlover/sassdoc/
   image: sassy-gridlover.png
+
+- name: SassyStrings
+  url: http://hugogiraudel.com/SassyStrings/
+  image: sassystrings.png
+
+- name: SassyCast
+  url: http://hugogiraudel.com/SassyCast/
+  image: sassycast.png
+
+- name: SassySort
+  url: http://hugogiraudel.com/SassySort/
+  image: sassysort.png
+
+- name: SassyIteratorsGenerators
+  url: http://hugogiraudel.com/SassyIteratorsGenerators/
+  image: sassyiteratorsgenerators.png
+
+- name: SassyJSON
+  url: http://hugogiraudel.com/SassyJSON/
+  image: sassyjson.png
+
+- name: SassyMatrix
+  url: http://hugogiraudel.com/SassyMatrix/
+  image: sassymatrix.png
+
+- name: SassyGradients
+  url: http://hugogiraudel.com/SassyGradients/
+  image: sassygradients.png
+
+- name: SassyLogger
+  url: http://hugogiraudel.com/SassyLogger/
+  image: sassylogger.png
+
+- name: SassyBitwise
+  url: http://hugogiraudel.com/SassyBitwise/
+  image: sassybitwise.png
