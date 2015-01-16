@@ -7,6 +7,7 @@ title: "Gulp integration"
 [gulp-sassdoc]: https://github.com/SassDoc/gulp-sassdoc
 [Getting started]: https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
 [Vinyl]: https://github.com/wearefractal/vinyl
+[vinyl-source-stream]: https://github.com/hughsk/vinyl-source-stream
 
 ## Introduction
 
@@ -18,7 +19,7 @@ as it explains how to create a Gulpfile as well as install and use Gulp plugins.
 
 ## Examples
 
-### Bare minimum example, using defaults or `.sassdocrc`.
+### Bare minimum example, using defaults or `.sassdocrc`
 
 {% highlight sh %}
 npm install --save-dev gulp sassdoc
@@ -36,7 +37,7 @@ gulp.task('sassdoc', function () {
 
 
 
-### Example with *some* options passed in.
+### Example with *some* options passed in
 
 {% highlight sh %}
 npm install --save-dev gulp sassdoc
@@ -70,7 +71,7 @@ gulp.task('sassdoc', function () {
 
 
 
-### Example adding support for Sass (indented syntax) files.
+### Example adding support for Sass (indented syntax) files
 
 {% highlight sh %}
 npm install --save-dev gulp sass-convert sassdoc
@@ -93,7 +94,7 @@ gulp.task('sassdoc', function () {
 
 
 
-### Example of a Sassy workflow.
+### Example of a Sassy workflow
 
 {% highlight sh %}
 npm install --save-dev gulp sassdoc gulp-sass
@@ -107,17 +108,20 @@ var sass = require('gulp-sass');
 gulp.task('styles', function () {
   return gulp.src('path/to/source/**/*.scss')
     .pipe(sassdoc())
-    .pipe(sass());
+    .pipe(sass())
     .pipe(gulp.dest('path/to/styles'));
 });
 {% endhighlight %}
 
 
 
-### Example of a non Gulp pipeline.
+## Notes on SassDoc's stream API
 
-Acutally SassDoc is not tight to Gulp, the only requirement is it's expecting
-[Vinyl] files passed trough.
+### Example of a non Gulp pipeline
+
+SassDoc Stream API is not tight to Gulp, its only requirement is
+expecting [Vinyl] files passed trough. The [vinyl-source-stream] module
+might comes in handy.
 
 {% highlight sh %}
 npm install --save-dev vinyl-source-stream sassdoc
@@ -135,9 +139,38 @@ fs.createReadStream('./file.scss')
 
 
 
-### Notes
+### End event
 
-<p class="note  note--danger">
+<p class="note">
+  The <code>end</code> event emitted by SassDoc's stream refers to the end of
+  the parsing phase. If you want to await for the full documentation process to
+  end, SassDoc is attaching a promise. This might be interesting if you run a
+  sequence of tasks.
+</p>
+
+{% highlight js %}
+var gulp = require('gulp');
+var sassdoc = require('sassdoc');
+
+gulp.task('sassdoc', function () {
+  var stream = sassdoc();
+
+  gulp.src('path/to/source/**/*.scss')
+    .pipe(stream)
+    .on('end', function () {
+      console.log('End of parsing phase');
+    });
+
+  return stream.promise.then(function () {
+    console.log('End of documentation process');
+  });
+});
+{% endhighlight %}
+
+
+### Drain event
+
+<p class="note note--danger">
   <strong>Caution!</strong>
   On projects with a relatively high number of files, and if SassDoc is the last
   stream of the pipeline, you might need to release the back pressure and trigger
