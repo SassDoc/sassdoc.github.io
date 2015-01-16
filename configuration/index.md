@@ -35,6 +35,7 @@ Here is the available configuration that does not depend on the theme whatsoever
 | `autofill`           | Array           | `["requires", "throws"]`   |
 | `groups`             | Object          | `{ undefined: "general" }` |
 | `no-update-notifier` | Boolean         | `false`                    |
+| `verbose`            | Boolean         | `false`                    |
 
 ## Destination
 
@@ -119,5 +120,9 @@ groups:
 SassDoc tries to make sure you always use an up-to-date version. If it is not the case, it will prompt you to update your current version. You can disable this behaviour by using the `no-update-notifier` option.
 
 <p class="note  note--info"><strong>Note:</strong> you can also use the CLI option <code>--no-update-notifier</code>.</p>
+
+## Verbose
+
+SassDoc will output messages at the various documentation process states.
 
 {% include routes.html %}
