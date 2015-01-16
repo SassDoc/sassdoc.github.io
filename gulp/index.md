@@ -3,7 +3,7 @@ layout: default
 title: "Gulp integration"
 ---
 
-[Gulp]: http://gulpjs.com
+[gulpjs]: http://gulpjs.com
 [gulp-sassdoc]: https://github.com/SassDoc/gulp-sassdoc
 [Getting started]: https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
 [Vinyl]: https://github.com/wearefractal/vinyl
@@ -12,9 +12,9 @@ title: "Gulp integration"
 ## Introduction
 
 Starting from version `2.0` and higher SassDoc is able to integrates directly in
-your [Gulp] pipelines without any plugin. In such the [gulp-sassdoc] plugin has been deprecated.
+your [Gulp][gulpjs] pipelines without any plugin. In such the [gulp-sassdoc] plugin has been deprecated.
 
-If you haven't used [Gulp] before, be sure to check out the [Getting started] guide,
+If you haven't used [Gulp][gulpjs] before, be sure to check out the [Getting started] guide,
 as it explains how to create a Gulpfile as well as install and use Gulp plugins.
 
 ## Examples
