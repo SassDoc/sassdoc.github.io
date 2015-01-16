@@ -48,36 +48,36 @@ specify any option that SassDoc supports. Refer to:
 * [Customising the view][view] for default theme options.
 
 <p class="note  note--info">
-  <strong>Heads up:</strong> if a config file is passed
-and found, its options will prevail over defaults. Additional options passed to
-the Grunt task, will complement it but not override it.
-You should really manage your options in one place.
+  <strong>Heads up:</strong> if options or a config file are passed it will prevail
+over `.sassdocrc` if any. You should really manage your options in one place.
 </p>
 
 ## Examples
 
 See the [Gruntfile](https://github.com/sassdoc/grunt-sassdoc/blob/master/Gruntfile.js)
-in the repository for a full example.
+in the repository for full examples.
+
+### Bare minimum example.
 
 {% highlight js %}
-// Bare minimum example.
 grunt.initConfig({
   sassdoc: {
     default: {
-      src: 'path/to/sass',
-      dest: 'path/to/docs',
+      src: 'path/to/source',
     },
   },
 });
 {% endhighlight %}
 
+
+
+### Example with an external configuration file.
+
 {% highlight js %}
-// Example with external view configuration file.
 grunt.initConfig({
   sassdoc: {
     default: {
-      src: path/to/sass',
-      dest: 'path/to/docs',
+      src: 'path/to/source',
       options: {
         config: 'path/to/config.json',
       },
@@ -86,35 +86,38 @@ grunt.initConfig({
 });
 {% endhighlight %}
 
+
+
+### Example with passed in options.
+
 {% highlight js %}
-// Example with passed in options.
 // Tip: you're not required to to pass every options,
-// just override the one you need.
+// just set the one you need.
 grunt.initConfig({
   sassdoc: {
     default: {
-      src: 'path/to/sass',
-      dest: 'path/to/docs',
+      src: 'path/to/source',
       options: {
+        dest: 'path/to/docs',
         display: {
           access: ['public', 'private'],
           alias: true,
           watermark: true,
         },
-        package: './package.json',
-        theme: 'sassdoc-theme-dark',
         groups: {
           slug: 'Title',
           helpers: 'Helpers',
           hacks: 'Dirty Hacks & Fixes',
-          undefined: 'Ungrouped',
+          'undefined': 'Ungrouped',
         },
-        basePath: 'https://github.com/SassDoc/sassdoc',
+        basePath: 'https://github.com/SassDoc/grunt-sassdoc',
       },
     },
   },
 });
 {% endhighlight %}
+
+
 
 ## Events
 
@@ -127,12 +130,12 @@ Here is a simple example using them:
 
 {% highlight js %}
 // Examples using start and done events.
-grunt.event.on('sassdoc.start', function (target, src, dest) {
-  grunt.log.writeln(target + ': compiling ' + src + ' to ' + dest);
+grunt.event.on('sassdoc.start', function (target, src) {
+  grunt.log.writeln(target + ': compiling ' + src);
 });
 
-grunt.event.on('sassdoc.done', function (target, src, dest) {
-  grunt.log.writeln(target + ': ' + src + ' compiled to ' + dest);
+grunt.event.on('sassdoc.done', function (target, src) {
+  grunt.log.writeln(target + ': done');
 });
 {% endhighlight %}
 
