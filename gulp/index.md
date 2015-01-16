@@ -135,4 +135,28 @@ fs.createReadStream('./file.scss')
 
 
 
+### Notes
+
+<p class="note  note--danger">
+  <strong>Caution!</strong>
+  On projects with a relatively high number of files, and if SassDoc is the last
+  stream of the pipeline, you might need to release the back pressure and trigger
+  flowing mode, aka "drain". This is imposed by how Streams 2 works.
+</p>
+
+{% highlight js %}
+var gulp = require('gulp');
+var sassdoc = require('sassdoc');
+
+gulp.task('sassdoc', function () {
+  return gulp.src('path/to/source/**/*.scss')
+    .pipe(sassdoc())
+    // Either trigger `resume` event.
+    .resume();
+    // Or attach a noop `data` event listener.
+    .on('data', function () {});
+});
+{% endhighlight %}
+
+
 {% include routes.html %}
