@@ -13,7 +13,7 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
 
 <ul class="authors">
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/465181988584820738/HBYqx97z_400x400.jpeg" alt="Pascal Duez" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/554739699936669696/1lMS0izv_400x400.jpeg" alt="Pascal Duez" class="author__avatar">
     <a class="author__name" href="https://twitter.com/pascalduez">Pascal Duez</a>
     <span class="author__role">Echosystem maintainer</span>
   </li>
