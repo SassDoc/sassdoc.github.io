@@ -88,10 +88,10 @@ grunt.initConfig({
 
 
 
-### Example with passed in options.
+### Example with some options passed in.
 
 {% highlight js %}
-// Tip: you're not required to to pass every options,
+// Tip: you're not required to pass every options,
 // just set the one you need.
 grunt.initConfig({
   sassdoc: {
@@ -138,5 +138,7 @@ grunt.event.on('sassdoc.done', function (target, src) {
   grunt.log.writeln(target + ': done');
 });
 {% endhighlight %}
+
+
 
 {% include routes.html %}

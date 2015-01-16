@@ -30,38 +30,61 @@ specify any option that SassDoc supports. Refer to:
 * [Configuration][configuration] for SassDoc options;
 * [Customising the view][view] for default theme options.
 
-<p class="note note--info">
-  <strong>Heads up:</strong> if a config file is passed
-and found, its options will prevail over defaults. Additional options passed to
-the Grunt task, will complement it but not override it.
-You should really manage your options in one place.
+<p class="note  note--info">
+  <strong>Heads up:</strong> if options or a config file are passed it will prevail
+over <code>.sassdocrc</code> if any. You should really manage your options in one place.
+</p>
+
+## Destination
+
+<p class="note  note--info">
+  <strong>Heads up:</strong> Due to the way Broccoli operates, you have to specify
+  the destination folder manually. <code>broccoli build path/to/dest</code>.
+  In consequences, the <code>dest</code> option from SassDoc is disabled.
 </p>
 
 ## Examples
 
-{% highlight js %}
-// Bare minimum, using defaults.
-var docs = sassdoc('path/to/sass');
-{% endhighlight %}
+### Bare minimum, using defaults.
 
 {% highlight js %}
-// Example with external view configuration file.
-var docs = sassdoc('path/to/sass', {
-    config: 'path/to/view.json',
+var docs = sassdoc('path/to/source');
+{% endhighlight %}
+
+
+
+### Example with external an configuration file.
+
+{% highlight js %}
+var docs = sassdoc('path/to/source', {
+    config: 'path/to/config.json',
 });
 {% endhighlight %}
 
+
+
+### Example with some options passed in.
+
 {% highlight js %}
-// Example with passed in options.
-var docs = sassdoc('path/to/sass', {
-    verbose: true,
-    display: {
-      access: ['public', 'private'],
-      alias: true,
-      watermark: true,
-    },
-    package: './package.json',
+// Tip: you're not required to pass every options,
+// just set the one you need.
+var docs = sassdoc('path/to/source', options: {
+  verbose: true,
+  display: {
+    access: ['public', 'private'],
+    alias: true,
+    watermark: true,
+  },
+  groups: {
+    slug: 'Title',
+    helpers: 'Helpers',
+    hacks: 'Dirty Hacks & Fixes',
+    'undefined': 'Ungrouped',
+  },
+  basePath: 'https://github.com/SassDoc/broccoli-sassdoc',
 });
 {% endhighlight %}
+
+
 
 {% include routes.html %}

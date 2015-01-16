@@ -132,3 +132,7 @@ fs.createReadStream('./file.scss')
   .pipe(source('./file.scss'))
   .pipe(sassdoc());
 {% endhighlight %}
+
+
+
+{% include routes.html %}
