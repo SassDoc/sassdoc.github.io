@@ -12,7 +12,7 @@ title: "Theme Gallery"
     <ul class="theme-picker__list">
     {% for theme in site.data.themes %}
       <li class="theme-picker__item" data-theme-name="{{ theme[0] }}">
-        <img src="/theme-gallery/thumbs/{{ theme[0] }}.png" alt="{{ theme[0] }}" />
+        <img src="{{ site.baseurl }}/theme-gallery/thumbs/{{ theme[0] }}.png" alt="{{ theme[0] }}" />
         <div class="theme-picker__metadata  metadata">
           <ul class="metadata__list">
             <li class="metadata__item">
@@ -57,7 +57,7 @@ title: "Theme Gallery"
 </article>
 
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="{{ '/assets/js/ThemePicker.js' | prepend: site.baseurl }}"></script>
+<script src="{{ site.baseurl }}/assets/js/ThemePicker.js"></script>
 <script>
   $(document).ready(function () {
     new ThemePicker();

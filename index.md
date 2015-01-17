@@ -6,7 +6,7 @@ title: "Release the docs!"
 <div class="megatron">
     <div class="megatron__top  clearfix">
         <div class="container">
-            <img class="megatron__illustration" alt="SassDoc, release the docs!" src="/assets/images/illustration.png" />
+            <img class="megatron__illustration" alt="SassDoc, release the docs!" src="{{ site.baseurl }}/assets/images/illustration.png" />
 
             <div class="megatron__content">
 {% highlight bash %}
@@ -52,7 +52,7 @@ sassdoc source/
     <div class="home__section-content">
         <div class="container">
 
-            <p><a href="http://github.com/sassdoc/sassdoc">SassDoc</a> parses your source folder to grab <a href="/annotations/">documentation-specific comments</a>. From there, it builds a <a href="/data-interface/">data tree</a>, that gets <a href="/extra-tools/">enhanced and filtered</a> before being passed to the <a href="/customising-the-view/">view</a>. So you end up with a fully styled HTML document, like this:</p>
+            <p><a href="http://github.com/sassdoc/sassdoc">SassDoc</a> parses your source folder to grab <a href="{{ site.baseurl }}/annotations/">documentation-specific comments</a>. From there, it builds a <a href="{{ site.baseurl }}/data-interface/">data tree</a>, that gets <a href="{{ site.baseurl }}/extra-tools/">enhanced and filtered</a> before being passed to the <a href="{{ site.baseurl }}/customising-the-view/">view</a>. So you end up with a fully styled HTML document, like this:</p>
 
             <img src="{{ site.baseurl }}/assets/images/preview-image.png" alt="SassDoc Default Theme" />
         </div>
