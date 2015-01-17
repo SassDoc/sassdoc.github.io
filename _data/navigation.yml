@@ -50,6 +50,9 @@
     - title: "Broccoli"
       route: broccoli
       _blank: false
+    - title: "sassdocify"
+      route: sassdocify
+      _blank: true
 - title: "Extras"
   items:
     - title: "Changelog"
