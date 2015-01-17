@@ -23,7 +23,7 @@ sassdoc source/
     <div class="megatron__bottom">
         <div class="container">
             <div class="megatron__content">
-                <a href="{{ site.base_url }}/getting-started/" class="button  button--primary  megatron__button">Get started</a><!--
+                <a href="{{ site.baseurl }}/getting-started/" class="button  button--primary  megatron__button">Get started</a><!--
                 --><a href="http://twitter.com/share?text=Release+the+docs!+@SassDoc_+is+a+documentation+tool+for+Sass+%E2%80%94&url=http://sassdoc.com" class="button  button--primary  megatron__button" target="_blank">Tweet it</a>
             </div>
         </div>
@@ -54,7 +54,7 @@ sassdoc source/
 
             <p><a href="http://github.com/sassdoc/sassdoc">SassDoc</a> parses your source folder to grab <a href="/annotations/">documentation-specific comments</a>. From there, it builds a <a href="/data-interface/">data tree</a>, that gets <a href="/extra-tools/">enhanced and filtered</a> before being passed to the <a href="/customising-the-view/">view</a>. So you end up with a fully styled HTML document, like this:</p>
 
-            <img src="{{ site.base_url }}/assets/images/preview-image.png" alt="SassDoc Default Theme" />
+            <img src="{{ site.baseurl }}/assets/images/preview-image.png" alt="SassDoc Default Theme" />
         </div>
     </div>
 </section>
@@ -72,6 +72,6 @@ sassdoc source/
 
 <section class="home__section  home__section--catcher">
     <div class="home__section-content">
-        <p class="container">All <a href="{{ site.base_url }}/gallery/">these projects</a> are documented with SassDoc. What are you waiting for to make your own?</p>
+        <p class="container">All <a href="{{ site.baseurl }}/gallery/">these projects</a> are documented with SassDoc. What are you waiting for to make your own?</p>
     </div>
 </section>
