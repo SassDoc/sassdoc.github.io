@@ -49,7 +49,7 @@ specify any option that SassDoc supports. Refer to:
 
 <p class="note  note--info">
   <strong>Heads up:</strong> if options or a config file are passed it will prevail
-over `.sassdocrc` if any. You should really manage your options in one place.
+over <code>.sassdocrc</code> if any. You should really manage your options in one place.
 </p>
 
 ## Examples

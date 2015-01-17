@@ -61,6 +61,10 @@ The `basePath` option is used to provide a *View source* link to each item in ca
 
     https://github.com/sassdoc/sassdoc-theme-default/tree/master/scss/utils/_functions.scss#L13-L37
 
+<p class="note  note--warning">
+  <strong>Caution!</strong> as you can see from the previous example, GitHub adds <code>/tree/master</code> or <code>/blob/&lt;branch_name&gt;</code> between the base path and the file path. To prevent your links from being broken, set your base path to: <code>https://github.com/USERNAME/REPOSITORY/tree/master</code> (or <code>/blob/&lt;branch_name&gt;</code>).
+</p>
+
 ## Shortcut icon
 
 The `shortcutIcon` option can be used to provide a favicon to your documentation. It accepts a path, either relative or absolute.
@@ -87,6 +91,8 @@ trackingCode: |
 {% endhighlight %}
 
 <p class="note  note--info"><strong>Note:</strong> in YAML, you can leave a single pipe on the first line to indicate that the everything until the next key is a literal string.</p>
+
+<p class="note  note--danger"><strong>Beware!</strong> This is a possible door to JavaScript code injection. Be careful.</p>
 
 ## Example
 
@@ -119,7 +125,9 @@ And the same configuration in YAML:
 basePath: https://github.com/SassDoc/sassdoc
 shortcutIcon: assets/images/favicon.png
 display:
-    access: [public, private]
+    access:
+        - public
+        - private
     alias: false
     watermark: true
 

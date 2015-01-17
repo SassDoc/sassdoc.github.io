@@ -9,7 +9,7 @@ SassDoc is doing quite a lot of things under the hood. In most cases, you won't 
 
 <p class="note  note--info"><strong>Clarification:</strong> in the following examples, we are using C-style comments but it works exactly the same for inline comments as well. Please refer to the <a href="/annotations/">Annotations</a> page for the syntax.</p>
 
-<p class="note  note--info"><strong>Note:</strong>You can run SassDoc in parse mode with the <code>--parse</code> CLI flag to output the data as JSON instead of generating a documentation directory.</p>
+<p class="note  note--info"><strong>Note:</strong> you can run SassDoc in parse mode with the <code>--parse</code> CLI flag to output the data as JSON instead of generating a documentation directory.</p>
 
 ## Terminology
 

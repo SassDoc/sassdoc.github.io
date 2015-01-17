@@ -11,7 +11,7 @@ title: "Gulp integration"
 
 ## Introduction
 
-Starting from version `2.0` and higher SassDoc is able to integrates directly in
+Starting from version `2.0` and higher SassDoc is able to integrate directly in
 your [Gulp][gulpjs] pipelines without any plugin. In such the [gulp-sassdoc] plugin has been deprecated.
 
 If you haven't used [Gulp][gulpjs] before, be sure to check out the [Getting started] guide,
@@ -141,8 +141,8 @@ fs.createReadStream('./file.scss')
 
 ### End event
 
-<p class="note">
-  The <code>end</code> event emitted by SassDoc's stream refers to the end of
+<p class="note  note--info">
+  <strong>Note:</strong> the <code>end</code> event emitted by SassDoc's stream refers to the end of
   the parsing phase. If you want to await for the full documentation process to
   end, SassDoc is attaching a promise. This might be interesting if you run a
   sequence of tasks.

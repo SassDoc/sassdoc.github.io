@@ -6,15 +6,17 @@ title: "Using your own theme"
 ## Introduction
 
 SassDoc is fully themable. You can write your own theme for your
-projects, and publish it on npm so other people can use it too!
+projects, and publish it on [npm](https://www.npmjs.com/) so other people can use it too!
 
-The easiest way for you to build a theme is to use the Yeoman generator. See [Theme Generator][theme_generator] to get started. You will be given the possibility to customize the theme to your needs based on prompts. It will output all the boilerplate files for you in a single command. Furthermore, the generated code is loaded with inline documentation so you don't get lost.
+The easiest way for you to build a theme is to use the [Yeoman](http://yeoman.io/) generator. See [Theme Generator][theme_generator] to get started. You will be given the possibility to customize the theme to your needs based on prompts. It will output all the boilerplate files for you in a single command. Furthermore, the generated code is loaded with inline documentation so you don't get lost.
 
-You can also have a look at [sassdoc-theme-blank][repo_theme_blank] which is a fully documented empty theme you can tweak.
+<p class="note  note--info">
+  <strong>Tip!</strong> You can also have a look at <a href="{{ site.data.routes.repo_theme_blank }}">sassdoc-theme-blank</a> which is a fully documented empty theme you can tweak.
+</p>
 
 ## Going manually
 
-When you set the `--theme` option of the cli interface, or the
+When you set the `--theme` option of the CLI interface, or the
 `config.theme` option to `foo`, SassDoc will search for
 a `sassdoc-theme-foo`, package, then `./foo`, and finally `foo`.
 
@@ -120,7 +122,7 @@ the world!
 <p class="note  note--info">
   <strong>Note:</strong> you are not required to use Swig. There's a lot
   of template engines available in Themeleon through
-  [consolidate.js][repo_consolidate]. Furthermore it's a breeze to write a
+  <a href="{{ site.data.routes.repo_consolidate }}">consolidate.js</a>. Furthermore it's a breeze to write a
   Themeleon extension for your favorite template
   engine&nbsp;&mdash;&nbsp;or you can just use any node module in your
   render procedure without using a Themeleon helper.

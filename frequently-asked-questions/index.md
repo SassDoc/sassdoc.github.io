@@ -5,16 +5,18 @@ title: "Frequently Asked Questions"
 
 ## Does SassDoc work with `.sass` files?
 
-**Yes**. SassDoc automatically detects and converts Sass files to SCSS.  
+**Yes**. SassDoc automatically detects and converts Sass files to SCSS.
 
-Though you will need Sass (Ruby Sass) v3.4.5 or higher for this to work.  
-The Sass executable needs to be in your PATH, either globally or locally trough Bundler.  
+Though you will need Sass (Ruby Sass) v3.4.5 or higher for this to work.
+The Sass executable needs to be in your PATH, either globally or locally trough Bundler.
 Check it with `sass-convert -v` or `bundle exec sass-convert -v`.
 
-Basically SassDoc first converts your Sass files to SCSS format on the fly (in memory),  
+Basically SassDoc first converts your Sass files to SCSS format on the fly (in memory),
 then run over this SCSS files to generate documentation, original files are untouched.
 
-*Please not that this might produce small gaps in source files lines references.*
+<p class="note  note--info">
+  <strong>Note:</strong> this might produce small gaps in source files lines references.
+</p>
 
 ## Can SassDoc generate style guides?
 

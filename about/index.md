@@ -11,11 +11,13 @@ Still, we needed this. We needed a way to document our Sass files, APIs, framewo
 
 SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Galliat](https://twitter.com/valeriangalliat), [Hugo Giraudel](https://twitter.com/hugogiraudel) and [Fabrice Weinberg](https://twitter.com/fweinb), a.k.a [SassDoc team](https://github.com/sassdoc) with the help of [Why Alix](https://twitter.com/isendil) for the design. And perhaps you, if you feel like <a href="{{ site.data.routes.contributing }}">contributing</a>!
 
+## Core Team
+
 <ul class="authors">
   <li class="author">
     <img src="https://pbs.twimg.com/profile_images/554739699936669696/1lMS0izv_400x400.jpeg" alt="Pascal Duez" class="author__avatar">
     <a class="author__name" href="https://twitter.com/pascalduez">Pascal Duez</a>
-    <span class="author__role">Echosystem maintainer</span>
+    <span class="author__role">Ecosystem maintainer</span>
   </li>
 
   <li class="author">
@@ -35,10 +37,20 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
     <a class="author__name" href="https://twitter.com/fweinb">Fabrice Weinberg</a>
     <span class="author__role">Parser tinkerer</span>
   </li>
+</ul>
 
+## Contributors
+
+<ul class="authors">
   <li class="author">
     <img src="https://pbs.twimg.com/profile_images/1839011731/cupkace-detoure_reasonably_small_400x400.jpg" alt="Why Alix" class="author__avatar">
     <a class="author__name" href="https://twitter.com/isendil">Why Alix</a>
+    <span class="author__role">Poulpix drawer</span>
+  </li>
+
+  <li class="author">
+    <img src="https://pbs.twimg.com/profile_images/444569810307780609/o4zBdWS5_400x400.jpeg" alt="Reda Lemeden" class="author__avatar">
+    <a class="author__name" href="https://twitter.com/kaishin">Reda Lemeden</a>
     <span class="author__role">Octopus designer</span>
   </li>
 
