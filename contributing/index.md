@@ -18,7 +18,6 @@ Please, do not open an issue only to ask a question; it is not the best place fo
 
 If it's not, you can leave your question on:
 
-* [#sassdoc on freenode](http://webchat.freenode.net/)
 * [SassDoc on Slack](http://sassdoc.slack.com/)
 
 If you need a quick reply or don't feel really comfortable with asking on a public channel, try getting in touch with us on Twitter when possible: [@SassDoc\_](https://twitter.com/sassdoc_), the official account.
@@ -36,6 +35,7 @@ So you think you've found a bug? Likely. We're all humans after all! Before even
 * [Yeoman theme generator][repo_generator]: theme generator
 * [Site][repo_site]: SassDoc's site
 * [Syntax converter][repo_converter]: Sass to SCSS converter and the like
+* [Blank theme][repo_theme_blank]: Blank theme
 
 Please give GitHub's search a try first, to make sure someone didn't already submit something similar. If what you've found seems unique, be sure to open an issue in the appropriate repository with a clear title and a description as complete as possible.
 

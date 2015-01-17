@@ -1,6 +1,7 @@
 .authors {
     overflow: hidden;
     list-style: none;
+    padding-left: 0;
 }
 
 .author {
@@ -15,7 +16,7 @@
     }
 
     @include respond-to("huge") {
-        width: (100% / 3);
+        width: (100% / 2);
     }
 }
 

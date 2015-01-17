@@ -47,7 +47,7 @@ Each annotated comment will include a `commentRange` object like so:
 
 ## Name
 
-Name of the documented item is self parsed, hence `@name` doesn't exist.
+Name of the documented item is self parsed, hence `@name` doesn't exist. A future version of SassDoc will allow to overwrite the item's name with a `@name` annotation.
 
 ## Description
 

@@ -9,18 +9,18 @@ If you have made up so far into building your own theme, you'll be pleased to no
 
 ## Markdown
 
-You may have noticed most descriptions from annotations are parsed as Markdown. This is thanks to the Markdown filter from sassdoc-filter (using [Marked](https://github.com/chjj/marked)).
+You may have noticed most descriptions from annotations are parsed as Markdown. This is thanks to the Markdown filter from [sassdoc-extras][repo_extras] (using [Marked](https://github.com/chjj/marked)).
 
 Usage:
 
 {% highlight js %}
-var filter = require('sassdoc-filter');
+var extras = require('sassdoc-extras');
 
 // Your theme function
 module.exports = function (dest, ctx) {
   // ...
 
-  filter.markdown(ctx);
+  extras.markdown(ctx);
 };
 {% endhighlight %}
 
@@ -28,7 +28,7 @@ This filter overrides the provided values, so a value such as ``This is some `co
 
 ## Display toggle
 
-Depending on whether or not you want to display items based on their visibility (access level, `public` or `private`), the `display` filter might be able to help you. When used, it adds a `display` key to each item that is either `true` or `false`.
+Depending on whether or not you want to display items based on their visibility (access level, `public` or `private`), the `display` filter might be able to help you. When used, it removes items that should not be displayed.
 
 To determine if an item should be displayed or not, this filter reads the `display.access` key from the context configuration (so make sure your theme defines one).
 
@@ -43,13 +43,13 @@ To determine if an item should be displayed or not, this filter reads the `displ
 Usage:
 
 {% highlight js %}
-var filter = require('sassdoc-filter');
+var extras = require('sassdoc-extras');
 
 // Your theme function
 module.exports = function (dest, ctx) {
   // ...
 
-  filter.display(ctx);
+  extras.display(ctx);
 };
 {% endhighlight %}
 
@@ -86,13 +86,13 @@ Note that this filter rewrites the `group` key from each item. For instance, an 
 Usage:
 
 {% highlight js %}
-var filter = require('sassdoc-filter');
+var extras = require('sassdoc-extras');
 
 // Your theme function
 module.exports = function (dest, ctx) {
   // ...
 
-  filter.groupName(ctx);
+  extras.groupName(ctx);
 };
 {% endhighlight %}
 
@@ -100,7 +100,7 @@ module.exports = function (dest, ctx) {
 
 When used, the `shortcutIcon` filter takes the eponymous key from the configuration and converts it into an object with `type`, `url` and `path` keys.
 
-For instance, `"http://absolute.path/to/icon.png"` as a value in `ctx.view.shortcutIcon` would yield `ctx.shortcutIcon` as:
+For instance, `"http://absolute.path/to/icon.png"` as a value in `ctx.shortcutIcon` would yield `ctx.shortcutIcon` as:
 
 {% highlight js %}
 {
@@ -109,7 +109,7 @@ For instance, `"http://absolute.path/to/icon.png"` as a value in `ctx.view.short
 }
 {% endhighlight %}
 
-On the other hand, a relative path like `"relative/path/to/icon.png"` would leave `ctx.view.shortcutIcon` as:
+On the other hand, a relative path like `"relative/path/to/icon.png"` would leave `ctx.shortcutIcon` as:
 
 {% highlight js %}
 {
@@ -122,13 +122,13 @@ On the other hand, a relative path like `"relative/path/to/icon.png"` would leav
 Usage:
 
 {% highlight js %}
-var filter = require('sassdoc-filter');
+var extras = require('sassdoc-extras');
 
 // Your theme function
 module.exports = function (dest, ctx) {
   // ...
 
-  filter.shortcutIcon(ctx);
+  extras.shortcutIcon(ctx);
 };
 {% endhighlight %}
 
