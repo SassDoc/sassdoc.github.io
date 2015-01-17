@@ -77,16 +77,12 @@ documentation data.
 }
 {% endhighlight %}
 
-## View
+Apart from these keys, users can put whatever they want in this object,
+via the SassDoc configuration file. You can use it to let the user
+configure your theme.
 
-Don't assume the view object will contain anything. If the user
-doesn't have a configuration file it will likely be an empty object.
-
-The view has no strict interface. Users can put whatever they
-want in this object. You can use it to let the user configure your
-theme (the main purpose of the view object is indeed configuration).
-
-An example view object, assuming you use some [filters][extra_tools]:
+An example context object (without previous standard keys), assuming you
+use some [filters][extra_tools]:
 
 {% highlight js %}
 {
@@ -100,7 +96,7 @@ An example view object, assuming you use some [filters][extra_tools]:
     helpers: 'Helpers',
     hacks: 'Dirty Hacks & Fixes',
     undefined: 'Ungrouped',
-  }
+  },
 }
 {% endhighlight %}
 
