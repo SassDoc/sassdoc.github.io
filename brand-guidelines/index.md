@@ -52,6 +52,6 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 
 ## Illustration
 
-![PNG Logo](/assets/images/illustration.png)
+![PNG Logo]({{ site.baseurl }}/assets/images/illustration.png)
 
 {% include routes.html %}

@@ -158,7 +158,7 @@ theme: theme
 {% endhighlight %}
 
 You're now telling SassDoc to search for a theme named `theme`. SassDoc
-will try to resolve it with the rules described in [Theme Configuration](/configuration/#theme).
+will try to resolve it with the rules described in [Theme Configuration]({{ site.data.routes.configuration }}#theme).
 
 When passing a directory to `require`, Node.js will search for an
 `index.js` file in it. Your theme module will therefore be in
@@ -230,7 +230,7 @@ Then, run `npm publish` and you're done!
 
 ## Extra tools from SassDoc
 
-SassDoc provides a couple of extra features to theme builders. Please refer to [relevant section](/extra-tools/).
+SassDoc provides a couple of extra features to theme builders. Please refer to [relevant section][extra_tools]).
 
 ## Extra tools from Swig
 

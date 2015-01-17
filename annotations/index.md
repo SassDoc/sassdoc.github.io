@@ -253,7 +253,7 @@ Describes the documented item.
 | Aliases     | &mdash;                                                     |
 | Autofilled  | false                                                       |
 | Allowed on  | functions, mixins, placeholders, variables                  |
-| Extra notes | Groups define the way items are displayed in SassDoc's default theme.<br>Groups can be aliased for friendly names from the configuration ([more infos](/configuration/#groups)). |
+| Extra notes | Groups define the way items are displayed in SassDoc's default theme.<br>Groups can be aliased for friendly names from the configuration ([more infos]({{ site.data.routes.configuration }}#groups)). |
 
 ### Example
 

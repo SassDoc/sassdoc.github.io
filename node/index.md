@@ -77,7 +77,7 @@ vfs.src(source)
   <strong>Note:</strong> that's why you don't need a plugin to use SassDoc with <a href="{{ site.data.routes.gulp }}">Gulp</a>!
 </p>
 
-Find more examples and notes about the Stream API on the [Gulp](/gulp/#notes-on-sassdocs-stream-api) page.
+Find more examples and notes about the Stream API on the [Gulp]({{ site.data.routes.gulp }}#notes-on-sassdocs-stream-api) page.
 
 ## About glob
 
