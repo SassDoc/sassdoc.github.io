@@ -75,7 +75,7 @@ t.changelog = async () => {
 // Preview {{{
 
 t.preview = async () => {
-  const theme = 'node_modules/sassdoc/node_modules/sassdoc-theme-default'
+  const theme = 'node_modules/sassdoc-theme-default'
   const preview = 'assets/images/preview-image.png'
 
   im('Compiling `default` theme in `.preview`.')
