@@ -259,6 +259,9 @@ async () => {
       .filter(p => p instanceof Promise)
       .map(p => p.catch(throwNextTick))
   )
+
+  // Close screenshot service if needed.
+  screenshot.close()
 }()
 
 // }}}
