@@ -239,7 +239,7 @@ async () => {
   // Show existing targets.
   if (!targets.length) {
     console.error('Please specify a target. Available targets:')
-    Object.keys(t).map(x => `  ${x}`).forEach(console.log)
+    Object.keys(t).map(x => `  ${x}`).forEach(console.error)
     process.exit(1)
   }
 
