@@ -73,3 +73,6 @@
     - title: "Brand guidelines"
       route: branding
       _blank: false
+    - title: "SassDocMeister"
+      route: sassdocmeister
+      _blank: true
