@@ -209,7 +209,6 @@ t.gallery = async () => {
 
         await exec(`mogrify -resize 900x '${file}'`)
       })
-      .map(x => x instanceof Promise)
   )
 }
 
