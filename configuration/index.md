@@ -16,7 +16,7 @@ sassdoc source/       -c path/to/config.json # Short option and JSON file
 sassdoc source/ --config path/to/config.yaml # Long  option and YAML file
 {% endhighlight %}
 
-If you are using the Node API rather than the CLI tool, you can pass your configuration object as the third argument of the `sassdoc` function:
+If you are using the Node API rather than the CLI tool, you can pass your configuration object as the second argument of the `sassdoc` function:
 
 {% highlight js %}
 var sassdoc = require('sassdoc');
@@ -25,7 +25,7 @@ sassdoc(source, config);
 
 ## Options
 
-Here is the available configuration that does not depend on the theme whatsoever:
+Here are the available configuration options that does not depend on the theme whatsoever:
 
 | Option               | Type            | Default                               |
 |----------------------|-----------------|---------------------------------------|
