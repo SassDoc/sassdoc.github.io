@@ -138,9 +138,6 @@ t['theme-gallery'] = async () => {
     const preview = `${previewDir}/${theme}`
     const thumb = `${thumbDir}/${theme}.png`
 
-    // im(`Retrieving \`${theme}\` theme package.`)
-    // await exec(`npm i ${theme}`)
-
     im(`Compiling \`${theme}\` theme in \`${preview}\`.`)
 
     await sassdoc(sampleDir, {
