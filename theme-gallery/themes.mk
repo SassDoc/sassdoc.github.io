@@ -1,2 +1,0 @@
-THEMES += default
-THEMES += vulcan

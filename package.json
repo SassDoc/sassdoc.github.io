@@ -1,6 +1,20 @@
 {
   "dependencies": {
-    "atom-screenshot": "^0.3.0",
-    "sassdoc": "^2.0.0-rc.16"
+    "6to5": "^2.12.6",
+    "atom-screenshot": "^0.4.2",
+    "combined-stream": "0.0.7",
+    "fs-extra-promise": "^0.1.0",
+    "js-yaml": "^3.2.5",
+    "mz": "^1.2.1",
+    "promisepipe": "^1.0.1",
+    "request": "^2.51.0",
+    "sassdoc": "^2.0.0-rc.16",
+    "sassdoc-theme-default": "^2.0.0-rc.11",
+    "sassdoc-theme-vulcan": "^0.2.0",
+    "split": "^0.3.2",
+    "through2-filter": "^1.4.0"
+  },
+  "scripts": {
+    "make": "6to5-node --experimental make"
   }
 }
