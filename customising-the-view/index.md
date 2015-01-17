@@ -62,7 +62,7 @@ The `basePath` option is used to provide a *View source* link to each item in ca
     https://github.com/sassdoc/sassdoc-theme-default/tree/master/scss/utils/_functions.scss#L13-L37
 
 <p class="note  note--warning">
-  <strong>Caution!</strong> as you can see from the previous example, GitHub adds <code>/tree/&lt;branch_name></code> between the base path and the file path. To prevent your links from being broken, set your base path to: <code>https://github.com/USERNAME/REPOSITORY/tree/master</code> (or whatever branch your code is on).
+  <strong>Caution!</strong> as you can see from the previous example, GitHub adds <code>/tree/master</code> or <code>/blob/&lt;branch_name&gt;</code> between the base path and the file path. To prevent your links from being broken, set your base path to: <code>https://github.com/USERNAME/REPOSITORY/tree/master</code> (or <code>/blob/&lt;branch_name&gt;</code>).
 </p>
 
 ## Shortcut icon

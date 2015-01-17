@@ -35,7 +35,7 @@ methods and well as an `alias` array and a `multiple` boolean.
 | `name` | string | Name of the annotation. |
 | `parse` | function | Takes the annotation content as parameter and returns the parsed data (can be of any type &mdash; it will be available in the theme as `item.<annotationName>`, as an array if `multiple` is `true`). |
 | `resolve` | function | Called after the raw data is generated, where the whole SassDoc data is being passed (indexed by type and name). You can then modify this object reference as you want to complete your data structure while having access to the whole data. |
-| `default` | function | Returns a default value when &mdash; if ever &mdash; the annotation is not present. |
+| `default` | function | Returns a default value when &mdash;&nbsp;if ever&nbsp;&mdash; the annotation is not present. |
 | `autofill` | function | Takes a parsed annotation object. You can modify this object reference as you want while having access to the whole parsed content of the current annotation. |
 | `multiple` | boolean | Indicates if this annotation is allowed multiple times per item (default is `true`). |
 | `alias` | array | Array of aliases for the annotation. |
