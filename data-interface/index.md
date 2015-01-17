@@ -19,8 +19,6 @@ SassDoc uses the word "item" to describe either a variable, a function, a mixin 
 * a context, which is a sub-object containing the item's name, its type (function, variable, mixin, placeholder), the lines at which it has been found in the file, and the its inner code (inside the declaration braces / variable content);
 * annotations: both those declared in the related documentation block comment, and those omitted with a default value.
 
-Note that as a matter of simplicity, all annotations are mapped to an array, even those for which having multiple values makes no sense (for instance `@access`).
-
 {% highlight js %}
 {
   description: '',
