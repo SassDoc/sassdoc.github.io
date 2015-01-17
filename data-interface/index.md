@@ -7,7 +7,7 @@ title: "Data interface"
 
 SassDoc is doing quite a lot of things under the hood. In most cases, you won't have to know anything about it but if you are willing to write your own theme, you might need to understand what's going on. Especially, you'll need to know what is being returned to the view so that you can actually write your templates.
 
-<p class="note  note--info"><strong>Clarification:</strong> in the following examples, we are using C-style comments but it works exactly the same for inline comments as well. Please refer to the <a href="{{ site.baseurl }}/annotations/">Annotations</a> page for the syntax.</p>
+<p class="note  note--info"><strong>Clarification:</strong> in the following examples, we are using C-style comments but it works exactly the same for inline comments as well. Please refer to the <a href="{{ site.data.routes.annotations }}">Annotations</a> page for the syntax.</p>
 
 <p class="note  note--info"><strong>Note:</strong> you can run SassDoc in parse mode with the <code>--parse</code> CLI flag to output the data as JSON instead of generating a documentation directory.</p>
 

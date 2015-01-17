@@ -52,7 +52,7 @@ sassdoc source/
     <div class="home__section-content">
         <div class="container">
 
-            <p><a href="http://github.com/sassdoc/sassdoc">SassDoc</a> parses your source folder to grab <a href="{{ site.baseurl }}/annotations/">documentation-specific comments</a>. From there, it builds a <a href="{{ site.baseurl }}/data-interface/">data tree</a>, that gets <a href="{{ site.baseurl }}/extra-tools/">enhanced and filtered</a> before being passed to the <a href="{{ site.baseurl }}/customising-the-view/">view</a>. So you end up with a fully styled HTML document, like this:</p>
+            <p><a href="http://github.com/sassdoc/sassdoc">SassDoc</a> parses your source folder to grab <a href="{{ site.data.routes.annotations }}">documentation-specific comments</a>. From there, it builds a <a href="{{ site.data.routes.data_interface }}">data tree</a>, that gets <a href="{{ site.data.routes.extra_tools }}">enhanced and filtered</a> before being passed to the <a href="{{ site.data.routes.view }}">view</a>. So you end up with a fully styled HTML document, like this:</p>
 
             <img src="{{ site.baseurl }}/assets/images/preview-image.png" alt="SassDoc Default Theme" />
         </div>

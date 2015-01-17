@@ -30,7 +30,7 @@ title: "Annotations"
 | [@todo](#todo)                             | Things to do related to the documented item                | &mdash;                 |
 | [@type](#type)                             | Describes the type of a variable                           | &mdash;                 |
 
-<p class="note  note--info"><strong>Note:</strong> remember that you can define annotations at a file level rather than on specific items, which can happen to be very useful when all items from a file share some traits (author, group, and so on...). To do so, please refer to <a href="{{ site.baseurl }}/file-level-annotations/">File-level Annotations</a>.</p>
+<p class="note  note--info"><strong>Note:</strong> remember that you can define annotations at a file level rather than on specific items, which can happen to be very useful when all items from a file share some traits (author, group, and so on...). To do so, please refer to <a href="{{ site.data.routes.poster_annotations }}">File-level Annotations</a>.</p>
 
 ## Comment Range
 
