@@ -71,7 +71,7 @@ Note that this filter rewrites the `group` key from each item. For instance, an 
 
 {% highlight js %}
 {
-  'group': [['hacks']],
+  'group': ['hacks'],
 }
 {% endhighlight %}
 
