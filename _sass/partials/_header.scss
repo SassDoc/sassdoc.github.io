@@ -78,10 +78,19 @@
 }
 
 .logo {
+    img {
+        margin: 0 auto 1em;
+    }
+
     @include respond-to("large") {
         float: left;
         margin-right: 1em;
         padding: 1em 0;
+
+        img {
+            margin-top: -.5em;
+            max-width: 3em;
+        }
     }
 
     @include respond-to("huge") {
@@ -89,7 +98,11 @@
         position: absolute;
         right: 100%;
         top: 50%;
-        margin-top: -.75em;
+        margin-top: -1em;
+
+        img {
+            max-width: 3em;
+        }
     }
 }
 
