@@ -8,6 +8,7 @@ title: "Command line"
 Getting started with SassDoc could not be any easier.
 
 {% highlight bash %}
+npm install npm@latest -g # SassDoc requires npm 2.0
 npm install sassdoc -g
 {% endhighlight %}
 
