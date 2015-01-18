@@ -1,4 +1,5 @@
 // Dependencies {{{
+// ================
 
 const CombinedStream = require('combined-stream')
 const es = require('event-stream')
@@ -19,6 +20,7 @@ const zip = require('array-zip')
 // }}}
 
 // Helpers {{{
+// ===========
 
 const repoUrl = 'https://raw.githubusercontent.com/SassDoc/sassdoc/master'
 
@@ -50,6 +52,7 @@ const t = {}
 // }}}
 
 // Changelog {{{
+// =============
 
 t.changelog = async () => {
   const changelog = 'changelog/index.md'
@@ -73,6 +76,7 @@ t.changelog = async () => {
 // }}}
 
 // Preview {{{
+// ===========
 
 t.preview = async () => {
   const theme = 'node_modules/sassdoc-theme-default'
@@ -101,6 +105,7 @@ t.preview = async () => {
 // }}}
 
 // Themes {{{
+// ==========
 
 const themes = ['default', 'vulcan']
 const themeDirs = themes.map(x => `node_modules/sassdoc-theme-${x}`)
@@ -110,6 +115,7 @@ const themeGallery = 'theme-gallery'
 const sampleDir = `${themeGallery}/sample`
 
 // Sample {{{
+// ----------
 
 t.sample = async () => {
   if (!await fs.exists(sampleDir)) {
@@ -123,6 +129,7 @@ t.sample = async () => {
 // }}}
 
 // Gallery {{{
+// -----------
 
 t['theme-gallery'] = async () => {
   // Ensure sample directory exists.
@@ -180,6 +187,7 @@ t.themes = async () => {
 // }}}
 
 // Gallery {{{
+// ===========
 
 t.gallery = async () => {
   const gallery = await yamlf('_data/gallery.yml')
@@ -212,6 +220,7 @@ t.gallery = async () => {
 // }}}
 
 // Makefile {{{
+// ============
 
 t.makefile = async () => {
   im('Generating makefile.')
@@ -229,6 +238,7 @@ t.makefile = async () => {
 // }}}
 
 // Execution {{{
+// =============
 
 async () => {
   const targets = process.argv.slice(2)
