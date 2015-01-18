@@ -158,7 +158,7 @@ t['theme-gallery'] = async () => {
   const thumbDir = `${themeGallery}/thumbs`
   const defaultTheme = 'https://github.com/SassDoc/sassdoc-theme-default'
 
-  await Promise.all([previewDir, thumbDir].map(fse.mkdirs))
+  await Promise.all([previewDir, thumbDir].map(x => fse.mkdirs(x)))
 
   for (let [theme, themePackage] of zip(themes, themePackages)) {
     const preview = `${previewDir}/${theme}`
@@ -176,7 +176,7 @@ t['theme-gallery'] = async () => {
     im(`Taking a screenshot of \`${theme}\` theme in \`${thumb}\`.`)
 
     await screenshot({
-      url: furl `${preview}/index.html`,
+      url: furl(`${preview}/index.html`),
       width: 1024,
       height: 768,
       dest: thumb,
