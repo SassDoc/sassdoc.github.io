@@ -1,6 +1,6 @@
 - title: "Getting started"
   items:
-    - title: "Upgrade from 1.0 to 2.0"
+    - title: "Upgrading"
       route: upgrading
       _blank: false
     - title: "Command Line"
