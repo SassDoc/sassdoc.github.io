@@ -8,7 +8,7 @@ title: "Upgrade from 1.0 to 2.0"
 The default value of some annotations is now inside square brackets
 instead of parentheses. This affects `@param`, `@prop` and `@require`.
 
-###### Before
+**Before:**
 
 {% highlight scss %}
 /**
@@ -17,7 +17,7 @@ instead of parentheses. This affects `@param`, `@prop` and `@require`.
 @function baz($foo) {}
 {% endhighlight %}
 
-###### After
+**After:**
 
 {% highlight scss %}
 /**
@@ -36,41 +36,48 @@ Be sure to review the changes made by the script and eventually fix
 details by hand.
 
 
-###### GNU `sed`
+**GNU `sed`:**
 
 {% highlight sh %}
 find . -type f -name '*.s[ac]ss' -exec sed -ri '/@param|@prop|@require/y/()/[]/' {} +
 {% endhighlight %}
 
-###### BSD/Mac `sed`
+**BSD/Mac `sed`:**
 
 {% highlight sh %}
 find . -type f -name '*.s[ac]ss' -exec sed -Ei '' '/@param|@prop|@require/y/\(\)/\[\]/' {} +
 {% endhighlight %}
+
 ## CLI
 
 The CLI usage slightly changed, since the destination is now optional
 and configurable with an option instead of an argument, so you'll have
 to update your scripts using SassDoc if you have any.
 
-###### Before
+**Before:**
 
 {% highlight sh %}
 sassdoc scss/ doc/
 {% endhighlight %}
 
-###### After
+**After:**
 
 {% highlight sh %}
 sassdoc scss/ --dest doc/
 {% endhighlight %}
+
+When you don't give a destination, SassDoc will put the documentation in
+a `sassdoc` folder in the current directory.
+
+**SassDoc will wipe the whole destination folder upon each run, so be
+sure you don't have anything important in it.**
 
 ## Node
 
 The `documentize` function from 1.0 is now the default export from the
 `sassdoc` module.
 
-###### Before
+**Before:**
 
 {% highlight js %}
 var sassdoc = require('sassdoc');
@@ -80,7 +87,7 @@ sassdoc.documentize('scss/').then(function () {
 });
 {% endhighlight %}
 
-###### After
+**After:**
 
 {% highlight js %}
 var sassdoc = require('sassdoc');
