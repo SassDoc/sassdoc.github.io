@@ -1,4 +1,5 @@
 home: "/"
+upgrading: "/upgrading/"
 command_line: "/getting-started/"
 configuration: "/configuration/"
 annotations: "/annotations/"
