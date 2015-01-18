@@ -10,7 +10,7 @@ title: "Release the docs!"
 
             <div class="megatron__content">
 {% highlight bash %}
-# Ensure npm 2.0 is installed (required for SassDoc)
+# Ensure npm 2.0 is installed
 npm install npm@latest -g
 
 # Install SassDoc globally
