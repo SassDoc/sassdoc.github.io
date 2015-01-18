@@ -7,6 +7,7 @@ const exec = require('mz/child_process').exec
 const filter = require('through2-filter')
 const fs = require('mz/fs')
 const fse = require('fs-extra-promise')
+const map = require('through2-map')
 const path = require('path')
 const promisePipe = require('promisepipe')
 const readline = require('readline')
@@ -51,27 +52,45 @@ const t = {}
 
 // }}}
 
-// Changelog {{{
-// =============
+// Pages {{{
+// =========
 
-t.changelog = async () => {
-  const changelog = 'changelog/index.md'
-  const url = `${repoUrl}/CHANGELOG.md`
-  const header = '---\nlayout: default\ntitle: "Changelog"\n---\n\n'
+// Turn GitHub code blocks in Liquide code blocks.
+const convertCodeBlocks = line =>
+  line
+    .replace(/^( *)```([a-z0-9]+)$/, '$1{% highlight $2 %}')
+    .replace(/^( *)```$/, '$1{% endhighlight %}')
 
-  im(`Retrieving changelog from main repository to \`${changelog}\`.`)
+async function page(local, remote, header) {
+  im(`Retrieving \`${remote}\` from main repository to \`${local}\`.`)
 
-  const output = fs.createWriteStream(changelog)
+  const url = `${repoUrl}/${remote}`
+  const output = fs.createWriteStream(local)
 
   output.write(header)
 
   await promisePipe(
     request(url),
     split(/(\n)/),
-    filterCount((line, i) => i > 2),
+    filterCount((line, i) => i > 4),
+    map({ wantStrings: true }, convertCodeBlocks),
     output
   )
 }
+
+t.changelog = () =>
+  page(
+    'changelog/index.md',
+    'CHANGELOG.md',
+    '---\nlayout: default\ntitle: "Changelog"\n---\n\n'
+  )
+
+t.upgrading = () =>
+  page(
+    'upgrading/index.md',
+    'UPGRADE-2.0.md',
+    '---\nlayout: default\ntitle: "Upgrade from 1.0 to 2.0"\n---\n\n'
+  )
 
 // }}}
 
