@@ -47,6 +47,12 @@ const filterCount = (f, i=0) =>
 const yamlf = async file =>
   yaml.safeLoad(await fs.readFile(file))
 
+const shot = options =>
+  screenshot({
+    ...options,
+    css: '::-webkit-scrollbar { display: none; }',
+  })
+
 // Tasks container.
 const t = {}
 
@@ -111,7 +117,7 @@ t.preview = async () => {
 
   im(`Taking a screenshot in \`${preview}\`.`)
 
-  await screenshot({
+  await shot({
     url: furl('.preview/index.html'),
     width: 1200,
     height: 675,
@@ -175,7 +181,7 @@ t['theme-gallery'] = async () => {
 
     im(`Taking a screenshot of \`${theme}\` theme in \`${thumb}\`.`)
 
-    await screenshot({
+    await shot({
       url: furl(`${preview}/index.html`),
       width: 1024,
       height: 768,
@@ -224,7 +230,7 @@ t.gallery = async () => {
       .map(async x => {
         const file = `${galleryDir}/${x.image}`
 
-        await screenshot({
+        await shot({
           url: furl('.preview/index.html'),
           width: 1440,
           height: 900,
