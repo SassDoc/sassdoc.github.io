@@ -179,8 +179,8 @@ t['theme-gallery'] = async () => {
       url: furl(`${preview}/index.html`),
       width: 1024,
       height: 768,
-      dest: thumb,
     })
+      .then(writeFile(thumb))
 
     await exec(`mogrify -resize 256x192 '${thumb}'`)
   }
