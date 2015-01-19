@@ -27,9 +27,11 @@ If `src` is not given, it's set to the current directory.
 
 ## Options
 
-    -h, --help                 Show help.
-    -V, --version              Show version.
-    -m <msg>, --message=<msg>  Set the git-commit(1) message.
+{% highlight sh %}
+-h, --help                 Show help.
+-V, --version              Show version.
+-m <msg>, --message=<msg>  Set the git-commit(1) message.
+{% endhighlight %}
 
 ## Examples
 
