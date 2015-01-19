@@ -1,7 +1,54 @@
 ---
 layout: default
-title: "Upgrading to v2"
+title: "Upgrade from 1.0 to 2.0"
 ---
+
+## C-style comments
+
+The support of C-style `/**` comments [have been dropped][issue-326].
+You can use the following scripts to upgrade your codebase to `///`
+comments if you were using them:
+
+**GNU `sed`:**
+
+{% highlight sh %}
+find . -name '*.s[ac]ss' -exec sed -i 's,^/\*\*,///,;s,^  *\*\*/,////,;s,^  *\*/,///,;s,^  *\*,///,' {} +
+{% endhighlight %}
+
+**Mac/BSD `sed`:**
+
+{% highlight sh %}
+find . -name '*.s[ac]ss' -exec sed -i '' 's,^/\*\*,///,;s,^  *\*\*/,////,;s,^  *\*/,///,;s,^  *\*,///,' {} +
+{% endhighlight %}
+
+The script can't handle all the possible edge cases, so please make sure
+to run it in a version-controlled environment, and review carefully the
+changes.
+
+You'll also have to manually fix all your [poster comments] by hand
+since there is no way for this script to convert them accurately; only
+the closing can be converted, but you'll need to add a `/` to all poster
+openings.
+
+If you want to know more on what's happening in these cryptic `sed`
+commands, here is the commented `sed` source:
+
+{% highlight sed %}
+# Opening (can't determine if poster or normal)
+s,^/\*\*,///,
+
+# Poster closing
+s,^  *\*\*/,////,
+
+# Normal closing
+s,^  *\*/,///,
+
+# Comment body
+s,^  *\*,///,
+{% endhighlight %}
+
+[issue-326]: https://github.com/SassDoc/sassdoc/issues/326
+[poster comments]: http://sassdoc.com/file-level-annotations/
 
 ## Annotations
 

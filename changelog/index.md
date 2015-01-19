@@ -7,6 +7,7 @@ title: "Changelog"
 
 ### API breaks for users
 
+* C-style comments (`/** */`) are no longer supported ([#326](https://github.com/SassDoc/sassdoc/issues/326))
 * SassDoc now always outputs its own directory in the current folder ([#302](https://github.com/SassDoc/sassdoc/issues/302))
 * `--dest` option has been added to define SassDoc's folder path for output, default is `sassdoc` ([#302](https://github.com/SassDoc/sassdoc/issues/302))
 * `--no-prompt` option no longer exists since SassDoc outputs its own folder ([#302](https://github.com/SassDoc/sassdoc/issues/302))
@@ -38,8 +39,8 @@ title: "Changelog"
   * `sassdoc.documentize` does not exist anymore.
   * `sassdoc(src [, config])` execute the full Documentation process, returns a Promise.
   * `sassdoc([config])` execute the full Documentation process, returns a Stream of Vinyl files.
-  * `sassdoc(src [, config]).parse` returns a Promise with the full data object.
-  * `sassdoc([config]).parse` returns a Stream with the full data object.
+  * `sassdoc.parse(src [, config])` returns a Promise with the full data object.
+  * `sassdoc.parse([config])` returns a Stream with the full data object.
 
 ### New features
 
