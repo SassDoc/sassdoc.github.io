@@ -33,7 +33,7 @@ openings.
 If you want to know more on what's happening in these cryptic `sed`
 commands, here is the commented `sed` source:
 
-{% highlight sed %}
+{% endhighlight %}
 # Opening (can't determine if poster or normal)
 s,^/\*\*,///,
 
