@@ -138,6 +138,7 @@ const themePackages = themeDirs.map(x => `${x}/package.json`)
 
 const themeGallery = 'theme-gallery'
 const sampleDir = `${themeGallery}/sample`
+const defaultTheme = 'https://github.com/SassDoc/sassdoc-theme-default'
 
 // Sample {{{
 // ----------
@@ -162,7 +163,6 @@ t['theme-gallery'] = async () => {
 
   const previewDir = `${themeGallery}/preview`
   const thumbDir = `${themeGallery}/thumbs`
-  const defaultTheme = 'https://github.com/SassDoc/sassdoc-theme-default'
 
   await Promise.all([previewDir, thumbDir].map(x => fse.mkdirs(x)))
 
