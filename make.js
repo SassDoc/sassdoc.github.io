@@ -237,7 +237,7 @@ t.gallery = async () => {
         const file = `${galleryDir}/${x.image}`
 
         await shot({
-          url: furl(x.url),
+          url: x.url,
           width: 1440,
           height: 900,
         })
