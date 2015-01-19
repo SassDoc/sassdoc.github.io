@@ -85,3 +85,7 @@
 - name: SassyBitwise
   url: http://hugogiraudel.com/SassyBitwise/
   image: sassybitwise.png
+
+- name: vulcan-framework
+  url: http://vulcan-framework.github.io/core/
+  image: vulcan-framework.png
