@@ -166,7 +166,8 @@ t['theme-gallery'] = async () => {
 
   await Promise.all([previewDir, thumbDir].map(x => fse.mkdirs(x)))
 
-  for (let [theme, themePackage] of zip(themes, themePackages)) {
+  for (let theme of process.env.THEME ? [process.env.THEME] : themes) {
+    const themePackage = themePackages[themes.indexOf(theme)]
     const preview = `${previewDir}/${theme}`
     const thumb = `${thumbDir}/${theme}.png`
 
@@ -225,8 +226,13 @@ t.gallery = async () => {
   // Ensure directory exists.
   await fse.mkdirs(galleryDir)
 
+  const filter = !process.env.SITE
+    ? () => true
+    : x => x.image === `${process.env.SITE}.png`
+
   await Promise.all(
     gallery
+      .filter(filter)
       .map(async x => {
         const file = `${galleryDir}/${x.image}`
 
