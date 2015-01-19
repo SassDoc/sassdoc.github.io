@@ -56,13 +56,6 @@ Describes the documented item.
 ### Example
 
 {% highlight scss %}
-/**
- * Here is the description
- * On several lines if you will
- */
-{% endhighlight %}
-
-{% highlight scss %}
 /// Here is the description
 /// On several lines if you will
 {% endhighlight %}
@@ -87,16 +80,6 @@ Describes the documented item.
 ### Example
 
 {% highlight scss %}
-/**
- * @access private
- */
-
-/**
- * @access public
- */
-{% endhighlight %}
-
-{% highlight scss %}
 /// @access private
 
 /// @access public
@@ -117,12 +100,6 @@ Describes the documented item.
 ### Example
 
 {% highlight scss %}
-/**
- * @alias other-item
- */
-{% endhighlight %}
-
-{% highlight scss %}
 /// @alias other-item
 {% endhighlight %}
 
@@ -139,12 +116,6 @@ Describes the documented item.
 | Extra notes | Parsed as Markdown.*                                       |
 
 ### Example
-
-{% highlight scss %}
-/**
- * @author Author's name
- */
-{% endhighlight %}
 
 {% highlight scss %}
 /// @author Author's name
@@ -165,12 +136,6 @@ Describes the documented item.
 ### Example
 
 {% highlight scss %}
-/**
- * @content [Description]
- */
-{% endhighlight %}
-
-{% highlight scss %}
 /// @content [Description]
 {% endhighlight %}
 
@@ -187,16 +152,6 @@ Describes the documented item.
 | Extra notes | Parsed as Markdown.*<br>Message is optional.               |
 
 ### Example
-
-{% highlight scss %}
-/**
- * @deprecated
- */
-
-/**
- * @deprecated Deprecation related message
- */
-{% endhighlight %}
 
 {% highlight scss %}
 /// @deprecated
@@ -217,21 +172,6 @@ Describes the documented item.
 | Extra notes | Lines starting with `@` need to be indented to work correctly.<br>First word on the same line as `@example` is the language for syntax highlighting.<br>Currently supported languages: `css`, `scss`, `markup`, `javascript`. New languages on demand.<br>Everything but the first word on the same line as `@example` is the description.<br>Hyphen before description is optional.<br>Description is parsed as Markdown.* |
 
 ### Example
-
-{% highlight scss %}
-/**
- * @example
- * 4 + 2 = 8
- * 4 / 2 = 2
- *
- * @example scss
- * // This is some SCSS code
- *
- * @example scss - Clamp function
- * clamp(42, $min: 13, $max: 37)
- * // 37
- */
-{% endhighlight %}
 
 {% highlight scss %}
 /// @example
@@ -258,12 +198,6 @@ Describes the documented item.
 ### Example
 
 {% highlight scss %}
-/**
- * @group helpers
- */
-{% endhighlight %}
-
-{% highlight scss %}
 /// @group helpers
 {% endhighlight %}
 
@@ -282,12 +216,6 @@ Describes the documented item.
 ### Example
 
 {% highlight scss %}
-/**
- * @ignore Message
- */
-{% endhighlight %}
-
-{% highlight scss %}
 /// @ignore Message
 {% endhighlight %}
 
@@ -304,13 +232,6 @@ Describes the documented item.
 | Extra notes | Caption is optional.                                       |
 
 ### Example
-
-{% highlight scss %}
-/**
- * @link http://some.url
- * @link http://some.url Optional caption
- */
-{% endhighlight %}
 
 {% highlight scss %}
 /// @link http://some.url
@@ -332,12 +253,6 @@ Describes the documented item.
 ### Example
 
 {% highlight scss %}
-/**
- * @output Description
- */
-{% endhighlight %}
-
-{% highlight scss %}
 /// @output Description
 {% endhighlight %}
 
@@ -354,15 +269,6 @@ Describes the documented item.
 | Extra notes | Default value is optional.<br>Description is optional. Hyphen before description is optional.<br>Description is parsed as Markdown.*<br>Multiple types should be separated by pipes (`|`). |
 
 ### Example
-
-{% highlight scss %}
-/**
- * @param {type} $name
- * @param {type | othertype} $name
- * @param {type} $name - description
- * @param {type} $name [default value] - description
- */
-{% endhighlight %}
 
 {% highlight scss %}
 /// @param {type} $name
@@ -386,12 +292,6 @@ Describes the documented item.
 ### Example
 
 {% highlight scss %}
-/**
- * @prop {Type} base.default [default] - description
- */
-{% endhighlight %}
-
-{% highlight scss %}
 /// @prop {Type} base.default [default] - description
 {% endhighlight %}
 
@@ -408,17 +308,6 @@ Describes the documented item.
 | Extra notes | Type is optional; default type is `function`. Can be either `function`, `mixin`, `variable` or `placeholder`.<br>If `{type}` is `variable`, then the `$` sign before the variable name is optional. Alongside if there is a `$` sign before the item name, then the `{variable}` type is optional.<br>If `{type}` is `placeholder`, then the `%` sign before the placeholder name is optional. Alongside if there is a `%` sign before the item name, then the `{placeholder}` type is optional.<br>Description is optional. Hyphen before description is optional.<br>Description is parsed as Markdown.*<br>Link is optional.<br>Item name can contain `::`, `:`, `.` and/or `/` when item is from an external resource.<br>Link is used as a link if present, else it tries to link to an inner item, else it doesn't have a link.<br>The other item will automatically have a key named `usedBy` containing the name of function requiring it. |
 
 ### Example
-
-{% highlight scss %}
-/**
- * @require item
- * @require {type} item
- * @require {type} item - description
- * @require {type} item description
- * @require {type} item <link>
- * @require {type} item description <link>
- */
-{% endhighlight %}
 
 {% highlight scss %}
 /// @require item
@@ -444,20 +333,6 @@ Describes the documented item.
 ### Example
 
 {% highlight scss %}
-/**
- * @return {type}
- */
-
-/**
- * @return {type | othertype}
- */
-
-/**
- * @return {type} description
- */
-{% endhighlight %}
-
-{% highlight scss %}
 /// @return {type}
 
 /// @return {type | othertype}
@@ -478,15 +353,6 @@ Describes the documented item.
 | Extra notes | Type is optional; default type is `function`. Can be either `function`, `mixin`, `variable` or `placeholder`.<br>If `{type}` is `variable`, then the `$` sign before the variable name is optional. Alongside if there is a `$` sign before the item name, then the `{variable}` type is optional.<br>If `{type}` is `placeholder`, then the `%` sign before the placeholder name is optional. Alongside if there is a `%` sign before the item name, then the `{placeholder}` type is optional. |
 
 ### Example
-
-{% highlight scss %}
-/**
- * @see other-item
- * @see {mixin} other-item
- * @see $other-item
- * @see %other-item
- */
-{% endhighlight %}
 
 {% highlight scss %}
 /// @see other-item
@@ -510,13 +376,6 @@ Describes the documented item.
 ### Example
 
 {% highlight scss %}
-/**
- * @since version
- * @since version description
- */
-{% endhighlight %}
-
-{% highlight scss %}
 /// @since version
 /// @since version description
 {% endhighlight %}
@@ -534,12 +393,6 @@ Describes the documented item.
 | Extra notes | Parsed as Markdown.*                                       |
 
 ### Example
-
-{% highlight scss %}
-/**
- * @throw Error related message
- */
-{% endhighlight %}
 
 {% highlight scss %}
 /// @throw Error related message
@@ -560,12 +413,6 @@ Describes the documented item.
 ### Example
 
 {% highlight scss %}
-/**
- * @todo Task to be done
- */
-{% endhighlight %}
-
-{% highlight scss %}
 /// @todo Task to be done
 {% endhighlight %}
 
@@ -582,16 +429,6 @@ Describes the documented item.
 | Extra notes | Multiple types should be separated with pipes (`|`).       |
 
 ### Example
-
-{% highlight scss %}
-/**
- * @type Bool
- */
-
-/**
- * @type Bool | String
- */
-{% endhighlight %}
 
 {% highlight scss %}
 /// @type Bool

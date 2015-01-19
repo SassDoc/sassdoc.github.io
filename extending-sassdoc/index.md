@@ -60,10 +60,8 @@ module.exports.annotations.push({
 Then, a `@friend` annotation to mark an item as "friend", for example:
 
 {% highlight scss %}
-/**
- * @friend {function} foo
- * @friend {variable} bar
- */
+/// @friend {function} foo
+/// @friend {variable} bar
 {% endhighlight %}
 
 In your templates, `item.friend` will be an array of references

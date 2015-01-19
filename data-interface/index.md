@@ -52,9 +52,7 @@ SassDoc will collect all these item in an array and sort them by group, alphabet
 Will just return the string after the annotation as the access level.
 
 {% highlight scss %}
-/**
- * @access private
- */
+/// @access private
 {% endhighlight %}
 
 An item will look like this:
@@ -71,9 +69,7 @@ An item will look like this:
 Will list the alias in the `alias` key and add the alias item to the `aliased` key in the referenced item.
 
 {% highlight scss %}
-/**
- * @alias other-item
- */
+/// @alias other-item
 @mixin alias-for-other-item() { /* ... */ }
 {% endhighlight %}
 
@@ -102,9 +98,7 @@ Item `other-item` will look like this:
 ## @author
 
 {% highlight scss %}
-/**
- * @author Fabrice Weinberg
- */
+/// @author Fabrice Weinberg
 {% endhighlight %}
 
 An item will look like this:
@@ -120,9 +114,7 @@ An item will look like this:
 ## @content
 
 {% highlight scss %}
-/**
- * @content The `@content` directive allows user ...
- */
+/// @content The `@content` directive allows user ...
 {% endhighlight %}
 
 An item will look like this:
@@ -137,9 +129,7 @@ An item will look like this:
 ## @deprecated
 
 {% highlight scss %}
-/**
- * @deprecated No longer in use
- */
+/// @deprecated No longer in use
 {% endhighlight %}
 
 An item will look like this:
@@ -154,11 +144,9 @@ An item will look like this:
 ## @example
 
 {% highlight scss %}
-/**
- * @example scss - basic usage
- * clamp(42, $min: 13, $max: 37)
- * // 37
- */
+/// @example scss - basic usage
+/// clamp(42, $min: 13, $max: 37)
+/// // 37
 {% endhighlight %}
 
 An item will look like this:
@@ -177,9 +165,7 @@ An item will look like this:
 ## @group
 
 {% highlight scss %}
-/**
- * @group Groupname
- */
+/// @group Groupname
 {% endhighlight %}
 
 An item will look like this:
@@ -196,9 +182,7 @@ An item will look like this:
 This line will be just ignored.
 
 {% highlight scss %}
-/**
- * @ignore Ignore the line
- */
+/// @ignore Ignore the line
 {% endhighlight %}
 
 An item will look like this:
@@ -214,9 +198,7 @@ An item will look like this:
 ## @link (synonym: @source)
 
 {% highlight scss %}
-/**
- * @link http://example.com Caption
- */
+/// @link http://example.com Caption
 {% endhighlight %}
 
 An item will look like this:
@@ -234,9 +216,7 @@ An item will look like this:
 ## @output (synonym: @outputs)
 
 {% highlight scss %}
-/**
- * @output Description of output styles
- */
+/// @output Description of output styles
 {% endhighlight %}
 
 An item will look like this:
@@ -251,9 +231,7 @@ An item will look like this:
 ## @parameter (synonyms: @param, @arg, @argument)
 
 {% highlight scss %}
-/**
- * @param {type} $name [default value] - description
- */
+/// @param {type} $name [default value] - description
 {% endhighlight %}
 
 An item will look like this:
@@ -273,9 +251,7 @@ An item will look like this:
 ## @property (synonym: @prop)
 
 {% highlight scss %}
-/**
- * @prop {Function} base.default [default] - description
- */
+/// @prop {Function} base.default [default] - description
 {% endhighlight %}
 
 {% highlight js %}
@@ -296,9 +272,7 @@ An item will look like this:
 The required item will automatically have a key named `usedBy` containing the whole referencing item.
 
 {% highlight scss %}
-/**
- * @require {type} item - description <link>
- */
+/// @require {type} item - description <link>
 {% endhighlight %}
 
 An item will look like this:
@@ -328,9 +302,7 @@ The referenced item will have a `usedBy` key that looks like:
 ## @return (synonym: @returns)
 
 {% highlight scss %}
-/**
- * @return {type} description
- */
+/// @return {type} description
 {% endhighlight %}
 
 An item will look like this:
@@ -350,9 +322,7 @@ An item will look like this:
 Describes the version at which the documented item has been implemented or updated.
 
 {% highlight scss %}
-/**
- * @since version description
- */
+/// @since version description
 {% endhighlight %}
 
 An item will look like this:
@@ -370,9 +340,7 @@ An item will look like this:
 ## @throw (synonym: @throws, @exception)
 
 {% highlight scss %}
-/**
- * @throws Error related message
- */
+/// @throw Error related message
 {% endhighlight %}
 
 An item will look like this:
@@ -387,9 +355,7 @@ An item will look like this:
 ## @todo
 
 {% highlight scss %}
-/**
- * @todo Task to be done
- */
+/// @todo Task to be done
 {% endhighlight %}
 
 An item will look like this:
@@ -404,9 +370,7 @@ An item will look like this:
 ## @type
 
 {% highlight scss %}
-/**
- * @type bool | string
- */
+/// @type bool | string
 {% endhighlight %}
 
 An item will look like this:

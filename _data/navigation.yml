@@ -3,7 +3,7 @@
     - title: "Upgrading"
       route: upgrading
       _blank: false
-    - title: "Command Line"
+    - title: "Getting started"
       route: command_line
       _blank: false
     - title: "Configuration"

@@ -11,18 +11,14 @@ instead of parentheses. This affects `@param`, `@prop` and `@require`.
 **Before:**
 
 {% highlight scss %}
-/**
-  * @param {String} $foo (bar) - Baz.
-  */
+/// @param {String} $foo (bar) - Baz.
 @function baz($foo) {}
 {% endhighlight %}
 
 **After:**
 
 {% highlight scss %}
-/**
-  * @param {String} $foo [bar] - Baz.
-  */
+/// @param {String} $foo [bar] - Baz.
 @function baz($foo) {}
 {% endhighlight %}
 
