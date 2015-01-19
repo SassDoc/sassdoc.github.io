@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Command line"
+title: "Getting started"
 ---
 
 ## Install
