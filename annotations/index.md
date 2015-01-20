@@ -53,7 +53,7 @@ Name of the documented item is self parsed, hence `@name` doesn't exist. A futur
 
 Describes the documented item.
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// Here is the description
@@ -77,7 +77,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, placeholders, variables                 |
 | Extra notes | Either `public` or `private`.                              |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @access private
@@ -97,7 +97,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, variables                               |
 | Extra notes | The other item will automatically have a key named `aliased` containing the name of aliases. |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @alias other-item
@@ -115,7 +115,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, placeholders, variables                 |
 | Extra notes | Parsed as Markdown.*                                       |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @author Author's name
@@ -133,7 +133,7 @@ Describes the documented item.
 | Allowed on  | mixins                                                                   |
 | Extra notes | Parsed as Markdown.*                                                     |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @content [Description]
@@ -151,7 +151,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, placeholders, variables                 |
 | Extra notes | Parsed as Markdown.*<br>Message is optional.               |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @deprecated
@@ -171,7 +171,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, placeholders, variables                 |
 | Extra notes | Lines starting with `@` need to be indented to work correctly.<br>First word on the same line as `@example` is the language for syntax highlighting.<br>Currently supported languages: `css`, `scss`, `markup`, `javascript`. New languages on demand.<br>Everything but the first word on the same line as `@example` is the description.<br>Hyphen before description is optional.<br>Description is parsed as Markdown.* |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @example
@@ -195,7 +195,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, placeholders, variables                  |
 | Extra notes | Groups define the way items are displayed in SassDoc's default theme.<br>Groups can be aliased for friendly names from the configuration ([more infos]({{ site.data.routes.configuration }}#groups)). |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @group helpers
@@ -213,7 +213,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, placeholders, variables                 |
 | Extra notes | &mdash;                                                    |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @ignore Message
@@ -231,7 +231,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, placeholders, variables                 |
 | Extra notes | Caption is optional.                                       |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @link http://some.url
@@ -250,7 +250,7 @@ Describes the documented item.
 | Allowed on  | mixins                                                     |
 | Extra notes | Parsed as Markdown.*                                       |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @output Description
@@ -268,7 +268,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins                                          |
 | Extra notes | Default value is optional.<br>Description is optional. Hyphen before description is optional.<br>Description is parsed as Markdown.*<br>Multiple types should be separated by pipes (`|`). |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @param {type} $name
@@ -289,7 +289,7 @@ Describes the documented item.
 | Allowed on  | variables                                                         |
 | Extra notes | Description is parsed as Markdown.*<br>If `{Type}` is omitted, it will default to `Map` to make it more convenient for nested maps. |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @prop {Type} base.default [default] - description
@@ -307,7 +307,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, placeholders, variables                 |
 | Extra notes | Type is optional; default type is `function`. Can be either `function`, `mixin`, `variable` or `placeholder`.<br>If `{type}` is `variable`, then the `$` sign before the variable name is optional. Alongside if there is a `$` sign before the item name, then the `{variable}` type is optional.<br>If `{type}` is `placeholder`, then the `%` sign before the placeholder name is optional. Alongside if there is a `%` sign before the item name, then the `{placeholder}` type is optional.<br>Description is optional. Hyphen before description is optional.<br>Description is parsed as Markdown.*<br>Link is optional.<br>Item name can contain `::`, `:`, `.` and/or `/` when item is from an external resource.<br>Link is used as a link if present, else it tries to link to an inner item, else it doesn't have a link.<br>The other item will automatically have a key named `usedBy` containing the name of function requiring it. |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @require item
@@ -330,7 +330,7 @@ Describes the documented item.
 | Allowed on  | functions                                                  |
 | Extra notes | Description is optional. Hyphen before description is optional.<br>Description is parsed as Markdown.*<br>Multiple types must be separated by pipes (`|`). |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @return {type}
@@ -352,7 +352,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, placeholders, variables                 |
 | Extra notes | Type is optional; default type is `function`. Can be either `function`, `mixin`, `variable` or `placeholder`.<br>If `{type}` is `variable`, then the `$` sign before the variable name is optional. Alongside if there is a `$` sign before the item name, then the `{variable}` type is optional.<br>If `{type}` is `placeholder`, then the `%` sign before the placeholder name is optional. Alongside if there is a `%` sign before the item name, then the `{placeholder}` type is optional. |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @see other-item
@@ -373,7 +373,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, placeholders, variables                 |
 | Extra notes | Description is optional. Hyphen before description is optional.<br>Description is parsed as Markdown.* |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @since version
@@ -392,7 +392,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, placeholders                            |
 | Extra notes | Parsed as Markdown.*                                       |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @throw Error related message
@@ -410,7 +410,7 @@ Describes the documented item.
 | Allowed on  | functions, mixins, placeholders, variables                 |
 | Extra notes | Parsed as Markdown.*                                       |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @todo Task to be done
@@ -428,7 +428,7 @@ Describes the documented item.
 | Allowed on  | variables                                                  |
 | Extra notes | Multiple types should be separated with pipes (`|`).       |
 
-### Example
+<h3>Example</h3>
 
 {% highlight scss %}
 /// @type Bool
