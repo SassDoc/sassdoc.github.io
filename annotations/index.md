@@ -18,15 +18,15 @@ title: "Annotations"
 | [@example](#example)                       | Example for the documented item                            | &mdash;                 |
 | [@group](#group)                           | Group the documented item belongs to                       | &mdash;                 |
 | [@ignore](#ignore)                         | Ignored content                                            | &mdash;                 |
-| [@link](#link-synonym-source)              | Link related to the documented item                        | @source                 |
+| [@link](#link)                             | Link related to the documented item                        | @source                 |
 | [@output](#output)                         | Output from the documented mixin                           | &mdash;                 |
-| [@parameter](#param-synonyms-arg-argument) | Parameters from the documented mixin or function           | @param, @arg, @argument |
-| [@property](#prop)                         | Property of the documented map                             | @prop                   |
-| [@require](#requires)                      | Requirements from the documented item                      | @requires               |
-| [@return](#returns-synonym-return)         | Return from the documented function                        | @returns                |
+| [@parameter](#parameter)                   | Parameters from the documented mixin or function           | @param, @arg, @argument |
+| [@property](#property)                     | Property of the documented map                             | @prop                   |
+| [@require](#require)                       | Requirements from the documented item                      | @requires               |
+| [@return](#return)                         | Return from the documented function                        | @returns                |
 | [@see](#see)                               | Resource related to the documented item                    | &mdash;                 |
 | [@since](#since)                           | Changelog for the documented item                          | &mdash;                 |
-| [@throw](#throws-synonym-throw-exception)  | Exceptions raised by the documented item                   | @throws, @exception     |
+| [@throw](#throw)                           | Exceptions raised by the documented item                   | @throws, @exception     |
 | [@todo](#todo)                             | Things to do related to the documented item                | &mdash;                 |
 | [@type](#type)                             | Describes the type of a variable                           | &mdash;                 |
 
