@@ -56,7 +56,7 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
 
   <li class="author">
     <img src="http://1.gravatar.com/avatar/17b37204cf6010dca12951259135df7b?s=383&d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D383&r=G" alt="You" class="author__avatar">
-    <span class="author__name">You</span>
+    <a class="author__name" href="https://github.com/SassDoc/sassdoc/blob/develop/CONTRIBUTING.md">You</a>
     <span class="author__role">Contributor</span>
   </li>
 </ul>
