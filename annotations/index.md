@@ -175,13 +175,15 @@ Describes the documented item.
 
 {% highlight scss %}
 /// @example
-/// 4 + 2 = 8
-/// 4 / 2 = 2
+///   4 + 2 = 8
+///   4 / 2 = 2
 ///
 /// @example scss - Clamp function
-/// clamp(42, $min: 13, $max: 37)
-/// // 37
+///   clamp(42, $min: 13, $max: 37)
+///   // 37
 {% endhighlight %}
+
+<p class="note  note--info"><strong>Tip!</strong> In order to prevent any issue with lines starting with <code>@</code>, it is highly recommended &mdash; yet not mandatory &mdash; to always indent the content of an <code>@example</code> annotation.</p>
 
 ## @group
 

@@ -145,8 +145,8 @@ An item will look like this:
 
 {% highlight scss %}
 /// @example scss - basic usage
-/// clamp(42, $min: 13, $max: 37)
-/// // 37
+///   clamp(42, $min: 13, $max: 37)
+///   // 37
 {% endhighlight %}
 
 An item will look like this:
