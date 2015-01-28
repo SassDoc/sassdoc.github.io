@@ -1,5 +1,5 @@
 .highlight {
-    background: mix($blue, $black, 80%);
+    background: mix($tertiary-color, $black, 80%);
     font-family: $code-font-stack;
     overflow: auto;
     border-left: .5em solid $black;
@@ -17,7 +17,7 @@
 
 :not(pre) > code {
     font-family: $code-font-stack;
-    color: $blue;
+    color: $tertiary-color;
     font-weight: bold;
 }
 
@@ -79,7 +79,7 @@
 
 .highlight .kc,
 .highlight .kd {
-    color: mix($blue, white, 30%);
+    color: mix($tertiary-color, white, 30%);
 }
 
 .highlight .kn {
@@ -139,7 +139,7 @@
 }
 
 .highlight .nx {
-    color: $pink;
+    color: $primary-color;
 }
 
 .highlight .py {
@@ -148,7 +148,7 @@
 
 .highlight .nt,
 .l-Scalar-Plain {
-    color: $pink;
+    color: $primary-color;
 }
 
 .highlight .nv {
@@ -174,7 +174,7 @@
 .highlight .sb,
 .highlight .sc,
 .highlight .sd {
-    color: $yellow;
+    color: $secondary-color;
 }
 
 .highlight .se {

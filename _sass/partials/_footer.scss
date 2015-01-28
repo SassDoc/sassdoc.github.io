@@ -1,6 +1,6 @@
 .footer {
-    background-color: $blue;
-    color: $yellow;
+    background-color: $tertiary-color;
+    color: $secondary-color;
     clear: both;
     text-align: center;
     padding: 1em 0;
@@ -10,7 +10,7 @@
     }
 
     a {
-        color: $yellow;
+        color: $secondary-color;
     }
 }
 

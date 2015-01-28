@@ -18,6 +18,6 @@
     padding: 1em;
 
     @include respond-to("large") {
-        border-left: $sidebar-width solid $pink;
+        border-left: $sidebar-width solid $primary-color;
     }
 }

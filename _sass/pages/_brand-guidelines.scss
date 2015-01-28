@@ -27,17 +27,17 @@
     }
 }
 
-.color--pink {
-    background-color: $pink;
+.color--primary {
+    background-color: $primary-color;
 }
 
-.color--blue {
-    background-color: $blue;
+.color--secondary {
+    background-color: $secondary-color;
+}
+
+.color--tertiary {
+    background-color: $tertiary-color;
     color: white;
-}
-
-.color--yellow {
-    background-color: $yellow;
 }
 
 .color--black {
@@ -51,4 +51,18 @@
 
 .color__value {
     display: block;
+}
+
+.logo-table {
+    width: 100%;
+
+    td {
+        padding: 1em;
+        border: 1px solid silver;
+    }
+
+    img {
+        display: block;
+        height: auto;
+    }
 }
