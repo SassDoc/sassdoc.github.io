@@ -100,35 +100,6 @@ t.upgrading = () =>
 
 // }}}
 
-// Preview {{{
-// ===========
-
-t.preview = async () => {
-  const theme = 'node_modules/sassdoc-theme-default'
-  const preview = 'assets/images/preview-image.png'
-
-  im('Compiling `default` theme in `.preview`.')
-
-  await sassdoc(`${theme}/scss`, {
-    dest: '.preview',
-    package: `${theme}/package.json`,
-    verbose: true,
-  })
-
-  im(`Taking a screenshot in \`${preview}\`.`)
-
-  await shot({
-    url: furl('.preview/index.html'),
-    width: 1200,
-    height: 675,
-  })
-    .then(writeFile(preview))
-
-  await fse.remove('.preview')
-}
-
-// }}}
-
 // Themes {{{
 // ==========
 
@@ -208,6 +179,37 @@ t.themes = async () => {
   }
 
   await promisePipe(combined, output)
+}
+
+// }}}
+
+// Preview {{{
+// ===========
+
+t.preview = async () => {
+  // Ensure sample directory exists.
+  await t.sample()
+
+  const preview = 'assets/images/preview-image.png'
+
+  im('Compiling `default` theme in `.preview`.')
+
+  await sassdoc(sampleDir, {
+    dest: '.preview',
+    package: `node_modules/sassdoc-theme-default/package.json`,
+    verbose: true,
+  })
+
+  im(`Taking a screenshot in \`${preview}\`.`)
+
+  await shot({
+    url: furl('.preview/index.html'),
+    width: 1200,
+    height: 675,
+  })
+    .then(writeFile(preview))
+
+  await fse.remove('.preview')
 }
 
 // }}}
