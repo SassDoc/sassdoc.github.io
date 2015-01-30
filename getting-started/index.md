@@ -26,7 +26,7 @@ sassdoc [options]
 
 ... where:
 
-* `<src>` is the path to one or more Sass folders or [glob expressions](https://github.com/isaacs/node-glob#glob-primer) to SCSS/Sass files; `-` is given instead, SassDoc will read from stdin;
+* `<src>` is the path to one or more Sass folders or [glob expressions](https://github.com/isaacs/node-glob#glob-primer) to SCSS/Sass files; if `-` is given instead, SassDoc will read from stdin;
 * `[options]` are the [options](#options).
 
 ## Options
