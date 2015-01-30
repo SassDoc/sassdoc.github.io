@@ -161,3 +161,10 @@
         width: auto;
     }
 }
+
+.home__note {
+    border: .1em solid $tertiary-color;
+    border-radius: .25em;
+    padding: .5em .25em;
+    text-align: center;
+}

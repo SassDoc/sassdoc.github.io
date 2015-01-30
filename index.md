@@ -33,7 +33,7 @@ sassdoc source/
 <section class="home__section">
     <div class="container">
 
-        <p class="note  note--success">Already using SassDoc? <a href="{{ site.baseurl }}/upgrading/">Upgrade to version 2</a> right away!</p>
+        <p class="home__note">Already using SassDoc? <a href="{{ site.baseurl }}/upgrading/">Upgrade to version 2</a> right away!</p>
 
         <p>SassDoc is to Sass what JSDoc is to JavaScript: a documentation system to build pretty and powerful docs in the blink of an eye. Among other things, SassDoc is:</p>
 
