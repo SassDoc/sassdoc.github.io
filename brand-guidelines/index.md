@@ -51,16 +51,16 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 <table class="logo-table">
     <tbody>
         <tr>
-            <td><img src="/assets/images/logo_full_compact.svg" alt="SassDoc Logo, squared & compact version" /></td>
-            <td><img src="/assets/images/logo_light_compact.svg" alt="SassDoc Logo, light and compact version" /></td>
+            <td><img src="{{ site.baseurl }}/assets/images/logo_full_compact.svg" alt="SassDoc Logo, squared & compact version" /></td>
+            <td><img src="{{ site.baseurl }}/assets/images/logo_light_compact.svg" alt="SassDoc Logo, light and compact version" /></td>
         </tr>
         <tr>
             <td><a href="https://sassdoc.com/assets/images/logo_full_compact.svg" target="_blank">Full Compact Version (.svg)</a></td>
             <td><a href="https://sassdoc.com/assets/images/logo_light_compact.svg" target="_blank">Light Compact Version (.svg)</a></td>
         </tr>
         <tr>
-            <td><img src="/assets/images/logo_full_inline.svg" alt="SassDoc Logo, light and compact version" /></td>
-            <td><img src="/assets/images/logo_light_inline.svg" alt="SassDoc Logo, light and inline version" /></td>
+            <td><img src="{{ site.baseurl }}/assets/images/logo_full_inline.svg" alt="SassDoc Logo, light and compact version" /></td>
+            <td><img src="{{ site.baseurl }}/assets/images/logo_light_inline.svg" alt="SassDoc Logo, light and inline version" /></td>
         </tr>
         <tr>
             <td><a href="https://sassdoc.com/assets/images/logo_full_inline.svg" target="_blank">Full Inline Version (.svg)</a></td>
