@@ -6,13 +6,10 @@ title: "Release the docs!"
 <div class="megatron">
     <div class="megatron__top  clearfix">
         <div class="container">
-            <img class="megatron__illustration" alt="SassDoc, release the docs!" src="{{ site.baseurl }}/assets/images/illustration.png" />
+            <img class="megatron__illustration" alt="SassDoc, release the docs!" src="{{ site.baseurl }}/assets/images/illustration.svg" />
 
             <div class="megatron__content">
 {% highlight bash %}
-# Ensure npm 2.0 is installed
-npm install npm@latest -g
-
 # Install SassDoc globally
 npm install sassdoc -g
 

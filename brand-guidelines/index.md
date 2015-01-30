@@ -71,6 +71,15 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 
 ## Illustration
 
-![PNG Logo]({{ site.baseurl }}/assets/images/illustration.png)
+<table class="logo-table">
+    <tbody>
+        <tr>
+            <td><img src="{{ site.baseurl }}/assets/images/illustration.svg" alt="SassDoc illustration" /></td>
+        </tr>
+        <tr>
+            <td><a href="{{ site.baseurl }}/assets/images/illustration.svg" target="_blank">Illustration (.svg)</a></td>
+        </tr>
+    </tbody>
+</table>
 
 {% include routes.html %}
