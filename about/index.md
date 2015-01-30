@@ -9,7 +9,7 @@ There is nothing new with SassDoc. It has nothing of a revolutionnary idea; ther
 
 Still, we needed this. We needed a way to document our Sass files, APIs, frameworks, libraries and whatever. Thus, this project.
 
-SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Galliat](https://twitter.com/valeriangalliat), [Hugo Giraudel](https://twitter.com/hugogiraudel) and [Fabrice Weinberg](https://twitter.com/fweinb), a.k.a [SassDoc team](https://github.com/sassdoc) with the help of [Why Alix](https://twitter.com/isendil) for the design and [Reda Lemeden](https://twitter.com/kaishin) for the logo. And perhaps you, if you feel like <a href="{{ site.data.routes.contributing }}">contributing</a>!
+SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Galliat](https://twitter.com/valeriangalliat), [Hugo Giraudel](https://twitter.com/hugogiraudel) and [Fabrice Weinberg](https://twitter.com/fweinb), a.k.a [SassDoc team](https://github.com/sassdoc) with the help of [Why Alix](https://twitter.com/whyalix) for the design and [Reda Lemeden](https://twitter.com/kaishin) for the logo. And perhaps you, if you feel like <a href="{{ site.data.routes.contributing }}">contributing</a>!
 
 ## Core Team
 
@@ -43,8 +43,8 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
 
 <ul class="authors">
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/1839011731/cupkace-detoure_reasonably_small_400x400.jpg" alt="Why Alix" class="author__avatar">
-    <a class="author__name" href="https://twitter.com/isendil">Why Alix</a>
+    <img src="https://pbs.twimg.com/profile_images/561287689580732418/WHJblIbk_400x400.jpeg" alt="Why Alix" class="author__avatar">
+    <a class="author__name" href="https://twitter.com/whyalix">Why Alix</a>
     <span class="author__role">Poulpix drawer</span>
   </li>
 
