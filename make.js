@@ -23,7 +23,7 @@ const zip = require('array-zip')
 // Helpers {{{
 // ===========
 
-const repoUrl = 'https://raw.githubusercontent.com/SassDoc/sassdoc/develop'
+const repoUrl = 'https://raw.githubusercontent.com/SassDoc/sassdoc/master'
 
 // Say what I'm doing.
 function im(...args) {
