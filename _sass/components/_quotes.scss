@@ -28,7 +28,7 @@
     margin: 0;
 
     a {
-        color: $blue;
+        color: $tertiary-color;
     }
 }
 
@@ -39,7 +39,7 @@
 
 .quote__content::before,
 .quote__content::after {
-    color: $blue;
+    color: $tertiary-color;
 }
 
 .quote__content::before {

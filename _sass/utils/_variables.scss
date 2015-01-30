@@ -18,9 +18,9 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 /// @type Color
 $pink: #dd5a6f;
 
-/// Blue
+/// Purple
 /// @type Color
-$blue: #135c6a;
+$purple: #5c4863;
 
 /// Yellow
 /// @type Color
@@ -29,6 +29,18 @@ $yellow: #ffc93c;
 /// Black
 /// @type Color
 $black: #333;
+
+/// Primary color
+/// @type Color
+$primary-color: $pink;
+
+/// Primary color
+/// @type Color
+$secondary-color: $yellow;
+
+/// Primary color
+/// @type Color
+$tertiary-color: $purple;
 
 /// Breakpoints
 /// @type Map

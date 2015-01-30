@@ -1,5 +1,5 @@
 .sidebar {
-    background: $pink;
+    background: $primary-color;
     text-align: center;
     padding: 1em;
 
@@ -25,7 +25,7 @@
     border-bottom: 1px solid rgba(black, .1);
     padding: .45em .9em;
     margin: 0;
-    color: $yellow !important;
+    color: $secondary-color !important;
 
     @include respond-to("large") {
         border: none;
@@ -39,7 +39,7 @@
     padding-left: 0;
     font-size: .9em;
     padding-bottom: 1.5em;
-    border-bottom: .25em solid $yellow;
+    border-bottom: .25em solid $secondary-color;
     margin: 0;
 
     @include respond-to("large") {
@@ -75,7 +75,7 @@
     }
 
     &.active a {
-        color: $yellow;
+        color: $secondary-color;
         font-weight: bold;
     }
 }
@@ -111,7 +111,7 @@
     &:hover,
     &:focus,
     &:active {
-        background: $pink;
+        background: $primary-color;
     }
 
     @include respond-to("large") {

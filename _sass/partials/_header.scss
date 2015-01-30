@@ -4,7 +4,7 @@
     padding: 1em 0;
 
     @include respond-to("large") {
-        border-bottom: .5em solid $pink;
+        border-bottom: .5em solid $primary-color;
         text-align: left;
     }
 
@@ -34,6 +34,8 @@
 }
 
 .nav__item {
+    display: inline-block;
+
     @include respond-to("large") {
        float: left;
     }
@@ -45,9 +47,17 @@
     }
 }
 
+.nav__item--no-small {
+    display: none;
+
+    @include respond-to("large") {
+        display: block;
+    }
+}
+
 .nav__link {
     display: block;
-    padding: 1em;
+    padding: .5em;
     position: relative;
 
     &:hover {
@@ -55,6 +65,8 @@
     }
 
     @include respond-to("large") {
+        padding: 1em;
+
         &::after {
             content: '';
             opacity: 0;
@@ -65,7 +77,7 @@
             bottom: -2em;
             border-left: .6em solid transparent;
             border-right: .6em solid transparent;
-            border-bottom: .75em solid $pink;
+            border-bottom: .75em solid $primary-color;
             left: 50%;
             margin-left: -.3em;
         }
@@ -78,30 +90,26 @@
 }
 
 .logo {
+    margin: 0 1em;
+    display: block;
+
     img {
         margin: 0 auto 1em;
     }
 
     @include respond-to("large") {
-        float: left;
-        margin-right: 1em;
-        padding: 1em 0;
-
-        img {
-            margin-top: -.5em;
-            max-width: 3em;
-        }
+        display: none;
     }
 
     @include respond-to("huge") {
-        padding: 0;
         position: absolute;
         right: 100%;
         top: 50%;
-        margin-top: -1em;
+        margin: -1.45em 0 0;
+        display: block;
 
         img {
-            max-width: 3em;
+            max-width: 8em;
         }
     }
 }
@@ -109,14 +117,16 @@
 .main-title {
     text-align: center;
     text-transform: uppercase;
-    color: $pink;
+    color: $primary-color;
     font-weight: bold;
-    font-size: 2.5em;
-    margin: 0;
+    font-size: 1.5em;
+    margin: 0 0 1em;
 
     @include respond-to("large") {
+        font-size: 2.5em;
         text-align: left;
         float: left;
+        margin: 0;
     }
 }
 

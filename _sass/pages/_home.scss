@@ -14,7 +14,7 @@
 .megatron__top {
     position: relative;
     padding: 2em 0;
-    background: $yellow;
+    background: $secondary-color;
 
 
     .highlight {
@@ -38,7 +38,7 @@
             }
 
             .c {
-                color: $blue;
+                color: $tertiary-color;
             }
 
             .nb {
@@ -49,7 +49,7 @@
 }
 
 .megatron__bottom {
-    background: $pink;
+    background: $primary-color;
     padding: .5em 0;
 }
 
@@ -110,7 +110,7 @@
 
     &:first-of-type {
         margin-top: 0;
-        background: url(http://subtlepatterns.com/patterns/gplaypattern.png);
+        background: url('http://subtlepatterns.com/patterns/gplaypattern.png');
         padding-top: 4em;
     }
 
@@ -121,7 +121,7 @@
 
 .home__section-heading {
     margin: 0;
-    color: $pink;
+    color: $primary-color;
     font-size: 1.5em;
     text-transform: uppercase;
     text-align: center;
@@ -137,16 +137,20 @@
 }
 
 .home__section-content {
-    border-top: .4em solid $pink;
+    border-top: .4em solid $primary-color;
     padding-top: 3em;
-    margin-top: -.85em;
+    margin-top: -0.65em;
+
+    @include respond-to("large") {
+        margin-top: -0.95em;
+    }
 }
 
 
 .home__section--catcher {
     font-size: 1.5em;
     text-align: center;
-    background: url(http://subtlepatterns.com/patterns/gplaypattern.png);
+    background: url('http://subtlepatterns.com/patterns/gplaypattern.png');
 
     .home__section-content {
         margin: 0;

@@ -26,18 +26,18 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 ## Colors
 
 <ul class="colors">
-    <li class="color  color--yellow">
-        <span class="color__name">$yellow</span>
-        <span class="color__value">#ffc93c</span>
-    </li>
-
-    <li class="color  color--pink">
-        <span class="color__name">$pink</span>
+    <li class="color  color--primary">
+        <span class="color__name">$primary-color</span>
         <span class="color__value">#dd5a6f</span>
     </li>
 
-    <li class="color  color--blue">
-        <span class="color__name">$blue</span>
+    <li class="color  color--secondary">
+        <span class="color__name">$secondary-color</span>
+        <span class="color__value">#ffc93c</span>
+    </li>
+
+    <li class="color  color--tertiary">
+        <span class="color__name">$tertiary-color</span>
         <span class="color__value">#135c6a</span>
     </li>
 
@@ -48,7 +48,26 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 </ul>
 
 ## Logo
-
+<table class="logo-table">
+    <tbody>
+        <tr>
+            <td><img src="/assets/images/logo_full_compact.svg" alt="SassDoc Logo, squared & compact version" /></td>
+            <td><img src="/assets/images/logo_light_compact.svg" alt="SassDoc Logo, light and compact version" /></td>
+        </tr>
+        <tr>
+            <td><a href="https://sassdoc.com/assets/images/logo_full_compact.svg" target="_blank">Full Compact Version (.svg)</a></td>
+            <td><a href="https://sassdoc.com/assets/images/logo_light_compact.svg" target="_blank">Light Compact Version (.svg)</a></td>
+        </tr>
+        <tr>
+            <td><img src="/assets/images/logo_full_inline.svg" alt="SassDoc Logo, light and compact version" /></td>
+            <td><img src="/assets/images/logo_light_inline.svg" alt="SassDoc Logo, light and inline version" /></td>
+        </tr>
+        <tr>
+            <td><a href="https://sassdoc.com/assets/images/logo_full_inline.svg" target="_blank">Full Inline Version (.svg)</a></td>
+            <td><a href="https://sassdoc.com/assets/images/logo_light_inline.svg" target="_blank">Light Inline Version (.svg)</a></td>
+        </tr>
+    </tbody>
+</table>
 
 ## Illustration
 
