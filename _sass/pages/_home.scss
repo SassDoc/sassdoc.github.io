@@ -50,7 +50,11 @@
 
 .megatron__bottom {
     background: $primary-color;
-    padding: .5em 0;
+    padding: 1em 0;
+
+    @include respond-to("large") {
+        padding: .5em 0;
+    }
 }
 
 .megatron__content {
@@ -83,7 +87,7 @@
 }
 
 .megatron__illustration {
-    margin: 0 auto 1em;
+    margin: 0 auto 2em;
 
     @include respond-to("large") {
         margin-top: 0;
