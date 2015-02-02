@@ -21,7 +21,6 @@ Write [SassDoc compliant comments][annotations]. The syntax is pretty close to J
 {% highlight bash %}
 sassdoc <src>... [options]
 sassdoc - [options]
-sassdoc [options]
 {% endhighlight %}
 
 ... where:
