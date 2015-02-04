@@ -19,7 +19,7 @@
   image: sass-mq.png
 
 - name: SassyIcons
-  url: http://pascalduez.github.io/SassyIcons/docs/
+  url: http://pascalduez.github.io/SassyIcons/
   image: sassyicons.png
 
 - name: SassyFilters
