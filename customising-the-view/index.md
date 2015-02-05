@@ -13,15 +13,16 @@ This is done exactly like the regular configuration, within the same configurati
 
 [SassDoc's default theme][repo_theme] has a couple of options to give you some extra power over the view.
 
-| Option              | Type    | Default                 |
-|---------------------|---------|-------------------------|
-| `display.access`    | Array   | `["public", "private"]` |
-| `display.alias`     | Boolean | `false`                 |
-| `display.watermark` | Boolean | `true`                  |
-| `basePath`          | String  | `""`                    |
-| `shortcutIcon`      | String  | `""`                    |
-| `googleAnalytics`   | String  | `""`                    |
-| `trackingCode`      | String  | `""`                    |
+| Option              | Type            | Default                 |
+|---------------------|-----------------|-------------------------|
+| `display.access`    | Array           | `["public", "private"]` |
+| `display.alias`     | Boolean         | `false`                 |
+| `display.watermark` | Boolean         | `true`                  |
+| `basePath`          | String          | `""`                    |
+| `shortcutIcon`      | String          | `""`                    |
+| `googleAnalytics`   | String          | `""`                    |
+| `trackingCode`      | String          | `""`                    |
+| `privatePrefix`     | Regex           | `^[_-]`                 |
 
 ## Visibility display
 
@@ -143,3 +144,17 @@ tracking: |
 {% endhighlight %}
 
 {% include routes.html %}
+
+## Private Prefix
+
+It is common practice to prefix so called *private* items by an underscore (`_`) in languages that do not provide a way to have actual private members in order to indicate they are internal tools not meant to be used as part of the public API.
+
+Adding to this, Sass treats hyphens and underscores exactly the same in identifiers, so `_foo` and `-foo` are equivalent when it comes to a functions, mixins and variables name (not for placeholders though, which behave more like CSS classes where `_` and `-` are not the same).
+
+When applied to SassDoc, it means that SassDoc will automatically assume that an item is private (i.e. `@access private`) if it starts with an hyphen or an underscore. You can configure this with the `privatePrefix` option.
+
+When set to `false`, it intimates SassDoc not to assume anything. On the other hand, if a regular expression is given (default is `^[_-]`), SassDoc will assume the item is private if its name matches.
+
+{% highlight yaml %}
+privatePrefix: ^[_-]
+{% endhighlight %}
