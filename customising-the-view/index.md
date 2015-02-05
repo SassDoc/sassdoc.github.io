@@ -26,6 +26,7 @@ This is done exactly like the regular configuration, within the same configurati
 | `sort`              | Array   | &mdash;                 |
 | `description`       | String  | &mdash;                 |
 | `descriptionPath`   | String  | &mdash;                 |
+| `privatePrefix`     | Regex   | `^[_-]`                 |
 
 ## Visibility display
 
