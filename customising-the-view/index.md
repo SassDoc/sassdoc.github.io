@@ -23,6 +23,7 @@ This is done exactly like the regular configuration, within the same configurati
 | `googleAnalytics`   | String          | `""`                    |
 | `trackingCode`      | String          | `""`                    |
 | `privatePrefix`     | Regex           | `^[_-]`                 |
+| `sort`              | Array           |                         |
 
 ## Visibility display
 
@@ -94,6 +95,31 @@ trackingCode: |
 <p class="note  note--info"><strong>Note:</strong> in YAML, you can leave a single pipe on the first line to indicate that the everything until the next key is a literal string.</p>
 
 <p class="note  note--danger"><strong>Beware!</strong> This is a possible door to JavaScript code injection. Be careful.</p>
+
+## Sort
+
+You can customize the order of your items with this option.
+
+Supported criteria are:
+
+* [`group`]({{ site.data.routes.configuration }}#groups)
+* `file`
+* [`line`]({{ site.data.routes.annotations }}#comment-range)
+* [`access`]({{ site.data.routes.annotations }}#access)
+
+The `sort` context key is an array of strings, representing a sort
+criteria plus an optional sort order. The sort order is determined if
+the last character is either `>` or `<` (respectively desc and asc).
+
+{% highlight yaml %}
+sort:
+  - access
+  - line>
+  - group
+  - file
+{% endhighlight %}
+
+This will sort the data by access (public first, then private, `access>` would have inverted the order), then by descending line (last items in the file first), then by alphetical group (case insensitive), then by file.
 
 ## Example
 
