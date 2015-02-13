@@ -18,11 +18,11 @@ This is done exactly like the regular configuration, within the same configurati
 | `display.access`    | Array   | `["public", "private"]` |
 | `display.alias`     | Boolean | `false`                 |
 | `display.watermark` | Boolean | `true`                  |
-| `basePath`          | String  | `""`                    |
-| `shortcutIcon`      | String  | `""`                    |
-| `googleAnalytics`   | String  | `""`                    |
-| `trackingCode`      | String  | `""`                    |
-| `sort`              | Array   |                         |
+| `basePath`          | String  | &mdash;                 |
+| `shortcutIcon`      | String  | &mdash;                 |
+| `googleAnalytics`   | String  | &mdash;                 |
+| `trackingCode`      | String  | &mdash;                 |
+| `sort`              | Array   | &mdash;                 |
 
 ## Visibility display
 
