@@ -13,17 +13,17 @@ This is done exactly like the regular configuration, within the same configurati
 
 [SassDoc's default theme][repo_theme] has a couple of options to give you some extra power over the view.
 
-| Option              | Type            | Default                 |
-|---------------------|-----------------|-------------------------|
-| `display.access`    | Array           | `["public", "private"]` |
-| `display.alias`     | Boolean         | `false`                 |
-| `display.watermark` | Boolean         | `true`                  |
-| `basePath`          | String          | `""`                    |
-| `shortcutIcon`      | String          | `""`                    |
-| `googleAnalytics`   | String          | `""`                    |
-| `trackingCode`      | String          | `""`                    |
-| `privatePrefix`     | Regex           | `^[_-]`                 |
-| `sort`              | Array           |                         |
+| Option              | Type    | Default                 |
+|---------------------|---------|-------------------------|
+| `display.access`    | Array   | `["public", "private"]` |
+| `display.alias`     | Boolean | `false`                 |
+| `display.watermark` | Boolean | `true`                  |
+| `basePath`          | String  | &mdash;                 |
+| `shortcutIcon`      | String  | &mdash;                 |
+| `googleAnalytics`   | String  | &mdash;                 |
+| `trackingCode`      | String  | &mdash;                 |
+| `privatePrefix`     | Regex   | `^[_-]`                 |
+| `sort`              | Array   | &mdash;                 |
 
 ## Visibility display
 
