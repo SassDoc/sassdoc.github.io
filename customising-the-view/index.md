@@ -23,6 +23,8 @@ This is done exactly like the regular configuration, within the same configurati
 | `googleAnalytics`   | String  | &mdash;                 |
 | `trackingCode`      | String  | &mdash;                 |
 | `sort`              | Array   | &mdash;                 |
+| `description`       | String  | &mdash;                 |
+| `descriptionPath`   | String  | &mdash;                 |
 
 ## Visibility display
 
@@ -119,6 +121,26 @@ sort:
 {% endhighlight %}
 
 This will sort the data by access (public first, then private, `access>` would have inverted the order), then by descending line (last items in the file first), then by alphetical group (case insensitive), then by file.
+
+## Description
+
+You can define a complete description of your project (unlike `package.description` which is a short overview). It is parsed as Markdown.
+
+{% highlight yaml %}
+description: |
+  This is the description of the project!
+
+  * It is parsed as markdown.
+  * It is displayed in your documentation page.
+{% endhighlight %}
+
+## Description path
+
+If you prefer to externalize the description in a file, you can use the `descriptionPath` option, which will populate (or overwrite) the `description` option. It is relative to the configuration file, and parsed as Markdown.
+
+{% highlight yaml %}
+descriptionPath: ../README.md
+{% endhighlight %}
 
 ## Example
 
