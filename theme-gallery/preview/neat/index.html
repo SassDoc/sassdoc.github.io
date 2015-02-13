@@ -1,0 +1,4682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="&lt;p&gt;SassDoc theme used in the Bourbon suite.&lt;/p&gt;
+">
+    <link href="http://fonts.googleapis.com/css?family=Nunito:300,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+    <title></title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body>
+    
+<nav class="side-nav">
+  <ul class="social">
+    <li><a class="github" href="">GitHub / Install</a></li>
+    <li><a class="twitter" href="">Twitter</a></li>
+    <li><a class="gitter" href="">Gitter</a></li>
+  </ul>
+
+  <a class="logo-container" href="">
+    <img alt=" Logo" class="logo" src="">
+  </a>
+
+  <ul class="list">
+    
+      
+        
+          <li class="title">
+  <a href="#mixin">
+    <h3 class="type-heading">mixins</h3>
+  </a>
+</li>
+
+
+  <li><a href="#keyframes">keyframes</a></li>
+
+  <li><a href="#prefixer">prefixer</a></li>
+
+  <li><a href="#opacity">opacity</a></li>
+
+
+        
+      
+      
+        
+      
+      
+        
+      
+    
+      
+        
+          <li class="title">
+  <a href="#mixin">
+    <h3 class="type-heading">mixins</h3>
+  </a>
+</li>
+
+
+  <li><a href="#clearfix">clearfix</a></li>
+
+  <li><a href="#visually-hidden">visually-hidden</a></li>
+
+  <li><a href="#ellipsis">ellipsis</a></li>
+
+
+        
+      
+      
+        
+      
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+          <li class="title">
+  <a href="#mixin">
+    <h3 class="type-heading">mixins</h3>
+  </a>
+</li>
+
+
+  <li><a href="#size">size</a></li>
+
+  <li><a href="#position">position</a></li>
+
+  <li><a href="#absolute">absolute</a></li>
+
+  <li><a href="#relative">relative</a></li>
+
+  <li><a href="#fixed">fixed</a></li>
+
+  <li><a href="#respond-to">respond-to</a></li>
+
+  <li><a href="#inline-block">inline-block</a></li>
+
+  <li><a href="#card">card</a></li>
+
+  <li><a href="#on-event">on-event</a></li>
+
+  <li><a href="#when-inside">when-inside</a></li>
+
+
+        
+      
+        
+      
+      
+        
+          <li class="title">
+  <a href="#function">
+    <h3 class="type-heading">functions</h3>
+  </a>
+</li>
+
+
+  <li><a href="#opposite-direction">opposite-direction</a></li>
+
+  <li><a href="#clamp">clamp</a></li>
+
+  <li><a href="#z">z</a></li>
+
+  <li><a href="#is-valid-length">is-valid-length</a></li>
+
+  <li><a href="#top-shadow">top-shadow</a></li>
+
+  <li><a href="#bottom-shadow">bottom-shadow</a></li>
+
+
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+      
+        
+      
+        
+      
+        
+          <li class="title">
+  <a href="#variable">
+    <h3 class="type-heading">variables</h3>
+  </a>
+</li>
+
+
+  <li><a href="#pink">pink</a></li>
+
+  <li><a href="#purple">purple</a></li>
+
+  <li><a href="#yellow">yellow</a></li>
+
+  <li><a href="#black">black</a></li>
+
+  <li><a href="#primary-color">primary-color</a></li>
+
+  <li><a href="#secondary-color">secondary-color</a></li>
+
+  <li><a href="#tertiary-color">tertiary-color</a></li>
+
+  <li><a href="#light-grey">light-grey</a></li>
+
+  <li><a href="#medium-grey">medium-grey</a></li>
+
+  <li><a href="#breakpoints">breakpoints</a></li>
+
+  <li><a href="#z-indexes">z-indexes</a></li>
+
+  <li><a href="#sidebar-width">sidebar-width</a></li>
+
+  <li><a href="#vertical-rhythm">vertical-rhythm</a></li>
+
+  <li><a href="#text-font-stack">text-font-stack</a></li>
+
+  <li><a href="#code-font-stack">code-font-stack</a></li>
+
+
+        
+      
+    
+  </ul>
+</nav>
+
+
+    <div class="main-content">
+      
+  <header class="search-bar">
+    <section data-role="content-wrapper">
+      <div class="meta-data">
+        <h1>Sassdoc-theme-neat <span>0.0.2</span></h1>
+      </div>
+
+      <div class="search-form" data-role="search-form">
+        <input name="search" type="text" class="search-field" autocomplete="off" autofocus id="search-field" placeholder="Search documentation..." />
+        <ul class="suggestion-container"></ul>
+      </div>
+    </section>
+  </header>
+
+  <section class="main-inner">
+    
+      
+        
+          <h1 id="mixin" class="type-title">
+  <span data-role="content-wrapper">
+    mixins
+  </span>
+</h1>
+
+<section class="mixins">
+  
+    
+
+<article id="keyframes" data-name="keyframes" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#keyframes">
+      keyframes
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin keyframes($name) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Mixin to handle cross browser keyframes for CSS animations.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$name</code>
+      <ul class="meta">
+        <span class="type-label">String</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Animation name</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="prefixer" data-name="prefixer" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#prefixer">
+      prefixer
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin prefixer($property, $value, $vendors: &#39;webkit&#39; &#39;moz&#39; &#39;ms&#39; &#39;o&#39;) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Mixin to prefix properties that are not prefixed by Compass</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$property</code>
+      <ul class="meta">
+        <span class="type-label">String</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Property to prefix</p>
+
+      </div>
+    </dd>
+  
+    <dt class="parameter">
+      <code class="name">$value</code>
+      <ul class="meta">
+        <span class="type-label">*</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Value for property</p>
+
+      </div>
+    </dd>
+  
+    <dt class="parameter">
+      <code class="name">$vendors</code>
+      <ul class="meta">
+        <span class="type-label">List</span>
+        
+          <span class="default-label">
+            Default:<code>&#39;webkit&#39; &#39;moz&#39; &#39;ms&#39; &#39;o&#39;</code>
+          </span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Vendor prefixes to output</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+  <section class="example">
+    <h3 class="sub-heading">Example</h3>
+
+    
+      <pre class="code language-scss"><code> @include prefixer(&#39;transform&#39;, &#39;translate(10px)&#39;);</code></pre>
+      
+    </section>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="opacity" data-name="opacity" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#opacity">
+      opacity
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin opacity($opacity) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Mixin for cross-browser opacity (IE 8).
+Clamps the value between 0 and 1.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$opacity</code>
+      <ul class="meta">
+        <span class="type-label">Number</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Opacity level, between 0 and 1</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+</section>
+
+        
+      
+      
+        
+      
+      
+        
+      
+    
+      
+        
+          <h1 id="mixin" class="type-title">
+  <span data-role="content-wrapper">
+    mixins
+  </span>
+</h1>
+
+<section class="mixins">
+  
+    
+
+<article id="clearfix" data-name="clearfix" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#clearfix">
+      clearfix
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+        
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin clearfix($extend: true) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Float clearing helper.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$extend</code>
+      <ul class="meta">
+        <span class="type-label">Bool</span>
+        
+          <span class="default-label">
+            Default:<code>true</code>
+          </span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Whether or not extend a placeholder.</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="visually-hidden" data-name="visually-hidden" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#visually-hidden">
+      visually-hidden
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+        
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin visually-hidden($extend: true) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Accessibility hiding helper.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$extend</code>
+      <ul class="meta">
+        <span class="type-label">Bool</span>
+        
+          <span class="default-label">
+            Default:<code>true</code>
+          </span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Whether or not extend a placeholder.</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="ellipsis" data-name="ellipsis" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#ellipsis">
+      ellipsis
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+        
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin ellipsis($extend: true) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Accessibility ellipsis helper.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$extend</code>
+      <ul class="meta">
+        <span class="type-label">Bool</span>
+        
+          <span class="default-label">
+            Default:<code>true</code>
+          </span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Whether or not extend a placeholder.</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+</section>
+
+        
+      
+      
+        
+      
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+          <h1 id="mixin" class="type-title">
+  <span data-role="content-wrapper">
+    mixins
+  </span>
+</h1>
+
+<section class="mixins">
+  
+    
+
+<article id="size" data-name="size" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#size">
+      size
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin size($width, $height: $width) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Mixin to size elements.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$width</code>
+      <ul class="meta">
+        <span class="type-label">Number</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Width</p>
+
+      </div>
+    </dd>
+  
+    <dt class="parameter">
+      <code class="name">$height</code>
+      <ul class="meta">
+        <span class="type-label">Number</span>
+        
+          <span class="default-label">
+            Default:<code>$width</code>
+          </span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Height</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="position" data-name="position" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#position">
+      position
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+
+      
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+
+      
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+
+      
+        
+      
+    
+      
+
+      
+        
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Shorthand for positioning.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$position</code>
+      <ul class="meta">
+        <span class="type-label">String</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Position type (either <code>absolute</code>, <code>fixed</code> or <code>relative</code>)</p>
+
+      </div>
+    </dd>
+  
+    <dt class="parameter">
+      <code class="name">$top</code>
+      <ul class="meta">
+        <span class="type-label">Length</span>
+        
+          <span class="default-label">
+            Default:<code>null</code>
+          </span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Top offset</p>
+
+      </div>
+    </dd>
+  
+    <dt class="parameter">
+      <code class="name">$right</code>
+      <ul class="meta">
+        <span class="type-label">Length</span>
+        
+          <span class="default-label">
+            Default:<code>null</code>
+          </span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Right offset</p>
+
+      </div>
+    </dd>
+  
+    <dt class="parameter">
+      <code class="name">$bottom</code>
+      <ul class="meta">
+        <span class="type-label">Length</span>
+        
+          <span class="default-label">
+            Default:<code>null</code>
+          </span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Bottom offset</p>
+
+      </div>
+    </dd>
+  
+    <dt class="parameter">
+      <code class="name">$left</code>
+      <ul class="meta">
+        <span class="type-label">Length</span>
+        
+          <span class="default-label">
+            Default:<code>null</code>
+          </span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Left offset</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="absolute" data-name="absolute" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#absolute">
+      absolute
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+        
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin absolute($args...) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Shorthand for absolute positioning.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$args</code>
+      <ul class="meta">
+        <span class="type-label">Arglist</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Offsets</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+  <section class="example">
+    <h3 class="sub-heading">Example</h3>
+
+    
+      <pre class="code language-scss"><h4 class="description"><p>Stretch an item over its parent.</p>
+</h4><code> @include absolute($top: 0, $right: 0, $bottom: 0, $left: 0)</code></pre>
+      
+    </section>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="relative" data-name="relative" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#relative">
+      relative
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+        
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin relative($args...) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Shorthand for relative positioning.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$args</code>
+      <ul class="meta">
+        <span class="type-label">Arglist</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Offsets</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="fixed" data-name="fixed" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#fixed">
+      fixed
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+        
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin fixed($args...) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Shorthand for fixed positioning.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$args</code>
+      <ul class="meta">
+        <span class="type-label">Arglist</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Offsets</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="respond-to" data-name="respond-to" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#respond-to">
+      respond-to
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin respond-to($breakpoint) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Responsive manager.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$breakpoint</code>
+      <ul class="meta">
+        <span class="type-label">String</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Breakpoint</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="inline-block" data-name="inline-block" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#inline-block">
+      inline-block
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+        
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin inline-block($align: null) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Mixin handling inline-block and vertical-align at once.
+If no align is specified, then the <code>vertical-align</code> property won&#39;t be output.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$align</code>
+      <ul class="meta">
+        <span class="type-label">String</span>
+        
+          <span class="default-label">
+            Default:<code>null</code>
+          </span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Vertical align</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="card" data-name="card" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#card">
+      card
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin card($depth) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Gives a card depth effect.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$depth</code>
+      <ul class="meta">
+        <span class="type-label">Number</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>depth level [between 1 and 5]</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+  <h3 class="sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality">
+        
+          Google Design
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="on-event" data-name="on-event" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#on-event">
+      on-event
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+        
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin on-event($self: false) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Event wrapper.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$self</code>
+      <ul class="meta">
+        <span class="type-label">Bool</span>
+        
+          <span class="default-label">
+            Default:<code>false</code>
+          </span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Whether or not to include current selector</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+  <h3 class="sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="https://twitter.com/csswizardry/status/478938530342006784">
+        
+          Original tweet from Harry Roberts
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="when-inside" data-name="when-inside" data-type="mixin" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#when-inside">
+      when-inside
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@mixin when-inside($context) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Contexts</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$context</code>
+      <ul class="meta">
+        <span class="type-label">String, List</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>No description available.</p>
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+</section>
+
+        
+      
+        
+      
+      
+        
+          <h1 id="function" class="type-title">
+  <span data-role="content-wrapper">
+    functions
+  </span>
+</h1>
+
+<section class="functions">
+  
+    
+
+<article id="opposite-direction" data-name="opposite-direction" data-type="function" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#opposite-direction">
+      opposite-direction
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@function opposite-direction($directions) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Returns the opposite direction of every direction in <code>$directions</code>.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$directions</code>
+      <ul class="meta">
+        <span class="type-label">List</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Positions to revert</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+  <h3 class="sub-heading">Returns</h3>
+  <p class="item-description">
+  
+    List, Null
+  
+  </p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="clamp" data-name="clamp" data-type="function" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#clamp">
+      clamp
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@function clamp($value, $min, $max) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Clamp <code>$value</code> between <code>$min</code> and <code>$max</code>.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$value</code>
+      <ul class="meta">
+        <span class="type-label">Number</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Value to clamp between <code>$min</code> and <code>$max</code></p>
+
+      </div>
+    </dd>
+  
+    <dt class="parameter">
+      <code class="name">$min</code>
+      <ul class="meta">
+        <span class="type-label">Number</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Minimum value</p>
+
+      </div>
+    </dd>
+  
+    <dt class="parameter">
+      <code class="name">$max</code>
+      <ul class="meta">
+        <span class="type-label">Number</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Maximum value</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+  <h3 class="sub-heading">Returns</h3>
+  <p class="item-description">
+  
+    Number, Null
+  
+  </p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="z" data-name="z" data-type="function" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#z">
+      z
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@function z($layer) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Helper to manage <code>z-index</code>.
+Tries to fetch the z-index mapped to <code>$layer</code> in <code>$z-indexes</code> map.
+If found, returns it, else returns <code>null</code>.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$layer</code>
+      <ul class="meta">
+        <span class="type-label">String</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Layer</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+  <h3 class="sub-heading">Returns</h3>
+  <p class="item-description">
+  
+    Number, Null
+  
+  </p>
+
+
+      
+        
+        
+  <section class="example">
+    <h3 class="sub-heading">Example</h3>
+
+    
+      <pre class="code language-scss"><code>z-index: z(&quot;default&quot;)</code></pre>
+      
+    </section>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="is-valid-length" data-name="is-valid-length" data-type="function" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#is-valid-length">
+      is-valid-length
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@function is-valid-length($value) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Tests whether the value is a valid length.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$value</code>
+      <ul class="meta">
+        <span class="type-label">*</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>Value to test</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+  <h3 class="sub-heading">Returns</h3>
+  <p class="item-description">
+  
+    Bool
+  
+  </p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="top-shadow" data-name="top-shadow" data-type="function" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#top-shadow">
+      top-shadow
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@function top-shadow($depth) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Computes a top-shadow for a card effect.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$depth</code>
+      <ul class="meta">
+        <span class="type-label">Number</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>depth level</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+  <h3 class="sub-heading">Returns</h3>
+  <p class="item-description">
+  
+    List
+  
+  </p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="bottom-shadow" data-name="bottom-shadow" data-type="function" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#bottom-shadow">
+      bottom-shadow
+    </a>
+  </h2>
+
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    
+    
+      
+
+      
+
+      
+
+      
+        
+      
+    
+    <pre class="code language-scss"><code>@function bottom-shadow($depth) { ... }</code></pre>
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Computes a bottom-shadow for a card effect.</p>
+</p>
+
+
+      
+        
+        
+  <h3 class="sub-heading">Parameters</h3>
+  <dl class="parameters">
+  
+    <dt class="parameter">
+      <code class="name">$depth</code>
+      <ul class="meta">
+        <span class="type-label">Number</span>
+        
+          <span class="required-label">Required</span>
+        
+      </ul>
+    </dt>
+    <dd class="parameter-definition">
+      <div class="description">
+        <p>depth level</p>
+
+      </div>
+    </dd>
+  
+  </dl>
+  
+
+      
+        
+        
+  <h3 class="sub-heading">Returns</h3>
+  <p class="item-description">
+  
+    List
+  
+  </p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+</section>
+
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+      
+        
+      
+        
+      
+        
+          <h1 id="variable" class="type-title">
+  <span data-role="content-wrapper">
+    variables
+  </span>
+</h1>
+
+<section class="variables">
+  
+    
+
+<article id="pink" data-name="pink" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#pink">
+      pink
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Color</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$pink: #dd5a6f;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Pink</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="purple" data-name="purple" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#purple">
+      purple
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Color</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$purple: #5c4863;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Purple</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="yellow" data-name="yellow" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#yellow">
+      yellow
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Color</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$yellow: #ffc93c;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Yellow</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="black" data-name="black" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#black">
+      black
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Color</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$black: #333;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Black</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="primary-color" data-name="primary-color" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#primary-color">
+      primary-color
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Color</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$primary-color: $pink;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Primary color</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="secondary-color" data-name="secondary-color" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#secondary-color">
+      secondary-color
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Color</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$secondary-color: $yellow;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Primary color</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="tertiary-color" data-name="tertiary-color" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#tertiary-color">
+      tertiary-color
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Color</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$tertiary-color: $purple;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Primary color</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="light-grey" data-name="light-grey" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#light-grey">
+      light-grey
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Color</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$light-grey: #e0e0e0;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Light grey</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="medium-grey" data-name="medium-grey" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#medium-grey">
+      medium-grey
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Color</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$medium-grey: #ddd;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Medium</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="breakpoints" data-name="breakpoints" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#breakpoints">
+      breakpoints
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Map</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$breakpoints: (
+  'small':  (max-width: 800px),
+  'medium': (min-width: 801px)
+) !global;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Map of breakpoints for responsive design.</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+  
+    
+      
+      <h3 class="sub-heading">See</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-respond-to"><code>respond-to</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="z-indexes" data-name="z-indexes" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#z-indexes">
+      z-indexes
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Map</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$z-indexes: (
+  'goku':       9001,
+  'modal':      5000,
+  'dropdown':   4000,
+  'social':     3000,
+  'default':       1,
+  'below':        -1
+) !global;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Z-indexes layers.</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+  
+    
+      
+      <h3 class="sub-heading">See</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-z"><code>z</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="sidebar-width" data-name="sidebar-width" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#sidebar-width">
+      sidebar-width
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Number</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$sidebar-width: 280px;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Sidebar width</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="vertical-rhythm" data-name="vertical-rhythm" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#vertical-rhythm">
+      vertical-rhythm
+    </a>
+  </h2>
+
+  
+    <span class="type-label">Number</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$vertical-rhythm: 1.5rem;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Vertical rhythm</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="text-font-stack" data-name="text-font-stack" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#text-font-stack">
+      text-font-stack
+    </a>
+  </h2>
+
+  
+    <span class="type-label">List</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Text font stack</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+    
+
+<article id="code-font-stack" data-name="code-font-stack" data-type="variable" class="item"
+  
+  >
+  <div data-role="content-wrapper">
+    <header class="title-bar">
+  <h2 class="item-title">
+    <a href="#code-font-stack">
+      code-font-stack
+    </a>
+  </h2>
+
+  
+    <span class="type-label">List</span>
+  
+
+  <div class="metadata">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+</header>
+
+    <div class="declaration">
+  
+    <pre class="code language-scss"><code>$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace;</code></pre>
+
+  
+</div>
+
+
+    
+      
+        
+        
+  <p><p>Code font stack</p>
+</p>
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+
+
+
+      
+        
+        
+
+      
+        
+        
+
+      
+        
+        
+
+      
+    
+  </div>
+</article>
+
+  
+</section>
+
+        
+      
+    
+    <footer class="footer">
+      <div data-role="content-wrapper" id="footer">
+  <a href=""><img class="footer-logo" src=""/></a>
+
+  <p>Neat is maintained and funded by <a href=""></a>.</p>
+  <p>Documentation generated using <a href="http://sassdoc.com/">SassDoc</a>.</p>
+  <p>The names and logos are trademarks of  © <span id="year"></span></p>
+</div>
+
+    </footer>
+  </section>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/vendor/waypoints.min.js"></script>
+<script src="assets/vendor/fuse.min.js"></script>
+<script src="assets/vendor/ticker.js"></script>
+<script src="assets/vendor/highlight.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '']);
+    _gaq.push(['_setDomainName', '']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+  </body>
+</html>

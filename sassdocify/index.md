@@ -5,10 +5,10 @@ title: "SassDocify"
 
 ## Introduction
 
-SassDocify is a little command-line tool that helps you publishing a [GitHub Pages](https://pages.github.com/) site with your SassDoc-powered documentation. It creates a `gh-pages` branch in the current git repository, and documents the `<src>` directory within it.
+SassDocify is a little command-line tool that helps you to publish a [GitHub Pages](https://pages.github.com/) site with your SassDoc-powered documentation. It creates a `gh-pages` branch in the current git repository, and documents the `<src>` directory within it.
 
 <p class="note  note--warning">
-  <strong>Important:</strong> SassDocify is a shell script and will work only on Unix systems (tested successfully on MacOS, Linux and BSD). If you run Windows, you can still use it through MinGW or a similar Unix tool set for Windows, though this haven't ben tested.
+  <strong>Important:</strong> SassDocify is a shell script and will work only on Unix systems (tested successfully on MacOS, Linux and BSD). If you run Windows, you can still use it through MinGW or a similar Unix tool set for Windows, though these haven't been tested.
 </p>
 
 ## Installation

@@ -3,6 +3,29 @@ layout: default
 title: "Changelog"
 ---
 
+## 2.0.7
+
+* Fix group sorting. ([e506be0](https://github.com/SassDoc/sassdoc/commit/e506be01df1bdbb378cdfa015b221b8ff72843d0))
+
+## 2.0.6
+
+* Graceful relative paths in CLI and config file. ([#362](https://github.com/SassDoc/sassdoc/issues/362),
+[c47dea1](https://github.com/SassDoc/sassdoc/commit/c47dea149771e995b1782fd917e48bec37df48f6))
+
+## 2.0.5
+
+* Fix an issue with relative path passed via CLI and configuration file ([#364](https://github.com/SassDoc/sassdoc/pull/364), [c47dea1](https://github.com/SassDoc/sassdoc/commit/c47dea149771e995b1782fd917e48bec37df48f6))
+
+## 2.0.4
+
+* Fix an issue with autofill and items that use a css keyword as name. ([#359](https://github.com/SassDoc/sassdoc/issues/359))
+* Fix an issue where `.sassdocrc` was ignored when using Node.js API
+([#363](https://github.com/SassDoc/sassdoc/issues/363))
+
+## 2.0.3
+
+* Fix the CLI synopsis, SassDoc can't be executed without arguments.
+
 ## 2.0.2
 
 * Move to 6to5 3 in `selfContained` mode to avoid global scope pollution ([#354](https://github.com/SassDoc/sassdoc/issues/354#issuecomment-72464640))
