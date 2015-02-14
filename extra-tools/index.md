@@ -7,11 +7,7 @@ layout: default
 
 If you have made up so far into building your own theme, you'll be pleased to now SassDoc comes with some [extra tools][repo_extras] for theme builders. Those filters add some features to SassDoc by post-processing the data.
 
-## Markdown
-
-You may have noticed most descriptions from annotations are parsed as Markdown. This is thanks to the Markdown filter from [sassdoc-extras][repo_extras] (using [Marked](https://github.com/chjj/marked)).
-
-Usage:
+Any extra is used by requiring `sassdoc-extras`, and calling the extra function on it, passing it the context object. For example to use the [Markdown](#markdown) extra:
 
 {% highlight js %}
 var extras = require('sassdoc-extras');
@@ -24,9 +20,19 @@ module.exports = function (dest, ctx) {
 };
 {% endhighlight %}
 
+If you use multiple extras, you can "chain" them like this:
+
+{% highlight js %}
+extras(ctx, 'markdown', 'display', 'shortcutIcon');
+{% endhighlight %}
+
+## Markdown (`markdown`)
+
+You may have noticed most descriptions from annotations are parsed as Markdown. This is thanks to the Markdown filter from [sassdoc-extras][repo_extras] (using [Marked](https://github.com/chjj/marked)).
+
 This filter overrides the provided values, so a value such as ``This is some `code`.`` would become ``This is some <code>code</code>``.
 
-## Display toggle
+## Display toggle (`display`)
 
 Depending on whether or not you want to display items based on their visibility (access level, `public` or `private`), the `display` filter might be able to help you. When used, it removes items that should not be displayed.
 
@@ -40,20 +46,7 @@ To determine if an item should be displayed or not, this filter reads the `displ
 }
 {% endhighlight %}
 
-Usage:
-
-{% highlight js %}
-var extras = require('sassdoc-extras');
-
-// Your theme function
-module.exports = function (dest, ctx) {
-  // ...
-
-  extras.display(ctx);
-};
-{% endhighlight %}
-
-## Groups aliases
+## Groups aliases (`groupName`)
 
 The `groupName` filter makes it possible for you to define aliases for your group slugs (see [reference]({{ site.data.routes.configuration }}#groups)). When using `@group` annotation in your SassDoc comments, you usually define a slug (a lowercase string without spaces). If you want your theme to display pretty titles, you can map those slugs to human-friendly names by setting a `groups` key in your context configuration.
 
@@ -83,20 +76,7 @@ Note that this filter rewrites the `group` key from each item. For instance, an 
 }
 {% endhighlight %}
 
-Usage:
-
-{% highlight js %}
-var extras = require('sassdoc-extras');
-
-// Your theme function
-module.exports = function (dest, ctx) {
-  // ...
-
-  extras.groupName(ctx);
-};
-{% endhighlight %}
-
-## Shortcut icon
+## Shortcut icon (`shortcutIcon`)
 
 When used, the `shortcutIcon` filter takes the eponymous key from the configuration and converts it into an object with `type`, `url` and `path` keys.
 
@@ -119,17 +99,28 @@ On the other hand, a relative path like `"relative/path/to/icon.png"` would leav
 }
 {% endhighlight %}
 
-Usage:
+## Sort (`sort`)
+
+It's possible to sort the items from a `sort` configuration value with the `sort` filter.
+
+Supported criteria are:
+
+* [`group`]({{ site.data.routes.configuration }}#groups)
+* `file`
+* [`line`]({{ site.data.routes.annotations }}#comment-range)
+* [`access`]({{ site.data.routes.annotations }}#access)
+
+The sort order is determined if the last character is either `>` or `<` (respectively desc and asc).
 
 {% highlight js %}
-var extras = require('sassdoc-extras');
-
-// Your theme function
-module.exports = function (dest, ctx) {
-  // ...
-
-  extras.shortcutIcon(ctx);
-};
+{
+  sort: [
+    'access',
+    'line>',
+    'group',
+    'file',
+  ],
+}
 {% endhighlight %}
 
 {% include routes.html %}
