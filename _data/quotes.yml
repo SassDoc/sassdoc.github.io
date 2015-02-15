@@ -5,15 +5,21 @@
 
 - content: "Everybody that creates Sassy things for the community should check out @SassDoc_. Definitely one of the coolest Sass tools I've run across!"
   author: Flint.gs
-  author_avatar: https://pbs.twimg.com/profile_images/515497500052951040/NrqBvPvP_400x400.jpeg
+  author_avatar: /assets/images/quotes/FlintGrid.jpg
   link: https://twitter.com/FlintGrid/status/519688720404840449
 
 - content: "I’m In love with @SassDoc_ <3"
   author: Tim Hartmann
-  author_avatar: https://pbs.twimg.com/profile_images/378800000238836354/aec0f12ecb7034a70d66e0194756ae3a_400x400.jpeg
+  author_avatar: /assets/images/quotes/tim_hartmann_.png
   link: https://twitter.com/tim_hartmann_/status/508286445896077313
 
 - content: "Writing docs with @SassDoc_. actually fun. maybe the point of documentation is more to think through what you’re doing – not who reads it."
   author: Fabian Fabian
-  author_avatar: https://pbs.twimg.com/profile_images/1820328179/avatar_2_400x400.jpg
+  author_avatar: /assets/images/quotes/filtercake.jpg
   link: https://twitter.com/filtercake/status/505451649549496320
+
+- content: "Decided to stop postponing it and give @SassDoc_ a go. Now I'm sad for postponing it because it's one of the best and essential Sass tools!"
+  author: Adonis K.
+  author_avatar: /assets/images/quotes/adon1sk.png
+  link: https://twitter.com/adon1sk/status/566937361536536576
+
