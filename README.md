@@ -3,6 +3,12 @@
 > Uncompiled source code from the Jekyll powered
 > [official SassDoc site](http://sassdoc.com).
 
+## Local preview
+
+    $ jekyll serve
+
+should enable you to prevew the site at `http://localhost:4000/`
+
 ## Building
 
 ### `make`
