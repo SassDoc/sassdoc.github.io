@@ -3,6 +3,10 @@
 > Uncompiled source code from the Jekyll powered
 > [official SassDoc site](http://sassdoc.com).
 
+## Preview `jekyll serve`
+
+Local preview on port 4000 (http://0.0.0.0:4000 or http://localhost:4000 depending on setups).
+
 ## Building
 
 ### `make`
