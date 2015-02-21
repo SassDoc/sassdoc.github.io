@@ -1,26 +1,19 @@
 {
-  "dependencies": {
-    "array-zip": "^1.0.0",
-    "atom-screenshot": "^0.4.3",
-    "babel": "^4.4.0",
+  "devDependencies": {
+    "babel": "^4.4.3",
+    "chalk": "^0.5.1",
     "combined-stream": "0.0.7",
+    "es6-denodeify": "^0.1.1",
     "event-stream": "^3.2.1",
     "fs-extra-promise": "^0.1.0",
+    "jake": "^8.0.10",
     "js-yaml": "^3.2.5",
     "mz": "^1.2.1",
     "promisepipe": "^1.0.1",
     "request": "^2.51.0",
     "sassdoc": "^2.1.0",
-    "sassdoc-theme-default": "^2.3.0",
-    "sassdoc-theme-flippant": "^0.1.0",
-    "sassdoc-theme-neat": "0.0.2",
-    "sassdoc-theme-rest": "^1.0.2",
-    "sassdoc-theme-vulcan": "^0.2.0",
     "split": "^0.3.2",
     "through2-filter": "^1.4.0",
     "through2-map": "^1.4.0"
-  },
-  "scripts": {
-    "make": "babel-node --experimental make"
   }
 }

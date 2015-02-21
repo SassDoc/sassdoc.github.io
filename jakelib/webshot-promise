@@ -1,0 +1,4 @@
+const denodeify = require('es6-denodeify')(Promise)
+const webshot = require('webshot')
+
+export default denodeify(webshot)
