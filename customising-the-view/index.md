@@ -192,8 +192,6 @@ tracking: |
   <img src="http://piwik.example.org/piwik.php?idsite={$IDSITE}amp;rec=1" style="border:0" alt="" />
 {% endhighlight %}
 
-{% include routes.html %}
-
 ## Private Prefix
 
 It is common practice to prefix so called *private* items by an underscore (`_`) in languages that do not provide a way to have actual private members in order to indicate they are internal tools not meant to be used as part of the public API.
@@ -207,3 +205,5 @@ When set to `false`, it intimates SassDoc not to assume anything. On the other h
 {% highlight yaml %}
 privatePrefix: ^[_-]
 {% endhighlight %}
+
+{% include routes.html %}
