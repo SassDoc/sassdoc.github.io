@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "6to5": "^2.12.6",
+    "babel": "^4.4.0",
     "array-zip": "^1.0.0",
     "atom-screenshot": "^0.4.3",
     "combined-stream": "0.0.7",
@@ -19,6 +19,6 @@
     "through2-map": "^1.4.0"
   },
   "scripts": {
-    "make": "6to5-node --experimental make"
+    "make": "babel-node --experimental make"
   }
 }
