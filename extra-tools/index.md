@@ -133,3 +133,15 @@ module.exports = function (dest, ctx) {
 {% endhighlight %}
 
 {% include routes.html %}
+
+## Description
+
+The `description` filter introduces a `description` and `descriptionPath` configuration keys. The first is a raw description text, the second is a path to a file to find the description text (and will override the `description` key).
+
+{% highlight js %}
+{
+  descriptionPath: '../README.md',
+}
+{% endhighlight %}
+
+The `descriptionPath` is relative to the configuration file, and have no required format. However the `markdown` filter will be happy to parse the description as Markdown if called **after** `description`.
