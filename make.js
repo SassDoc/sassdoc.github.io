@@ -252,24 +252,6 @@ t.gallery = async () => {
 
 // }}}
 
-// Makefile {{{
-// ============
-
-t.makefile = async () => {
-  im('Generating makefile.')
-
-  await fs.writeFile(
-    'Makefile',
-    [
-      `${Object.keys(t).join(' ')}: force`,
-      '\tnpm run make $@\n',
-      'force:\n',
-    ].join('\n')
-  )
-}
-
-// }}}
-
 // Execution {{{
 // =============
 

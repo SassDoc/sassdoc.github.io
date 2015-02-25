@@ -8,7 +8,6 @@ title: "Annotations"
 | Annotation                                 | Description                                                | Aliases                 |
 |--------------------------------------------|------------------------------------------------------------|-------------------------|
 | [Comment range](#comment-range)            | Comment range                                              | &mdash;                 |
-| [Name](#name)                              | Name of the documented item                                | &mdash;                 |
 | [Description](#description)                | Description of the documented item                         | &mdash;                 |
 | [@access](#access)                         | Access of the documented item                              | &mdash;                 |
 | [@alias](#alias)                           | Whether the documented item is an alias of another item    | &mdash;                 |
@@ -19,6 +18,7 @@ title: "Annotations"
 | [@group](#group)                           | Group the documented item belongs to                       | &mdash;                 |
 | [@ignore](#ignore)                         | Ignored content                                            | &mdash;                 |
 | [@link](#link)                             | Link related to the documented item                        | @source                 |
+| [@name](#name)                             | Name of the documented item                                | &mdash;                 |
 | [@output](#output)                         | Output from the documented mixin                           | &mdash;                 |
 | [@parameter](#parameter)                   | Parameters from the documented mixin or function           | @param, @arg, @argument |
 | [@property](#property)                     | Property of the documented map                             | @prop                   |
@@ -44,10 +44,6 @@ Each annotated comment will include a `commentRange` object like so:
 {% endhighlight %}
 
 ... representing the start and end of the comment.
-
-## Name
-
-Name of the documented item is self parsed, hence `@name` doesn't exist. A future version of SassDoc will allow to overwrite the item's name with a `@name` annotation.
 
 ## Description
 
@@ -238,6 +234,24 @@ Describes the documented item.
 {% highlight scss %}
 /// @link http://some.url
 /// @link http://some.url Optional caption
+{% endhighlight %}
+
+## @name
+
+| Attribute   | Value                                                      |
+|-------------|------------------------------------------------------------|
+| Description | Provide a custom name for the documented item              |
+| Multiple    | false                                                      |
+| Default     | `item.context.name`                                        |
+| Aliases     | &mdash;                                                    |
+| Autofilled  | true                                                       |
+| Allowed on  | functions, mixins, placeholders, variables                 |
+| Extra notes | Only useful when wanting to override the self parsed name. |
+
+<h3>Example</h3>
+
+{% highlight scss %}
+/// @name message-[error|warning|success|info]
 {% endhighlight %}
 
 ## @output
