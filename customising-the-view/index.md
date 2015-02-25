@@ -22,7 +22,6 @@ This is done exactly like the regular configuration, within the same configurati
 | `shortcutIcon`      | String  | &mdash;                 |
 | `googleAnalytics`   | String  | &mdash;                 |
 | `trackingCode`      | String  | &mdash;                 |
-| `privatePrefix`     | Regex   | `^[_-]`                 |
 | `sort`              | Array   | &mdash;                 |
 | `description`       | String  | &mdash;                 |
 | `descriptionPath`   | String  | &mdash;                 |
