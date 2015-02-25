@@ -1,4 +1,4 @@
 $(MAKECMDGOALS): force
-	npm run jake $@
+	npm run make $@
 
 force:
