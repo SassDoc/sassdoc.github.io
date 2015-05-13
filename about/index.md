@@ -27,7 +27,7 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/378800000638607178/d6b74325fc8156ccc6a3926156e5e1b6_400x400.jpeg" alt="Hugo Giraudel" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/593402285910286336/bSpd1aIp.jpg" alt="Hugo Giraudel" class="author__avatar">
     <a class="author__name" href="https://twitter.com/hugogiraudel">Hugo Giraudel</a>
     <span class="author__role">Project thinker</span>
   </li>
@@ -49,7 +49,7 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/444569810307780609/o4zBdWS5_400x400.jpeg" alt="Reda Lemeden" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/589717677746352128/FoWXEn2W.jpg" alt="Reda Lemeden" class="author__avatar">
     <a class="author__name" href="https://twitter.com/kaishin">Reda Lemeden</a>
     <span class="author__role">Octopus designer</span>
   </li>
