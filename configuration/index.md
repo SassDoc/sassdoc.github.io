@@ -38,6 +38,7 @@ Here are the available configuration options that does not depend on the theme w
 | `no-update-notifier` | Boolean         | `false`                               |
 | `verbose`            | Boolean         | `false`                               |
 | `strict`             | Boolean         | `false`                               |
+| `debug`              | Boolean         | `false`                               |
 
 ## Destination
 
