@@ -43,7 +43,7 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
 
 <ul class="authors">
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/561287689580732418/WHJblIbk_400x400.jpeg" alt="Why Alix" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/581847034371534848/DumCxgjf.jpg" alt="Why Alix" class="author__avatar">
     <a class="author__name" href="https://twitter.com/whyalix">Why Alix</a>
     <span class="author__role">Poulpix drawer</span>
   </li>
