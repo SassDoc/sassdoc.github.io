@@ -5,9 +5,10 @@ layout: default
 
 ## Introduction
 
-If you have made up so far into building your own theme, you'll be pleased to now SassDoc comes with some [extra tools][repo_extras] for theme builders. Those filters add some features to SassDoc by post-processing the data.
+If you have embarked upon the task of building your own theme, you'll be pleased to know SassDoc comes with some [extra tools][repo_extras] for theme builders. These filters add some features to SassDoc by post-processing the data.
 
-Any extra is used by requiring `sassdoc-extras`, and calling the extra function on it, passing it the context object. For example to use the [Markdown](#markdown) extra:
+Extras can be added by requiring `sassdoc-extras`, calling the extra function on it, and passing it the context object.
+For example, to use the [Markdown](#markdown) extra:
 
 {% highlight js %}
 var extras = require('sassdoc-extras');
@@ -20,7 +21,7 @@ module.exports = function (dest, ctx) {
 };
 {% endhighlight %}
 
-If you use multiple extras, you can "chain" them like this:
+To use multiple extras, place the extras in an array:
 
 {% highlight js %}
 extras(ctx, 'markdown', 'display', 'shortcutIcon');
@@ -28,15 +29,17 @@ extras(ctx, 'markdown', 'display', 'shortcutIcon');
 
 ## Markdown (`markdown`)
 
-You may have noticed most descriptions from annotations are parsed as Markdown. This is thanks to the Markdown filter from [sassdoc-extras][repo_extras] (using [Marked](https://github.com/chjj/marked)).
+You may have noticed most descriptions from annotations are parsed as Markdown. This is thanks to the Markdown filter from [sassdoc-extras][repo_extras] (using [Marked](https://github.com/chjj/marked)). This filter overrides the provided values.
 
-This filter overrides the provided values, so a value such as ``This is some `code`.`` would become ``This is some <code>code</code>``.
+For example, ``This is some `code`.`` becomes ``This is some <code>code</code>``.
 
 ## Display toggle (`display`)
 
-Depending on whether or not you want to display items based on their visibility (access level, `public` or `private`), the `display` filter might be able to help you. When used, it removes items that should not be displayed.
+The `display` filter allows you to display items based on their visibility (access level: `public` or `private`). This filter removes items that should not be displayed.
 
-To determine if an item should be displayed or not, this filter reads the `display.access` key from the context configuration (so make sure your theme defines one).
+The `display` filter uses the `display.access` key from the context configuration to determine if an item should be displayed or not.
+
+_**Note:** It's always best to define an access level._
 
 {% highlight js %}
 {
@@ -48,7 +51,7 @@ To determine if an item should be displayed or not, this filter reads the `displ
 
 ## Groups aliases (`groupName`)
 
-The `groupName` filter makes it possible for you to define aliases for your group slugs (see [reference]({{ site.data.routes.configuration }}#groups)). When using `@group` annotation in your SassDoc comments, you usually define a slug (a lowercase string without spaces). If you want your theme to display pretty titles, you can map those slugs to human-friendly names by setting a `groups` key in your context configuration.
+The `groupName` filter allows you to define aliases for group slugs (see [reference]({{ site.data.routes.configuration }}#groups)). When using `@group` annotation in your SassDoc comments, you usually define a slug (a lowercase string without spaces). If you want your theme to display pretty titles, you can map those slugs to human-friendly names by setting a `groups` key in your context configuration.
 
 {% highlight js %}
 {
@@ -60,7 +63,9 @@ The `groupName` filter makes it possible for you to define aliases for your grou
 }
 {% endhighlight %}
 
-Note that this filter rewrites the `group` key from each item. For instance, an item with such a group key:
+_**Note:** The `groupname` filter overrides the `group` key of each item._
+
+To use the group key:
 
 {% highlight js %}
 {
@@ -68,7 +73,7 @@ Note that this filter rewrites the `group` key from each item. For instance, an 
 }
 {% endhighlight %}
 
-... would look like this once the `groupName` filter has been used:
+To use the `groupName` filter:
 
 {% highlight js %}
 {
@@ -78,9 +83,9 @@ Note that this filter rewrites the `group` key from each item. For instance, an 
 
 ## Shortcut icon (`shortcutIcon`)
 
-When used, the `shortcutIcon` filter takes the eponymous key from the configuration and converts it into an object with `type`, `url` and `path` keys.
+The `shortcutIcon` filter takes the eponymous key from the configuration and converts it into an object with `type`, `url` and `path` keys.
 
-For instance, `"http://absolute.path/to/icon.png"` as a value in `ctx.shortcutIcon` would yield `ctx.shortcutIcon` as:
+To use the icon URL `http://absolute.path/to/icon.png` in `ctx.shortcutIcon`:
 
 {% highlight js %}
 {
@@ -89,7 +94,7 @@ For instance, `"http://absolute.path/to/icon.png"` as a value in `ctx.shortcutIc
 }
 {% endhighlight %}
 
-On the other hand, a relative path like `"relative/path/to/icon.png"` would leave `ctx.shortcutIcon` as:
+To use the relative path `relative/path/to/icon.png` in `ctx.shortcutIcon`:
 
 {% highlight js %}
 {
@@ -101,16 +106,16 @@ On the other hand, a relative path like `"relative/path/to/icon.png"` would leav
 
 ## Sort (`sort`)
 
-It's possible to sort the items from a `sort` configuration value with the `sort` filter.
+The `sort` filter sorts the items from a `sort` configuration value.
 
-Supported criteria are:
+Supported criteria:
 
 * [`group`]({{ site.data.routes.configuration }}#groups)
 * `file`
 * [`line`]({{ site.data.routes.annotations }}#comment-range)
 * [`access`]({{ site.data.routes.annotations }}#access)
 
-The sort order is determined if the last character is either `>` or `<` (respectively desc and asc).
+The sort order is determined by the last character: `>` (desc) _or_ `<` (asc).
 
 {% highlight js %}
 {
@@ -125,9 +130,13 @@ The sort order is determined if the last character is either `>` or `<` (respect
 
 {% include routes.html %}
 
-## Description
+## Description (`description`, `descriptionPath`)
 
-The `description` filter introduces a `description` and `descriptionPath` configuration keys. The first is a raw description text, the second is a path to a file to find the description text (and will override the `description` key).
+This filter introduces the `description` and `descriptionPath` configuration keys.
+
+The `description` key contains raw description text. The `descriptionPath` contains the path to a file containing the description.
+
+_**Note:** Using `descriptionPath` will override the `description` key._
 
 {% highlight js %}
 {
@@ -135,4 +144,6 @@ The `description` filter introduces a `description` and `descriptionPath` config
 }
 {% endhighlight %}
 
-The `descriptionPath` is relative to the configuration file, and have no required format. However the `markdown` filter will be happy to parse the description as Markdown if called **after** `description`.
+The `descriptionPath` is relative to the configuration file, and has no required format.
+
+_**Note:** If the `markdown` filter is called **after** the `description` filter, it will parse the description value as Markdown._
