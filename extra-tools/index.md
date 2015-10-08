@@ -21,7 +21,7 @@ module.exports = function (dest, ctx) {
 };
 {% endhighlight %}
 
-To use multiple extras, place the extras in an array:
+To use multiple extras, you can "chain" them like this:
 
 {% highlight js %}
 extras(ctx, 'markdown', 'display', 'shortcutIcon');
