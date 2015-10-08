@@ -39,7 +39,7 @@ The `display` filter allows you to display items based on their visibility (acce
 
 The `display` filter uses the `display.access` key from the context configuration to determine if an item should be displayed or not.
 
-_**Note:** It's always best to define an access level._
+<p class="note  note--info"><strong>Note:</strong> It's always best to define an access level.</p>
 
 {% highlight js %}
 {
@@ -63,7 +63,7 @@ The `groupName` filter allows you to define aliases for group slugs (see [refere
 }
 {% endhighlight %}
 
-_**Note:** The `groupname` filter overrides the `group` key of each item._
+<p class="note  note--info"><strong>Note:</strong>  The `groupname` filter overrides the `group` key of each item.</p>
 
 To use the group key:
 
@@ -136,7 +136,7 @@ This filter introduces the `description` and `descriptionPath` configuration key
 
 The `description` key contains raw description text. The `descriptionPath` contains the path to a file containing the description.
 
-_**Note:** Using `descriptionPath` will override the `description` key._
+<p class="note  note--info"><strong>Note:</strong>  Using `descriptionPath` will override the `description` key.</p>
 
 {% highlight js %}
 {
@@ -146,4 +146,4 @@ _**Note:** Using `descriptionPath` will override the `description` key._
 
 The `descriptionPath` is relative to the configuration file, and has no required format.
 
-_**Note:** If the `markdown` filter is called **after** the `description` filter, it will parse the description value as Markdown._
+<p class="note  note--info"><strong>Note:</strong>  If the `markdown` filter is called **after** the `description` filter, it will parse the description value as Markdown.</p>
