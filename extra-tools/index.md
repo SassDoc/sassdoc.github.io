@@ -65,7 +65,7 @@ The `groupName` filter allows you to define aliases for group slugs (see [refere
 
 <p class="note  note--info"><strong>Note:</strong>  The `groupName` filter overrides the `group` key of each item.</p>
 
-To use the group key:
+Result of using the `group` key:
 
 {% highlight js %}
 {
@@ -73,7 +73,7 @@ To use the group key:
 }
 {% endhighlight %}
 
-To use the `groupName` filter:
+Result of using the `groupName` filter:
 
 {% highlight js %}
 {
@@ -85,7 +85,7 @@ To use the `groupName` filter:
 
 The `shortcutIcon` filter takes the eponymous key from the configuration and converts it into an object with `type`, `url` and `path` keys.
 
-To use the icon URL `http://absolute.path/to/icon.png` in `ctx.shortcutIcon`:
+Result of using a URL `http://absolute.path/to/icon.png` in `ctx.shortcutIcon`:
 
 {% highlight js %}
 {
@@ -94,7 +94,7 @@ To use the icon URL `http://absolute.path/to/icon.png` in `ctx.shortcutIcon`:
 }
 {% endhighlight %}
 
-To use the relative path `relative/path/to/icon.png` in `ctx.shortcutIcon`:
+Result of using a relative path `relative/path/to/icon.png` in `ctx.shortcutIcon`:
 
 {% highlight js %}
 {
