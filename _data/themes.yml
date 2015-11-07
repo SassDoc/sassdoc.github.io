@@ -109,6 +109,7 @@ vulcan: {
 neat: {
   "name": "sassdoc-theme-neat",
   "description": "SassDoc theme used in the Bourbon suite.",
+  "title": "SassDoc theme Neat",
   "version": "0.0.2",
   "author": {
     "name": "thoughtbot, Inc"
@@ -172,4 +173,66 @@ neat: {
   },
   "directories": {},
   "_resolved": "https://registry.npmjs.org/sassdoc-theme-neat/-/sassdoc-theme-neat-0.0.2.tgz"
+}
+flippant: {
+  "name": "sassdoc-theme-flippant",
+  "version": "0.1.0",
+  "description": "A modified version of Sassdoc's default theme",
+  "title": "SassDoc theme Flippant",
+  "files": [
+    "assets",
+    "views",
+    "dist",
+    "default.json",
+    "index.js",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "main": "dist",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbox/flippant.git"
+  },
+  "author": {
+    "name": "dbox"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dbox/flippant/issues"
+  },
+  "dependencies": {
+    "chroma-js": "^0.6.3",
+    "es6-denodeify": "^0.1.0",
+    "es6-promise": "^2.0.1",
+    "extend": "^2.0.0",
+    "fs-extra": "^0.16.3",
+    "html-minifier": "^0.7.0",
+    "sassdoc-extras": "^2.4.0",
+    "swig": "1.4.0",
+    "swig-extras": "^0.0.1"
+  },
+  "homepage": "https://github.com/dbox/flippant#readme",
+  "gitHead": "aeaad9f7ac82d6758c7fc8ce35e913e92402aebd",
+  "_id": "sassdoc-theme-flippant@0.1.0",
+  "_shasum": "149a6b89ac3276351a2caeee1da45ac068e1bf8b",
+  "_from": "sassdoc-theme-flippant@*",
+  "_npmVersion": "2.14.7",
+  "_nodeVersion": "4.2.1",
+  "_npmUser": {
+    "name": "dbox",
+    "email": "danielbox@gmail.com"
+  },
+  "dist": {
+    "shasum": "149a6b89ac3276351a2caeee1da45ac068e1bf8b",
+    "tarball": "http://registry.npmjs.org/sassdoc-theme-flippant/-/sassdoc-theme-flippant-0.1.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "dbox",
+      "email": "danielbox@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/sassdoc-theme-flippant/-/sassdoc-theme-flippant-0.1.0.tgz"
 }
