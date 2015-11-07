@@ -103,7 +103,7 @@ t.upgrading = () =>
 // Themes {{{
 // ==========
 
-const themes = ['default', 'vulcan', 'neat', 'flippant']
+const themes = ['default', 'vulcan', 'neat', 'flippant' /*, 'rest' */]
 const themeDirs = themes.map(x => `node_modules/sassdoc-theme-${x}`)
 const themePackages = themeDirs.map(x => `${x}/package.json`)
 

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>helpers</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">helpers</h1>
+</div>
+<h1 id="clearfix">clearfix</h1>
+<h2 id="source">Source</h2>
+<pre class="sourceCode scss"><code>@mixin clearfix($extend: true) { 
+  @if $extend {
+    @extend %clearfix;
+  }
+
+  @else {
+    &amp;:after {
+      content: &quot;&quot;;
+      display: table;
+      clear: both;
+    }
+  }
+}</code></pre>
+<h2 id="description">Description</h2>
+<p>Float clearing helper.</p>
+<h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+<th align="left">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">extend</td>
+<td align="left">Whether or not extend a placeholder.</td>
+<td align="left">Bool</td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<h2 id="requires">Requires</h2>
+<ul>
+<li><code>clearfix</code></li>
+</ul>
+<h2 id="used-by">Used By</h2>
+<ul>
+<li>[mixin] <code>clearfix</code></li>
+<li>[placeholder] <code>clearfix</code></li>
+</ul>
+<h1 id="visually-hidden">visually-hidden</h1>
+<h2 id="source-1">Source</h2>
+<pre class="sourceCode scss"><code>@mixin visually-hidden($extend: true) { 
+  @if $extend {
+    @extend %visually-hidden;
+  }
+
+  @else {
+    @include size(1px);
+    position: absolute;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+  }
+}</code></pre>
+<h2 id="description-1">Description</h2>
+<p>Accessibility hiding helper.</p>
+<h2 id="parameters-1">Parameters</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+<th align="left">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">extend</td>
+<td align="left">Whether or not extend a placeholder.</td>
+<td align="left">Bool</td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<h2 id="requires-1">Requires</h2>
+<ul>
+<li><code>visually-hidden</code></li>
+<li><code>size</code></li>
+</ul>
+<h2 id="used-by-1">Used By</h2>
+<ul>
+<li>[mixin] <code>visually-hidden</code></li>
+<li>[placeholder] <code>visually-hidden</code></li>
+</ul>
+<h1 id="ellipsis">ellipsis</h1>
+<h2 id="source-2">Source</h2>
+<pre class="sourceCode scss"><code>@mixin ellipsis($extend: true) { 
+  @if $extend {
+    @extend %ellipsis;
+  }
+
+  @else {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}</code></pre>
+<h2 id="description-2">Description</h2>
+<p>Accessibility ellipsis helper.</p>
+<h2 id="parameters-2">Parameters</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+<th align="left">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">extend</td>
+<td align="left">Whether or not extend a placeholder.</td>
+<td align="left">Bool</td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<h2 id="requires-2">Requires</h2>
+<ul>
+<li><code>ellipsis</code></li>
+</ul>
+<h2 id="used-by-2">Used By</h2>
+<ul>
+<li>[mixin] <code>ellipsis</code></li>
+<li>[placeholder] <code>ellipsis</code></li>
+</ul>
+</body>
+</html>

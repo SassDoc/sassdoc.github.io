@@ -14,6 +14,7 @@
     "sassdoc-theme-default": "^2.3.0",
     "sassdoc-theme-flippant": "^0.1.0",
     "sassdoc-theme-neat": "0.0.2",
+    "sassdoc-theme-rest": "^1.0.2",
     "sassdoc-theme-vulcan": "^0.2.0",
     "split": "^0.3.2",
     "through2-filter": "^1.4.0",

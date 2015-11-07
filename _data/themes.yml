@@ -236,3 +236,65 @@ flippant: {
   "directories": {},
   "_resolved": "https://registry.npmjs.org/sassdoc-theme-flippant/-/sassdoc-theme-flippant-0.1.0.tgz"
 }
+rest: {
+  "name": "sassdoc-theme-rest",
+  "version": "1.0.2",
+  "description": "Sassdoc theme that converts to reStructured text",
+  "title": "SassDoc theme Rest",
+  "main": "lib",
+  "dependencies": {
+    "es6-denodeify": "^0.1.0",
+    "es6-promise": "^2.0.1",
+    "extend": "^2.0.0",
+    "fs-extra": "^0.16.3",
+    "sassdoc-extras": "^2.2.0",
+    "swig": "1.4.0",
+    "rest-simple-table": "1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Elliot Mitchum",
+    "email": "elliot.mitchum@ellioseven.com"
+  },
+  "license": "ISC",
+  "devDependencies": {},
+  "keywords": [
+    "Sassdoc",
+    "Sassdoc Theme",
+    "reStructured Text"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellioseven/sassdoc-theme-rest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ellioseven/sassdoc-theme-rest/issues"
+  },
+  "homepage": "https://github.com/ellioseven/sassdoc-theme-rest#readme",
+  "gitHead": "26a43a58290f0d06f8a928b04141ead6eeffee19",
+  "_id": "sassdoc-theme-rest@1.0.2",
+  "_shasum": "38ce96e270cf9c3b1e5f531387c56c9ad5dd04ad",
+  "_from": "sassdoc-theme-rest@*",
+  "_npmVersion": "2.11.2",
+  "_nodeVersion": "0.12.5",
+  "_npmUser": {
+    "name": "ellioseven",
+    "email": "elliot.mitchum@ellioseven.com"
+  },
+  "dist": {
+    "shasum": "38ce96e270cf9c3b1e5f531387c56c9ad5dd04ad",
+    "tarball": "http://registry.npmjs.org/sassdoc-theme-rest/-/sassdoc-theme-rest-1.0.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "ellioseven",
+      "email": "elliot.mitchum@ellioseven.com"
+    }
+  ],
+  "_resolved": "https://registry.npmjs.org/sassdoc-theme-rest/-/sassdoc-theme-rest-1.0.2.tgz"
+}
