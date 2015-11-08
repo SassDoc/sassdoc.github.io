@@ -63,9 +63,9 @@ The `groupName` filter allows you to define aliases for group slugs (see [refere
 }
 {% endhighlight %}
 
-<p class="note  note--info"><strong>Note:</strong>  The `groupName` filter overrides the `group` key of each item.</p>
+<p class="note  note--info"><strong>Note:</strong>  The `groupName` filter overrides the default `group` key for each item.</p>
 
-Result of using the `group` key:
+Example: Default `group` key:
 
 {% highlight js %}
 {
@@ -73,7 +73,7 @@ Result of using the `group` key:
 }
 {% endhighlight %}
 
-Result of using the `groupName` filter:
+Example: After using `groupName` filter:
 
 {% highlight js %}
 {
