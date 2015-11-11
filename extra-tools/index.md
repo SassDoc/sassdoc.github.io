@@ -147,3 +147,81 @@ The `description` key contains raw description text. The `descriptionPath` conta
 The `descriptionPath` is relative to the configuration file, and has no required format.
 
 <p class="note  note--info"><strong>Note:</strong>  If the `markdown` filter is called **after** the `description` filter, it will parse the description value as Markdown.</p>
+
+
+## Resolved variables (`resolveVariables`)
+
+The `resolveVariables` filter attempts to connect aliased variable to their
+original value. This might be useful for previewing certain types of values,
+e.g. colors. Variable aliases can be used in different contexts: variables,
+map properties, mixin and function parameters. While the original value
+is left untouched there’s a new `resolvedValue` key being added.
+
+{% highlight scss %}
+/// Blue
+/// @type Color
+$color-blue: #22b8dc;
+
+/// Main color
+/// @type Color
+$color-main: $color-blue;
+
+/// Map of colors.
+/// @prop {Color} main [$color-blue] - main color
+/// @type Map
+$colors: (
+  'main': $color-blue,
+);
+
+/// Example mixin.
+/// @param {Color} $color [$color-main] - configurable background color
+@mixin foobar($color: $color-main) { ... }
+{% endhighlight %}
+
+Example: default data for a variable item.
+
+{% highlight js %}
+{
+  "description": "<p>Blue</p>\n",
+  "context": {
+    "type": "variable",
+    "name": "color-blue",
+    "value": "#22b8dc"
+  },
+  "type": "Color"
+},
+{
+  "description": "<p>Main color</p>\n",
+  "context": {
+    "type": "variable",
+    "name": "color-main",
+    "value": "$color-blue"
+  },
+  "type": "Color"
+}
+{% endhighlight %}
+
+Example: result after using the `resolveVariables` filter.
+
+{% highlight js %}
+{
+  "description": "<p>Blue</p>\n",
+  "context": {
+    "type": "variable",
+    "name": "color-blue",
+    "value": "#22b8dc"
+  },
+  "type": "Color",
+  "resolvedValue": "#22b8dc"
+},
+{
+  "description": "<p>Main color</p>\n",
+  "context": {
+    "type": "variable",
+    "name": "color-main",
+    "value": "$color-blue"
+  },
+  "type": "Color",
+  "resolvedValue": "#22b8dc"
+}
+{% endhighlight %}
