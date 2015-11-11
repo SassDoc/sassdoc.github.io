@@ -63,15 +63,16 @@ Describes the documented item.
 
 ## @access
 
-| Attribute   | Value                                                      |
-|-------------|------------------------------------------------------------|
-| Description | Defines the access of the documented item                  |
-| Multiple    | false                                                      |
-| Default     | `public`                                                   |
-| Aliases     | &mdash;                                                    |
-| Autofilled  | false                                                      |
-| Allowed on  | functions, mixins, placeholders, variables                 |
-| Extra notes | Either `public` or `private`.                              |
+| Attribute       | Value                                                  |
+|-----------------|--------------------------------------------------------|
+| Description     | Defines the access of the documented item              |
+| Multiple        | false                                                  |
+| Default         | `public`                                               |
+| Aliases         | &mdash;                                                |
+| Autofilled      | false                                                  |
+| OverwritePoster | true                                                   |
+| Allowed on      | functions, mixins, placeholders, variables             |
+| Extra notes     | Either `public` or `private`.                          |
 
 <h3>Example</h3>
 
@@ -101,15 +102,16 @@ Describes the documented item.
 
 ## @author
 
-| Attribute   | Value                                                      |
-|-------------|------------------------------------------------------------|
-| Description | Describes the author of the documented item                |
-| Multiple    | true                                                       |
-| Default     | &mdash;                                                    |
-| Aliases     | &mdash;                                                    |
-| Autofilled  | false                                                      |
-| Allowed on  | functions, mixins, placeholders, variables                 |
-| Extra notes | Parsed as Markdown.*                                       |
+| Attribute       | Value                                                  |
+|-----------------|--------------------------------------------------------|
+| Description     | Describes the author of the documented item            |
+| Multiple        | true                                                   |
+| Default         | &mdash;                                                |
+| Aliases         | &mdash;                                                |
+| Autofilled      | false                                                  |
+| OverwritePoster | true                                                   |
+| Allowed on      | functions, mixins, placeholders, variables             |
+| Extra notes     | Parsed as Markdown.*                                   |
 
 <h3>Example</h3>
 
