@@ -27,8 +27,8 @@ module.exports.annotations = [];
 ## Schema
 
 Each annotation is an object with a `name` property, a `parse`
-method, and optionnally `resolve`, `default` and `autofill`
-methods and well as an `alias` array and a `multiple` boolean.
+method, and optionally `resolve`, `default` and `autofill`
+methods and well as an `alias` array, a `multiple` and an `overwritePoster` boolean.
 
 | Key | Type | Description |
 |-----|------|-------------|
@@ -38,6 +38,7 @@ methods and well as an `alias` array and a `multiple` boolean.
 | `default` | function | Returns a default value when &mdash;&nbsp;if ever&nbsp;&mdash; the annotation is not present. |
 | `autofill` | function | Takes a parsed annotation object. You can modify this object reference as you want while having access to the whole parsed content of the current annotation. |
 | `multiple` | boolean | Indicates if this annotation is allowed multiple times per item (default is `true`). |
+| `overwritePoster` | boolean | Indicates if this annotation is allowed to override a file level instance (default is `false`). |
 | `alias` | array | Array of aliases for the annotation. |
 
 ## Examples
