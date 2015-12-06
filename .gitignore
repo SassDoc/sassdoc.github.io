@@ -1,6 +1,8 @@
 node_modules
 .DS_Store
 _site
+_preview
+_sample
 .sass-cache
 sassdoc
 *.map
