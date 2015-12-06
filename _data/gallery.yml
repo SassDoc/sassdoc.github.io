@@ -27,7 +27,7 @@
   image: sassyfilters.png
 
 - name: SassyLists
-  url: http://sassylists.com/documentation
+  url: http://at-import.github.io/SassyLists/documentation/
   image: sassylists.png
 
 - name: css-patterns
