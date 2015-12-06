@@ -1,5 +1,6 @@
 // Register Babel ES6 module loader.
-require('babel/register')({ experimental: true })
+require('babel-core/register')
+require('babel-polyfill')
 
 // Require `.jake` files as `.js`.
 require.extensions['.jake'] = require.extensions['.js']
