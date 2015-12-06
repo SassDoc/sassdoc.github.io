@@ -7,7 +7,6 @@
     "chalk": "^1.1.1",
     "combined-stream": "^1.0.5",
     "es6-denodeify": "^0.1.1",
-    "event-stream": "^3.2.1",
     "fs-extra-promise": "^0.3.1",
     "jake": "^8.0.10",
     "js-yaml": "^3.2.5",
