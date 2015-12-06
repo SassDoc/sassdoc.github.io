@@ -11,12 +11,14 @@ directory(galleryDir)
 gallery.forEach(item => {
   const image = `${galleryDir}/${item.image}`
 
-  file(image, [galleryDir, 'webshot'], async () => {
+  file(image, [galleryDir, 'screenshot'], async () => {
     im`Rendering ${item.url} in ${image}.`
 
-    await require('./webshot-promise')(item.url, image, {
-      screenSize: { width: 1440, height: 900 },
-      defaultWhiteBackground: true,
+    await require('./screenshot')({
+      url: item.url,
+      dest: image,
+      width: 1440,
+      height: 900
     })
 
     await exec(`mogrify -resize 900x '${image}'`)

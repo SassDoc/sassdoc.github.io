@@ -20,12 +20,14 @@ file('_preview', [sampleDir, defaultTheme.package], async () => {
   console.log()
 })
 
-file(preview, ['_preview', 'webshot'], async () => {
+file(preview, ['_preview', 'screenshot'], async () => {
   im`Taking a screenshot in ${preview}.`
 
-  await require('./webshot-promise')(furl('_preview/index.html'), preview, {
-    screenSize: { width: 1200, height: 675 },
-    defaultWhiteBackground: true,
+  await require('./screenshot')({
+    url: furl('_preview/index.html'),
+    dest: preview,
+    width: 1200,
+    height: 675
   })
 })
 

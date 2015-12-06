@@ -28,12 +28,14 @@ themes.forEach(theme => {
     console.log()
   })
 
-  task(thumb, [preview, thumbDir, 'webshot'], async () => {
+  task(thumb, [preview, thumbDir, 'screenshot'], async () => {
     im`Taking a screenshot of ${preview} in ${thumb}.`
 
-    await require('./webshot-promise')(furl(`${preview}/index.html`), thumb, {
-      screenSize: { width: 1024, height: 768 },
-      defaultWhiteBackground: true,
+    await require('./screenshot')({
+      url: furl(`${preview}/index.html`),
+      dest: thumb,
+      width: 1024,
+      height: 768
     })
 
     await exec(`mogrify -resize 256x192 '${thumb}'`)

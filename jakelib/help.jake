@@ -19,7 +19,7 @@ ${title('General')}
 ${key('help')}                  Show this help.
 ${key('preview')}               Render the preview image ${code('assets/images/preview-image.png')}.
 ${key('sample')}                Fetch some SCSS sample in ${code('_sample')}.
-${key('webshot')}               Download Webshot.
+${key('screenshot')}            Download the screenshot tool.
 
 ${title('Pages')}
 
