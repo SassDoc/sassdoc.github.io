@@ -1,7 +1,7 @@
-const chalk = require('chalk')
-const fs = require('mz/fs')
-const path = require('path')
-const jsYaml = require('js-yaml')
+import chalk from 'chalk'
+import fs from 'mz/fs'
+import path from 'path'
+import jsYaml from 'js-yaml'
 
 const chevron = '»'
 

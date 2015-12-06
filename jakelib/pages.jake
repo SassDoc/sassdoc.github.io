@@ -1,10 +1,10 @@
-const { im } = require('./utils')
-const filter = require('through2-filter')
-const fs = require('fs')
-const map = require('through2-map')
-const promisePipe = require('promisepipe')
-const request = require('request')
-const split = require('split')
+import { im } from './utils'
+import filter from 'through2-filter'
+import fs from 'fs'
+import map from 'through2-map'
+import promisePipe from 'promisepipe'
+import request from 'request'
+import split from 'split'
 
 const repo = 'https://raw.githubusercontent.com/SassDoc/sassdoc/master'
 

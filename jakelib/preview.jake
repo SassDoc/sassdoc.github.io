@@ -1,8 +1,9 @@
-const { im, furl } = require('./utils')
-const { themes } = require('./themes')
-const { sampleDir } = require('./sample')
-const fse = require('fs-extra-promise')
-const sassdoc = require('sassdoc')
+import { im, furl } from './utils'
+import { themes } from './themes'
+import { sampleDir } from './sample'
+import fse from 'fs-extra-promise'
+import sassdoc from 'sassdoc'
+import screenshot from './screenshot'
 
 const defaultTheme = themes.find(x => x.shortName === 'default')
 const preview = 'assets/images/preview-image.png'
@@ -23,7 +24,7 @@ file('_preview', [sampleDir, defaultTheme.package], async () => {
 file(preview, ['_preview', 'screenshot'], async () => {
   im`Taking a screenshot in ${preview}.`
 
-  await require('./screenshot')({
+  await screenshot({
     url: furl('_preview/index.html'),
     dest: preview,
     width: 1200,

@@ -1,8 +1,8 @@
-const { im, asyncTask } = require('./utils')
-const { themes } = require('./themes')
-const exec = require('mz/child_process').exec
-const fs = require('mz/fs')
-const fse = require('fs-extra-promise')
+import { im, asyncTask } from './utils'
+import { themes } from './themes'
+import exec from 'mz/child_process'
+import fs from 'mz/fs'
+import fse from 'fs-extra-promise'
 
 const defaultTheme = 'https://github.com/SassDoc/sassdoc-theme-default'
 export const sampleDir = `_sample`

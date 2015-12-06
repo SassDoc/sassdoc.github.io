@@ -1,4 +1,4 @@
-const chalk = require('chalk')
+import chalk from 'chalk'
 
 const key = name =>
   `${chalk.red('*')} ${chalk.green(name)}`

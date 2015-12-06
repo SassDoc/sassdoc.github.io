@@ -1,9 +1,9 @@
-const { im } = require('./utils')
-const CombinedStream = require('combined-stream')
-const exec = require('mz/child_process').exec
-const fs = require('fs')
-const promisePipe = require('promisepipe')
-const themesPackage = require('../_themes/package')
+import { im } from './utils'
+import CombinedStream from 'combined-stream'
+import { exec } from 'mz/child_process'
+import fs from 'fs'
+import promisePipe from 'promisepipe'
+import themesPackage from '../_themes/package'
 
 export const themes = Object.keys(themesPackage.devDependencies)
   .map(name => ({

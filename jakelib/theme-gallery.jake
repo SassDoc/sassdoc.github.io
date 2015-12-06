@@ -1,8 +1,9 @@
-const { im, furl } = require('./utils')
-const { themes } = require('./themes')
-const { sampleDir } = require('./sample')
-const exec = require('mz/child_process').exec
-const sassdoc = require('sassdoc')
+import { im, furl } from './utils'
+import { themes } from './themes'
+import { sampleDir } from './sample'
+import { exec } from 'mz/child_process'
+import sassdoc from 'sassdoc'
+import screenshot from './screenshot'
 
 const previewDir = 'theme-gallery/preview'
 const thumbDir = 'theme-gallery/thumbs'
@@ -31,7 +32,7 @@ themes.forEach(theme => {
   task(thumb, [preview, thumbDir, 'screenshot'], async () => {
     im`Taking a screenshot of ${preview} in ${thumb}.`
 
-    await require('./screenshot')({
+    await screenshot({
       url: furl(`${preview}/index.html`),
       dest: thumb,
       width: 1024,
