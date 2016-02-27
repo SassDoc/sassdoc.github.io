@@ -27,7 +27,7 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/668551711783546880/ExYjuH4N.jpg" alt="Hugo Giraudel" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/693769004373168128/fgmYomJy.jpg" alt="Hugo Giraudel" class="author__avatar">
     <a class="author__name" href="https://twitter.com/hugogiraudel">Hugo Giraudel</a>
     <span class="author__role">Project thinker</span>
   </li>
