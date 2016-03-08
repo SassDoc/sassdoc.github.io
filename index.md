@@ -23,7 +23,7 @@ sassdoc source/
     <div class="megatron__bottom">
         <div class="container">
             <div class="megatron__content">
-                <a href="{{ site.baseurl }}/getting-started/" class="button  button--primary  megatron__button">Get started</a><!--
+                <a href="{{ site.baseurl }}/getting-started/" class="button  button--primary  megatron__button">Documentation</a><!--
                 --><a href="http://twitter.com/share?text=Release+the+docs!+@SassDoc_+is+a+documentation+tool+for+Sass+%E2%80%94&url=http://sassdoc.com" class="button  button--primary  megatron__button" target="_blank">Tweet it</a>
             </div>
         </div>
