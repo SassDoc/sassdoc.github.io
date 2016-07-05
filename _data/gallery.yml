@@ -6,6 +6,10 @@
   url: http://lunelson.de/sass-maps-plus/
   image: sass-maps-plus.png
 
+- name: Manila Mixins
+  url: https://mike3run.github.io/manila-mixins/
+  image: manila.png
+
 - name: include-media
   url: http://eduardoboucas.com/include-media/doc/
   image: include-media.png
