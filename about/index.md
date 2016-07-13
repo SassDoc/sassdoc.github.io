@@ -5,7 +5,7 @@ title: "About"
 
 ## SassDoc team
 
-There is nothing new with SassDoc. It has nothing of a revolutionnary idea; there are countless of SassDoc projects on GitHub, yet most of them are dead or practically unusable.
+There is nothing new with SassDoc. It has nothing of a revolutionary idea; there are countless of SassDoc projects on GitHub, yet most of them are dead or practically unusable.
 
 Still, we needed this. We needed a way to document our Sass files, APIs, frameworks, libraries and whatever. Thus, this project.
 
