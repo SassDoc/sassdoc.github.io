@@ -6,6 +6,10 @@
   url: http://lunelson.de/sass-maps-plus/
   image: sass-maps-plus.png
 
+- name: QMUI Web 
+  url: http://qmuiteam.com/web
+  image: qmui.png
+
 - name: Manila Mixins
   url: https://mike3run.github.io/manila-mixins/
   image: manila.png
