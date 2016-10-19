@@ -26,8 +26,8 @@ module.exports.annotations = [];
 
 ## Schema
 
-Each annotation is an object with a `name` property, a `parse`
-method, and optionnally `resolve`, `default` and `autofill`
+Each annotation is a function that returns an object with a `name` property, a `parse`
+method, and optionally `resolve`, `default` and `autofill`
 methods and well as an `alias` array and a `multiple` boolean.
 
 | Key | Type | Description |
@@ -47,13 +47,15 @@ awesome) (also aliased as `@wow`). This annotation is just meant to be applied a
 argument. You can then add a condition on `item.awesome` in your templates!
 
 {% highlight js %}
-module.exports.annotations.push({
-  name: 'awesome',
-  parse: function () { return true; },
-  default: function (comment) { return false; },
-  autofill: function (comment) {},
-  multiple: false,
-  alias: ['wow'],
+module.exports.annotations.push(function () {
+  return {
+    name: 'awesome',
+    parse: function () { return true; },
+    default: function (comment) { return false; },
+    autofill: function (comment) {},
+    multiple: false,
+    alias: ['wow']
+  };
 });
 {% endhighlight %}
 
@@ -68,33 +70,32 @@ In your templates, `item.friend` will be an array of references
 to the "friends" items.
 
 {% highlight js %}
-module.exports.annotations.push({
-  name: 'friend',
+module.exports.annotations.push(function () {
+  return  {
+    name: 'friend',
+    parse: function (text) {
+      var match = /^\{(.*)\}\s*(.*)$/.exec(text.trim());
+      return {
+        type: match[1],
+        name: match[2],
+      };
+    },
+    resolve: function (data) {
+      Object.keys(data).forEach(function (type) {
+        Object.keys(data[type]).forEach(function (name) {
+          var item = data[type][name];
 
-  parse: function (text) {
-    var match = /^\{(.*)\}\s*(.*)$/.exec(text.trim());
+          if (!item.friend) {
+            return;
+          }
 
-    return {
-      type: match[1],
-      name: match[2],
-    };
-  },
-
-  resolve: function (data) {
-    Object.keys(data).forEach(function (type) {
-      Object.keys(data[type]).forEach(function (name) {
-        var item = data[type][name];
-
-        if (!item.friend) {
-          return;
-        }
-
-        item.friend.map(function (friend) {
-          return data[friend.type][friend.name];
+          item.friend.map(function (friend) {
+            return data[friend.type][friend.name];
+          });
         });
       });
-    });
-  },
+    }
+  };
 });
 {% endhighlight %}
 
