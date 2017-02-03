@@ -51,7 +51,7 @@
   image: sassy-starter.png
 
 - name: a11y.css
-  url: http://ffoodd.github.io/a11y.css/docs/
+  url: http://ffoodd.github.io/a11y.css/docs.html
   image: a11y.css.png
 
 - name: Sassy-Gridlover
