@@ -1,5 +1,7 @@
 # SassDoc
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/SassDoc/sassdoc.github.io.svg)](https://greenkeeper.io/)
+
 > Uncompiled source code from the Jekyll powered
 > [official SassDoc site](http://sassdoc.com).
 
