@@ -39,7 +39,7 @@ The `display` filter allows you to display items based on their visibility (acce
 
 The `display` filter uses the `display.access` key from the context configuration to determine if an item should be displayed or not.
 
-<p class="note  note--info"><strong>Note:</strong> It's always best to define an access level.</p>
+<p class="note  note--info"><strong>Note:</strong> it’s always best to define an access level.</p>
 
 {% highlight js %}
 {
@@ -63,7 +63,7 @@ The `groupName` filter allows you to define aliases for group slugs (see [refere
 }
 {% endhighlight %}
 
-<p class="note  note--info"><strong>Note:</strong>  The `groupName` filter overrides the default `group` key for each item.</p>
+<p class="note  note--info"><strong>Note:</strong>  The <code>groupName</code> filter overrides the default <code>group</code> key for each item.</p>
 
 Example: Default `group` key:
 
@@ -136,7 +136,7 @@ This filter introduces the `description` and `descriptionPath` configuration key
 
 The `description` key contains raw description text. The `descriptionPath` contains the path to a file containing the description.
 
-<p class="note  note--info"><strong>Note:</strong>  Using `descriptionPath` will override the `description` key.</p>
+<p class="note  note--info"><strong>Note:</strong>  using <code>descriptionPath</code> will override the <code>description</code> key.</p>
 
 {% highlight js %}
 {
@@ -146,7 +146,7 @@ The `description` key contains raw description text. The `descriptionPath` conta
 
 The `descriptionPath` is relative to the configuration file, and has no required format.
 
-<p class="note  note--info"><strong>Note:</strong>  If the `markdown` filter is called **after** the `description` filter, it will parse the description value as Markdown.</p>
+<p class="note  note--info"><strong>Note:</strong> if the <code>markdown</code> filter is called <strong>after</strong> the <code>description</code> filter, it will parse the description value as Markdown.</p>
 
 
 ## Resolved variables (`resolveVariables`)
