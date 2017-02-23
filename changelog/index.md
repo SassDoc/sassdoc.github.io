@@ -3,6 +3,66 @@ layout: default
 title: "Changelog"
 ---
 
+## 2.2.0
+
+ * Batch upgrade dependencies, fix security warnings.
+ * Upgrade transpilation to Babel 6.
+
+## 2.1.20
+
+* Add `argument` as an alias for `parameter` annotation.
+
+## 2.1.19
+
+* Fix expected line numbers from scss-comment-parser.
+
+## 2.1.18
+
+* Fix previous publish.
+
+## 2.1.17
+
+* Downgrade scss-comment-parser. ([#438](https://github.com/SassDoc/sassdoc/issues/438), [#439](https://github.com/SassDoc/sassdoc/issues/439))
+
+## 2.1.16
+
+* Upgrade scss-comment-parser. ([#21](https://github.com/SassDoc/scss-comment-parser/pull/21))
+
+## 2.1.15
+
+* Update Babel to 5.5 because of a bug with Babel 5.1 runtime.
+
+## 2.1.14
+
+* Make `access` work when not autofilled ([#399](https://github.com/SassDoc/sassdoc/issues/399))
+
+## 2.1.13
+
+* Default destination is relative to CWD ([#403](https://github.com/SassDoc/sassdoc/pull/403))
+
+## 2.1.12
+
+* More generic streaming success message ([#402](https://github.com/SassDoc/sassdoc/pull/402))
+
+## 2.1.11
+
+* Republish of 2.1.10 because of a failed npm publish.
+
+## 2.1.10
+
+* Strip `@example` indent ([#401](https://github.com/SassDoc/sassdoc/pull/401))
+
+## 2.1.9
+
+* Upgrade to Babel 5.1, fix zn issue with `Symbol`  ([#396](https://github.com/SassDoc/sassdoc/issues/396))
+
+## 2.1.8
+
+* Upgrade to Babel 5.0 ([#394](https://github.com/SassDoc/sassdoc/pull/394))
+* Ensure `default` theme name is properly logged ([#393](https://github.com/SassDoc/sassdoc/pull/393))
+* Several dependencies updates ([#392](https://github.com/SassDoc/sassdoc/pull/392))
+* Switched to Eslint ([#388](https://github.com/SassDoc/sassdoc/pull/388))
+
 ## 2.1.0 &mdash; Polite Little Squid
 
 * A [`@name` annotation](http://sassdoc.com/annotations/#name) has been added to make it possible to override an item's name ([#358](https://github.com/SassDoc/sassdoc/issues/358))
