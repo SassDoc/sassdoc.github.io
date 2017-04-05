@@ -15,7 +15,7 @@
   image: manila.png
 
 - name: include-media
-  url: http://eduardoboucas.com/include-media/doc/
+  url: http://include-media.com/documentation/
   image: include-media.png
 
 - name: Guardian StyleSheets (GUSS)
