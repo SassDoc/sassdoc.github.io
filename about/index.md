@@ -49,7 +49,7 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/767318955988029440/iK8d36iY.jpg" alt="Reda Lemeden" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/855933292302016516/r-Fy69uf_400x400.jpg" alt="Reda Lemeden" class="author__avatar">
     <a class="author__name" href="https://twitter.com/kaishin">Reda Lemeden</a>
     <span class="author__role">Octopus designer</span>
   </li>
