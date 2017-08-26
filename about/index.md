@@ -15,13 +15,13 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
 
 <ul class="authors">
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/554739699936669696/1lMS0izv_400x400.jpeg" alt="Pascal Duez" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/889039640052862976/knu2W4tf_400x400.jpg" alt="Pascal Duez" class="author__avatar">
     <a class="author__name" href="https://twitter.com/pascalduez">Pascal Duez</a>
     <span class="author__role">Ecosystem maintainer</span>
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/725156986631888896/AdS-OLD8.jpg" alt="Valérian Galliat" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/879747434217439232/AcKCfJi-_400x400.jpg" alt="Valérian Galliat" class="author__avatar">
     <a class="author__name" href="https://twitter.com/valeriangalliat">Valérian Galliat</a>
     <span class="author__role">Engine maker</span>
   </li>
