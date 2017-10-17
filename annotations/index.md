@@ -171,7 +171,7 @@ Describes the documented item.
 
 {% highlight scss %}
 /// @example
-///   4 + 2 = 8
+///   4 + 2 = 6
 ///   4 / 2 = 2
 ///
 /// @example scss - Clamp function
