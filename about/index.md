@@ -21,7 +21,7 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/879747434217439232/AcKCfJi-_400x400.jpg" alt="Valérian Galliat" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/933780356347576320/jT3AfCFD_400x400.jpg" alt="Valérian Galliat" class="author__avatar">
     <a class="author__name" href="https://twitter.com/valeriangalliat">Valérian Galliat</a>
     <span class="author__role">Engine maker</span>
   </li>
@@ -43,7 +43,7 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
 
 <ul class="authors">
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/581847034371534848/DumCxgjf.jpg" alt="Why Alix" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/908013238482333696/NpAxctyl_400x400.jpg" alt="Why Alix" class="author__avatar">
     <a class="author__name" href="https://twitter.com/whyalix">Why Alix</a>
     <span class="author__role">Poulpix drawer</span>
   </li>
