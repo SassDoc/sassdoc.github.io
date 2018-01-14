@@ -53,6 +53,9 @@
     - title: "Broccoli"
       route: broccoli
       _blank: false
+    - title: "Webpack"
+      route: webpack
+      _blank: false
     - title: "SassDocify"
       route: sassdocify
       _blank: false
