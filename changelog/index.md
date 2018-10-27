@@ -3,6 +3,40 @@ layout: default
 title: "Changelog"
 ---
 
+### 2.5.1
+
+  * Update `sassdoc-theme-default`.  
+    Fixes an issue with main types pluralization. 
+    ([#101](https://github.com/SassDoc/sassdoc-theme-default/pull/101)
+
+## 2.5.0
+
+  * Added support for async annotation resolve functions.
+    ([#517](https://github.com/SassDoc/sassdoc/issues/517), [#518](https://github.com/SassDoc/sassdoc/pull/518))
+
+## 2.4.0
+
+  * Added support for scoped theme packages.
+    ([#514](https://github.com/SassDoc/sassdoc/issues/514), [#515](https://github.com/SassDoc/sassdoc/pull/515))
+
+## 2.3.0
+
+ * Themes can now pass an `includeUnknownContexts` config key up to the parser.  
+   Allows for including comments not necessarily linked to an item in final data.
+   ([#498](https://github.com/SassDoc/sassdoc/pull/498))
+
+## 2.2.2
+
+ * Fix the `verbose` and `strict` flags throwing an exception when being passed
+   from config or API params. ([#491](https://github.com/SassDoc/sassdoc/issues/491), [#490](https://github.com/SassDoc/sassdoc/issues/490))
+
+## 2.2.1
+
+ * Scope empty data message under the verbose flag. ([#488](https://github.com/SassDoc/sassdoc/issues/488), [#489](https://github.com/SassDoc/sassdoc/issues/489))
+   This prevent unwanted console cluttering on certain build setup.
+ * Remove empty data warning about CSS selectors.
+   This is no longer relevant, since CSS selectors are supported (although not being promoted yet).
+
 ## 2.2.0
 
  * Batch upgrade dependencies, fix security warnings.
