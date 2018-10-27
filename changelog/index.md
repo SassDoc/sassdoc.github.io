@@ -3,10 +3,10 @@ layout: default
 title: "Changelog"
 ---
 
-### 2.5.1
+## 2.5.1
 
   * Update `sassdoc-theme-default`.  
-    Fixes an issue with main types pluralization. 
+    Fixes an issue with main types pluralization.
     ([#101](https://github.com/SassDoc/sassdoc-theme-default/pull/101)
 
 ## 2.5.0
