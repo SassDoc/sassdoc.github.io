@@ -3,6 +3,20 @@ layout: default
 title: "Changelog"
 ---
 
+# Changelog
+
+## 2.7.0
+
+  * Update `sassdoc-theme-default`.  
+    Template engine replacement, swap Swig per Nunjucks.
+
+## 2.6.0
+
+  * Update `sassdoc-theme-default`.  
+  * Update `scss-comment-parser`.  
+  * Add group description parsing
+  ([#534](https://github.com/SassDoc/sassdoc/pull/534)
+
 ## 2.5.1
 
   * Update `sassdoc-theme-default`.  
