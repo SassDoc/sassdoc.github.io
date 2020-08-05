@@ -38,7 +38,7 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 
     <li class="color  color--tertiary">
         <span class="color__name">$tertiary-color</span>
-        <span class="color__value">#135c6a</span>
+        <span class="color__value">#5c4863</span>
     </li>
 
     <li class="color  color--black">
