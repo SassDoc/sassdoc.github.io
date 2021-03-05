@@ -21,7 +21,7 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/933780356347576320/jT3AfCFD_400x400.jpg" alt="Valérian Galliat" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/1366189325210300416/T6AvmRsk_400x400.jpg" alt="Valérian Galliat" class="author__avatar">
     <a class="author__name" href="https://twitter.com/valeriangalliat">Valérian Galliat</a>
     <span class="author__role">Engine maker</span>
   </li>
@@ -43,13 +43,13 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
 
 <ul class="authors">
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/908013238482333696/NpAxctyl_400x400.jpg" alt="Why Alix" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/1357077364983873537/sOfDVXlS_400x400.jpg" alt="Why Alix" class="author__avatar">
     <a class="author__name" href="https://twitter.com/whyalix">Why Alix</a>
     <span class="author__role">Poulpix drawer</span>
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/855933292302016516/r-Fy69uf_400x400.jpg" alt="Reda Lemeden" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/1229352122979934209/D46B13BF_400x400.jpg" alt="Reda Lemeden" class="author__avatar">
     <a class="author__name" href="https://twitter.com/kaishin">Reda Lemeden</a>
     <span class="author__role">Octopus designer</span>
   </li>
