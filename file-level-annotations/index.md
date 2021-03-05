@@ -20,11 +20,11 @@ Feel free to add a description to it, however it won't be parsed in any way. For
 /// This is a poster comment.
 /// It will apply annotations to all items from file.
 /// @group API
-/// @author Hugo Giraudel
+/// @author Kitty Giraudel
 ////
 
 /// This item will have:
-/// `@group API` and `@author Hugo Giraudel`
+/// `@group API` and `@author Kitty Giraudel`
 /// inherited from the poster.
 @function dummy-function() {
   // ...

@@ -9,7 +9,7 @@ There is nothing new with SassDoc. It has nothing of a revolutionary idea; there
 
 Still, we needed this. We needed a way to document our Sass files, APIs, frameworks, libraries and whatever. Thus, this project.
 
-SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Galliat](https://twitter.com/valeriangalliat), [Hugo Giraudel](https://twitter.com/hugogiraudel) and [Fabrice Weinberg](https://twitter.com/fweinb), a.k.a [SassDoc team](https://github.com/sassdoc) with the help of [Why Alix](https://twitter.com/whyalix) for the design and [Reda Lemeden](https://twitter.com/kaishin) for the logo. And perhaps you, if you feel like <a href="{{ site.data.routes.contributing }}">contributing</a>!
+SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Galliat](https://twitter.com/valeriangalliat), [Kitty Giraudel](https://twitter.com/KittyGiraudel) and [Fabrice Weinberg](https://twitter.com/fweinb), a.k.a [SassDoc team](https://github.com/sassdoc) with the help of [Why Alix](https://twitter.com/whyalix) for the design and [Reda Lemeden](https://twitter.com/kaishin) for the logo. And perhaps you, if you feel like <a href="{{ site.data.routes.contributing }}">contributing</a>!
 
 ## Core Team
 
@@ -27,8 +27,8 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/763380328316694528/QI6mgUbU.jpg" alt="Hugo Giraudel" class="author__avatar">
-    <a class="author__name" href="https://twitter.com/hugogiraudel">Hugo Giraudel</a>
+    <img src="https://pbs.twimg.com/profile_images/1317111234504916993/LoUeV5RC_400x400.jpg" alt="Kitty Giraudel" class="author__avatar">
+    <a class="author__name" href="https://twitter.com/KittyGiraudel">Kitty Giraudel</a>
     <span class="author__role">Project thinker</span>
   </li>
 
