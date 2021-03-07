@@ -735,7 +735,7 @@ This mixin allows extra content to be passed (through the ``@content`` directive
 Author
 ~~~~~~
 
-* Hugo Giraudel
+* Kitty Giraudel
 
 pink
 ----

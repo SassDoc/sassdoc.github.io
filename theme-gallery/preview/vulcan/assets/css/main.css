@@ -118,7 +118,7 @@
  */
 /**
  * Shorthand for positioning.
- * @link http://hugogiraudel.com/2013/08/05/offsets-sass-mixin/ Documentation
+ * @link https://kittygiraudel.com/2013/08/05/offsets-sass-mixin/ Documentation
  *
  * @access private
  *
@@ -132,7 +132,7 @@
 /**
  * Shorthand for absolute positioning.
  *
- * @link http://hugogiraudel.com/2014/05/19/new-offsets-sass-mixin/ Documentation
+ * @link https://kittygiraudel.com/2014/05/19/new-offsets-sass-mixin/ Documentation
  *
  * @requires {mixin} position
  *
@@ -144,7 +144,7 @@
 /**
  * Shorthand for relative positioning.
  *
- * @link http://hugogiraudel.com/2014/05/19/new-offsets-sass-mixin/ Documentation
+ * @link https://kittygiraudel.com/2014/05/19/new-offsets-sass-mixin/ Documentation
  *
  * @requires {mixin} position
  *
@@ -153,7 +153,7 @@
 /**
  * Shorthand for fixed positioning.
  *
- * @link http://hugogiraudel.com/2014/05/19/new-offsets-sass-mixin/ Documentation
+ * @link https://kittygiraudel.com/2014/05/19/new-offsets-sass-mixin/ Documentation
  *
  * @requires {mixin} position
  *

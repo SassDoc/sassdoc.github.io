@@ -6,7 +6,7 @@
   url: http://lunelson.de/sass-maps-plus/
   image: sass-maps-plus.png
 
-- name: QMUI Web 
+- name: QMUI Web
   url: http://qmuiteam.com/web/tools.html
   image: qmui.png
 
@@ -57,42 +57,6 @@
 - name: Sassy-Gridlover
   url: http://hiulit.github.io/Sassy-Gridlover/sassdoc/
   image: sassy-gridlover.png
-
-- name: SassyStrings
-  url: http://hugogiraudel.com/SassyStrings/
-  image: sassystrings.png
-
-- name: SassyCast
-  url: http://hugogiraudel.com/SassyCast/
-  image: sassycast.png
-
-- name: SassySort
-  url: http://hugogiraudel.com/SassySort/
-  image: sassysort.png
-
-- name: SassyIteratorsGenerators
-  url: http://hugogiraudel.com/SassyIteratorsGenerators/
-  image: sassyiteratorsgenerators.png
-
-- name: SassyJSON
-  url: http://hugogiraudel.com/SassyJSON/
-  image: sassyjson.png
-
-- name: SassyMatrix
-  url: http://hugogiraudel.com/SassyMatrix/
-  image: sassymatrix.png
-
-- name: SassyGradients
-  url: http://hugogiraudel.com/SassyGradients/
-  image: sassygradients.png
-
-- name: SassyLogger
-  url: http://hugogiraudel.com/SassyLogger/
-  image: sassylogger.png
-
-- name: SassyBitwise
-  url: http://hugogiraudel.com/SassyBitwise/
-  image: sassybitwise.png
 
 - name: vulcan-framework
   url: http://vulcan-framework.github.io/core/

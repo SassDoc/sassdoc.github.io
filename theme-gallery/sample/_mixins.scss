@@ -158,7 +158,7 @@
 }
 
 /// Contexts
-/// @author Hugo Giraudel
+/// @author Kitty Giraudel
 /// @param {String | List} $context
 @mixin when-inside($context) {
     #{$context} & {

@@ -21,7 +21,7 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/1366189325210300416/T6AvmRsk_400x400.jpg" alt="Valérian Galliat" class="author__avatar">
+    <img src="https://pbs.twimg.com/profile_images/1368544291677745153/Y9ato75j_400x400.jpg" alt="Valérian Galliat" class="author__avatar">
     <a class="author__name" href="https://twitter.com/valeriangalliat">Valérian Galliat</a>
     <span class="author__role">Engine maker</span>
   </li>
