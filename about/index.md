@@ -20,19 +20,16 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/1368544291677745153/Y9ato75j_400x400.jpg" alt="Valérian Galliat" class="author__avatar">
     <a class="author__name" href="https://twitter.com/valeriangalliat">Valérian Galliat</a>
     <span class="author__role">Engine maker</span>
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/1317111234504916993/LoUeV5RC_400x400.jpg" alt="Kitty Giraudel" class="author__avatar">
     <a class="author__name" href="https://twitter.com/KittyGiraudel">Kitty Giraudel</a>
     <span class="author__role">Project thinker</span>
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/2849329881/9938793eb770f5c0957cdd7406456053_400x400.png" alt="Fabrice Weinberg" class="author__avatar">
     <a class="author__name" href="https://twitter.com/fweinb">Fabrice Weinberg</a>
     <span class="author__role">Parser tinkerer</span>
   </li>
@@ -42,19 +39,16 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
 
 <ul class="authors">
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/1357077364983873537/sOfDVXlS_400x400.jpg" alt="Why Alix" class="author__avatar">
     <a class="author__name" href="https://twitter.com/whyalix">Why Alix</a>
     <span class="author__role">Poulpix drawer</span>
   </li>
 
   <li class="author">
-    <img src="https://pbs.twimg.com/profile_images/1229352122979934209/D46B13BF_400x400.jpg" alt="Reda Lemeden" class="author__avatar">
     <a class="author__name" href="https://twitter.com/kaishin">Reda Lemeden</a>
     <span class="author__role">Octopus designer</span>
   </li>
 
   <li class="author">
-    <img src="http://1.gravatar.com/avatar/17b37204cf6010dca12951259135df7b?s=383&d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D383&r=G" alt="You" class="author__avatar">
     <a class="author__name" href="https://github.com/SassDoc/sassdoc/blob/develop/CONTRIBUTING.md">You</a>
     <span class="author__role">Contributor</span>
   </li>
