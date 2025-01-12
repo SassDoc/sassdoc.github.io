@@ -15,7 +15,7 @@ SassDoc is built by [Pascal Duez](https://twitter.com/pascalduez), [Valerian Gal
 
 <ul class="authors">
   <li class="author">
-    <a class="author__name" href="https://pascalduez.me")>Pascal Duez</a>
+    <a class="author__name" href="https://pascalduez.me">Pascal Duez</a>
     <span class="author__role">Ecosystem maintainer</span>
   </li>
 
